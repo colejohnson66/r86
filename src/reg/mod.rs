@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   lib.rs
+ * File:   mod.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,8 +20,5 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-// disable dead code warning
-// WARNING: this MUST be removed for release
-#![allow(dead_code)]
-
-pub mod reg;
+pub mod avx;
+pub mod gpr;
