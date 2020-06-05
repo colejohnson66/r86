@@ -21,4 +21,26 @@
  * ============================================================================
  */
 pub mod avx;
+pub mod cr0;
 pub mod gpr;
+
+#[macro_export]
+macro_rules! bitfield {
+    ($get:ident,$set:ident,$type:ty,$bitpos:expr) => {
+        pub fn $get(&self) -> bool {
+            let mask: $type = 1u8.into();
+            let mask = mask << $bitpos;
+            (self.value & mask) != 0
+        }
+
+        pub fn $set(&mut self, value: bool) {
+            let mask: $type = 1u8.into();
+            let mask = mask << $bitpos;
+            if value {
+                self.value |= !mask;
+            } else {
+                self.value &= mask;
+            }
+        }
+    };
+}
