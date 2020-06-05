@@ -20,10 +20,43 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-// TODO: Lots of repeated code; learn and use macros
 // TODO: Implement f16, f32, and f64 accessors
 // TODO: Implement saturation functions (should they be here?)
 use std::mem;
+
+macro_rules! avx_accessors {
+    ($get:ident,$set:ident,$type:ty,$size:expr) => {
+        pub fn $get(&self, idx: usize) -> $type {
+            let size = mem::size_of::<$type>();
+            let idx = idx * size;
+            assert!(idx < self.value.len());
+
+            let mut bits: [u8; $size] = [0; $size];
+            bits.copy_from_slice(&self.value[idx..idx + size]);
+            <$type>::from_le_bytes(bits)
+        }
+        pub unsafe fn $set(&mut self, idx: usize, val: $type) {
+            let size = mem::size_of::<$type>();
+            let idx = idx * size;
+            assert!(idx < self.value.len());
+
+            let bits = mem::transmute::<$type, [u8; $size]>(val);
+            for i in idx..idx + size {
+                self.value[i] = bits[i];
+            }
+        }
+    };
+}
+macro_rules! avx_arr_accessor {
+    ($get:ident,$set:ident,$type:ty,$size:expr) => {
+        pub unsafe fn $get(&self) -> [$type; 64 / $size] {
+            mem::transmute::<[u8; 64], [$type; 64 / $size]>(self.value)
+        }
+        pub unsafe fn $set(&mut self, arr: &[$type; 64 / $size]) {
+            self.value = mem::transmute::<[$type; 64 / $size], [u8; 64]>(*arr);
+        }
+    };
+}
 
 /// An AVX register.
 /// Internally represented by a 512-bit (64-byte) byte array.
@@ -109,155 +142,21 @@ impl Avx {
         self.value = arr;
     }
 
-    pub fn i16(&self, idx: usize) -> i16 {
-        let size = mem::size_of::<i16>();
-        let idx = idx * size;
+    avx_accessors!(i16, set_i16, i16, 2);
+    avx_arr_accessor!(i16_arr, set_i16_arr, i16, 2);
 
-        let mut bits: [u8; 2] = [0; 2];
-        bits.copy_from_slice(&self.value[idx..idx + size]);
-        i16::from_le_bytes(bits)
-    }
-    pub unsafe fn set_i16(&mut self, idx: usize, val: i16) {
-        let size = mem::size_of::<i16>();
-        let idx = idx * size;
-        assert!(idx < self.value.len());
+    avx_accessors!(u16, set_u16, u16, 2);
+    avx_arr_accessor!(u16_arr, set_u16_arr, u16, 2);
 
-        let bits = mem::transmute::<i16, [u8; 2]>(val);
-        for i in idx..idx + size {
-            self.value[i] = bits[i];
-        }
-    }
-    pub unsafe fn i16_arr(&self) -> [i16; 32] {
-        mem::transmute::<[u8; 64], [i16; 32]>(self.value)
-    }
-    pub unsafe fn set_i16_arr(&mut self, arr: [i16; 32]) {
-        self.value = mem::transmute::<[i16; 32], [u8; 64]>(arr);
-    }
+    avx_accessors!(i32, set_i32, i32, 4);
+    avx_arr_accessor!(i32_arr, set_i32_arr, i32, 4);
 
-    pub fn u16(&self, idx: usize) -> u16 {
-        let size = mem::size_of::<u16>();
-        let idx = idx * size;
+    avx_accessors!(u32, set_u32, u32, 4);
+    avx_arr_accessor!(u32_arr, set_u32_arr, u32, 4);
 
-        let mut bits: [u8; 2] = [0; 2];
-        bits.copy_from_slice(&self.value[idx..idx + size]);
-        u16::from_le_bytes(bits)
-    }
-    pub unsafe fn set_u16(&mut self, idx: usize, val: u16) {
-        let size = mem::size_of::<i16>();
-        let idx = idx * size;
-        assert!(idx < self.value.len());
+    avx_accessors!(i64, set_i64, i64, 8);
+    avx_arr_accessor!(i64_arr, set_i64_arr, i64, 8);
 
-        let bits = mem::transmute::<u16, [u8; 2]>(val);
-        for i in idx..idx + size {
-            self.value[i] = bits[i];
-        }
-    }
-    pub unsafe fn u16_arr(&self) -> [u16; 32] {
-        mem::transmute::<[u8; 64], [u16; 32]>(self.value)
-    }
-    pub unsafe fn set_u16_arr(&mut self, arr: [u16; 32]) {
-        self.value = mem::transmute::<[u16; 32], [u8; 64]>(arr);
-    }
-
-    pub fn i32(&self, idx: usize) -> i32 {
-        let size = mem::size_of::<i32>();
-        let idx = idx * size;
-
-        let mut bits: [u8; 4] = [0; 4];
-        bits.copy_from_slice(&self.value[idx..idx + size]);
-        i32::from_le_bytes(bits)
-    }
-    pub unsafe fn set_i32(&mut self, idx: usize, val: i32) {
-        let size = mem::size_of::<i16>();
-        let idx = idx * size;
-        assert!(idx < self.value.len());
-
-        let bits = mem::transmute::<i32, [u8; 4]>(val);
-        for i in idx..idx + size {
-            self.value[i] = bits[i];
-        }
-    }
-    pub unsafe fn i32_arr(&self) -> [i32; 16] {
-        mem::transmute::<[u8; 64], [i32; 16]>(self.value)
-    }
-    pub unsafe fn set_i32_arr(&mut self, arr: [i32; 16]) {
-        self.value = mem::transmute::<[i32; 16], [u8; 64]>(arr);
-    }
-
-    pub fn u32(&self, idx: usize) -> u32 {
-        let size = mem::size_of::<u32>();
-        let idx = idx * size;
-
-        let mut bits: [u8; 4] = [0; 4];
-        bits.copy_from_slice(&self.value[idx..idx + size]);
-        u32::from_le_bytes(bits)
-    }
-    pub unsafe fn set_u32(&mut self, idx: usize, val: u32) {
-        let size = mem::size_of::<i16>();
-        let idx = idx * size;
-        assert!(idx < self.value.len());
-
-        let bits = mem::transmute::<u32, [u8; 4]>(val);
-        for i in idx..idx + size {
-            self.value[i] = bits[i];
-        }
-    }
-    pub unsafe fn u32_arr(&self) -> [u32; 16] {
-        mem::transmute::<[u8; 64], [u32; 16]>(self.value)
-    }
-    pub unsafe fn set_u32_arr(&mut self, arr: [u32; 16]) {
-        self.value = mem::transmute::<[u32; 16], [u8; 64]>(arr);
-    }
-
-    pub fn i64(&self, idx: usize) -> i64 {
-        let size = mem::size_of::<i64>();
-        let idx = idx * size;
-        assert!(idx < self.value.len());
-
-        let mut bits: [u8; 8] = [0; 8];
-        bits.copy_from_slice(&self.value[idx..idx + size]);
-        i64::from_le_bytes(bits)
-    }
-    pub unsafe fn set_i64(&mut self, idx: usize, val: i64) {
-        let size = mem::size_of::<i64>();
-        let idx = idx * size;
-        assert!(idx < self.value.len());
-
-        let bits = mem::transmute::<i64, [u8; 8]>(val);
-        for i in idx..idx + size {
-            self.value[i] = bits[i];
-        }
-    }
-    pub unsafe fn i64_arr(&self) -> [i64; 8] {
-        mem::transmute::<[u8; 64], [i64; 8]>(self.value)
-    }
-    pub unsafe fn set_i64_arr(&mut self, arr: [i64; 8]) {
-        self.value = mem::transmute::<[i64; 8], [u8; 64]>(arr);
-    }
-
-    pub fn u64(&self, idx: usize) -> u64 {
-        let size = mem::size_of::<u64>();
-        let idx = idx * size;
-        assert!(idx < self.value.len());
-
-        let mut bits: [u8; 8] = [0; 8];
-        bits.copy_from_slice(&self.value[idx..idx + size]);
-        u64::from_le_bytes(bits)
-    }
-    pub unsafe fn set_u64(&mut self, idx: usize, val: u64) {
-        let size = mem::size_of::<u64>();
-        let idx = idx * size;
-        assert!(idx < self.value.len());
-
-        let bits = mem::transmute::<u64, [u8; 8]>(val);
-        for i in idx..idx + size {
-            self.value[i] = bits[i];
-        }
-    }
-    pub unsafe fn u64_arr(&self) -> [u64; 8] {
-        mem::transmute::<[u8; 64], [u64; 8]>(self.value)
-    }
-    pub unsafe fn set_u64_arr(&mut self, arr: [u64; 8]) {
-        self.value = mem::transmute::<[u64; 8], [u8; 64]>(arr);
-    }
+    avx_accessors!(u64, set_u64, u64, 8);
+    avx_arr_accessor!(u64_arr, set_u64_arr, u64, 8);
 }
