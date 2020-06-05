@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   lib.rs
+ * File:   aaa.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,9 +20,9 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-// disable dead code warning
-// WARNING: this MUST be removed for release
-#![allow(dead_code)]
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub mod cpu;
-pub mod reg;
+pub fn aaa(_cpu: Cpu, _instr: Instr) -> u32 {
+    unimplemented!();
+}
