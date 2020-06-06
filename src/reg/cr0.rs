@@ -53,6 +53,9 @@ impl Cr0 {
         let temp = value & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+    pub fn set_raw_value_unchecked(&mut self, value: u32) {
+        self.value = value;
+    }
 
     bitfield!(pg, set_pg, u32, 31);
     bitfield!(cd, set_cd, u32, 30);

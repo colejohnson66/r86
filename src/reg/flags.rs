@@ -60,10 +60,14 @@ impl Flags {
     pub fn set_raw_value(&mut self, value: u64) {
         // bit[63:22] are reserved, so ensure the upper 32-bits aren't set
         // TODO: should we just ignore them instead of panic!()?
-        assert!(((value as u64) & 0xFFFF_FFFF_0000_0000) == 0);
+        assert!((value & 0xFFFF_FFFF_0000_0000) == 0);
         let temp = value as u32;
         let temp = temp & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
+    }
+    pub fn set_raw_value_unchecked(&mut self, value: u64) {
+        // just lob off the upper bits if they're set
+        self.value = (value & 0xFFFF_FFFF) as u32;
     }
 
     bitfield!(id, set_id, u32, 21);
