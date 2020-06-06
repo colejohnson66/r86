@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   andpd.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,57 +20,33 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod aaa;
-mod aad;
-mod aam;
-mod aas;
-mod adc;
-mod adcx;
-mod add;
-mod addpd;
-mod addps;
-mod addsd;
-mod addss;
-mod addsubpd;
-mod addsubps;
-mod adox;
-mod aesdec;
-mod aesdeclast;
-mod aesenc;
-mod aesenclast;
-mod aesimc;
-mod aeskeygenassist;
-mod and;
-mod andn;
-mod andnpd;
-mod andnps;
-mod andpd;
-mod andps;
-mod arpl;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use aaa::*;
-pub use aad::*;
-pub use aam::*;
-pub use aas::*;
-pub use adc::*;
-pub use adcx::*;
-pub use add::*;
-pub use addpd::*;
-pub use addps::*;
-pub use addsd::*;
-pub use addss::*;
-pub use addsubpd::*;
-pub use addsubps::*;
-pub use adox::*;
-pub use aesdec::*;
-pub use aesdeclast::*;
-pub use aesenc::*;
-pub use aesenclast::*;
-pub use aesimc::*;
-pub use aeskeygenassist::*;
-pub use and::*;
-pub use andn::*;
-pub use andnpd::*;
-pub use andnps::*;
-pub use andps::*;
-pub use arpl::*;
+pub struct Andpd;
+
+impl Andpd {
+    pub fn vdq_wdq(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_hdq_wdq_v128(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vqq_hqq_wqq_v256(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_hdq_wdq_e128(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vqq_hqq_wqq_e256(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdqq_hdqq_wdqq_e512(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+}

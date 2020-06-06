@@ -366,7 +366,7 @@ pub enum OpcodeName {
     // [66 0F 38 DB /r] AESIMC xmm1, xmm2/m128
     AESIMC_VdqWdq,
     // [VEX.128.66.0F38.WIG DB /r] VAESIMC xmm1, xmm2/m128
-    VAESIMC_VdqWpq_V128,
+    VAESIMC_VdqWdq_V128,
 
     // [66 0F 3A DF /r ib] AESKEYGENASSIST xmm1, xmm2/m128, imm8
     AESKEYGENASSIST_VdqWdqIb,
