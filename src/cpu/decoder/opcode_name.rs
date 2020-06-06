@@ -546,11 +546,11 @@ pub enum OpcodeName {
     BNDMK_BGdqMq,
 
     // [66 0F 1A /r] BNDMOV bnd1, bnd2/m64
-    BNDMOV_BGdqBEd,
+    BNDMOV_BGdqBEq,
     // [66 0F 1A /r] BNDMOV bnd1, bnd2/m128
     BNDMOV_BGdqBEdq,
     // [66 0F 1B /r] BNDMOV bnd1/m64, bnd2
-    BNDMOV_BEdBGdq,
+    BNDMOV_BEqBGdq,
     // [66 0F 1B /r] BNDMOV bnd1/m128, bnd2
     BNDMOV_BEdqBGdq,
 

@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   bndmk.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,10 +20,13 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod error;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use error::*;
+pub struct Bndldx;
+
+impl Bndldx {
+    pub fn bgdq_m(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+}

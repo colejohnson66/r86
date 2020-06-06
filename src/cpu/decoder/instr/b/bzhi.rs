@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   bzhi.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,10 +20,17 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod error;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use error::*;
+pub struct Bzhi;
+
+impl Bzhi {
+    pub fn gd_dd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn gq_bq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+}

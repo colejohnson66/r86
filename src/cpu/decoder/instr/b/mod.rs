@@ -20,10 +20,52 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod error;
+mod bextr;
+mod blendpd;
+mod blendps;
+mod blendvpd;
+mod blendvps;
+mod blsi;
+mod blsmsk;
+mod blsr;
+mod bndcl;
+mod bndcn;
+mod bndcu;
+mod bndldx;
+mod bndmk;
+mod bndmov;
+mod bndstx;
+mod bound;
+mod bsf;
+mod bsr;
+mod bswap;
+mod bt;
+mod btc;
+mod btr;
+mod bts;
+mod bzhi;
 
-pub use a::*;
-pub use b::*;
-pub use error::*;
+pub use bextr::*;
+pub use blendpd::*;
+pub use blendps::*;
+pub use blendvpd::*;
+pub use blendvps::*;
+pub use blsi::*;
+pub use blsmsk::*;
+pub use blsr::*;
+pub use bndcl::*;
+pub use bndcn::*;
+pub use bndcu::*;
+pub use bndldx::*;
+pub use bndmk::*;
+pub use bndmov::*;
+pub use bndstx::*;
+pub use bound::*;
+pub use bsf::*;
+pub use bsr::*;
+pub use bswap::*;
+pub use bt::*;
+pub use btc::*;
+pub use btr::*;
+pub use bts::*;
+pub use bzhi::*;
