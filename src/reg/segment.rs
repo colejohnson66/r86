@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   lib.rs
+ * File:   segment.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,11 +20,18 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-// disable dead code warning
-// WARNING: this MUST be removed for release
-#![allow(dead_code)]
+pub enum CacheGranularity {
+    Byte,
+    FourKilobyte,
+}
 
-pub mod cpu;
-pub mod reg;
+pub enum CacheSize {
+    SixteenBit,
+    ThirtytwoBit,
+}
 
-pub type Address = u64;
+pub struct Segment {
+    pub selector: u16,
+    pub cache_granularity: CacheGranularity,
+    pub cache_default_size: CacheSize,
+}

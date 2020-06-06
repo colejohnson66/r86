@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   lib.rs
+ * File:   global_segment.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,11 +20,9 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-// disable dead code warning
-// WARNING: this MUST be removed for release
-#![allow(dead_code)]
+use crate::Address;
 
-pub mod cpu;
-pub mod reg;
-
-pub type Address = u64;
+pub struct GlobalSegment {
+    pub base: Address,
+    pub limit: u16,
+}

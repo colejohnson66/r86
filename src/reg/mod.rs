@@ -22,7 +22,9 @@
  */
 pub mod avx;
 pub mod cr0;
+pub mod global_segment;
 pub mod gpr;
+pub mod segment;
 
 #[macro_export]
 macro_rules! bitfield {

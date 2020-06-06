@@ -25,8 +25,7 @@ pub mod decoder;
 use crate::reg::avx::Avx;
 use crate::reg::cr0::Cr0;
 use crate::reg::gpr::Gpr;
-
-type Address = u64;
+use crate::Address;
 
 const AVX_REGISTER_COUNT: usize = 32;
 
