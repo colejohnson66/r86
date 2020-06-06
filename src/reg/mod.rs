@@ -22,6 +22,7 @@
  */
 pub mod avx;
 pub mod cr0;
+pub mod flags;
 pub mod global_segment;
 pub mod gpr;
 pub mod segment;
@@ -43,6 +44,29 @@ macro_rules! bitfield {
             } else {
                 self.value &= mask;
             }
+        }
+    };
+}
+
+#[macro_export]
+macro_rules! multibit_bitfield {
+    ($get:ident,$set:ident,$type:ty,$bitpos:expr,$width:expr) => {
+        pub fn $get(&self) -> $type {
+            // sets as many LSB as $width
+            // eg. if $width is 2, this will result in `mask` being set to 0b11
+            let mask: $type = 1u8.into();
+            let mask = (mask << $width) - 1;
+            (self.value >> $bitpos) & mask
+        }
+
+        pub fn $set(&mut self, value: $type) {
+            // see above
+            let mask: $type = 1u8.into();
+            let mask = (mask << $width) - 1;
+            assert!((value & mask) == value); // ensure no unusable bits are set
+            let mask = !(mask << $bitpos);
+            let temp = self.value & mask;
+            self.value = temp | (value << $bitpos);
         }
     };
 }
