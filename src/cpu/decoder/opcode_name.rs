@@ -20,6 +20,7 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
+// TODO: fix this
 #![allow(non_camel_case_types)]
 /* A.2.1: Codes for addressing method:
  * -----------------------------------

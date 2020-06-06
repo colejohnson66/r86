@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   aad.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,18 +20,9 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod aaa;
-mod aad;
-mod aam;
-mod aas;
-mod adc;
-mod adcx;
-mod add;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use aaa::*;
-pub use aad::*;
-pub use aam::*;
-pub use aas::*;
-pub use adc::*;
-pub use adcx::*;
-pub use add::*;
+pub fn aad_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    unimplemented!();
+}
