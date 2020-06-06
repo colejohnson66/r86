@@ -23,6 +23,10 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub fn aad_ib(_cpu: Cpu, _instr: Instr) -> u32 {
-    unimplemented!();
+pub struct Aad;
+
+impl Aad {
+    pub fn ib(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
 }

@@ -23,6 +23,10 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub fn aas(_cpu: Cpu, _instr: Instr) -> u32 {
-    unimplemented!();
+pub struct Aas;
+
+impl Aas {
+    pub fn ib(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
 }

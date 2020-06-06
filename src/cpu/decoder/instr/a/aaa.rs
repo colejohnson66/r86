@@ -23,6 +23,10 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub fn aaa(_cpu: Cpu, _instr: Instr) -> u32 {
-    unimplemented!();
+pub struct Aaa;
+
+impl Aaa {
+    pub fn noarg(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
 }

@@ -23,10 +23,14 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub fn adcx_gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
-    unimplemented!();
-}
+pub struct Adcx;
 
-pub fn adcx_gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
-    unimplemented!();
+impl Adcx {
+    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
 }
