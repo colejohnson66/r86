@@ -53,6 +53,7 @@ macro_rules! fpr_accessors {
     };
 }
 
+#[derive(Clone, Copy)]
 pub struct Fpr {
     sign_exponent: u16,
     significand: u64,

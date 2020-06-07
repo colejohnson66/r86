@@ -21,8 +21,10 @@
  * ============================================================================
  */
 pub mod decoder;
+pub mod fpu;
 pub mod instr;
 
+use crate::cpu::fpu::I387;
 use crate::reg::avx::Avx;
 use crate::reg::cr0::Cr0;
 use crate::reg::cr3::Cr3;
@@ -75,7 +77,7 @@ pub struct Cpu {
     cr4: Cr4,
     cr8: (),
 
-    i387: (),
+    i387: I387,
 
     // vmm0-vmm31: vector registers
     // vtmp: temp register
