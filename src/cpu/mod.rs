@@ -24,6 +24,8 @@ pub mod decoder;
 
 use crate::reg::avx::Avx;
 use crate::reg::cr0::Cr0;
+use crate::reg::cr3::Cr3;
+use crate::reg::cr4::Cr4;
 use crate::reg::gpr::Gpr;
 use crate::Address;
 
@@ -67,8 +69,8 @@ pub struct Cpu {
 
     cr0: Cr0,
     cr2: Address,
-    cr3: (),
-    cr4: (),
+    cr3: Cr3,
+    cr4: Cr4,
     cr8: (),
 
     i387: (),
