@@ -26,6 +26,7 @@ pub mod cr3;
 pub mod cr4;
 pub mod dr6;
 pub mod flags;
+pub mod fpr;
 pub mod global_segment;
 pub mod gpr;
 pub mod segment;
