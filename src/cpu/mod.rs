@@ -27,6 +27,7 @@ use crate::reg::avx::Avx;
 use crate::reg::cr0::Cr0;
 use crate::reg::cr3::Cr3;
 use crate::reg::cr4::Cr4;
+use crate::reg::dr6::Dr6;
 use crate::reg::gpr::Gpr;
 use crate::Address;
 
@@ -65,7 +66,7 @@ pub struct Cpu {
     tr: (),
 
     dr: [Address; 4], // DR0-DR3
-    dr6: (),
+    dr6: Dr6,
     dr7: u32,
 
     cr0: Cr0,
