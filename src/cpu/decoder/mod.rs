@@ -20,7 +20,6 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-pub mod instr;
 mod opcode_name;
 
 pub use crate::cpu::decoder::opcode_name::OpcodeName;

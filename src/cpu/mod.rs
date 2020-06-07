@@ -21,6 +21,7 @@
  * ============================================================================
  */
 pub mod decoder;
+pub mod instr;
 
 use crate::reg::avx::Avx;
 use crate::reg::cr0::Cr0;
