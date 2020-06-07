@@ -22,6 +22,8 @@
  */
 pub mod avx;
 pub mod cr0;
+pub mod cr3;
+pub mod cr4;
 pub mod flags;
 pub mod global_segment;
 pub mod gpr;
