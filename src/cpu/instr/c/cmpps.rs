@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   cmpps.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,12 +20,33 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod error;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use error::*;
+pub struct Cmpps;
+
+impl Cmpps {
+    pub fn vdq_wdq_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_gdq_wdq_ib_v128(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vqq_hqq_wqq_ib_v256(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_gdq_wdq_ib_e128(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vqq_hqq_wqq_ib_e256(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdqq_hdqq_wdqq_ib_e512(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+}

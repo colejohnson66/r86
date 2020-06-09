@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   cmpxchgxb.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,12 +20,20 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod error;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use error::*;
+pub struct Cmpxchg8b;
+pub struct Cmpxchg16b;
+
+impl Cmpxchg8b {
+    pub fn mq(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Cmpxchg16b {
+    pub fn mdq(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+}

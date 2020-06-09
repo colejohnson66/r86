@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   cvtsi2sd.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,12 +20,33 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod error;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use error::*;
+pub struct Cvtsi2sd;
+
+impl Cvtsi2sd {
+    pub fn vdq_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn vdq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_hdq_ed_v(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_hdq_ed_e(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_hdq_eq_v(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_hdq_eq_e(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+}

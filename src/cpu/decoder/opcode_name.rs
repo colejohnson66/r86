@@ -924,7 +924,7 @@ pub enum OpcodeName {
     // [VEX.LIG.F2.0F.WIG C2 /r ib] VCMPSD xmm1, xmm2, xmm3/m64, imm8
     VCMPSD_VdqHdqWqIb_V,
     // [EVEX.LIG.F2.0F.W1 C2 /r ib] VCMPSD k1 {k2}, xmm2, xmm3/m64{sae}, imm8
-    VCMPSD_VdqHdqWqIb_E,
+    VCMPSD_KGqHdqWqIb_E,
 
     // [F3 0F C2 /r ib] CMPSS xmm1, xmm2/m32, imm8
     CMPSS_VdqWdIb,
