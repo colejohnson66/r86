@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   divss.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,14 +20,21 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod error;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use error::*;
+pub struct Divss;
+
+impl Divss {
+    pub fn vdq_wq(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_hdq_wq_v(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdq_hdq_wq_e(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
+}

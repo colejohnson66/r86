@@ -20,14 +20,24 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod error;
+mod daa;
+mod das;
+mod dec;
+mod div;
+mod divpd;
+mod divps;
+mod divsd;
+mod divss;
+mod dppd;
+mod dpps;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use error::*;
+pub use daa::*;
+pub use das::*;
+pub use dec::*;
+pub use div::*;
+pub use divpd::*;
+pub use divps::*;
+pub use divsd::*;
+pub use divss::*;
+pub use dppd::*;
+pub use dpps::*;
