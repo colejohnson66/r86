@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   gf2p8affineqb.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,20 +20,33 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
+pub struct Gf2p8affineqb;
+
+impl Gf2p8affineqb {
+    fn vdq_wdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdq_hdq_wdq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_hqq_wqq_ib_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}

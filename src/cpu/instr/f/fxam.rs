@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   fxam.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,20 +20,13 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
+pub struct Fxam;
+
+impl Fxam {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}

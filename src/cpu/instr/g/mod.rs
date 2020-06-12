@@ -20,20 +20,10 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
+mod gf2p8affineinvqb;
+mod gf2p8affineqb;
+mod gf2p8mulb;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
+pub use gf2p8affineinvqb::*;
+pub use gf2p8affineqb::*;
+pub use gf2p8mulb::*;

@@ -20,20 +20,14 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
+mod emms;
+mod endbr32;
+mod endbr64;
+mod enter;
+mod extractps;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
+pub use emms::*;
+pub use endbr32::*;
+pub use endbr64::*;
+pub use enter::*;
+pub use extractps::*;

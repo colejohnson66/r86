@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   fldc.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,20 +20,55 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
+pub struct Fld1;
+pub struct Fldl2t;
+pub struct Fldl2e;
+pub struct Fldpi;
+pub struct Fldlg2;
+pub struct Fldln2;
+pub struct Fldz;
+
+impl Fld1 {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Fldl2t {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Fldl2e {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Fldpi {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Fldlg2 {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Fldln2 {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Fldz {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}

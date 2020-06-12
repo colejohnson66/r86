@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   fmul.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,20 +20,43 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
+pub struct Fmul;
+pub struct Fmulp;
+pub struct Fimul;
+
+impl Fmul {
+    fn md(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn mq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn sti_st0(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Fmulp {
+    fn sti_st0(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Fimul {
+    fn md(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn mw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
