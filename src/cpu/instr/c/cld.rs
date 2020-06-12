@@ -26,7 +26,7 @@ use crate::cpu::Cpu;
 pub struct Cld;
 
 impl Cld {
-    pub fn noarg(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

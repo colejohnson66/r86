@@ -26,11 +26,11 @@ use crate::cpu::Cpu;
 pub struct Bextr;
 
 impl Bextr {
-    pub fn gd_ed_bd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed_bd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq_bq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq_bq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

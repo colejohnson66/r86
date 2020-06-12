@@ -26,15 +26,15 @@ use crate::cpu::Cpu;
 pub struct Cmpsd;
 
 impl Cmpsd {
-    pub fn vdq_wq_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn vdq_wq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_hdq_wq_ib_v(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_hdq_wq_ib_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_kgq_hdq_wq_ib_e(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_kgq_hdq_wq_ib_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

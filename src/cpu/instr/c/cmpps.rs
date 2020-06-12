@@ -26,27 +26,27 @@ use crate::cpu::Cpu;
 pub struct Cmpps;
 
 impl Cmpps {
-    pub fn vdq_wdq_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn vdq_wdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_gdq_wdq_ib_v128(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_gdq_wdq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vqq_hqq_wqq_ib_v256(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vqq_hqq_wqq_ib_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_gdq_wdq_ib_e128(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_gdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vqq_hqq_wqq_ib_e256(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vqq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdqq_hdqq_wdqq_ib_e512(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdqq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

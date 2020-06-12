@@ -26,27 +26,27 @@ use crate::cpu::Cpu;
 pub struct Cvtps2dq;
 
 impl Cvtps2dq {
-    pub fn vdq_wq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn vdq_wq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_wdq_v128(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_wdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vqq_wqq_v256(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vqq_wqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_wdq_e128(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vqq_wqq_e256(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdqq_wdqq_e512(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

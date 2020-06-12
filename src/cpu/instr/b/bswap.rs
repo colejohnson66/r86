@@ -26,11 +26,11 @@ use crate::cpu::Cpu;
 pub struct Bswap;
 
 impl Bswap {
-    pub fn gd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

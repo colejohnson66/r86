@@ -26,11 +26,11 @@ use crate::cpu::Cpu;
 pub struct Andn;
 
 impl Andn {
-    pub fn gd_bd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_bd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_bq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_bq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

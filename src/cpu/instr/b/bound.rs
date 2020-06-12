@@ -26,11 +26,11 @@ use crate::cpu::Cpu;
 pub struct Bound;
 
 impl Bound {
-    pub fn gw_ma(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ma(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ma(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ma(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

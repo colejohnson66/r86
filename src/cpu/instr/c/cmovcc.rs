@@ -41,225 +41,225 @@ pub struct Cmovle;
 pub struct Cmovg;
 
 impl Cmovo {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovno {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovb {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovae {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmove {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovne {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovbe {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmova {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovs {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovns {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovp {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovnp {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovl {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovge {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovle {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmovg {
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

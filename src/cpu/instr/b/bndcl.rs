@@ -26,11 +26,11 @@ use crate::cpu::Cpu;
 pub struct Bndcl;
 
 impl Bndcl {
-    pub fn bgdq_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn bgdq_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn bgdq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn bgdq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

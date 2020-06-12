@@ -26,27 +26,27 @@ use crate::cpu::Cpu;
 pub struct Cvtsi2sd;
 
 impl Cvtsi2sd {
-    pub fn vdq_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn vdq_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn vdq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn vdq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_hdq_ed_v(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_hdq_ed_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_hdq_ed_e(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_hdq_ed_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_hdq_eq_v(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_hdq_eq_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_hdq_eq_e(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_hdq_eq_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

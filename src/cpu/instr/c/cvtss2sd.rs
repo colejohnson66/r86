@@ -26,15 +26,15 @@ use crate::cpu::Cpu;
 pub struct Cvtss2sd;
 
 impl Cvtss2sd {
-    pub fn vdq_wd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn vdq_wd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_hdq_wd_v(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_hdq_wd_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_hdq_wd_e(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_hdq_wd_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

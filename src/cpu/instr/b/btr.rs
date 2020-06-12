@@ -26,27 +26,27 @@ use crate::cpu::Cpu;
 pub struct Btr;
 
 impl Btr {
-    pub fn ew_gw(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ew_gw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ed_gd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ed_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eq_gq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eq_gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ew_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ew_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ed_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ed_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eq_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

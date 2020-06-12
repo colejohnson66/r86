@@ -26,11 +26,11 @@ use crate::cpu::Cpu;
 pub struct Dppd;
 
 impl Dppd {
-    pub fn vdq_wdq_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn vdq_wdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_vdq_hdq_wdq_ib_v128(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_vdq_hdq_wdq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

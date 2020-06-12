@@ -26,7 +26,7 @@ use crate::cpu::Cpu;
 pub struct Arpl;
 
 impl Arpl {
-    pub fn ew_gw(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ew_gw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

@@ -26,19 +26,19 @@ use crate::cpu::Cpu;
 pub struct Div;
 
 impl Div {
-    pub fn eb(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

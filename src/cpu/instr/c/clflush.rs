@@ -26,7 +26,7 @@ use crate::cpu::Cpu;
 pub struct Clflush;
 
 impl Clflush {
-    pub fn mb(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn mb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

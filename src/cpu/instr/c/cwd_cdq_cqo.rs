@@ -28,19 +28,19 @@ pub struct Cdq;
 pub struct Cqo;
 
 impl Cwd {
-    pub fn noarg(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cdq {
-    pub fn noarg(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cqo {
-    pub fn noarg(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

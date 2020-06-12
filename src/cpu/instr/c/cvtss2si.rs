@@ -26,27 +26,27 @@ use crate::cpu::Cpu;
 pub struct Cvtss2si;
 
 impl Cvtss2si {
-    pub fn gd_wd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_wd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_wd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_wd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_gd_wd_v(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_gd_wd_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_gd_wd_e(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_gd_wd_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_gq_wd_v(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_gq_wd_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn v_gq_wd_e(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn v_gq_wd_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

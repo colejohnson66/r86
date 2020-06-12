@@ -26,7 +26,7 @@ use crate::cpu::Cpu;
 pub struct Clrssbsy;
 
 impl Clrssbsy {
-    pub fn mq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn mq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

@@ -26,7 +26,7 @@ use crate::cpu::Cpu;
 pub struct Error;
 
 impl Error {
-    fn noarg(_cpu: Cpu, _instr: Instr) -> u32 {
+    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

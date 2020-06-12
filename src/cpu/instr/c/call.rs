@@ -26,43 +26,43 @@ use crate::cpu::Cpu;
 pub struct Call;
 
 impl Call {
-    pub fn jw(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn jw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn jd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn jd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ap_op16(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ap_op16(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ap_op32(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ap_op32(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ep_op16(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ep_op16(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ep_op32(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ep_op32(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ep_op64(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ep_op64(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

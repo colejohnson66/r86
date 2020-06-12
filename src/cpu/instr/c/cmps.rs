@@ -26,19 +26,19 @@ use crate::cpu::Cpu;
 pub struct Cmps;
 
 impl Cmps {
-    pub fn xb_yb(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn xb_yb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn xw_yw(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn xw_yw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn xd_yd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn xd_yd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn xq_yq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn xq_yq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

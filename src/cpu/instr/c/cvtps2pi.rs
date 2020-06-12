@@ -26,7 +26,7 @@ use crate::cpu::Cpu;
 pub struct Cvtps2pi;
 
 impl Cvtps2pi {
-    pub fn pq_wq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn pq_wq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

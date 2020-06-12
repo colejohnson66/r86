@@ -26,7 +26,7 @@ use crate::cpu::Cpu;
 pub struct Bndstx;
 
 impl Bndstx {
-    pub fn m_bgdq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn m_bgdq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

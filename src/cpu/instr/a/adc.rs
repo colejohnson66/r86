@@ -26,79 +26,79 @@ use crate::cpu::Cpu;
 pub struct Adc;
 
 impl Adc {
-    pub fn al_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn al_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ax_iw(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ax_iw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eax_id(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eax_id(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn rax_id(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn rax_id(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eb_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eb_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ew_iw(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ew_iw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ed_id(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ed_id(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eq_id(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eq_id(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gw_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eb_gb(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eb_gb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ew_gw(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ew_gw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn ed_gd(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ed_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn eq_gq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn eq_gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gb_eb(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gb_eb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gw_ew(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gd_ed(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn gq_eq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

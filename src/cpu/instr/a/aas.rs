@@ -26,7 +26,7 @@ use crate::cpu::Cpu;
 pub struct Aas;
 
 impl Aas {
-    pub fn ib(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

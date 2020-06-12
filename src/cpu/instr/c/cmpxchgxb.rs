@@ -27,13 +27,13 @@ pub struct Cmpxchg8b;
 pub struct Cmpxchg16b;
 
 impl Cmpxchg8b {
-    pub fn mq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn mq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
 impl Cmpxchg16b {
-    pub fn mdq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn mdq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

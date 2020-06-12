@@ -26,19 +26,19 @@ use crate::cpu::Cpu;
 pub struct Bndmov;
 
 impl Bndmov {
-    pub fn bgdq_beq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn bgdq_beq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn bgdq_bedq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn bgdq_bedq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn beq_bgdq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn beq_bgdq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    pub fn bedq_bgdq(_cpu: Cpu, _instr: Instr) -> u32 {
+    pub fn bedq_bgdq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
