@@ -23,6 +23,10 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub fn error(_cpu: Cpu, _instr: Instr) -> u32 {
-    unimplemented!();
+pub struct Error;
+
+impl Error {
+    fn noarg(_cpu: Cpu, _instr: Instr) -> u32 {
+        unimplemented!();
+    }
 }
