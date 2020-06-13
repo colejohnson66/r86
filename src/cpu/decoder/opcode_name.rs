@@ -2818,16 +2818,16 @@ pub enum OpcodeName {
 
     // [A4] MOVS m8, m8
     // [A4] MOVSB
-    MOVSB_YbXb,
+    MOVS_YbXb,
     // [A5] MOVS m16, m16
     // [A5] MOVSW
-    MOVSW_YbXb,
+    MOVS_YwXw,
     // [A5] MOVS m32, m32
     // [A5] MOVSD
-    MOVSD_YbXb,
+    MOVS_YdXd,
     // [REX.W A5] MOVS m64, m64
     // [REX.W A5] MOVSQ
-    MOVSW_YqXq,
+    MOVS_YqXq,
 
     // [F2 0F 10 /r] MOVSD xmm1, xmm2
     // [F2 0F 10 /r] MOVSD xmm1, m64
@@ -3017,7 +3017,7 @@ pub enum OpcodeName {
     // [VEX.LIG.F2.0F.WIG 59 /r] VMULSD xmm1, xmm2, xmm3/m64
     VMULSD_VdqHdqWq_V,
     // [EVEX.LIG.F2.0F.W1 59 /r] VMULSD xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VMULSD_VdqHdqWqE,
+    VMULSD_VdqHdqWq_E,
 
     // [F3 0F 59 /r] MULSS xmm1, xmm2/m32
     MULSS_VdqWd,

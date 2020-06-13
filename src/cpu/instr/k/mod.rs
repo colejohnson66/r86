@@ -20,32 +20,30 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
-mod h;
-mod i;
-mod j;
-mod k;
-mod l;
-mod m;
+mod kadd;
+mod kand;
+mod kandn;
+mod kmov;
+mod knot;
+mod kor;
+mod kortest;
+mod kshiftl;
+mod kshiftr;
+mod ktest;
+mod kunpckb;
+mod kxnor;
+mod kxor;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
-pub use h::*;
-pub use i::*;
-pub use j::*;
-pub use k::*;
-pub use l::*;
-pub use m::*;
+pub use kadd::*;
+pub use kand::*;
+pub use kandn::*;
+pub use kmov::*;
+pub use knot::*;
+pub use kor::*;
+pub use kortest::*;
+pub use kshiftl::*;
+pub use kshiftr::*;
+pub use ktest::*;
+pub use kunpckb::*;
+pub use kxnor::*;
+pub use kxor::*;
