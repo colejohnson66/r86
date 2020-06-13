@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   hsubpd.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,26 +20,14 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
-mod h;
-mod i;
-mod j;
+mod haddpd;
+mod haddps;
+mod hlt;
+mod hsubpd;
+mod hsubps;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
-pub use h::*;
-pub use i::*;
-pub use j::*;
+pub use haddpd::*;
+pub use haddps::*;
+pub use hlt::*;
+pub use hsubpd::*;
+pub use hsubps::*;

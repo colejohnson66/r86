@@ -20,26 +20,8 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
-mod h;
-mod i;
-mod j;
+mod jcc;
+mod jmp;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
-pub use h::*;
-pub use i::*;
-pub use j::*;
+pub use jcc::*;
+pub use jmp::*;

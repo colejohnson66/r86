@@ -20,26 +20,28 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
-mod h;
-mod i;
-mod j;
+mod idiv;
+mod imul;
+mod in_;
+mod inc;
+mod incsspd_incsspq;
+mod ins;
+mod insertps;
+mod int;
+mod invd;
+mod invlpg;
+mod invpcid;
+mod iret;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
-pub use h::*;
-pub use i::*;
-pub use j::*;
+pub use idiv::*;
+pub use imul::*;
+pub use in_::*;
+pub use inc::*;
+pub use incsspd_incsspq::*;
+pub use ins::*;
+pub use insertps::*;
+pub use int::*;
+pub use invd::*;
+pub use invlpg::*;
+pub use invpcid::*;
+pub use iret::*;
