@@ -984,7 +984,6 @@ pub enum OpcodeName {
     // [VEX.256.F3.0F.WIG E6 /r] VCVTDQ2PD ymm1, xmm2/m128
     VCVTDQ2PD_VqqWdq_V256,
     // [EVEX.128.F3.0F.W0 E6 /r] VCVTDQ2PD xmm1 {k1}{z}, xmm2/m64/m32bcst
-    // NOTE: Intel manual says `m128`
     VCVTDQ2PD_VdqWq_E128,
     // [EVEX.256.F3.0F.W0 E6 /r] VCVTDQ2PD ymm1 {k1}{z}, xmm2/m128/m32bcst
     VCVTDQ2PD_VqqWdq_E256,
