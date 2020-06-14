@@ -20,36 +20,14 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
-mod h;
-mod i;
-mod j;
-mod k;
-mod l;
-mod m;
-mod n;
-mod o;
+mod or;
+mod orpd;
+mod orps;
+mod out;
+mod outs;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
-pub use h::*;
-pub use i::*;
-pub use j::*;
-pub use k::*;
-pub use l::*;
-pub use m::*;
-pub use n::*;
-pub use o::*;
+pub use or::*;
+pub use orpd::*;
+pub use orps::*;
+pub use out::*;
+pub use outs::*;
