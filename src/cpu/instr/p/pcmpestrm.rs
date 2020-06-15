@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   pcmpestrm.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,38 +20,17 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
-mod h;
-mod i;
-mod j;
-mod k;
-mod l;
-mod m;
-mod n;
-mod o;
-mod p;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
-pub use h::*;
-pub use i::*;
-pub use j::*;
-pub use k::*;
-pub use l::*;
-pub use m::*;
-pub use n::*;
-pub use o::*;
-pub use p::*;
+pub struct Pcmpestrm;
+
+impl Pcmpestrm {
+    fn vdq_wdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdq_hdq_wdq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
