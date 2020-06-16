@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   scax.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,42 +20,25 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
-mod h;
-mod i;
-mod j;
-mod k;
-mod l;
-mod m;
-mod n;
-mod o;
-mod p;
-mod r;
-mod s;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
-pub use h::*;
-pub use i::*;
-pub use j::*;
-pub use k::*;
-pub use l::*;
-pub use m::*;
-pub use n::*;
-pub use o::*;
-pub use p::*;
-pub use r::*;
-pub use s::*;
+pub struct Scax;
+
+impl Scax {
+    pub fn al_yb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn ax_yw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn eax_yd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn rax_yq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}

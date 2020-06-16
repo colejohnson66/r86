@@ -5647,7 +5647,7 @@ pub enum OpcodeName {
     // [VEX.LIG.F2.0F.WIG 51 /r] VSQRTSD xmm1, xmm2, xmm3/m64
     VSQRTSD_VdqHdqWq_V,
     // [EVEX.LIG.F2.0F.W1 51 /r] VSQRTSD xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VSQRTSD_VdqHdqWd_E,
+    VSQRTSD_VdqHdqWq_E,
 
     // [F2 0F 51 /r] SQRTSS xmm1, xmm2/m64
     SQRTSS_VdqWq,
