@@ -22,6 +22,7 @@
  */
 mod daa;
 mod das;
+mod dbpsadbw;
 mod dec;
 mod div;
 mod divpd;
@@ -33,6 +34,7 @@ mod dpps;
 
 pub use daa::*;
 pub use das::*;
+pub use dbpsadbw::*;
 pub use dec::*;
 pub use div::*;
 pub use divpd::*;
