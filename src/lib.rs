@@ -25,6 +25,7 @@
 #![allow(dead_code)]
 
 pub mod cpu;
+pub mod mem;
 pub mod reg;
 
 pub type Address = u64;
