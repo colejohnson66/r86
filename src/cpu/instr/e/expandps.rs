@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   expandps.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,22 +20,21 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod emms;
-mod endbr32;
-mod endbr64;
-mod enter;
-mod expandpd;
-mod expandps;
-mod extractf;
-mod extracti;
-mod extractps;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use emms::*;
-pub use endbr32::*;
-pub use endbr64::*;
-pub use enter::*;
-pub use expandpd::*;
-pub use expandps::*;
-pub use extractf::*;
-pub use extracti::*;
-pub use extractps::*;
+pub struct Expandps;
+
+impl Expandps {
+    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
