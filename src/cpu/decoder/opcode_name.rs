@@ -6249,17 +6249,17 @@ pub enum OpcodeName {
     // [EVEX.128.66.0F38.W1 B8 /r] VFMADD231PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
     VFMADD231PD_VdqHdqWdq_E128,
     // [EVEX.256.66.0F38.W1 98 /r] VFMADD132PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADD132PD_VdqHdqWdq_E256,
+    VFMADD132PD_VqqHqqWqq_E256,
     // [EVEX.256.66.0F38.W1 A8 /r] VFMADD213PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADD213PD_VdqHdqWdq_E256,
+    VFMADD213PD_VqqHqqWqq_E256,
     // [EVEX.256.66.0F38.W1 B8 /r] VFMADD231PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADD231PD_VdqHdqWdq_E256,
+    VFMADD231PD_VqqHqqWqq_E256,
     // [EVEX.512.66.0F38.W1 98 /r] VFMADD132PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADD132PD_VdqHdqWdq_E512,
+    VFMADD132PD_VdqqHdqqWdqq_E512,
     // [EVEX.512.66.0F38.W1 A8 /r] VFMADD213PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADD213PD_VdqHdqWdq_E512,
+    VFMADD213PD_VdqqHdqqWdqq_E512,
     // [EVEX.512.66.0F38.W1 B8 /r] VFMADD231PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADD231PD_VdqHdqWdq_E512,
+    VFMADD231PD_VdqqHdqqWdqq_E512,
 
     // [VEX.128.66.0F38.W0 98 /r] VFMADD132PS xmm1, xmm2, xmm3/m128
     VFMADD132PS_VdqHdqWdq_V128,
@@ -6280,17 +6280,17 @@ pub enum OpcodeName {
     // [EVEX.128.66.0F38.W0 B8 /r] VFMADD231PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
     VFMADD231PS_VdqHdqWdq_E128,
     // [EVEX.256.66.0F38.W0 98 /r] VFMADD132PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADD132PS_VdqHdqWdq_E256,
+    VFMADD132PS_VqqHqqWqq_E256,
     // [EVEX.256.66.0F38.W0 A8 /r] VFMADD213PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADD213PS_VdqHdqWdq_E256,
+    VFMADD213PS_VqqHqqWqq_E256,
     // [EVEX.256.66.0F38.W0 B8 /r] VFMADD231PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADD231PS_VdqHdqWdq_E256,
+    VFMADD231PS_VqqHqqWqq_E256,
     // [EVEX.512.66.0F38.W0 98 /r] VFMADD132PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADD132PS_VdqHdqWdq_E512,
+    VFMADD132PS_VdqqHdqqWdqq_E512,
     // [EVEX.512.66.0F38.W0 A8 /r] VFMADD213PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADD213PS_VdqHdqWdq_E512,
+    VFMADD213PS_VdqqHdqqWdqq_E512,
     // [EVEX.512.66.0F38.W0 B8 /r] VFMADD231PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADD231PS_VdqHdqWdq_E512,
+    VFMADD231PS_VdqqHdqqWdqq_E512,
 
     // [VEX.LIG.66.0F38.W1 99 /r] VFMADD132SD xmm1, xmm2, xmm3/m64
     VFMADD132SD_VdqHdqWq_V,
