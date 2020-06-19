@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   popcnt.rs
+ * File:   pexpand.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -23,27 +23,12 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub struct Popcnt;
-pub struct Popcntb;
-pub struct Popcntw;
-pub struct Popcntd;
-pub struct Popcntq;
+pub struct Pexpandb;
+pub struct Pexpandw;
+pub struct Pexpandd;
+pub struct Pexpandq;
 
-impl Popcnt {
-    fn ew_gw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn ed_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn eq_gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-}
-
-impl Popcntb {
+impl Pexpandb {
     fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
@@ -57,7 +42,7 @@ impl Popcntb {
     }
 }
 
-impl Popcntw {
+impl Pexpandw {
     fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
@@ -71,7 +56,7 @@ impl Popcntw {
     }
 }
 
-impl Popcntd {
+impl Pexpandd {
     fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
@@ -85,7 +70,7 @@ impl Popcntd {
     }
 }
 
-impl Popcntq {
+impl Pexpandq {
     fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }

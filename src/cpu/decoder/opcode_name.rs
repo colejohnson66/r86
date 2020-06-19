@@ -6964,7 +6964,7 @@ pub enum OpcodeName {
     // [EVEX.256.66.0F38.W0 5A /r] VBROADCASTI32X4 ymm1 {k1}{z}, m128
     VBROADCASTI32X4_VqqMdq_E256,
     // [EVEX.512.66.0F38.W0 5A /r] VBROADCASTI32X4 zmm1 {k1}{z}, m128
-    VBROADCASTI32X4_VdqqMdq_E256,
+    VBROADCASTI32X4_VdqqMdq_E512,
     // [EVEX.256.66.0F38.W1 5A /r] VBROADCASTI64X2 ymm1 {k1}{z}, m128
     VBROADCASTI64X2_VqqMdq_E256,
     // [EVEX.512.66.0F38.W1 5A /r] VBROADCASTI64X2 zmm1 {k1}{z}, m128
@@ -7322,9 +7322,9 @@ pub enum OpcodeName {
     // [VEX.128.66.0F38.W0 90 /r] VPGATHERDD xmm1, vm32x, xmm2
     VPGATHERDD_VdqVMdHdq_V128,
     // [VEX.128.66.0F38.W0 91 /r] VPGATHERQD xmm1, vm64x, xmm2
-    VPGATHERDD_VdqVMqHdq_V256,
+    VPGATHERQD_VdqVMqHdq_V128,
     // [VEX.256.66.0F38.W0 90 /r] VPGATHERDD ymm1, vm32y, ymm2
-    VPGATHERDD_VqqVMdHqq_V128,
+    VPGATHERDD_VqqVMdHqq_V256,
     // [VEX.256.66.0F38.W0 91 /r] VPGATHERQD ymm1, vm64y, ymm2
     VPGATHERQD_VqqVMqHqq_V256,
 
@@ -7334,21 +7334,21 @@ pub enum OpcodeName {
     VPGATHERDD_VqqVMd_E256,
     // [EVEX.512.66.0F38.W0 90 /vsib] VPGATHERDD zmm1 {k1}, vm32z
     VPGATHERDD_VdqqVMd_E512,
-    // [EVEX.128.66.0F38.W1 90 /vsib] VPGATHERDQ xmm1 {k1}, vm64x
-    VPGATHERDD_VdqVMq_E128,
-    // [EVEX.256.66.0F38.W1 90 /vsib] VPGATHERDQ ymm1 {k1}, vm64y
-    VPGATHERDD_VqqVMq_E256,
-    // [EVEX.512.66.0F38.W1 90 /vsib] VPGATHERDQ zmm1 {k1}, vm64z
-    VPGATHERDD_VdqqVMq_E512,
+    // [EVEX.128.66.0F38.W1 90 /vsib] VPGATHERDQ xmm1 {k1}, vm32x
+    VPGATHERDQ_VdqVMd_E128,
+    // [EVEX.256.66.0F38.W1 90 /vsib] VPGATHERDQ ymm1 {k1}, vm32y
+    VPGATHERDQ_VqqVMd_E256,
+    // [EVEX.512.66.0F38.W1 90 /vsib] VPGATHERDQ zmm1 {k1}, vm32z
+    VPGATHERDQ_VdqqVMd_E512,
 
     // [VEX.128.66.0F38.W1 90 /r] VPGATHERDQ xmm1, vm32x, xmm2
     VPGATHERDQ_VdqVMdHdq_V128,
-    // [VEX.128.66.0F38.W1 91 /r] VPGATHERDQ xmm1, vm64x, xmm2
-    VPGATHERDQ_VdqVMqHdq_V128,
+    // [VEX.128.66.0F38.W1 91 /r] VPGATHERQQ xmm1, vm64x, xmm2
+    VPGATHERQQ_VdqVMqHdq_V128,
     // [VEX.256.66.0F38.W1 90 /r] VPGATHERDQ ymm1, vm32x, ymm2
     VPGATHERDQ_VqqVMdHqq_V256,
-    // [VEX.256.66.0F38.W1 91 /r] VPGATHERDQ ymm1, vm64x, ymm2
-    VPGATHERDQ_VqqVMqHqq_V256,
+    // [VEX.256.66.0F38.W1 91 /r] VPGATHERQQ ymm1, vm64x, ymm2
+    VPGATHERQQ_VqqVMqHqq_V256,
 
     // [EVEX.128.66.0F38.W0 91 /vsib] VPGATHERQD xmm1 {k1}, vm64x
     VPGATHERQD_VdqVMq_E128,

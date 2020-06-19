@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   popcnt.rs
+ * File:   pscatter.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -23,78 +23,63 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub struct Popcnt;
-pub struct Popcntb;
-pub struct Popcntw;
-pub struct Popcntd;
-pub struct Popcntq;
+pub struct Pscatterdd;
+pub struct Pscatterdq;
+pub struct Pscatterqd;
+pub struct Pscatterqq;
 
-impl Popcnt {
-    fn ew_gw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Pscatterdd {
+    fn v_vmd_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn ed_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vmd_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn eq_gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-}
-
-impl Popcntb {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vmd_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
-impl Popcntw {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Pscatterdq {
+    fn v_vmd_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vmd_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-}
-
-impl Popcntd {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vmd_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
-impl Popcntq {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Pscatterqd {
+    fn v_vmq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vmq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vmq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Pscatterqq {
+    fn v_vmq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vmq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vmq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

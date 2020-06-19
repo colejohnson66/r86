@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   popcnt.rs
+ * File:   psrav.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -23,78 +23,56 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub struct Popcnt;
-pub struct Popcntb;
-pub struct Popcntw;
-pub struct Popcntd;
-pub struct Popcntq;
+pub struct Psravw;
+pub struct Psravd;
+pub struct Psravq;
 
-impl Popcnt {
-    fn ew_gw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Psravw {
+    fn v_vdq_hdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn ed_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vqq_hqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn eq_gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-}
-
-impl Popcntb {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vdqq_hdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
-impl Popcntw {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Psravd {
+    fn v_vdq_hdq_wdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vqq_hqq_wqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-}
-
-impl Popcntd {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vdq_hdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vqq_hqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vdqq_hdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
 
-impl Popcntq {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Psravq {
+    fn v_vdq_hdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vqq_hqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vdqq_hdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
