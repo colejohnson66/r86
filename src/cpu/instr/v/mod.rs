@@ -20,54 +20,6 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod a;
-mod b;
-mod c;
-mod d;
-mod e;
-mod error;
-mod f;
-mod g;
-mod h;
-mod i;
-mod j;
-mod k;
-mod l;
-mod m;
-mod n;
-mod o;
-mod p;
-mod r;
-mod s;
-mod t;
-mod u;
-mod v;
-mod w;
-mod x;
-mod z;
+mod verr_verw;
 
-pub use a::*;
-pub use b::*;
-pub use c::*;
-pub use d::*;
-pub use e::*;
-pub use error::*;
-pub use f::*;
-pub use g::*;
-pub use h::*;
-pub use i::*;
-pub use j::*;
-pub use k::*;
-pub use l::*;
-pub use m::*;
-pub use n::*;
-pub use o::*;
-pub use p::*;
-pub use r::*;
-pub use s::*;
-pub use t::*;
-pub use u::*;
-pub use v::*;
-pub use w::*;
-pub use x::*;
-pub use z::*;
+pub use verr_verw::*;
