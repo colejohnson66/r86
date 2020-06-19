@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   testp.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,12 +20,28 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod test;
-mod testp;
-mod tpause;
-mod tzcnt;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use test::*;
-pub use testp::*;
-pub use tpause::*;
-pub use tzcnt::*;
+pub struct Testps;
+pub struct Testpd;
+
+impl Testps {
+    fn v_vdq_wdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Testpd {
+    fn v_vdq_wdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}

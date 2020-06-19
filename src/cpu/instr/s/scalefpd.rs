@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   scalefpd.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,12 +20,21 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod test;
-mod testp;
-mod tpause;
-mod tzcnt;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use test::*;
-pub use testp::*;
-pub use tpause::*;
-pub use tzcnt::*;
+pub struct Scalefpd;
+
+impl Scalefpd {
+    fn v_vdq_hdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}

@@ -8003,7 +8003,7 @@ pub enum OpcodeName {
     VRSQRT14SS_VdqHdqWd_E,
 
     // [EVEX.128.66.0F38.W1 2C /r] VSCALEFPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VSCALEFPD_VdqVdqWdq_E128,
+    VSCALEFPD_VdqHdqWdq_E128,
     // [EVEX.256.66.0F38.W1 2C /r] VSCALEFPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
     VSCALEFPD_VqqHqqWqq_E256,
     // [EVEX.512.66.0F38.W1 2C /r] VSCALEFPD zmm1 {k1}{z}, zmm2, xmm3/m512/m64bcst
@@ -8020,7 +8020,7 @@ pub enum OpcodeName {
     VSCALEFPS_VdqqHdqqWdqq_E512,
 
     // [EVEX.LIG.66.0F38.W0 2D /r] VSCALEFSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
-    VSCALEFSS_VdqHdqWq_E,
+    VSCALEFSS_VdqHdqWd_E,
 
     // [EVEX.128.66.0F38.W0 A2 /vsib] VSCATTERDPS vm32x {k1}, xmm1
     VSCATTERDPS_VMdVdq_E128,

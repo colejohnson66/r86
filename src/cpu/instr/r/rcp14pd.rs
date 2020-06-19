@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   rcp14pd.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,12 +20,21 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod test;
-mod testp;
-mod tpause;
-mod tzcnt;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use test::*;
-pub use testp::*;
-pub use tpause::*;
-pub use tzcnt::*;
+pub struct Rcp14pd;
+
+impl Rcp14pd {
+    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
