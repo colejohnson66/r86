@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   in_.rs
+ * File:   inserti.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -23,30 +23,46 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub struct In;
+pub struct Inserti128;
+pub struct Inserti32x4;
+pub struct Inserti64x2;
+pub struct Inserti32x8;
+pub struct Inserti64x4;
 
-impl In {
-    fn al_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Inserti128 {
+    fn v_vqq_hqq_wdq_ib_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Inserti32x4 {
+    fn v_vqq_hqq_wdq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn ax_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vdqq_hdqq_wdq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Inserti64x2 {
+    fn v_vqq_hqq_wdq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn eax_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vdqq_hdqq_wdq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
+}
 
-    fn al_dx(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Inserti32x8 {
+    fn v_vdqq_hdqq_wdq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
+}
 
-    fn ax_dx(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
-
-    fn eax_dx(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Inserti64x4 {
+    fn v_vdqq_hdqq_wdq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

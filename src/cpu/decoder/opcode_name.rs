@@ -6728,21 +6728,21 @@ pub enum OpcodeName {
 
     // [VEX.128.66.0F38.W1 92 /r] VGATHERDPD xmm1, vm32x, xmm2
     VGATHERDPD_VdqVMdHdq_V128,
-    // [VEX.128.66.0F38.W1 93 /r] VGATHERDPD xmm1, vm64x, xmm2
-    VGATHERDPD_VdqVMqHdq_V128,
+    // [VEX.128.66.0F38.W1 93 /r] VGATHERQPD xmm1, vm64x, xmm2
+    VGATHERQPD_VdqVMqHdq_V128,
     // [VEX.256.66.0F38.W1 92 /r] VGATHERDPD ymm1, vm32y, ymm2
     VGATHERDPD_VqqVMdHqq_V256,
-    // [VEX.256.66.0F38.W1 93 /r] VGATHERDPD ymm1, vm64y, ymm2
-    VGATHERDPD_VqqVMqHqq_V256,
+    // [VEX.256.66.0F38.W1 93 /r] VGATHERQPD ymm1, vm64y, ymm2
+    VGATHERQPD_VqqVMqHqq_V256,
 
     // [VEX.128.66.0F38.W0 92 /r] VGATHERDPS xmm1, vm32x, xmm2
     VGATHERDPS_VdqVMdHdq_V128,
-    // [VEX.128.66.0F38.W0 93 /r] VGATHERDPS xmm1, vm64x, xmm2
-    VGATHERDPS_VdqVMqHdq_V128,
+    // [VEX.128.66.0F38.W0 93 /r] VGATHERQPS xmm1, vm64x, xmm2
+    VGATHERQPS_VdqVMqHdq_V128,
     // [VEX.256.66.0F38.W0 92 /r] VGATHERDPS ymm1, vm32y, ymm2
     VGATHERDPS_VqqVMdHqq_V256,
-    // [VEX.256.66.0F38.W0 93 /r] VGATHERDPS ymm1, vm64y, ymm2
-    VGATHERDPS_VqqVMqHqq_V256,
+    // [VEX.256.66.0F38.W0 93 /r] VGATHERQPS ymm1, vm64y, ymm2
+    VGATHERQPS_VqqVMqHqq_V256,
 
     // [EVEX.128.66.0F38.W0 92 /vsib] VGATHERDPS xmm1 {k1}{z}, vm32x
     VGATHERDPS_VdqVMd_E128,
@@ -6849,13 +6849,13 @@ pub enum OpcodeName {
     // [VEX.256.66.0F38.W0 2D /r] VMASKMOVPD ymm1, ymm2, m256
     VMASKMOVPD_VqqHqqWqq_V256,
     // [VEX.128.66.0F38.W0 2E /r] VMASKMOVPS m128, xmm1, xmm2
-    VMASKMOVPS_WdqHdqWdq_V128,
+    VMASKMOVPS_WdqHdqVdq_V128,
     // [VEX.256.66.0F38.W0 2E /r] VMASKMOVPS m256, ymm1, ymm2
-    VMASKMOVPS_WqqHqqWqq_V256,
+    VMASKMOVPS_WqqHqqVqq_V256,
     // [VEX.128.66.0F38.W0 2F /r] VMASKMOVPD m128, xmm1, xmm2
-    VMASKMOVPD_WdqHdqWdq_V128,
+    VMASKMOVPD_WdqHdqVdq_V128,
     // [VEX.256.66.0F38.W0 2F /r] VMASKMOVPD m256, ymm1, ymm2
-    VMASKMOVPD_WqqHqqWqq_V256,
+    VMASKMOVPD_WqqHqqVqq_V256,
 
     // [VEX.128.66.0F3A.W0 02 /r ib] VPBLENDD xmm1, xmm2, xmm3/m128, imm8
     VPBLENDD_VdqHdqWdqIb_V128,

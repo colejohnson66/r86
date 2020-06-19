@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   getmantsd.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -20,32 +20,13 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod idiv;
-mod imul;
-mod in_;
-mod inc;
-mod incsspd_incsspq;
-mod ins;
-mod insertf;
-mod inserti;
-mod insertps;
-mod int;
-mod invd;
-mod invlpg;
-mod invpcid;
-mod iret;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use idiv::*;
-pub use imul::*;
-pub use in_::*;
-pub use inc::*;
-pub use incsspd_incsspq::*;
-pub use ins::*;
-pub use insertf::*;
-pub use inserti::*;
-pub use insertps::*;
-pub use int::*;
-pub use invd::*;
-pub use invlpg::*;
-pub use invpcid::*;
-pub use iret::*;
+pub struct Getmantsd;
+
+impl Getmantsd {
+    fn v_vdq_hdq_wq_ib_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}

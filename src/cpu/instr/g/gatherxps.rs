@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   in_.rs
+ * File:   gatherxps.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -23,30 +23,49 @@
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
-pub struct In;
+pub struct Gatherdps;
+pub struct Gatherqps;
 
-impl In {
-    fn al_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+impl Gatherdps {
+    fn v_vdq_vmd_hdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn ax_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vqq_vmd_hqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn eax_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vdq_vmd_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn al_dx(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vqq_vmd_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn ax_dx(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vdqq_vmd_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Gatherqps {
+    fn v_vdq_vmq_hdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 
-    fn eax_dx(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+    fn v_vqq_vmq_hqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdq_vmq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_vmq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_vmq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }
