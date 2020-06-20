@@ -42,7 +42,6 @@ impl Pmovm2b {
     }
 }
 
-
 impl Pmovm2w {
     fn v_vdq_krq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
@@ -57,7 +56,6 @@ impl Pmovm2w {
     }
 }
 
-
 impl Pmovm2d {
     fn v_vdq_krq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
@@ -71,7 +69,6 @@ impl Pmovm2d {
         unimplemented!();
     }
 }
-
 
 impl Pmovm2q {
     fn v_vdq_krq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
