@@ -132,7 +132,7 @@
  * VM - vm##x
  *
  * Custom operand types:
- * dqq - Doublequadquadword (512-bits), regardles of operand-size
+ * dqq - Doublequadquadword (512-bits), regardless of operand-size
  *       attribute
  * t   - Tenbyte (80 bits)
  *
