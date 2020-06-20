@@ -20,6 +20,7 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
+pub mod flag;
 mod opcode_name;
 
 pub use crate::cpu::decoder::opcode_name::OpcodeName;
@@ -44,9 +45,9 @@ pub struct Opcode {
     pub special_attr: u32,
 }
 
-pub struct OpmapEntry {
+pub struct OpcodeMapEntry {
     pub handler: InstrHandler,
-    pub attr: u64,
+    pub attr: Vec<&'static dyn flag::Flag>,
 }
 
 pub enum IsaExtension {
