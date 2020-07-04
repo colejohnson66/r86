@@ -20,10 +20,30 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
+mod gatherxpd;
+mod gatherxps;
+mod getexppd;
+mod getexpps;
+mod getexpsd;
+mod getexpss;
+mod getmanss;
+mod getmantpd;
+mod getmantps;
+mod getmantsd;
 mod gf2p8affineinvqb;
 mod gf2p8affineqb;
 mod gf2p8mulb;
 
+pub use gatherxpd::*;
+pub use gatherxps::*;
+pub use getexppd::*;
+pub use getexpps::*;
+pub use getexpsd::*;
+pub use getexpss::*;
+pub use getmanss::*;
+pub use getmantpd::*;
+pub use getmantps::*;
+pub use getmantsd::*;
 pub use gf2p8affineinvqb::*;
 pub use gf2p8affineqb::*;
 pub use gf2p8mulb::*;

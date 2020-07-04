@@ -132,7 +132,7 @@
  * VM - vm##x
  *
  * Custom operand types:
- * dqq - Doublequadquadword (512-bits), regardles of operand-size
+ * dqq - Doublequadquadword (512-bits), regardless of operand-size
  *       attribute
  * t   - Tenbyte (80 bits)
  *
@@ -6728,21 +6728,21 @@ pub enum OpcodeName {
 
     // [VEX.128.66.0F38.W1 92 /r] VGATHERDPD xmm1, vm32x, xmm2
     VGATHERDPD_VdqVMdHdq_V128,
-    // [VEX.128.66.0F38.W1 93 /r] VGATHERDPD xmm1, vm64x, xmm2
-    VGATHERDPD_VdqVMqHdq_V128,
+    // [VEX.128.66.0F38.W1 93 /r] VGATHERQPD xmm1, vm64x, xmm2
+    VGATHERQPD_VdqVMqHdq_V128,
     // [VEX.256.66.0F38.W1 92 /r] VGATHERDPD ymm1, vm32y, ymm2
     VGATHERDPD_VqqVMdHqq_V256,
-    // [VEX.256.66.0F38.W1 93 /r] VGATHERDPD ymm1, vm64y, ymm2
-    VGATHERDPD_VqqVMqHqq_V256,
+    // [VEX.256.66.0F38.W1 93 /r] VGATHERQPD ymm1, vm64y, ymm2
+    VGATHERQPD_VqqVMqHqq_V256,
 
     // [VEX.128.66.0F38.W0 92 /r] VGATHERDPS xmm1, vm32x, xmm2
     VGATHERDPS_VdqVMdHdq_V128,
-    // [VEX.128.66.0F38.W0 93 /r] VGATHERDPS xmm1, vm64x, xmm2
-    VGATHERDPS_VdqVMqHdq_V128,
+    // [VEX.128.66.0F38.W0 93 /r] VGATHERQPS xmm1, vm64x, xmm2
+    VGATHERQPS_VdqVMqHdq_V128,
     // [VEX.256.66.0F38.W0 92 /r] VGATHERDPS ymm1, vm32y, ymm2
     VGATHERDPS_VqqVMdHqq_V256,
-    // [VEX.256.66.0F38.W0 93 /r] VGATHERDPS ymm1, vm64y, ymm2
-    VGATHERDPS_VqqVMqHqq_V256,
+    // [VEX.256.66.0F38.W0 93 /r] VGATHERQPS ymm1, vm64y, ymm2
+    VGATHERQPS_VqqVMqHqq_V256,
 
     // [EVEX.128.66.0F38.W0 92 /vsib] VGATHERDPS xmm1 {k1}{z}, vm32x
     VGATHERDPS_VdqVMd_E128,
@@ -6849,13 +6849,13 @@ pub enum OpcodeName {
     // [VEX.256.66.0F38.W0 2D /r] VMASKMOVPD ymm1, ymm2, m256
     VMASKMOVPD_VqqHqqWqq_V256,
     // [VEX.128.66.0F38.W0 2E /r] VMASKMOVPS m128, xmm1, xmm2
-    VMASKMOVPS_WdqHdqWdq_V128,
+    VMASKMOVPS_WdqHdqVdq_V128,
     // [VEX.256.66.0F38.W0 2E /r] VMASKMOVPS m256, ymm1, ymm2
-    VMASKMOVPS_WqqHqqWqq_V256,
+    VMASKMOVPS_WqqHqqVqq_V256,
     // [VEX.128.66.0F38.W0 2F /r] VMASKMOVPD m128, xmm1, xmm2
-    VMASKMOVPD_WdqHdqWdq_V128,
+    VMASKMOVPD_WdqHdqVdq_V128,
     // [VEX.256.66.0F38.W0 2F /r] VMASKMOVPD m256, ymm1, ymm2
-    VMASKMOVPD_WqqHqqWqq_V256,
+    VMASKMOVPD_WqqHqqVqq_V256,
 
     // [VEX.128.66.0F3A.W0 02 /r ib] VPBLENDD xmm1, xmm2, xmm3/m128, imm8
     VPBLENDD_VdqHdqWdqIb_V128,
@@ -6964,7 +6964,7 @@ pub enum OpcodeName {
     // [EVEX.256.66.0F38.W0 5A /r] VBROADCASTI32X4 ymm1 {k1}{z}, m128
     VBROADCASTI32X4_VqqMdq_E256,
     // [EVEX.512.66.0F38.W0 5A /r] VBROADCASTI32X4 zmm1 {k1}{z}, m128
-    VBROADCASTI32X4_VdqqMdq_E256,
+    VBROADCASTI32X4_VdqqMdq_E512,
     // [EVEX.256.66.0F38.W1 5A /r] VBROADCASTI64X2 ymm1 {k1}{z}, m128
     VBROADCASTI64X2_VqqMdq_E256,
     // [EVEX.512.66.0F38.W1 5A /r] VBROADCASTI64X2 zmm1 {k1}{z}, m128
@@ -7322,9 +7322,9 @@ pub enum OpcodeName {
     // [VEX.128.66.0F38.W0 90 /r] VPGATHERDD xmm1, vm32x, xmm2
     VPGATHERDD_VdqVMdHdq_V128,
     // [VEX.128.66.0F38.W0 91 /r] VPGATHERQD xmm1, vm64x, xmm2
-    VPGATHERDD_VdqVMqHdq_V256,
+    VPGATHERQD_VdqVMqHdq_V128,
     // [VEX.256.66.0F38.W0 90 /r] VPGATHERDD ymm1, vm32y, ymm2
-    VPGATHERDD_VqqVMdHqq_V128,
+    VPGATHERDD_VqqVMdHqq_V256,
     // [VEX.256.66.0F38.W0 91 /r] VPGATHERQD ymm1, vm64y, ymm2
     VPGATHERQD_VqqVMqHqq_V256,
 
@@ -7334,21 +7334,21 @@ pub enum OpcodeName {
     VPGATHERDD_VqqVMd_E256,
     // [EVEX.512.66.0F38.W0 90 /vsib] VPGATHERDD zmm1 {k1}, vm32z
     VPGATHERDD_VdqqVMd_E512,
-    // [EVEX.128.66.0F38.W1 90 /vsib] VPGATHERDQ xmm1 {k1}, vm64x
-    VPGATHERDD_VdqVMq_E128,
-    // [EVEX.256.66.0F38.W1 90 /vsib] VPGATHERDQ ymm1 {k1}, vm64y
-    VPGATHERDD_VqqVMq_E256,
-    // [EVEX.512.66.0F38.W1 90 /vsib] VPGATHERDQ zmm1 {k1}, vm64z
-    VPGATHERDD_VdqqVMq_E512,
+    // [EVEX.128.66.0F38.W1 90 /vsib] VPGATHERDQ xmm1 {k1}, vm32x
+    VPGATHERDQ_VdqVMd_E128,
+    // [EVEX.256.66.0F38.W1 90 /vsib] VPGATHERDQ ymm1 {k1}, vm32y
+    VPGATHERDQ_VqqVMd_E256,
+    // [EVEX.512.66.0F38.W1 90 /vsib] VPGATHERDQ zmm1 {k1}, vm32z
+    VPGATHERDQ_VdqqVMd_E512,
 
     // [VEX.128.66.0F38.W1 90 /r] VPGATHERDQ xmm1, vm32x, xmm2
     VPGATHERDQ_VdqVMdHdq_V128,
-    // [VEX.128.66.0F38.W1 91 /r] VPGATHERDQ xmm1, vm64x, xmm2
-    VPGATHERDQ_VdqVMqHdq_V128,
+    // [VEX.128.66.0F38.W1 91 /r] VPGATHERQQ xmm1, vm64x, xmm2
+    VPGATHERQQ_VdqVMqHdq_V128,
     // [VEX.256.66.0F38.W1 90 /r] VPGATHERDQ ymm1, vm32x, ymm2
     VPGATHERDQ_VqqVMdHqq_V256,
-    // [VEX.256.66.0F38.W1 91 /r] VPGATHERDQ ymm1, vm64x, ymm2
-    VPGATHERDQ_VqqVMqHqq_V256,
+    // [VEX.256.66.0F38.W1 91 /r] VPGATHERQQ ymm1, vm64x, ymm2
+    VPGATHERQQ_VqqVMqHqq_V256,
 
     // [EVEX.128.66.0F38.W0 91 /vsib] VPGATHERQD xmm1 {k1}, vm64x
     VPGATHERQD_VdqVMq_E128,
@@ -8003,7 +8003,7 @@ pub enum OpcodeName {
     VRSQRT14SS_VdqHdqWd_E,
 
     // [EVEX.128.66.0F38.W1 2C /r] VSCALEFPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VSCALEFPD_VdqVdqWdq_E128,
+    VSCALEFPD_VdqHdqWdq_E128,
     // [EVEX.256.66.0F38.W1 2C /r] VSCALEFPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
     VSCALEFPD_VqqHqqWqq_E256,
     // [EVEX.512.66.0F38.W1 2C /r] VSCALEFPD zmm1 {k1}{z}, zmm2, xmm3/m512/m64bcst
@@ -8020,7 +8020,7 @@ pub enum OpcodeName {
     VSCALEFPS_VdqqHdqqWdqq_E512,
 
     // [EVEX.LIG.66.0F38.W0 2D /r] VSCALEFSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
-    VSCALEFSS_VdqHdqWq_E,
+    VSCALEFSS_VdqHdqWd_E,
 
     // [EVEX.128.66.0F38.W0 A2 /vsib] VSCATTERDPS vm32x {k1}, xmm1
     VSCATTERDPS_VMdVdq_E128,

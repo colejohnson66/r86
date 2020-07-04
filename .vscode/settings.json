@@ -2,5 +2,13 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "cSpell.words": [
+        "Doublequadquadword",
+        "Doublequadword",
+        "EVEX",
+        "Quadquadword",
+        "doubleword",
+        "quadword"
+    ]
 }

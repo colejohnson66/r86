@@ -21,6 +21,7 @@
  * ============================================================================
  */
 mod maskmovdqu;
+mod maskmovp;
 mod maskmovq;
 mod maxpd;
 mod maxps;
@@ -80,6 +81,7 @@ mod mulx;
 mod mwait;
 
 pub use maskmovdqu::*;
+pub use maskmovp::*;
 pub use maskmovq::*;
 pub use maxpd::*;
 pub use maxps::*;

@@ -24,6 +24,10 @@ use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
 
 pub struct Popcnt;
+pub struct Popcntb;
+pub struct Popcntw;
+pub struct Popcntd;
+pub struct Popcntq;
 
 impl Popcnt {
     fn ew_gw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
@@ -35,6 +39,62 @@ impl Popcnt {
     }
 
     fn eq_gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Popcntb {
+    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Popcntw {
+    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Popcntd {
+    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl Popcntq {
+    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
         unimplemented!();
     }
 }

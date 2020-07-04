@@ -21,9 +21,11 @@
  * ============================================================================
  */
 mod test;
+mod testp;
 mod tpause;
 mod tzcnt;
 
 pub use test::*;
+pub use testp::*;
 pub use tpause::*;
 pub use tzcnt::*;
