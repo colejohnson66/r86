@@ -22,6 +22,7 @@
  */
 pub mod flag;
 mod opcode_name;
+pub mod opmap;
 
 pub use crate::cpu::decoder::opcode_name::OpcodeName;
 use crate::cpu::Cpu;
@@ -48,6 +49,12 @@ pub struct Opcode {
 pub struct OpcodeMapEntry {
     pub handler: InstrHandler,
     pub attr: Vec<&'static dyn flag::Flag>,
+}
+
+impl OpcodeMapEntry {
+    pub fn new(handler: InstrHandler, attr: Vec<&'static dyn flag::Flag>) -> OpcodeMapEntry {
+        OpcodeMapEntry { handler, attr }
+    }
 }
 
 pub enum IsaExtension {
