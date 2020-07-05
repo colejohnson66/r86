@@ -3,6 +3,9 @@
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "files.associations": {
+        "*.in": "plaintext"
+    },
     "cSpell.words": [
         "Doublequadquadword",
         "Doublequadword",
@@ -10,5 +13,6 @@
         "Quadquadword",
         "doubleword",
         "quadword"
-    ]
+    ],
+    "rust-client.updateOnStartup": true,
 }

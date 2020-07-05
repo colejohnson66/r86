@@ -1,0 +1,3 @@
+edition = "2018"
+ignore = [ "src/cpu/decoder/opcodes.in" ]
+reorder_impl_items = true
