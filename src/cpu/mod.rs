@@ -36,8 +36,6 @@ use crate::reg::gpr::Gpr;
 use crate::reg::segment::Segment;
 use crate::Address;
 
-const AVX_REGISTER_COUNT: usize = 32;
-
 pub struct Cpu {
     /* In order:
      *  0 - rax: accumulator
