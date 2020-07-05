@@ -30,7 +30,10 @@ use crate::reg::cr0::Cr0;
 use crate::reg::cr3::Cr3;
 use crate::reg::cr4::Cr4;
 use crate::reg::dr6::Dr6;
+use crate::reg::flags::Flags;
+use crate::reg::global_segment::GlobalSegment;
 use crate::reg::gpr::Gpr;
+use crate::reg::segment::Segment;
 use crate::Address;
 
 const AVX_REGISTER_COUNT: usize = 32;
@@ -52,7 +55,7 @@ pub struct Cpu {
      */
     gpr: [Gpr; 19],
 
-    flags: (),
+    flags: Flags,
 
     // saved for backing up during a fault
     prev_rip: Address,
@@ -60,12 +63,12 @@ pub struct Cpu {
 
     instr_count: u64,
 
-    segment: [(); 6],
+    segment: [Segment; 6],
 
-    gdtr: (),
-    idtr: (),
-    ldtr: (),
-    tr: (),
+    gdtr: GlobalSegment,
+    idtr: GlobalSegment,
+    ldtr: GlobalSegment,
+    tr: GlobalSegment, // TODO: correct?
 
     dr: [Address; 4], // DR0-DR3
     dr6: Dr6,
