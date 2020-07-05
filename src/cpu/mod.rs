@@ -44,7 +44,7 @@ pub struct Cpu {
      *  3 - rbx: base
      *  4 - rbp: base pointer
      *  5 - rsi: source index
-     *  6 - rdi: desination index
+     *  6 - rdi: destination index
      *  7 - rsp: stack pointer
      *  8 - r8-r15: x86-64 extended registers
      * 16 - rip: instruction pointer
