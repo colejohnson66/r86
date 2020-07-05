@@ -23,7 +23,7 @@
 use crate::cpu::decoder::*;
 use crate::cpu::instr::*;
 
-// opcode(op, dismIntel, dismAtt, handler, arg1, arg2, arg3, arg4, lockable, extensions)
+// opcode(op, dismIntel, dismAtt, handler, arg1, arg2, arg3, arg4, suffix, lockable, extensions)
 //   op:         OpcodeName
 //   dismIntel:  str
 //   dismAtt:    str
@@ -32,11 +32,12 @@ use crate::cpu::instr::*;
 //   arg2:       OperandSource
 //   arg3:       OperandSource
 //   arg4:       OperandSource
+//   suffix:     OpSuffix
 //   lockable:   bool
 //   extensions: Vec<IsaExtension>
 
 // macro_rules! opcode {
-//     ($op:expr, $dismIntel:literal, $dismAtt:literal, $handler:ident, $arg1:expr, $arg2:expr, $arg3:expr, $arg4:expr, $lockable:expr, $extensions:expr) => {};
+//     ($op:expr, $dismIntel:literal, $dismAtt:literal, $handler:ident, $arg1:expr, $arg2:expr, $arg3:expr, $arg4:expr, $suffix:expr, $lockable:expr, $extensions:expr) => {};
 // }
 
-opcode!(OpcodeName::AAA, "aaa", "aaa", Aaa::noarg, "", "", "", "", false, vec![]);
+opcode!(OpcodeName::AAA, "aaa", "aaa", Aaa::noarg, "", "", "", "", OpSuffix::None, false, vec![]);
