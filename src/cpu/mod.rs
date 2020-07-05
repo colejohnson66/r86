@@ -102,23 +102,41 @@ macro_rules! gpr {
 
 impl Cpu {
     gpr!(rax, 0);
+
     gpr!(rcx, 1);
+
     gpr!(rdx, 2);
+
     gpr!(rbx, 3);
+
     gpr!(rbp, 4);
+
     gpr!(rsi, 5);
+
     gpr!(rdi, 6);
+
     gpr!(rsp, 7);
+
     gpr!(r8, 8);
+
     gpr!(r9, 9);
+
     gpr!(r10, 10);
+
     gpr!(r11, 11);
+
     gpr!(r12, 12);
+
     gpr!(r13, 13);
+
     gpr!(r14, 14);
+
     gpr!(r15, 15);
+
     gpr!(rip, 16);
+
     gpr!(tmp, 17);
+
     gpr!(nil, 18);
 
     pub fn gpr(&mut self, reg: usize) -> &Gpr {

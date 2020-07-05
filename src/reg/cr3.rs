@@ -38,6 +38,10 @@ pub struct Cr3 {
 }
 
 impl Cr3 {
+    bitfield!(pcd, set_pcd, u64, 4);
+
+    bitfield!(pwt, set_pwt, u64, 3);
+
     pub fn new() -> Cr3 {
         Cr3 {
             value: ALWAYS_SET_BITS,
@@ -47,10 +51,12 @@ impl Cr3 {
     pub fn raw_value(&self) -> u64 {
         self.value
     }
+
     pub fn set_raw_value(&mut self, value: u64) {
         let temp = value & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+
     pub fn set_raw_value_unchecked(&mut self, value: u64) {
         self.value = value;
     }
@@ -58,13 +64,11 @@ impl Cr3 {
     pub fn page_directory_base(&self) -> Address {
         self.value >> 11
     }
+
     pub fn set_page_directory_base(&mut self, value: Address) {
         // TODO: ensure upper 11 bits are unset
         let temp = self.value & 0x18;
         self.value = (value << 11) | temp;
     }
-
-    bitfield!(pcd, set_pcd, u64, 4);
-    bitfield!(pwt, set_pwt, u64, 3);
     // TODO
 }

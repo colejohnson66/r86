@@ -40,6 +40,22 @@ pub struct Dr6 {
 }
 
 impl Dr6 {
+    bitfield!(rtm, set_rtm, u32, 16);
+
+    bitfield!(bt, set_bt, u32, 15);
+
+    bitfield!(bs, set_bs, u32, 14);
+
+    bitfield!(bd, set_bd, u32, 13);
+
+    bitfield!(b3, set_b3, u32, 3);
+
+    bitfield!(b2, set_b2, u32, 2);
+
+    bitfield!(b1, set_b1, u32, 1);
+
+    bitfield!(b0, set_b0, u32, 0);
+
     pub fn new() -> Dr6 {
         Dr6 {
             value: ALWAYS_SET_BITS,
@@ -49,20 +65,13 @@ impl Dr6 {
     pub fn raw_value(&self) -> u32 {
         self.value
     }
+
     pub fn set_raw_value(&mut self, value: u32) {
         let temp = value & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+
     pub fn set_raw_value_unchecked(&mut self, value: u32) {
         self.value = value;
     }
-
-    bitfield!(rtm, set_rtm, u32, 16);
-    bitfield!(bt, set_bt, u32, 15);
-    bitfield!(bs, set_bs, u32, 14);
-    bitfield!(bd, set_bd, u32, 13);
-    bitfield!(b3, set_b3, u32, 3);
-    bitfield!(b2, set_b2, u32, 2);
-    bitfield!(b1, set_b1, u32, 1);
-    bitfield!(b0, set_b0, u32, 0);
 }

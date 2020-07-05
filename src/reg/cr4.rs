@@ -44,6 +44,46 @@ pub struct Cr4 {
 }
 
 impl Cr4 {
+    bitfield!(pke, set_pke, u32, 22);
+
+    bitfield!(smap, set_smap, u32, 21);
+
+    bitfield!(smep, set_smep, u32, 20);
+
+    bitfield!(osxsave, set_osxsave, u32, 18);
+
+    bitfield!(pcide, set_pcide, u32, 17);
+
+    bitfield!(fsgsbase, set_fsgsbase, u32, 16);
+
+    bitfield!(smxe, set_smxe, u32, 14);
+
+    bitfield!(vmxe, set_vmxe, u32, 13);
+
+    bitfield!(umip, set_umip, u32, 11);
+
+    bitfield!(osxmmexcpt, set_osxmmexcpt, u32, 10);
+
+    bitfield!(osfxsr, set_osfxsr, u32, 9);
+
+    bitfield!(pce, set_pce, u32, 8);
+
+    bitfield!(pge, set_pge, u32, 7);
+
+    bitfield!(mce, set_mce, u32, 6);
+
+    bitfield!(pae, set_pae, u32, 5);
+
+    bitfield!(pse, set_pse, u32, 4);
+
+    bitfield!(de, set_de, u32, 3);
+
+    bitfield!(tsd, set_tsd, u32, 2);
+
+    bitfield!(pvi, set_pvi, u32, 1);
+
+    bitfield!(vme, set_vme, u32, 0);
+
     pub fn new() -> Cr4 {
         Cr4 {
             value: ALWAYS_SET_BITS,
@@ -53,6 +93,7 @@ impl Cr4 {
     pub fn raw_value(&self) -> u64 {
         self.value as u64
     }
+
     pub fn set_raw_value(&mut self, value: u64) {
         // bit[63:23] are reserved, so ensure the upper 32-bits aren't set
         // TODO: should we just ignore them instead of panic!()?
@@ -61,29 +102,9 @@ impl Cr4 {
         let temp = temp & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+
     pub fn set_raw_value_unchecked(&mut self, value: u64) {
         // just lob off the upper bits if they're set
         self.value = (value & 0xFFFF_FFFF) as u32;
     }
-
-    bitfield!(pke, set_pke, u32, 22);
-    bitfield!(smap, set_smap, u32, 21);
-    bitfield!(smep, set_smep, u32, 20);
-    bitfield!(osxsave, set_osxsave, u32, 18);
-    bitfield!(pcide, set_pcide, u32, 17);
-    bitfield!(fsgsbase, set_fsgsbase, u32, 16);
-    bitfield!(smxe, set_smxe, u32, 14);
-    bitfield!(vmxe, set_vmxe, u32, 13);
-    bitfield!(umip, set_umip, u32, 11);
-    bitfield!(osxmmexcpt, set_osxmmexcpt, u32, 10);
-    bitfield!(osfxsr, set_osfxsr, u32, 9);
-    bitfield!(pce, set_pce, u32, 8);
-    bitfield!(pge, set_pge, u32, 7);
-    bitfield!(mce, set_mce, u32, 6);
-    bitfield!(pae, set_pae, u32, 5);
-    bitfield!(pse, set_pse, u32, 4);
-    bitfield!(de, set_de, u32, 3);
-    bitfield!(tsd, set_tsd, u32, 2);
-    bitfield!(pvi, set_pvi, u32, 1);
-    bitfield!(vme, set_vme, u32, 0);
 }

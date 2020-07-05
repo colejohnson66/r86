@@ -38,6 +38,27 @@ pub struct StatusWord {
 }
 
 impl StatusWord {
+    bitfield!(b, set_b, u16, 15);
+
+    // cc handled below
+    multibit_bitfield!(tos, set_tos, u16, 11, 3);
+
+    bitfield!(es, set_es, u16, 7);
+
+    bitfield!(sf, set_sf, u16, 6);
+
+    bitfield!(pe, set_pe, u16, 5);
+
+    bitfield!(ue, set_ue, u16, 4);
+
+    bitfield!(oe, set_oe, u16, 3);
+
+    bitfield!(ze, set_ze, u16, 2);
+
+    bitfield!(de, set_de, u16, 1);
+
+    bitfield!(ie, set_ie, u16, 0);
+
     pub fn new() -> StatusWord {
         StatusWord {
             value: ALWAYS_SET_BITS,
@@ -47,25 +68,15 @@ impl StatusWord {
     pub fn raw_value(&self) -> u16 {
         self.value
     }
+
     pub fn set_raw_value(&mut self, value: u16) {
         let temp = value & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+
     pub fn set_raw_value_unchecked(&mut self, value: u16) {
         self.value = value;
     }
-
-    bitfield!(b, set_b, u16, 15);
-    // cc handled below
-    multibit_bitfield!(tos, set_tos, u16, 11, 3);
-    bitfield!(es, set_es, u16, 7);
-    bitfield!(sf, set_sf, u16, 6);
-    bitfield!(pe, set_pe, u16, 5);
-    bitfield!(ue, set_ue, u16, 4);
-    bitfield!(oe, set_oe, u16, 3);
-    bitfield!(ze, set_ze, u16, 2);
-    bitfield!(de, set_de, u16, 1);
-    bitfield!(ie, set_ie, u16, 0);
 
     pub fn cc(&self) -> u16 {
         let c3 = (self.value & (1u16 << 14)) != 0;
@@ -76,6 +87,7 @@ impl StatusWord {
         }
         cc
     }
+
     pub fn set_cc(&mut self, val: u16) {
         let mask = !((1u16 << 8) | (1u16 << 9) | (1u16 << 10) | (1u16 << 14));
         let mut temp = self.value & mask;

@@ -89,10 +89,12 @@ impl I387 {
         let reg = (reg + self.swd.tos()) & 7;
         self.twd.get(reg as u32)
     }
+
     pub fn set_tag_valid(&mut self, reg: u16) {
         let reg = (reg + self.swd.tos()) & 7;
         self.twd.set(reg as u32, 0);
     }
+
     pub fn set_tag(&mut self, reg: u16, val: u16) {
         let reg = (reg + self.swd.tos()) & 7;
         self.twd.set(reg as u32, val);

@@ -60,6 +60,18 @@ pub struct Fpr {
 }
 
 impl Fpr {
+    fpr_accessors!(mmx_i8, set_mmx_i8, i8, 1);
+
+    fpr_accessors!(mmx_u8, set_mmx_u8, u8, 1);
+
+    fpr_accessors!(mmx_i16, set_mmx_i16, i16, 2);
+
+    fpr_accessors!(mmx_u16, set_mmx_u16, u16, 2);
+
+    fpr_accessors!(mmx_i32, set_mmx_i32, i32, 4);
+
+    fpr_accessors!(mmx_u32, set_mmx_u32, u32, 4);
+
     pub fn new() -> Fpr {
         Fpr {
             sign_exponent: 0,
@@ -70,32 +82,28 @@ impl Fpr {
     pub fn sign(&self) -> bool {
         (self.sign_exponent & 0x80) == 0x80
     }
+
     pub fn sign_exponent(&self) -> u16 {
         self.sign_exponent
     }
+
     pub fn significand(&self) -> u64 {
         self.significand
     }
 
-    fpr_accessors!(mmx_i8, set_mmx_i8, i8, 1);
-    fpr_accessors!(mmx_u8, set_mmx_u8, u8, 1);
-
-    fpr_accessors!(mmx_i16, set_mmx_i16, i16, 2);
-    fpr_accessors!(mmx_u16, set_mmx_u16, u16, 2);
-
-    fpr_accessors!(mmx_i32, set_mmx_i32, i32, 4);
-    fpr_accessors!(mmx_u32, set_mmx_u32, u32, 4);
-
     pub unsafe fn mmx_i64(&self) -> i64 {
         mem::transmute::<u64, i64>(self.significand)
     }
+
     pub unsafe fn set_mmx_i64(&mut self, val: i64) {
         self.significand = mem::transmute::<i64, u64>(val);
         self.after_mmx_reg_set();
     }
+
     pub fn mmx_u64(&self) -> u64 {
         self.significand
     }
+
     pub fn set_mmx_u64(&mut self, val: u64) {
         self.significand = val;
         self.after_mmx_reg_set();

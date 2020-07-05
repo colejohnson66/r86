@@ -40,6 +40,28 @@ pub struct Cr0 {
 }
 
 impl Cr0 {
+    bitfield!(pg, set_pg, u32, 31);
+
+    bitfield!(cd, set_cd, u32, 30);
+
+    bitfield!(nw, set_nw, u32, 29);
+
+    bitfield!(am, set_am, u32, 18);
+
+    bitfield!(wp, set_wp, u32, 18);
+
+    bitfield!(ne, set_ne, u32, 5);
+
+    bitfield!(et, set_et, u32, 4);
+
+    bitfield!(ts, set_ts, u32, 3);
+
+    bitfield!(em, set_em, u32, 2);
+
+    bitfield!(mp, set_mp, u32, 1);
+
+    bitfield!(pe, set_pe, u32, 0);
+
     pub fn new() -> Cr0 {
         Cr0 {
             value: ALWAYS_SET_BITS,
@@ -49,23 +71,13 @@ impl Cr0 {
     pub fn raw_value(&self) -> u32 {
         self.value
     }
+
     pub fn set_raw_value(&mut self, value: u32) {
         let temp = value & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+
     pub fn set_raw_value_unchecked(&mut self, value: u32) {
         self.value = value;
     }
-
-    bitfield!(pg, set_pg, u32, 31);
-    bitfield!(cd, set_cd, u32, 30);
-    bitfield!(nw, set_nw, u32, 29);
-    bitfield!(am, set_am, u32, 18);
-    bitfield!(wp, set_wp, u32, 18);
-    bitfield!(ne, set_ne, u32, 5);
-    bitfield!(et, set_et, u32, 4);
-    bitfield!(ts, set_ts, u32, 3);
-    bitfield!(em, set_em, u32, 2);
-    bitfield!(mp, set_mp, u32, 1);
-    bitfield!(pe, set_pe, u32, 0);
 }

@@ -38,6 +38,24 @@ pub struct ControlWord {
 }
 
 impl ControlWord {
+    bitfield!(x, set_x, u16, 12);
+
+    multibit_bitfield!(rc, set_rc, u16, 10, 2);
+
+    multibit_bitfield!(pc, set_pc, u16, 8, 2);
+
+    bitfield!(pm, set_pm, u16, 5);
+
+    bitfield!(um, set_um, u16, 4);
+
+    bitfield!(om, set_om, u16, 3);
+
+    bitfield!(zm, set_zm, u16, 2);
+
+    bitfield!(dm, set_dm, u16, 1);
+
+    bitfield!(im, set_im, u16, 0);
+
     pub fn new() -> ControlWord {
         ControlWord {
             value: ALWAYS_SET_BITS,
@@ -47,21 +65,13 @@ impl ControlWord {
     pub fn raw_value(&self) -> u16 {
         self.value
     }
+
     pub fn set_raw_value(&mut self, value: u16) {
         let temp = value & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+
     pub fn set_raw_value_unchecked(&mut self, value: u16) {
         self.value = value;
     }
-
-    bitfield!(x, set_x, u16, 12);
-    multibit_bitfield!(rc, set_rc, u16, 10, 2);
-    multibit_bitfield!(pc, set_pc, u16, 8, 2);
-    bitfield!(pm, set_pm, u16, 5);
-    bitfield!(um, set_um, u16, 4);
-    bitfield!(om, set_om, u16, 3);
-    bitfield!(zm, set_zm, u16, 2);
-    bitfield!(dm, set_dm, u16, 1);
-    bitfield!(im, set_im, u16, 0);
 }

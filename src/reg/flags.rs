@@ -48,6 +48,40 @@ pub struct Flags {
 }
 
 impl Flags {
+    bitfield!(id, set_id, u32, 21);
+
+    bitfield!(vip, set_vip, u32, 20);
+
+    bitfield!(vif, set_vif, u32, 19);
+
+    bitfield!(ac, set_ac, u32, 18);
+
+    bitfield!(vm, set_vm, u32, 17);
+
+    bitfield!(rf, set_rf, u32, 16);
+
+    bitfield!(nt, set_nt, u32, 14);
+
+    multibit_bitfield!(iopl, set_iopl, u32, 12, 2);
+
+    bitfield!(of, set_of, u32, 11);
+
+    bitfield!(df, set_df, u32, 10);
+
+    bitfield!(if_, set_if, u32, 9);
+
+    bitfield!(tf, set_tf, u32, 8);
+
+    bitfield!(sf, set_sf, u32, 7);
+
+    bitfield!(zf, set_zf, u32, 6);
+
+    bitfield!(af, set_af, u32, 4);
+
+    bitfield!(pf, set_pf, u32, 2);
+
+    bitfield!(cf, set_cf, u32, 0);
+
     pub fn new() -> Flags {
         Flags {
             value: ALWAYS_SET_BITS,
@@ -57,6 +91,7 @@ impl Flags {
     pub fn raw_value(&self) -> u64 {
         self.value as u64
     }
+
     pub fn set_raw_value(&mut self, value: u64) {
         // bit[63:22] are reserved, so ensure the upper 32-bits aren't set
         // TODO: should we just ignore them instead of panic!()?
@@ -65,26 +100,9 @@ impl Flags {
         let temp = temp & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+
     pub fn set_raw_value_unchecked(&mut self, value: u64) {
         // just lob off the upper bits if they're set
         self.value = (value & 0xFFFF_FFFF) as u32;
     }
-
-    bitfield!(id, set_id, u32, 21);
-    bitfield!(vip, set_vip, u32, 20);
-    bitfield!(vif, set_vif, u32, 19);
-    bitfield!(ac, set_ac, u32, 18);
-    bitfield!(vm, set_vm, u32, 17);
-    bitfield!(rf, set_rf, u32, 16);
-    bitfield!(nt, set_nt, u32, 14);
-    multibit_bitfield!(iopl, set_iopl, u32, 12, 2);
-    bitfield!(of, set_of, u32, 11);
-    bitfield!(df, set_df, u32, 10);
-    bitfield!(if_, set_if, u32, 9);
-    bitfield!(tf, set_tf, u32, 8);
-    bitfield!(sf, set_sf, u32, 7);
-    bitfield!(zf, set_zf, u32, 6);
-    bitfield!(af, set_af, u32, 4);
-    bitfield!(pf, set_pf, u32, 2);
-    bitfield!(cf, set_cf, u32, 0);
 }

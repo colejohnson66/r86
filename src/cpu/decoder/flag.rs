@@ -66,6 +66,7 @@ macro_rules! flag {
             fn flag_type(&self) -> FlagType {
                 $type
             }
+
             fn value(&self) -> u8 {
                 self.val
             }

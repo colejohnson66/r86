@@ -44,10 +44,12 @@ impl TagWord {
     pub fn raw_value(&self) -> u16 {
         self.value
     }
+
     pub fn set_raw_value(&mut self, value: u16) {
         let temp = value & EDITABLE_BITS;
         self.value = temp | ALWAYS_SET_BITS;
     }
+
     pub fn set_raw_value_unchecked(&mut self, value: u16) {
         self.value = value;
     }
@@ -56,6 +58,7 @@ impl TagWord {
         assert!(reg < 8);
         (self.value >> (reg * 2)) & 3
     }
+
     pub fn set(&mut self, reg: u32, val: u16) {
         assert!(reg < 8);
         assert!(val <= 0b11);
