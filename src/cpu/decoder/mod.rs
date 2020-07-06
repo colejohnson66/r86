@@ -36,16 +36,42 @@ type InstrHandler = fn(&mut Cpu, &Instr) -> u32;
 /// A decoded instruction.
 pub struct Instr {
     handler: InstrHandler,
-    opcode: u16,
     raw_instr: Vec<u8>,
 }
 
 pub struct Opcode {
     pub opcode: OpcodeName,
-    pub opcode_str: &'static str,
-    pub extensions: [IsaExtension; 4],
-    pub operand_sources: [u8; 4],
-    pub special_attr: u32,
+    pub mnemonic_intel: &'static str,
+    pub mnemonic_att: &'static str,
+    pub handler: InstrHandler,
+    pub arguments: [OperandSource; 4],
+    pub suffix: OpSuffix,
+    pub lockable: bool,
+    pub extensions: Vec<IsaExtension>,
+}
+
+impl Opcode {
+    pub fn new(
+        opcode: OpcodeName,
+        mnemonic_intel: &'static str,
+        mnemonic_att: &'static str,
+        handler: InstrHandler,
+        arguments: [OperandSource; 4],
+        suffix: OpSuffix,
+        lockable: bool,
+        extensions: Vec<IsaExtension>,
+    ) -> Opcode {
+        Opcode {
+            opcode,
+            mnemonic_intel,
+            mnemonic_att,
+            handler,
+            arguments,
+            suffix,
+            lockable,
+            extensions,
+        }
+    }
 }
 
 pub struct OpcodeMapEntry {
