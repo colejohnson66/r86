@@ -3,8 +3,8 @@
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.associations": {
-        "*.in": "plaintext"
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust"
     },
     "cSpell.words": [
         "Doublequadquadword",
@@ -15,4 +15,6 @@
         "quadword"
     ],
     "rust-client.updateOnStartup": true,
+    "rust.all_features": true,
+    "rust.rustfmt_path": "${env.HOME}/.cargo/bin/rustfmt"
 }

@@ -1,5 +1,5 @@
 /* ============================================================================
- * File:   opcodes.rs
+ * File:   mod.rs
  * Author: Cole Johnson
  * ============================================================================
  * Copyright (c) 2020 Cole Johnson
@@ -36,9 +36,9 @@ use crate::cpu::instr::*;
 //   lockable:   bool
 //   extensions: Vec<IsaExtension>
 
-// macro_rules! opcode {
-//     ($op:expr, $dismIntel:literal, $dismAtt:literal, $handler:ident, $arg1:expr, $arg2:expr, $arg3:expr, $arg4:expr, $suffix:expr, $lockable:expr, $extensions:expr) => {};
-// }
+macro_rules! opcode {
+    ($op:expr, $dismIntel:literal, $dismAtt:literal, $handler:ident, $arg1:expr, $arg2:expr, $arg3:expr, $arg4:expr, $suffix:expr, $lockable:expr, $extensions:expr) => {};
+}
 
 opcode!(OpcodeName::AAA, "aaa", "aaa", Aaa::noarg, "", "", "", "", OpSuffix::None, false, vec![]);
-opcode!(OpcodeName::AAD_Ib", "aad", "aad", Aad::ib, "Ib", "", "", "", OpSuffix::None, false, vec![]);
+opcode!(OpcodeName::AAD_Ib, "aad", "aad", Aad::ib, "Ib", "", "", "", OpSuffix::None, false, vec![]);
