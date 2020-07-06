@@ -41,3 +41,4 @@ use crate::cpu::instr::*;
 // }
 
 opcode!(OpcodeName::AAA, "aaa", "aaa", Aaa::noarg, "", "", "", "", OpSuffix::None, false, vec![]);
+opcode!(OpcodeName::AAD_Ib", "aad", "aad", Aad::ib, "Ib", "", "", "", OpSuffix::None, false, vec![]);
