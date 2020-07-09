@@ -58,6 +58,8 @@ macro_rules! avx_arr_accessor {
     };
 }
 
+// Little endian
+// TODO: make endian independent
 /// An AVX register.
 /// Internally represented by a 512-bit (64-byte) byte array.
 pub struct Avx {

@@ -53,6 +53,8 @@ macro_rules! fpr_accessors {
     };
 }
 
+// Little endian
+// TODO: make endian independent
 #[derive(Clone, Copy)]
 pub struct Fpr {
     sign_exponent: u16,

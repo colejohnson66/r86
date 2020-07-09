@@ -20,6 +20,7 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
+// endian independent
 pub struct Gpr {
     value: u64,
 }
