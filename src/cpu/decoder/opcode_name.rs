@@ -119,7 +119,7 @@
  *      operand size.
  *
  * - Intel 64 and IA-32 Architectures Software Developer's Manual
- *   - Version 71 (October 2019)
+ *   - Version 73 (November 2020)
  *   - Volume 2D, pages A-1 to A-3
  */
 /* Custom addressing methods:
