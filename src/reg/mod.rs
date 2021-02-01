@@ -58,14 +58,14 @@ macro_rules! multibit_bitfield {
         pub fn $get(&self) -> $type {
             // sets as many LSB as $width
             // eg. if $width is 2, this will result in `mask` being set to 0b11
-            let mask: $type = 1u8.into();
+            let mask: $type = 1;
             let mask = (mask << $width) - 1;
             (self.value >> $bitpos) & mask
         }
 
         pub fn $set(&mut self, value: $type) {
             // see above
-            let mask: $type = 1u8.into();
+            let mask: $type = 1;
             let mask = (mask << $width) - 1;
             assert!((value & mask) == value); // ensure no unusable bits are set
             let mask = !(mask << $bitpos);

@@ -11,8 +11,12 @@
         "Doublequadword",
         "EVEX",
         "Quadquadword",
+        "bitfield",
         "doubleword",
-        "quadword"
+        "dword",
+        "multibit",
+        "quadword",
+        "significand"
     ],
     "rust-client.updateOnStartup": true,
     "rust.rustfmt_path": "${env.HOME}/.cargo/bin/rustfmt"

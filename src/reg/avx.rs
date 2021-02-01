@@ -41,7 +41,7 @@ macro_rules! avx_accessors {
             assert!(idx < self.value.len());
 
             let bits = mem::transmute::<$type, [u8; $size]>(val);
-            for i in idx..idx + size {
+            for i in idx..(idx + size) {
                 self.value[i] = bits[i];
             }
         }
