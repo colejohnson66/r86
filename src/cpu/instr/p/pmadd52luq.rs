@@ -2,7 +2,7 @@
  * File:   pmadd52luq.rs
  * Author: Cole Johnson
  * ============================================================================
- * Copyright (c) 2020 Cole Johnson
+ * Copyright (c) 2020-2021 Cole Johnson
  *
  * This file is part of r86.
  *
