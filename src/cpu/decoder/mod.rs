@@ -21,8 +21,8 @@
  * ============================================================================
  */
 pub mod flag;
+pub mod opcode;
 mod opcode_name;
-//pub mod opcodes;
 pub mod opmap;
 
 pub use crate::cpu::decoder::opcode_name::OpcodeName;
