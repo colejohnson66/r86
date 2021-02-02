@@ -1003,6 +1003,20 @@ pub enum OpcodeName {
     // [EVEX.512.0F.W0 5B /r] VCVTDQ2PD zmm1 {k1}{z}, zmm2/m512/m32bcst{er}
     VCVTDQ2PS_VdqqWdqq_E512,
 
+    // [EVEX.128.F2.0F38.W0 72 /r] VCVTNE2PS2BF16 xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
+    VCVTNE2PS2BF16_VdqHdqWdq_E128,
+    // [EVEX.256.F2.0F38.W0 72 /r] VCVTNE2PS2BF16 ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
+    VCVTNE2PS2BF16_VqqHqqWqq_E256,
+    // [EVEX.512.F2.0F38.W0 72 /r] VCVTNE2PS2BF16 zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
+    VCVTNE2PS2BF16_VdqqHdqqWdqq_E512,
+
+    // [EVEX.128.F3.0F38.W0 72 /r] VCVTNEPS2BF16 xmm1 {k1}{z}, xmm2/m128/m32bcst
+    VCVTNEPS2BF16_VdqWdq_E128,
+    // [EVEX.256.F3.0F38.W0 72 /r] VCVTNEPS2BF16 ymm1 {k1}{z}, ymm2/m256/m32bcst
+    VCVTNEPS2BF16_VqqWqq_E256,
+    // [EVEX.512.F3.0F38.W0 72 /r] VCVTNEPS2BF16 zmm1 {k1}{z}, zmm2/m512/m32bcst
+    VCVTNEPS2BF16_VdqqWdqq_E512,
+
     // [F2 0F E6 /r] CVTPD2DQ xmm1, xmm2/m128
     CVTPD2DQ_VdqWdq,
     // [VEX.128.F2.0F.WIG E6 /r] VCVTPD2DQ xmm1, xmm2/m128
@@ -1267,6 +1281,13 @@ pub enum OpcodeName {
     VDIVSS_VdqHdqWd_V,
     // [EVEX.LIG.F3.0F.W1 5E /r] VDIVSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
     VDIVSS_VdqHdqWd_E,
+
+    // [EVEX.128.F3.0F38.W0 52 /r] VDPBF16PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
+    VDPBF16PS_VdqHdqWdq_E128,
+    // [EVEX.256.F3.0F38.W0 52 /r] VDPBF16PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
+    VDPBF16PS_VqqHqqWqq_E256,
+    // [EVEX.512.F3.0F38.W0 52 /r] VDPBF16PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
+    VDPBF16PS_VdqqHdqqWdqq_E512,
 
     // [66 0F 3A 41 /r ib] DPPD xmm1, xmm2/m128, imm8
     DPPD_VdqWdqIb,
@@ -3150,6 +3171,19 @@ pub enum OpcodeName {
     // [6F] OUTS m32, DX
     // [6F] OUTSD
     OUTSD,
+
+    // [EVEX.NDS.128.F2.0F38.W0 68 /r] VP2INTERSECTD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
+    VP2INTERSECTD_VdqHdqWdq_E128,
+    // [EVEX.NDS.256.F2.0F38.W0 68 /r] VP2INTERSECTD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
+    VP2INTERSECTD_VqqHqqWqq_E256,
+    // [EVEX.NDS.512.F2.0F38.W0 68 /r] VP2INTERSECTD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
+    VP2INTERSECTD_VdqqHdqqWdqq_E512,
+    // [EVEX.NDS.128.F2.0F38.W1 68 /r] VP2INTERSECTQ xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
+    VP2INTERSECTQ_VdqHdqWdq_E128,
+    // [EVEX.NDS.256.F2.0F38.W1 68 /r] VP2INTERSECTQ ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
+    VP2INTERSECTQ_VqqHqqWqq_E256,
+    // [EVEX.NDS.512.F2.0F38.W1 68 /r] VP2INTERSECTQ zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
+    VP2INTERSECTQ_VdqqHdqqWdqq_E512,
 
     // [NP 0F 38 1C /r] PABSB mm1, mm2/m64
     PABSB_PqQq,
@@ -8084,6 +8118,9 @@ pub enum OpcodeName {
 
     // [0F 09] WBINVD
     WBINVD,
+
+    // [F3 0F 09] WBNOINVD
+    WBNOINVD,
 
     // [F3 0F AE /2] WRFSBASE r32
     WRFSBASE_Gd,

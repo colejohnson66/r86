@@ -20,6 +20,7 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
+mod p2intersect;
 mod pabs;
 mod packss;
 mod packusdw;
@@ -145,6 +146,7 @@ mod pusha;
 mod pushf;
 mod pxor;
 
+pub use p2intersect::*;
 pub use pabs::*;
 pub use packss::*;
 pub use packusdw::*;

@@ -1,8 +1,8 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   p2intersect.rs
  * Author: Cole Johnson
  * ============================================================================
- * Copyright (c) 2020-2021 Cole Johnson
+ * Copyright (c) 2021 Cole Johnson
  *
  * This file is part of r86.
  *
@@ -20,28 +20,36 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod daa;
-mod das;
-mod dbpsadbw;
-mod dec;
-mod div;
-mod divpd;
-mod divps;
-mod divsd;
-mod divss;
-mod dpbf16ps;
-mod dppd;
-mod dpps;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
 
-pub use daa::*;
-pub use das::*;
-pub use dbpsadbw::*;
-pub use dec::*;
-pub use div::*;
-pub use divpd::*;
-pub use divps::*;
-pub use divsd::*;
-pub use divss::*;
-pub use dpbf16ps::*;
-pub use dppd::*;
-pub use dpps::*;
+pub struct P2intersectd;
+pub struct P2intersectq;
+
+impl P2intersectd {
+    pub fn v_vdq_hdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vqq_hqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdqq_hdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}
+
+impl P2intersectq {
+    pub fn v_vdq_hdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vqq_hqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+
+    pub fn v_vdqq_hdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+        unimplemented!();
+    }
+}

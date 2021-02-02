@@ -22,6 +22,7 @@
  */
 mod wait;
 mod wbinvd;
+mod wbnoinvd;
 mod wrmsr;
 mod wrpkru;
 mod wrss;
@@ -30,6 +31,7 @@ mod wrxsbase;
 
 pub use wait::*;
 pub use wbinvd::*;
+pub use wbnoinvd::*;
 pub use wrmsr::*;
 pub use wrpkru::*;
 pub use wrss::*;
