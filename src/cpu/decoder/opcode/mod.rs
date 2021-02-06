@@ -89,6 +89,34 @@ impl OpcodeList {
             vec![]
         ));
 
+        opcodes.push(opcode!(
+            OpcodeName::AamIb,
+            "aam",
+            "aam",
+            Aam::ib,
+            "Ib",
+            "",
+            "",
+            "",
+            OpSuffix::None,
+            false,
+            vec![]
+        ));
+
+        opcodes.push(opcode!(
+            OpcodeName::Aas,
+            "aas",
+            "aas",
+            Aas::noarg,
+            "",
+            "",
+            "",
+            "",
+            OpSuffix::None,
+            false,
+            vec![]
+        ));
+
         OpcodeList { opcodes }
     }
 }
