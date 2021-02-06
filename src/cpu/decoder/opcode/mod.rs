@@ -62,7 +62,7 @@ impl OpcodeList {
         let mut opcodes = Vec::with_capacity(4096);
 
         opcodes.push(opcode!(
-            OpcodeName::AAA,
+            OpcodeName::Aaa,
             "aaa",
             "aaa",
             Aaa::noarg,
@@ -76,7 +76,7 @@ impl OpcodeList {
         ));
 
         opcodes.push(opcode!(
-            OpcodeName::AAD_Ib,
+            OpcodeName::AadIb,
             "aad",
             "aad",
             Aad::ib,

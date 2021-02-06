@@ -20,8 +20,6 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-// TODO: fix this
-#![allow(non_camel_case_types)]
 /* A.2.1: Codes for addressing method:
  * -----------------------------------
  * A - Direct address: the instruction has no ModR/M byte; the address
@@ -152,8160 +150,8160 @@ pub enum OpcodeName {
     Error,
 
     // [37] AAA
-    AAA,
+    Aaa,
 
     // [D5 ib] AAD imm8
-    AAD_Ib,
+    AadIb,
 
     // [D4 ib] AAM imm8
-    AAM_Ib,
+    AamIb,
 
     // [3F] AAS
-    AAS,
+    Aas,
 
     // [14 ib] ADC AL, imm8
-    ADC_ALIb,
+    AdcALIb,
     // [15 iw] ADC AX, imm16
-    ADC_AXIw,
+    AdcAXIw,
     // [15 id] ADC EAX, imm32
-    ADC_EAXId,
+    AdcEAXId,
     // [REX.W 15 id] ADC RAX, imm32
-    ADC_RAXId,
+    AdcRAXId,
     // [80 /2 ib] ADC r/m8, imm8
     // [REX 80 /2 ib] ADC r/m8, imm8
-    ADC_EbIb,
+    AdcEbIb,
     // [81 /2 iw] ADC r/m16, imm16
-    ADC_EwIw,
+    AdcEwIw,
     // [81 /2 iw] ADC r/m32, imm32
-    ADC_EdId,
+    AdcEdId,
     // [REX.W 81 /2 id] ADC r/m64, imm32
-    ADC_EqId,
+    AdcEqId,
     // [83 /2 ib] ADC r/m16, imm8
-    ADC_GwIb,
+    AdcGwIb,
     // [83 /2 ib] ADC r/m32, imm8
-    ADC_GdIb,
+    AdcGdIb,
     // [REX.W 83 /2 ib] ADDC r/m64, imm8
-    ADC_GqIb,
+    AdcGqIb,
     // [10 /r] ADC r/m8, r8
     // [REX 10 /r] ADC r/m8, r8
-    ADC_EbGb,
+    AdcEbGb,
     // [11 /r] ADC r/m16, r16
-    ADC_EwGw,
+    AdcEwGw,
     // [11 /r] ADC r/m32, r32
-    ADC_EdGd,
+    AdcEdGd,
     // [REX.W 11 /r] ADC r/m64, r64
-    ADC_EqGq,
+    AdcEqGq,
     // [12 /r] ADC r8, r/m8
     // [REX 12 /r] ADC r8, r/m8
-    ADC_GbEb,
+    AdcGbEb,
     // [13 /r] ADC r16, r/m16
-    ADC_GwEw,
+    AdcGwEw,
     // [13 /r] ADC r32, r/m32
-    ADC_GdEd,
+    AdcGdEd,
     // [REX.W 13 /r] ADC r64, r/m64
-    ADC_GqEq,
+    AdcGqEq,
 
     // [66 0F 38 F6 /r] ADCX r32, r/m32
-    ADCX_GdEd,
+    AdcxGdEd,
     // [66 REX.W 0F 38 F6 /r] ADCX r64, r/m64
-    ADCX_GqEq,
+    AdcxGqEq,
 
     // [04 ib] ADD AL, imm8
-    ADD_ALIb,
+    AddALIb,
     // [05 iw] ADD AX, imm16
-    ADD_AXIw,
+    AddAXIw,
     // [05 id] ADD EAX, imm32
-    ADD_EAXId,
+    AddEAXId,
     // [REX.W 05 id] ADD RAX, imm32
-    ADD_RAXId,
+    AddRAXId,
     // [80 /0 ib] ADD r/m8, imm8
     // [REX 80 /0 ib] ADD r/m8, imm8
-    ADD_EbIb,
+    AddEbIb,
     // [81 /0 iw] ADD r/m16, imm16
-    ADD_EwIw,
+    AddEwIw,
     // [81 /0 iw] ADD r/m32, imm32
-    ADD_EdId,
+    AddEdId,
     // [REX.W 81 /0 id] ADD r/m64, imm32
-    ADD_EqId,
+    AddEqId,
     // [83 /0 ib] ADD r/m16, imm8
-    ADD_GwIb,
+    AddGwIb,
     // [83 /0 ib] ADD r/m32, imm8
-    ADD_GdIb,
+    AddGdIb,
     // [REX.W 83 /0 ib] ADDC r/m64, imm8
-    ADD_GqIb,
+    AddGqIb,
     // [00 /r] ADD r/m8, r8
     // [REX 00 /r] ADD r/m8, r8
-    ADD_EbGb,
+    AddEbGb,
     // [01 /r] ADD r/m16, r16
-    ADD_EwGw,
+    AddEwGw,
     // [01 /r] ADD r/m32, r32
-    ADD_EdGd,
+    AddEdGd,
     // [REX.W 01 /r] ADD r/m64, r64
-    ADD_EqGq,
+    AddEqGq,
     // [02 /r] ADD r8, r/m8
     // [REX 02 /r] ADD r8, r/m8
-    ADD_GbEb,
+    AddGbEb,
     // [03 /r] ADD r16, r/m16
-    ADD_GwEw,
+    AddGwEw,
     // [03 /r] ADD r32, r/m32
-    ADD_GdEd,
+    AddGdEd,
     // [REX.W 03 /r] ADD r64, r/m64
-    ADD_GqEq,
+    AddGqEq,
 
     // [66 0F 58 /r] ADDPD xmm1, xmm2/m128
-    ADDPD_VdqWdq,
+    AddpdVdqWdq,
     // [VEX.128.66.0F.WIG 58 /r] VADDPD xmm1, xmm2, xmm3/m128
-    VADDPD_VdqHdqWdq_V128,
+    VaddpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 58 /r] VADDPD ymm1, ymm2, ymm3/m256
-    VADDPD_VqqHqqWqq_V256,
+    VaddpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 58 /r] VADDPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VADDPD_VdqHdqWdq_E128,
+    VaddpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 58 /r] VADDPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VADDPD_VqqHqqWqq_E256,
+    VaddpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 58 /r] VADDPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VADDPD_VdqqHdqqWdqq_E512,
+    VaddpdVdqqHdqqWdqqE512,
 
     // [NP 0F 58 /r] ADDPS xmm1, xmm2/m128
-    ADDPS_VdqWdq,
+    AddpsVdqWdq,
     // [VEX.128.0F.WIG 58 /r] VADDPS xmm1, xmm2, xmm3/m128
-    VADDPS_VdqHdqWdq_V128,
+    VaddpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 58 /r] VADDPS ymm1, ymm2, ymm3/m256
-    VADDPS_VqqHqqWqq_V256,
+    VaddpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 58 /r] VADDPS xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VADDPS_VdqHdqWdq_E128,
+    VaddpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 58 /r] VADDPS ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VADDPS_VqqHqqWqq_E256,
+    VaddpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 58 /r] VADDPS zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VADDPS_VdqqHdqqWdqq_E512,
+    VaddpsVdqqHdqqWdqqE512,
 
     // [F2 0F 58 /r] ADDSD xmm1, xmm2/m64
-    ADDSD_VdqWq,
+    AddsdVdqWq,
     // [VEX.LIG.F2.OF.WIG 58 /r] VADDSD xmm1, xmm2, xmm3/m64
-    VADDSD_VdqHdqWq_V,
+    VaddsdVdqHdqWqV,
     // [EVEX.LIG.F2.0F.W1 58 /r] VADDSD xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VADDSD_VdqHdqWq_E,
+    VaddsdVdqHdqWqE,
 
     // [F3 0F 58 /r] ADDSS xmm1, xmm2/m32
-    ADDSS_VdqWd,
+    AddssVdqWd,
     // [VEX.LIG.F3.0F.WIG 58 /r] VADDSS xmm1, xmm2, xmm3/m32
-    VADDSS_VdqHdqWd_V,
+    VaddssVdqHdqWdV,
     // [EVEX.LIG.F3.0F.W0 58 /r] VADDSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
-    VADDSS_VdqHdqWd_E,
+    VaddssVdqHdqWdE,
 
     // [66 0F D0 /r] ADDSUBPD xmm1, xmm2/m128
-    ADDSUBPD_VdqWdq,
+    AddsubpdVdqWdq,
     // [VEX.128.66.0F.WIG D0 /r] VADDSUBPD xmm1, xmm2, xmm3/m128
-    VADDSUBPD_VdqHdqWdq_V128,
+    VaddsubpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG D0 /r] VADDSUBPD ymm1, ymm2, ymm3/m256
-    VADDSUBPD_VqqHqqWqq_V256,
+    VaddsubpdVqqHqqWqqV256,
 
     // [F2 0F D0 /r] ADDSUBPS xmm1, xmm2/m128
-    ADDSUBPS_VdqWdq,
+    AddsubpsVdqWdq,
     // [VEX.128.F2.0F.WIG D0 /r] VADDSUBPS xmm1, xmm2, xmm3/m128
-    VADDSUBPS_VdqHdqWdq_V128,
+    VaddsubpsVdqHdqWdqV128,
     // [VEX.256.F2.0F.WIG D0 /r] VADDSUBPS ymm1, ymm2, ymm3/m256
-    VADDSUBPS_VqqHqqWqq_V256,
+    VaddsubpsVqqHqqWqqV256,
 
     // [F3 0F 38 F6 /r] ADOX r32, r/m32
-    ADOX_GdEd,
+    AdoxGdEd,
     // [F3 REX.W 0F 38 F6 /r] ADOX r64, r/m64
-    ADOX_GqEq,
+    AdoxGqEq,
 
     // [66 0F 38 DE /r] AESDEC xmm1, xmm2/m128
-    AESDEC_VdqWdq,
+    AesdecVdqWdq,
     // [VEX.128.66.0F38.WIG DE /r] VAESDEC xmm1, xmm2, xmm3/m128
-    VAESDEC_VdqHdqWdq_V128,
+    VaesdecVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG DE /r] VAESDEC ymm1, ymm2, ymm3/m256
-    VAESDEC_VqqHqqWqq_V256,
+    VaesdecVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG DE /r] VAESDEC xmm1, xmm2, xmm3/m128
-    VAESDEC_VdqHdqWdq_E128,
+    VaesdecVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG DE /r] VAESDEC ymm1, ymm2, ymm3/m256
-    VAESDEC_VqqHqqWqq_E256,
+    VaesdecVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG DE /r] VAESDEC zmm1, zmm2, zmm3/m512
-    VAESDEC_VdqqHdqqWdqq_E512,
+    VaesdecVdqqHdqqWdqqE512,
 
     // [66 0F 38 DF /r] AESDECLAST xmm1, xmm2/m128
-    AESDECLAST_VdqWdq,
+    AesdeclastVdqWdq,
     // [VEX.128.66.0F38.WIG DF /r] VAESDECLAST xmm1, xmm2, xmm3/m128
-    VAESDECLAST_VdqHdqWdq_V128,
+    VaesdeclastVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG DF /r] VAESDECLAST ymm1, ymm2, ymm3/m256
-    VAESDECLAST_VqqHqqWqq_V256,
+    VaesdeclastVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG DF /r] VAESDECLAST xmm1, xmm2, xmm3/m128
-    VAESDECLAST_VdqHdqWdq_E128,
+    VaesdeclastVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG DF /r] VAESDECLAST ymm1, ymm2, ymm3/m256
-    VAESDECLAST_VqqHqqWqq_E256,
+    VaesdeclastVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG DF /r] VAESDECLAST zmm1, zmm2, zmm3/m512
-    VAESDECLAST_VdqqHdqqWdqq_E512,
+    VaesdeclastVdqqHdqqWdqqE512,
 
     // [66 0F 38 DC /r] AESENC xmm1, xmm2/m128
-    AESENC_VdqWdq,
+    AesencVdqWdq,
     // [VEX.128.66.0F38.WIG DC /r] VAESENC xmm1, xmm2, xmm3/m128
-    VAESENC_VdqHdqWdq_V128,
+    VaesencVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG DC /r] VAESENC ymm1, ymm2, ymm3/m256
-    VAESENC_VqqHqqWqq_V256,
+    VaesencVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG DC /r] VAESENC xmm1, xmm2, xmm3/m128
-    VAESENC_VdqHdqWdq_E128,
+    VaesencVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG DC /r] VAESENC ymm1, ymm2, ymm3/m256
-    VAESENC_VqqHqqWqq_E256,
+    VaesencVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG DC /r] VAESENC zmm1, zmm2, zmm3/m512
-    VAESENC_VdqqHdqqWdqq_E512,
+    VaesencVdqqHdqqWdqqE512,
 
     // [66 0F 38 DD /r] AESENCLAST xmm1, xmm2/m128
-    AESENCLAST_VdqWdq,
+    AesenclastVdqWdq,
     // [VEX.128.66.0F38.WIG DD /r] VAESENCLAST xmm1, xmm2, xmm3/m128
-    VAESENCLAST_VdqHdqWdq_V128,
+    VaesenclastVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG DD /r] VAESENCLAST ymm1, ymm2, ymm3/m256
-    VAESENCLAST_VqqHqqWqq_V256,
+    VaesenclastVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG DD /r] VAESENCLAST xmm1, xmm2, xmm3/m128
-    VAESENCLAST_VdqHdqWdq_E128,
+    VaesenclastVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG DD /r] VAESENCLAST ymm1, ymm2, ymm3/m256
-    VAESENCLAST_VqqHqqWqq_E256,
+    VaesenclastVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG DD /r] VAESENCLAST zmm1, zmm2, zmm3/m512
-    VAESENCLAST_VdqqHdqqWdqq_E512,
+    VaesenclastVdqqHdqqWdqqE512,
 
     // [66 0F 38 DB /r] AESIMC xmm1, xmm2/m128
-    AESIMC_VdqWdq,
+    AesimcVdqWdq,
     // [VEX.128.66.0F38.WIG DB /r] VAESIMC xmm1, xmm2/m128
-    VAESIMC_VdqWdq_V128,
+    VaesimcVdqWdqV128,
 
     // [66 0F 3A DF /r ib] AESKEYGENASSIST xmm1, xmm2/m128, imm8
-    AESKEYGENASSIST_VdqWdqIb,
+    AeskeygenassistVdqWdqIb,
     // [VEX.128.66.0F3A.WIG DF /r ib] AESKEYGENASSIST xmm1, xmm2/m128, imm8
-    VAESKEYGENASSIST_VdqWdqIb_V128,
+    VaeskeygenassistVdqWdqIbV128,
 
     // [24 ib] AND AL, imm8
-    AND_ALIb,
+    AndALIb,
     // [25 iw] AND AX, imm16
-    AND_AXIw,
+    AndAXIw,
     // [25 id] AND EAX, imm32
-    AND_EAXId,
+    AndEAXId,
     // [REX.W 25 id] AND RAX, imm32
-    AND_RAXId,
+    AndRAXId,
     // [80 /4 ib] AND r/m8, imm8
     // [REX 80 /4 ib] AND r/m8, imm8
-    AND_EbIb,
+    AndEbIb,
     // [81 /4 iw] AND r/m16, imm16
-    AND_EwIw,
+    AndEwIw,
     // [81 /4 iw] AND r/m32, imm32
-    AND_EdId,
+    AndEdId,
     // [REX.W 81 /4 id] AND r/m64, imm32
-    AND_EqId,
+    AndEqId,
     // [83 /4 ib] AND r/m16, imm8
-    AND_GwIb,
+    AndGwIb,
     // [83 /4 ib] AND r/m32, imm8
-    AND_GdIb,
+    AndGdIb,
     // [REX.W 83 /4 ib] ANDC r/m64, imm8
-    AND_GqIb,
+    AndGqIb,
     // [20 /r] AND r/m8, r8
     // [REX 20 /r] AND r/m8, r8
-    AND_EbGb,
+    AndEbGb,
     // [21 /r] AND r/m16, r16
-    AND_EwGw,
+    AndEwGw,
     // [21 /r] AND r/m32, r32
-    AND_EdGd,
+    AndEdGd,
     // [REX.W 21 /r] AND r/m64, r64
-    AND_EqGq,
+    AndEqGq,
     // [22 /r] AND r8, r/m8
     // [REX 22 /r] AND r8, r/m8
-    AND_GbEb,
+    AndGbEb,
     // [23 /r] AND r16, r/m16
-    AND_GwEw,
+    AndGwEw,
     // [23 /r] AND r32, r/m32
-    AND_GdEd,
+    AndGdEd,
     // [REX.W 23 /r] AND r64, r/m64
-    AND_GqEq,
+    AndGqEq,
 
     // [VEX.LZ.0F38.W0 F2 /r] ANDN r32a, r32b, r/m32
-    ANDN_GdBdEd,
+    AndnGdBdEd,
     // [VEX.LZ.0F38.W1 F2 /r] ANDN r64a, r64b, r/m64
-    ANDN_GqBqEq,
+    AndnGqBqEq,
 
     // [66 0F 54 /r] ANDPD xmm1, xmm2/m128
-    ANDPD_VdqWdq,
+    AndpdVdqWdq,
     // [VEX.128.66.0F 54 /r] VANDPD xmm1, xmm2, xmm3/m128
-    VANDPD_VdqHdqWdq_V128,
+    VandpdVdqHdqWdqV128,
     // [VEX.256.66.0F 54 /r] VANDPD ymm1, ymm2, ymm3/m256
-    VANDPD_VqqHqqWqq_V256,
+    VandpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 54 /r] VANDPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VANDPD_VdqHdqWdq_E128,
+    VandpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 54 /r] VANDPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VANDPD_VqqHqqWqq_E256,
+    VandpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 54 /r] VANDPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VANDPD_VdqqHdqqWdqq_E512,
+    VandpdVdqqHdqqWdqqE512,
 
     // [NP 0F 54 /r] ANDPS xmm1, xmm2/m128
-    ANDPS_VdqWdq,
+    AndpsVdqWdq,
     // [VEX.128.0F 54 /r] VANDPS xmm1, xmm2, xmm3/m128
-    VANDPS_VdqHdqWdq_V128,
+    VandpsVdqHdqWdqV128,
     // [VEX.256.0F 54 /r] VANDPS ymm1, ymm2, ymm3/m256
-    VANDPS_VqqHqqWqq_V256,
+    VandpsVqqHqqWqqV256,
     // [EVEX.128.0F.W0 54 /r] VANDPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VANDPS_VdqHdqWdq_E128,
+    VandpsVdqHdqWdqE128,
     // [EVEX.256.0F.W0 54 /r] VANDPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VANDPS_VqqHqqWqq_E256,
+    VandpsVqqHqqWqqE256,
     // [EVEX.512.0F.W0 54 /r] VANDPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VANDPS_VdqqHdqqWdqq_E512,
+    VandpsVdqqHdqqWdqqE512,
 
     // [66 0F 55 /r] ANDNPD xmm1, xmm2/m128
-    ANDNPD_VdqWdq,
+    AndnpdVdqWdq,
     // [VEX.128.66.0F 55 /r] VANDNPD xmm1, xmm2, xmm3/m128
-    VANDNPD_VdqHdqWdq_V128,
+    VandnpdVdqHdqWdqV128,
     // [VEX.256.66.0F 55 /r] VANDNPD ymm1, ymm2, ymm3/m256
-    VANDNPD_VqqHqqWqq_V256,
+    VandnpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 55 /r] VANDNPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VANDNPD_VdqHdqWdq_E128,
+    VandnpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 55 /r] VANDNPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VANDNPD_VqqHqqWqq_E256,
+    VandnpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 55 /r] VANDNPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VANDNPD_VdqqHdqqWdqq_E512,
+    VandnpdVdqqHdqqWdqqE512,
 
     // [NP 0F 55 /r] ANDNPS xmm1, xmm2/m128
-    ANDNPS_VdqWdq,
+    AndnpsVdqWdq,
     // [VEX.128.0F 55 /r] VANDNPS xmm1, xmm2, xmm3/m128
-    VANDNPS_VdqHdqWdq_V128,
+    VandnpsVdqHdqWdqV128,
     // [VEX.256.0F 55 /r] VANDNPS ymm1, ymm2, ymm3/m256
-    VANDNPS_VqqHqqWqq_V256,
+    VandnpsVqqHqqWqqV256,
     // [EVEX.128.0F.W0 55 /r] VANDNPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VANDNPS_VdqHdqWdq_E128,
+    VandnpsVdqHdqWdqE128,
     // [EVEX.256.0F.W0 55 /r] VANDNPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VANDNPS_VqqHqqWqq_E256,
+    VandnpsVqqHqqWqqE256,
     // [EVEX.512.0F.W0 55 /r] VANDNPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VANDNPS_VdqqHdqqWdqq_E512,
+    VandnpsVdqqHdqqWdqqE512,
 
     // [63 /r] ARPL r/m16, r16
-    ARPL_EwGw,
+    ArplEwGw,
 
     // [VEX.LZ.0F38.W0 F7 /r] BEXTR r32a, r/m32, r32b
-    BEXTR_GdEdBd,
+    BextrGdEdBd,
     // [VEX.LZ.0F38.W1 F7 /r] BEXTR r64a, r/m64, r64b
-    BEXTR_GqEqBq,
+    BextrGqEqBq,
 
     // [66 0F 3A 0D /r ib] BLENDPD xmm1, xmm2/m128, imm8
-    BLENDPD_VdqWdqIb,
+    BlendpdVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 0D /r ib] VBLENDPD xmm1, xmm2, xmm3/m128, imm8
-    VBLENDPD_VdqHdqWdqIb_V128,
+    VblendpdVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.WIG 0D /r ib] VBLENDPD ymm1, ymm2, ymm3/m256, imm8
-    VBLENDPD_VqqHqqWqqIb_V256,
+    VblendpdVqqHqqWqqIbV256,
 
     // [66 0F 3A 0C /r ib] BLENDPS xmm1, xmm2/m128, imm8
-    BLENDPS_VdqWdqIb,
+    BlendpsVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 0C /r ib] VBLENDPS xmm1, xmm2, xmm3/m128, imm8
-    VBLENDPS_VdqHdqWdqIb_V128,
+    VblendpsVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.WIG 0C /r ib] VBLENDPS ymm1, ymm2, ymm3/m256, imm8
-    VBLENDPS_VqqHqqWqqIb_V256,
+    VblendpsVqqHqqWqqIbV256,
 
     // [66 0F 38 15 /r] BLENDVPD xmm1, xmm2/m128, <XMM0>
-    BLENDVPD_VdqWdq,
+    BlendvpdVdqWdq,
     // [VEX.128.66.0F3A.W0 4B /r /is4] VBLENDVPD xmm1, xmm2, xmm3/m128, xmm4
-    VBLENDVPD_VdqHdqWdqIb_V128,
+    VblendvpdVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.W0 4B /r /is4] VBLENDVPD ymm1, ymm2, ymm3/m256, ymm4
-    VBLENDVPD_VqqHqqWqqIb_V256,
+    VblendvpdVqqHqqWqqIbV256,
 
     // [66 0F 38 14 /r] BLENDVPS xmm1, xmm2/m128, <XMM0>
-    BLENDVPS_VdqWdq,
+    BlendvpsVdqWdq,
     // [VEX.128.66.0F3A.W0 4A /r /is4] VBLENDVPS xmm1, xmm2, xmm3/m128, xmm4
-    VBLENDVPS_VdqHdqWdqIb_V128,
+    VblendvpsVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.W0 4A /r /is4] VBLENDVPS ymm1, ymm2, ymm3/m256, ymm4
-    VBLENDVPS_VqqHqqWqqIb_V256,
+    VblendvpsVqqHqqWqqIbV256,
 
     // [VEX.LZ.0F38.W0 F3 /3] BLSI r32, r/m32
-    BLSI_BdEd,
+    BlsiBdEd,
     // [VEX.LZ.0F37.W1 F3 /3] BLSI r64, r/m64
-    BLSI_BqEq,
+    BlsiBqEq,
 
     // [VEX.LZ.0F38.W0 F3 /2] BLSMSK r32, r/m32
-    BLSMSK_BdEd,
+    BlsmskBdEd,
     // [VEX.LZ.0F37.W1 F3 /2] BLSMSK r64, r/m64
-    BLSMSK_BqEq,
+    BlsmskBqEq,
 
     // [VEX.LZ.0F38.W0 F3 /1] BLSR r32, r/m32
-    BLSR_BdEd,
+    BlsrBdEd,
     // [VEX.LZ.0F37.W1 F3 /1] BLSR r64, r/m64
-    BLSR_BqEq,
+    BlsrBqEq,
 
     // [F3 0F 1A /r] BNDCL bnd, r/m32
-    BNDCL_BGdqEd,
+    BndclBGdqEd,
     // [F3 0F 1A /r] BNDCL bnd, r/m64
-    BNDCL_BGdqEq,
+    BndclBGdqEq,
 
     // [F2 0F 1A /r] BNDCU bnd, r/m32
-    BNDCU_BGdqEd,
+    BndcuBGdqEd,
     // [F2 0F 1A /r] BNDCU bnd, r/m64
-    BNDCU_BGdqEq,
+    BndcuBGdqEq,
     // [F2 0F 1B /r] BNDCN bnd, r/m32
-    BNDCN_BGdqEd,
+    BndcnBGdqEd,
     // [F2 0F 1B /r] BNDCN bnd, r/m64
-    BNDCN_BGdqEq,
+    BndcnBGdqEq,
 
     // [NP 0F 1A /r] BNDLDX bnd, mib
-    BNDLDX_BGdqM,
+    BndldxBGdqM,
 
     // [F3 0F 1B /r] BNDMK bnd, m32
-    BNDMK_BGdqMd,
+    BndmkBGdqMd,
     // [F3 0F 1B /r] BNDMK bnd, m64
-    BNDMK_BGdqMq,
+    BndmkBGdqMq,
 
     // [66 0F 1A /r] BNDMOV bnd1, bnd2/m64
-    BNDMOV_BGdqBEq,
+    BndmovBGdqBEq,
     // [66 0F 1A /r] BNDMOV bnd1, bnd2/m128
-    BNDMOV_BGdqBEdq,
+    BndmovBGdqBEdq,
     // [66 0F 1B /r] BNDMOV bnd1/m64, bnd2
-    BNDMOV_BEqBGdq,
+    BndmovBEqBGdq,
     // [66 0F 1B /r] BNDMOV bnd1/m128, bnd2
-    BNDMOV_BEdqBGdq,
+    BndmovBEdqBGdq,
 
     // [NP 0F 1B /r] BNDSTX mib, bnd
-    BNDSTX_MBGdq,
+    BndstxMBGdq,
 
     // [62 /r] BOUND r16, m16&16
-    BOUND_GwMa,
+    BoundGwMa,
     // [62 /r] BOUND r32, m32&32
-    BOUND_GdMa,
+    BoundGdMa,
 
     // [0F BC /r] BSF r16, r/m16
-    BSF_GwEw,
+    BsfGwEw,
     // [0F BC /r] BSF r32, r/m32
-    BSF_GdEd,
+    BsfGdEd,
     // [REX.W 0F BC /r] BSF r64, r/m64
-    BSF_GqEq,
+    BsfGqEq,
 
     // [0F BD /r] BSR r16, r/m16
-    BSR_GwEw,
+    BsrGwEw,
     // [0F BD /r] BSR r32, r/m32
-    BSR_GdEd,
+    BsrGdEd,
     // [REX.W 0F BD /r] BSR r64, r/m64
-    BSR_GqEq,
+    BsrGqEq,
 
     // [0F C8+rd] BSWAP r32
-    BSWAP_Gd,
+    BswapGd,
     // [REX.W 0F C8+rd] BSWAP r64
-    BSWAP_Gq,
+    BswapGq,
 
     // [0F A3 /r] BT r/m16, r16
-    BT_EwGw,
+    BtEwGw,
     // [0F A3 /r] BT r/m32, r32
-    BT_EdGd,
+    BtEdGd,
     // [REX.W 0F A3 /r] BT r/m64, r64
-    BT_EqGq,
+    BtEqGq,
     // [0F BA /4 ib] BT r/m16, imm8
-    BT_EwIb,
+    BtEwIb,
     // [0F BA /4 ib] BT r/m32, imm8
-    BT_EdIb,
+    BtEdIb,
     // [REX.W 0F BA /4 ib] BT r/m64, imm8
-    BT_EqIb,
+    BtEqIb,
 
     // [0F BB /r] BTC r/m16, r16
-    BTC_EwGw,
+    BtcEwGw,
     // [0F BB /r] BTC r/m32, r32
-    BTC_EdGd,
+    BtcEdGd,
     // [REX.W 0F BB /r] BTC r/m64, r64
-    BTC_EqGq,
+    BtcEqGq,
     // [0F BA /7 ib] BTC r/m16, imm8
-    BTC_EwIb,
+    BtcEwIb,
     // [0F BA /7 ib] BTC r/m32, imm8
-    BTC_EdIb,
+    BtcEdIb,
     // [REX.W 0F BA /7 ib] BTC r/m64, imm8
-    BTC_EqIb,
+    BtcEqIb,
 
     // [0F B3 /r] BTR r/m16, r16
-    BTR_EwGw,
+    BtrEwGw,
     // [0F B3 /r] BTR r/m32, r32
-    BTR_EdGd,
+    BtrEdGd,
     // [REX.W 0F B3 /r] BTR r/m64, r64
-    BTR_EqGq,
+    BtrEqGq,
     // [0F BA /6 ib] BTR r/m16, imm8
-    BTR_EwIb,
+    BtrEwIb,
     // [0F BA /6 ib] BTR r/m32, imm8
-    BTR_EdIb,
+    BtrEdIb,
     // [REX.W 0F BA /6 ib] BTR r/m64, imm8
-    BTR_EqIb,
+    BtrEqIb,
 
     // [0F AB /r] BTS r/m16, r16
-    BTS_EwGw,
+    BtsEwGw,
     // [0F AB /r] BTS r/m32, r32
-    BTS_EdGd,
+    BtsEdGd,
     // [REX.W 0F AB /r] BTS r/m64, r64
-    BTS_EqGq,
+    BtsEqGq,
     // [0F BA /5 ib] BTS r/m16, imm8
-    BTS_EwIb,
+    BtsEwIb,
     // [0F BA /5 ib] BTS r/m32, imm8
-    BTS_EdIb,
+    BtsEdIb,
     // [REX.W 0F BA /5 ib] BTS r/m64, imm8
-    BTS_EqIb,
+    BtsEqIb,
 
     // [VEX.LZ.0F38.W0 F5 /r] BZHI r32a, r/m32, r32b
-    BZHI_GdDdEd,
+    BzhiGdDdEd,
     // [VEX.LZ.0F38.W1 F5 /r] BZHI r64a, r/m64, r64b
-    BZHI_GqBqEq,
+    BzhiGqBqEq,
 
     // [E8 cw] CALL rel16
-    CALL_Jw,
+    CallJw,
     // [E8 cw] CALL rel32
-    CALL_Jd,
+    CallJd,
     // [FF /2] CALL r/m16
-    CALL_Ew,
+    CallEw,
     // [FF /2] CALL r/m32
-    CALL_Ed,
+    CallEd,
     // [FF /2] CALL r/m64
-    CALL_Eq,
+    CallEq,
     // [9A cd] CALL ptr16:16
-    CALL_Ap_Op16,
+    CallApOp16,
     // [9A cp] CALL ptr16:32
-    CALL_Ap_Op32,
+    CallApOp32,
     // [FF /3] CALL m16:16
-    CALL_Ep_Op16,
+    CallEpOp16,
     // [FF /3] CALL m16:32
-    CALL_Ep_Op32,
+    CallEpOp32,
     // [REX.W FF /3] CALL m16:64
-    CALL_Ep_Op64,
+    CallEpOp64,
 
     // [98] CBW
-    CBW,
+    Cbw,
     // [98] CWDE
-    CWDE,
+    Cwde,
     // [REX.W 98] CDQE
-    CDQE,
+    Cdqe,
 
     // [NP 0F 01 CA] CLAC
-    CLAC,
+    Clac,
 
     // [F8] CLC
-    CLC,
+    Clc,
 
     // [FC] CLD
-    CLD,
+    Cld,
 
     // [NP 0F 1C /0] CLDEMOTE m8
-    CLDEMOTE_Mb,
+    CldemoteMb,
 
     // [NP 0F AE /7] CLFLUSH m8
-    CLFLUSH_Mb,
+    ClflushMb,
 
     // [NFx 66 0F AE /7] CLFLUSHOPT m8
-    CLFLUSHOPT_Mb,
+    ClflushoptMb,
 
     // [FA] CLI
-    CLI,
+    Cli,
 
     // [F3 0F AE /6] CLRSSBSY m64
-    CLRSSBSY_Mq,
+    ClrssbsyMq,
 
     // [0F 06] CLTS
-    CLTS,
+    Clts,
 
     // [66 0F AE /6] CLWB m8
-    CLWB_Mb,
+    ClwbMb,
 
     // [F5] CMC
-    CMC,
+    Cmc,
 
     // [0F 40 /r] CMOVO r16, r/m16
-    CMOVO_GwEw,
+    CmovoGwEw,
     // [0F 40 /r] CMOVO r32, r/m32
-    CMOVO_GdEd,
+    CmovoGdEd,
     // [REX.W 0F 40 /r] CMOVO r64, r/m64
-    CMOVO_GqEq,
+    CmovoGqEq,
     // [0F 41 /r] CMOVNO r16, r/m16
-    CMOVNO_GwEw,
+    CmovnoGwEw,
     // [0F 41 /r] CMOVNO r32, r/m32
-    CMOVNO_GdEd,
+    CmovnoGdEd,
     // [REX.W 0F 41 /r] CMOVNO r64, r/m64
-    CMOVNO_GqEq,
+    CmovnoGqEq,
     // [0F 42 /r] CMOVB r16, r/m16
     // [0F 42 /r] CMOVC r16, r/m16
     // [0F 42 /r] CMOVNAE r16, r/m16
-    CMOVB_GwEw,
+    CmovbGwEw,
     // [0F 42 /r] CMOVB r32, r/m32
     // [0F 42 /r] CMOVC r32, r/m32
     // [0F 42 /r] CMOVNAE r32, r/m32
-    CMOVB_GdEd,
+    CmovbGdEd,
     // [REX.W 0F 42 /r] CMOVB r64, r/m64
     // [REX.W 0F 42 /r] CMOVC r64, r/m64
     // [REX.W 0F 42 /r] CMOVNAE r64, r/m64
-    CMOVB_GqEq,
+    CmovbGqEq,
     // [0F 43 /r] CMOVAE r16, r/m16
     // [0F 43 /r] CMOVNB r16, r/m16
-    CMOVAE_GwEw,
+    CmovaeGwEw,
     // [0F 43 /r] CMOVAE r32, r/m32
     // [0F 43 /r] CMOVNB r32, r/m32
-    CMOVAE_GdEd,
+    CmovaeGdEd,
     // [REX.W 0F 43 /r] CMOVAE r64, r/m64
     // [REX.W 0F 43 /r] CMOVNB r64, r/m64
-    CMOVAE_GqEq,
+    CmovaeGqEq,
     // [0F 44 /r] CMOVE r16, r/m16
     // [0F 44 /r] CMOVZ r16, r/m16
-    CMOVE_GwEw,
+    CmoveGwEw,
     // [0F 44 /r] CMOVE r32, r/m32
     // [0F 44 /r] CMOVZ r32, r/m32
-    CMOVE_GdEd,
+    CmoveGdEd,
     // [REX.W 0F 44 /r] CMOVE r64, r/m64
     // [REX.W 0F 44 /r] CMOVZ r64, r/m64
-    CMOVE_GqEq,
+    CmoveGqEq,
     // [0F 45 /r] CMOVNE r16, r/m16
     // [0F 45 /r] CMOVNZ r16, r/m16
-    CMOVNE_GwEw,
+    CmovneGwEw,
     // [0F 45 /r] CMOVNE r32, r/m32
     // [0F 45 /r] CMOVNZ r32, r/m32
-    CMOVNE_GdEd,
+    CmovneGdEd,
     // [REX.W 0F 45 /r] CMOVNE r64, r/m64
     // [REX.W 0F 45 /r] CMOVNZ r64, r/m64
-    CMOVNE_GqEq,
+    CmovneGqEq,
     // [0F 46 /r] CMOVBE r16, r/m16
     // [0F 46 /r] CMOVNA r16, r/m16
-    CMOVBE_GwEw,
+    CmovbeGwEw,
     // [0F 46 /r] CMOVBE r32, r/m32
     // [0F 46 /r] CMOVNA r32, r/m32
-    CMOVBE_GdEd,
+    CmovbeGdEd,
     // [REX.W 0F 46 /r] CMOVBE r64, r/m64
     // [REX.W 0F 46 /r] CMOVNA r64, r/m64
-    CMOVBE_GqEq,
+    CmovbeGqEq,
     // [0F 47 /r] CMOVA r16, r/m16
     // [0F 47 /r] CMOVNBE r16, r/m16
     // [0F 47 /r] CMOVNC r16, r/m16
-    CMOVA_GwEw,
+    CmovaGwEw,
     // [0F 47 /r] CMOVA r32, r/m32
     // [0F 47 /r] CMOVNBE r32, r/m32
     // [0F 47 /r] CMOVNC r32, r/m32
-    CMOVA_GdEd,
+    CmovaGdEd,
     // [REX.W 0F 47 /r] CMOVA r64, r/m64
     // [REX.W 0F 47 /r] CMOVNBE r64, r/m64
     // [REX.W 0F 47 /r] CMOVNC r64, r/m64
-    CMOVA_GqEq,
+    CmovaGqEq,
     // [0F 48 /r] CMOVS r16, r/m16
-    CMOVS_GwEw,
+    CmovsGwEw,
     // [0F 48 /r] CMOVS r32, r/m32
-    CMOVS_GdEd,
+    CmovsGdEd,
     // [REX.W 0F 48 /r] CMOVS r64, r/m64
-    CMOVS_GqEq,
+    CmovsGqEq,
     // [0F 49 /r] CMOVNS r16, r/m16
-    CMOVNS_GwEw,
+    CmovnsGwEw,
     // [0F 49 /r] CMOVNS r32, r/m32
-    CMOVNS_GdEd,
+    CmovnsGdEd,
     // [REX.W 0F 49 /r] CMOVNS r64, r/m64
-    CMOVNS_GqEq,
+    CmovnsGqEq,
     // [0F 4A /r] CMOVP r16, r/m16
     // [0F 4A /r] CMOVPE r16, r/m16
-    CMOVP_GwEw,
+    CmovpGwEw,
     // [0F 4A /r] CMOVP r32, r/m32
     // [0F 4A /r] CMOVPE r32, r/m32
-    CMOVP_GdEd,
+    CmovpGdEd,
     // [REX.W 0F 4A /r] CMOVP r64, r/m64
     // [REX.W 0F 4A /r] CMOVPE r64, r/m64
-    CMOVP_GqEq,
+    CmovpGqEq,
     // [0F 4B /r] CMOVNP r16, r/m16
     // [0F 4B /r] CMOVPO r16, r/m16
-    CMOVNP_GwEw,
+    CmovnpGwEw,
     // [0F 4B /r] CMOVNP r32, r/m32
     // [0F 4B /r] CMOVPO r32, r/m32
-    CMOVNP_GdEd,
+    CmovnpGdEd,
     // [REX.W 0F 4B /r] CMOVNP r64, r/m64
     // [REX.W 0F 4B /r] CMOVPO r64, r/m64
-    CMOVNP_GqEq,
+    CmovnpGqEq,
     // [0F 4C /r] CMOVL r16, r/m16
     // [0F 4C /r] CMOVNGE r16, r/m16
-    CMOVL_GwEw,
+    CmovlGwEw,
     // [0F 4C /r] CMOVL r32, r/m32
     // [0F 4C /r] CMOVNGE r32, r/m32
-    CMOVL_GdEd,
+    CmovlGdEd,
     // [REX.W 0F 4C /r] CMOVL r64, r/m64
     // [REX.W 0F 4C /r] CMOVNGE r64, r/m64
-    CMOVL_GqEq,
+    CmovlGqEq,
     // [0F 4D /r] CMOVGE r16, r/m16
     // [0F 4D /r] CMOVNL r16, r/m16
-    CMOVGE_GwEw,
+    CmovgeGwEw,
     // [0F 4D /r] CMOVGE r32, r/m32
     // [0F 4D /r] CMOVNL r32, r/m32
-    CMOVGE_GdEd,
+    CmovgeGdEd,
     // [REX.W 0F 4D /r] CMOVGE r64, r/m64
     // [REX.W 0F 4D /r] CMOVNL r64, r/m64
-    CMOVGE_GqEq,
+    CmovgeGqEq,
     // [0F 4E /r] CMOVLE r16, r/m16
     // [0F 4E /r] CMOVNG r16, r/m16
-    CMOVLE_GwEw,
+    CmovleGwEw,
     // [0F 4E /r] CMOVLE r32, r/m32
     // [0F 4E /r] CMOVNG r32, r/m32
-    CMOVLE_GdEd,
+    CmovleGdEd,
     // [REX.W 0F 4E /r] CMOVLE r64, r/m64
     // [REX.W 0F 4E /r] CMOVNG r64, r/m64
-    CMOVLE_GqEq,
+    CmovleGqEq,
     // [0F 4F /r] CMOVG r16, r/m16
     // [0F 4F /r] CMOVNLE r16, r/m16
-    CMOVG_GwEw,
+    CmovgGwEw,
     // [0F 4F /r] CMOVG r32, r/m32
     // [0F 4F /r] CMOVNLE r32, r/m32
-    CMOVG_GdEd,
+    CmovgGdEd,
     // [REX.W 0F 4F /r] CMOVG r64, r/m64
     // [REX.W 0F 4F /r] CMOVNLE r64, r/m64
-    CMOVG_GqEq,
+    CmovgGqEq,
 
     // [3C ib] CMP AL, imm8
-    CMP_ALIb,
+    CmpALIb,
     // [3D iw] CMP AX, imm16
-    CMP_AXIw,
+    CmpAXIw,
     // [3D id] CMP EAX, imm32
-    CMP_EAXId,
+    CmpEAXId,
     // [REX.W 3D id] CMP RAX, imm32
-    CMP_RAXId,
+    CmpRAXId,
     // [80 /7 ib] CMP r/m8, imm8
     // [REX 80 /7 ib] CMP r/m8, imm8
-    CMP_EbIb,
+    CmpEbIb,
     // [81 /7 ib] CMP r/m16, imm16
-    CMP_EwIw,
+    CmpEwIw,
     // [81 /7 ib] CMP r/m32, imm32
-    CMP_EdId,
+    CmpEdId,
     // [REX.W 81 /7 id] CMP r/m64, imm32
-    CMP_EqId,
+    CmpEqId,
     // [83 /7 ib] CMP r/m16, imm8
-    CMP_EwIb,
+    CmpEwIb,
     // [83 /7 ib] CMP r/m32, imm8
-    CMP_EdIb,
+    CmpEdIb,
     // [REX.W 83 /7 ib] CMP r/m64, imm8
-    CMP_EqIb,
+    CmpEqIb,
     // [38 /r] CMP r/m8, r8
     // [REX 38 /r] CMP r/m8, r8
-    CMP_EbGb,
+    CmpEbGb,
     // [39 /r] CMP r/m16, r16
-    CMP_EwGw,
+    CmpEwGw,
     // [39 /r] CMP r/m32, r32
-    CMP_EdGd,
+    CmpEdGd,
     // [REX.W 39 /r] CMP r/m64, r64
-    CMP_EqGq,
+    CmpEqGq,
     // [3A /r] CMP r8, r/m8
     // [REX 3A /r] CMP r8, r/m8
-    CMP_GbEb,
+    CmpGbEb,
     // [3B /r] CMP r16, r/m16
-    CMP_GwEw,
+    CmpGwEw,
     // [3B /r] CMP r32, r/m32
-    CMP_GdEd,
+    CmpGdEd,
     // [REX.W 38 /r] CMP r64, r/m64
-    CMP_GqEq,
+    CmpGqEq,
 
     // [66 0F C2 /r ib] CMPPD xmm1, xmm2/m128, imm8
-    CMPPD_VdqWdqIb,
+    CmppdVdqWdqIb,
     // [VEX.128.66.0F.WIG C2 /r ib] VCMPPD xmm1, xmm2, xmm3/m128, imm8
-    VCMPPD_VdqHdqWdqIb_V128,
+    VcmppdVdqHdqWdqIbV128,
     // [VEX.256.66.0F.WIG C2 /r ib] VCMPPD ymm1, ymm2, ymm3/m256, imm8
-    VCMPPD_VqqHqqWqqIb_V256,
+    VcmppdVqqHqqWqqIbV256,
     // [EVEX.128.66.0F.W1 C2 /r ib] VCMPPD k1 {k2}, xmm2, xmm3/m128/m64bcst, imm8
-    VCMPPD_VdqHdqWdqIb_E128,
+    VcmppdVdqHdqWdqIbE128,
     // [EVEX.256.66.0F.W1 C2 /r ib] VCMPPD k1 {k2}, ymm2, ymm3/m256/m64bcst, imm8
-    VCMPPD_VqqHqqWqqIb_E256,
+    VcmppdVqqHqqWqqIbE256,
     // [EVEX.512.66.0F.W1 C2 /r ib] VCMPPD k1 {k2}, zmm2, zmm3/m512/m64bcst{sae}, imm8
-    VCMPPD_VdqqHdqqWdqqIb_E512,
+    VcmppdVdqqHdqqWdqqIbE512,
 
     // [NP 0F C2 /r ib] CMPPS xmm1, xmm2/m128, imm8
-    CMPPS_VdqWdqIb,
+    CmppsVdqWdqIb,
     // [VEX.128.0F.WIG C2 /r ib] VCMPPS xmm1, xmm2, xmm3/m128, imm8
-    VCMPPS_VdqHdqWdqIb_V128,
+    VcmppsVdqHdqWdqIbV128,
     // [VEX.256.0F.WIG C2 /r ib] VCMPPS ymm1, ymm2, ymm3/m256, imm8
-    VCMPPS_VqqHqqWqqIb_V256,
+    VcmppsVqqHqqWqqIbV256,
     // [EVEX.128.0F.W0 C2 /r ib] VCMPPS k1 {k2}, xmm2, xmm3/m128/m32bcst, imm8
-    VCMPPS_VdqHdqWdqIb_E128,
+    VcmppsVdqHdqWdqIbE128,
     // [EVEX.256.0F.W0 C2 /r ib] VCMPPS k1 {k2}, ymm2, ymm3/m256/m32bcst, imm8
-    VCMPPS_VqqHqqWqqIb_E256,
+    VcmppsVqqHqqWqqIbE256,
     // [EVEX.512.0F.W0 C2 /r ib] VCMPPS k1 {k2}, zmm2, zmm3/m512/m32bcst{sae}, imm8
-    VCMPPS_VdqqHdqqWdqqIb_E512,
+    VcmppsVdqqHdqqWdqqIbE512,
 
     // [A6] CMPS m8, m8
     // [A6] CMPSB m8, m8
-    CMPS_XbYb,
+    CmpsXbYb,
     // [A7] CMPS m16, m16
     // [A7] CMPSW m16, m16
-    CMPS_XwYw,
+    CmpsXwYw,
     // [A7] CMPS m32, m32
     // [A7] CMPSD m32, m32
-    CMPS_XdYd,
+    CmpsXdYd,
     // [REX.W A7] CMPS m64, m64
     // [REX.W A7] CMPSQ m64, m64
-    CMPS_XqYq,
+    CmpsXqYq,
 
     // [F2 0F C2 /r ib] CMPSD xmm1, xmm2/m64, imm8
-    CMPSD_VdqWqIb,
+    CmpsdVdqWqIb,
     // [VEX.LIG.F2.0F.WIG C2 /r ib] VCMPSD xmm1, xmm2, xmm3/m64, imm8
-    VCMPSD_VdqHdqWqIb_V,
+    VcmpsdVdqHdqWqIbV,
     // [EVEX.LIG.F2.0F.W1 C2 /r ib] VCMPSD k1 {k2}, xmm2, xmm3/m64{sae}, imm8
-    VCMPSD_KGqHdqWqIb_E,
+    VcmpsdKGqHdqWqIbE,
 
     // [F3 0F C2 /r ib] CMPSS xmm1, xmm2/m32, imm8
-    CMPSS_VdqWdIb,
+    CmpssVdqWdIb,
     // [VEX.LIG.F3.0F.WIG C2 /r ib] VCMPSS xmm1, xmm2, xmm3/m32, imm8
-    VCMPSS_VdqHdqWdIb_V,
+    VcmpssVdqHdqWdIbV,
     // [EVEX.LIG.F3.0F.W0 C2 /r ib] VCMPSS k1 {k2}, xmm2, xmm3/m32{sae}, imm8
-    VCMPSS_KGqHdqWdIb_E,
+    VcmpssKGqHdqWdIbE,
 
     // [0F B0 /r] CMPXCHG r/m8, r8
     // [REX 0F B0 /r] CMPXCHG r/m8, r8
-    CMPXCHG_EbGb,
+    CmpxchgEbGb,
     // [0F B1 /r] CMPXCHG r/m16, r16
-    CMPXCHG_EwGw,
+    CmpxchgEwGw,
     // [0F B1 /r] CMPXCHG r/m32, r32
-    CMPXCHG_EdGd,
+    CmpxchgEdGd,
     // [REX.W 0F B1 /r] CMPXCHG r/m64, r64
-    CMPXCHG_EqGq,
+    CmpxchgEqGq,
 
     // [0F C7 /1] CMPXCHG8B m64
-    CMPXCHG8B_Mq,
+    Cmpxchg8bMq,
     // [REX.W 0F C7 /1] CMPXCHG m128
-    CMPXCHG16B_Mdq,
+    Cmpxchg16bMdq,
 
     // [66 0F 2F /r] COMISD xmm1, xmm2/m64
-    COMISD_VdqWq,
+    ComisdVdqWq,
     // [VEX.LIG.66.0F.WIG 2F /r] VCOMISD xmm1, xmm2/m64
-    VCOMISD_VdqWq_V,
+    VcomisdVdqWqV,
     // [EVEX.LIG.66.0F.W1 2F /r] VCOMISD xmm1, xmm2/m64{sae}
-    VCOMISD_VdqWq_E,
+    VcomisdVdqWqE,
 
     // [NP 0F 2F /r] COMISS xmm1, xmm2/m32
-    COMISS_VdqWd,
+    ComissVdqWd,
     // [VEX.LIG.0F.WIG 2F /r] VCOMISS xmm1, xmm2/m32
-    VCOMISS_VdqWd_V,
+    VcomissVdqWdV,
     // [EVEX.LIG.0F.W0 2F /r] VCOMISS xmm1, xmm2/m32{sae}
-    VCOMISS_VdqWd_E,
+    VcomissVdqWdE,
 
     // [0F A2] CPUID
-    CPUID,
+    Cpuid,
 
     // [F2 0F 38 F0 /r] CRC32 r32, r/m8
     // [F2 REX 0F 38 F0 /r] CRC32 r32, r/m8
-    CRC32_GdEb,
+    Crc32GdEb,
     // [F2 0F 38 F1 /r] CRC32 r32, r/m16
-    CRC32_GdEw,
+    Crc32GdEw,
     // [F2 0F 38 F1 /r] CRC32 r32, r/m32
-    CRC32_GdEd,
+    Crc32GdEd,
     // [F2 REX.W 0F 38 F0 /r] CRC32 r64, r/m8
-    CRC32_GqEb,
+    Crc32GqEb,
     // [F2 REX.W 0F 38 F1 /r] CRC32 r64, r/m64
-    CRC32_GqEq,
+    Crc32GqEq,
 
     // [F3 0F E6 /r] CVTDQ2PD xmm1, xmm2/m64
-    CVTDQ2PD_VdqWq,
+    Cvtdq2pdVdqWq,
     // [VEX.128.F3.0F.WIG E6 /r] VCVTDQ2PD xmm1, xmm2/m64
-    VCVTDQ2PD_VdqWq_V128,
+    Vcvtdq2pdVdqWqV128,
     // [VEX.256.F3.0F.WIG E6 /r] VCVTDQ2PD ymm1, xmm2/m128
-    VCVTDQ2PD_VqqWdq_V256,
+    Vcvtdq2pdVqqWdqV256,
     // [EVEX.128.F3.0F.W0 E6 /r] VCVTDQ2PD xmm1 {k1}{z}, xmm2/m64/m32bcst
-    VCVTDQ2PD_VdqWq_E128,
+    Vcvtdq2pdVdqWqE128,
     // [EVEX.256.F3.0F.W0 E6 /r] VCVTDQ2PD ymm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTDQ2PD_VqqWdq_E256,
+    Vcvtdq2pdVqqWdqE256,
     // [EVEX.512.F3.0F.W0 E6 /r] VCVTDQ2PD zmm1 {k1}{z}, ymm2/m256/m32bcst
-    VCVTDQ2PD_VdqqWqq_E512,
+    Vcvtdq2pdVdqqWqqE512,
 
     // [NP 0F 5B /r] CVTDQ2PD xmm1, xmm2/m128
-    CVTDQ2PS_VdqWdq,
+    Cvtdq2psVdqWdq,
     // [VEX.128.0F.WIG 5B /r] VCVTDQ2PD xmm1, xmm2/m128
-    VCVTDQ2PS_VdqWdq_V128,
+    Vcvtdq2psVdqWdqV128,
     // [VEX.256.0F.WIG 5B /r] VCVTDQ2PD ymm1, ymm2/m256
-    VCVTDQ2PS_VqqWqq_V256,
+    Vcvtdq2psVqqWqqV256,
     // [EVEX.128.0F.W0 5B /r] VCVTDQ2PD xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTDQ2PS_VdqWdq_E128,
+    Vcvtdq2psVdqWdqE128,
     // [EVEX.256.0F.W0 5B /r] VCVTDQ2PD ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VCVTDQ2PS_VqqWqq_E256,
+    Vcvtdq2psVqqWqqE256,
     // [EVEX.512.0F.W0 5B /r] VCVTDQ2PD zmm1 {k1}{z}, zmm2/m512/m32bcst{er}
-    VCVTDQ2PS_VdqqWdqq_E512,
+    Vcvtdq2psVdqqWdqqE512,
 
     // [EVEX.128.F2.0F38.W0 72 /r] VCVTNE2PS2BF16 xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VCVTNE2PS2BF16_VdqHdqWdq_E128,
+    Vcvtne2ps2bf16VdqHdqWdqE128,
     // [EVEX.256.F2.0F38.W0 72 /r] VCVTNE2PS2BF16 ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VCVTNE2PS2BF16_VqqHqqWqq_E256,
+    Vcvtne2ps2bf16VqqHqqWqqE256,
     // [EVEX.512.F2.0F38.W0 72 /r] VCVTNE2PS2BF16 zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VCVTNE2PS2BF16_VdqqHdqqWdqq_E512,
+    Vcvtne2ps2bf16VdqqHdqqWdqqE512,
 
     // [EVEX.128.F3.0F38.W0 72 /r] VCVTNEPS2BF16 xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTNEPS2BF16_VdqWdq_E128,
+    Vcvtneps2bf16VdqWdqE128,
     // [EVEX.256.F3.0F38.W0 72 /r] VCVTNEPS2BF16 ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VCVTNEPS2BF16_VqqWqq_E256,
+    Vcvtneps2bf16VqqWqqE256,
     // [EVEX.512.F3.0F38.W0 72 /r] VCVTNEPS2BF16 zmm1 {k1}{z}, zmm2/m512/m32bcst
-    VCVTNEPS2BF16_VdqqWdqq_E512,
+    Vcvtneps2bf16VdqqWdqqE512,
 
     // [F2 0F E6 /r] CVTPD2DQ xmm1, xmm2/m128
-    CVTPD2DQ_VdqWdq,
+    Cvtpd2dqVdqWdq,
     // [VEX.128.F2.0F.WIG E6 /r] VCVTPD2DQ xmm1, xmm2/m128
-    VCVTPD2DQ_VdqWdq_V128,
+    Vcvtpd2dqVdqWdqV128,
     // [VEX.256.F2.0F.WIG E6 /r] VCVTPD2DQ xmm1, ymm2/m256
-    VCVTPD2DQ_VdqWqq_V256,
+    Vcvtpd2dqVdqWqqV256,
     // [EVEX.128.F2.0F.W1 E6 /r] VCVTPD2DQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTPD2DQ_VdqWdq_E128,
+    Vcvtpd2dqVdqWdqE128,
     // [EVEX.256.F2.0F.W1 E6 /r] VCVTPD2DQ xmm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTPD2DQ_VdqWqq_E256,
+    Vcvtpd2dqVdqWqqE256,
     // [EVEX.512.F2.0F.W1 E6 /r] VCVTPD2DQ ymm1 {k1}{z}, zmm2/m512/m64bcst{er}
-    VCVTPD2DQ_VqqWdqq_E512,
+    Vcvtpd2dqVqqWdqqE512,
 
     // [66 0F 2D /r] CVTPD2PI mm, xmm/m128
-    CVTPD2PI_PqWdq,
+    Cvtpd2piPqWdq,
 
     // [66 0F 5A /r] CVTPD2PS xmm1, xmm2/m128
-    CVTPD2PS_VdqWdq,
+    Cvtpd2psVdqWdq,
     // [VEX.128.66.0F.WIG 5A /r] VCVTPD2PS xmm1, xmm2/m128
-    VCVTPD2PS_VdqWdq_V128,
+    Vcvtpd2psVdqWdqV128,
     // [VEX.256.66.0F.WIG 5A /r] VCVTPD2PS xmm1, ymm2/m256
-    VCVTPD2PS_VdqWqq_V256,
+    Vcvtpd2psVdqWqqV256,
     // [EVEX.128.66.0F.W1 5A /r] VCVTPD2PS xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTPD2PS_VdqWdq_E128,
+    Vcvtpd2psVdqWdqE128,
     // [EVEX.256.66.0F.W1 5A /r] VCVTPD2PS xmm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTPD2PS_VdqWqq_E256,
+    Vcvtpd2psVdqWqqE256,
     // [EVEX.512.66.0F.W1 5A /r] VCVTPD2PS ymm1 {k1}{z}, zmm2/m512/m64bcst{er}
-    VCVTPD2PS_VqqWdqq_E512,
+    Vcvtpd2psVqqWdqqE512,
 
     // [66 0F 2A /r] CVTPI2PD xmm, mm/m64
-    CVTPI2PD_VdqQq,
+    Cvtpi2pdVdqQq,
 
     // [NP 0F 2A /r] CVTPI2PS xmm, mm/m64
-    CVTPI2PS_VdqQq,
+    Cvtpi2psVdqQq,
 
     // [66 0F 5B /r] CVTPS2DQ xmm1, xmm2/m128
-    CVTPS2DQ_VdqWdq,
+    Cvtps2dqVdqWdq,
     // [VEX.128.66.0F.WIG 5B /r] VCVTPS2DQ xmm1, xmm2/m128
-    VCVTPS2DQ_VdqWdq_V128,
+    Vcvtps2dqVdqWdqV128,
     // [VEX.256.66.0F.WIG 5B /r] VCVTPS2DQ ymm1, ymm2/m256
-    VCVTPS2DQ_VqqWqq_V256,
+    Vcvtps2dqVqqWqqV256,
     // [EVEX.128.66.0F.W0 5B /r] VCVTPS2DQ xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTPS2DQ_VdqWdq_E128,
+    Vcvtps2dqVdqWdqE128,
     // [EVEX.256.66.0F.W0 5B /r] VCVTPS2DQ ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VCVTPS2DQ_VqqWqq_E256,
+    Vcvtps2dqVqqWqqE256,
     // [EVEX.512.66.0F.W0 5B /r] VCVTPS2DQ zmm1 {k1}{z}, zmm2/m512/m32bcst{er}
-    VCVTPS2DQ_VdqqWdqq_E512,
+    Vcvtps2dqVdqqWdqqE512,
 
     // [NP 0F 5A /r] CVTPS2PD xmm1, xmm2/m64
-    CVTPS2PD_VdqWq,
+    Cvtps2pdVdqWq,
     // [VEX.128.0F.WIG 5A /r] VCVTPS2PD xmm1, xmm2/m64
-    VCVTPS2PD_VdqWq_V128,
+    Vcvtps2pdVdqWqV128,
     // [VEX.256.0F.WIG 5A /r] VCVTPS2PD ymm1, xmm2/m128
-    VCVTPS2PD_VqqWdq_V256,
+    Vcvtps2pdVqqWdqV256,
     // [EVEX.128.0F.W0 5A /r] VCVTPS2PD xmm1 {k1}{z}, xmm2/m64/m32bcst
-    VCVTPS2PD_VdqWq_E128,
+    Vcvtps2pdVdqWqE128,
     // [EVEX.256.0F.W0 5A /r] VCVTPS2PD ymm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTPS2PD_VqqWdq_E256,
+    Vcvtps2pdVqqWdqE256,
     // [EVEX.512.0F.W0 5A /r] VCVTPS2PD zmm1 {k1}{z}, ymm2/m256/m32bcst{er}
-    VCVTPS2PD_VdqqWqq_E512,
+    Vcvtps2pdVdqqWqqE512,
 
     // [NP 0F 2D /r] CVTPS2PI mm, xmm/m64
-    CVTPS2PI_PqWq,
+    Cvtps2piPqWq,
 
     // [F2 0F 2D /r] CVTSD2SI r32, xmm1/m64
-    CVTSD2SI_GdWq,
+    Cvtsd2siGdWq,
     // [F2 REX.W 0F 2D /r] CVTSD2SI r64, xmm1/m64
-    CVTSD2SI_GqWq,
+    Cvtsd2siGqWq,
     // [VEX.LIG.F2.0F.W0 2D /r] VCVTSD2SI r32, xmm1/m64
-    VCVTSD2SI_GdWq_V,
+    Vcvtsd2siGdWqV,
     // [EVEX.LIG.F2.0F.W0 2D /r] VCVTSD2SI r32, xmm1/m64{er}
-    VCVTSD2SI_GdWq_E,
+    Vcvtsd2siGdWqE,
     // [VEX.LIG.F2.0F.W1 2D /r] VCVTSD2SI r64, xmm1/m64
-    VCVTSD2SI_GqWq_V,
+    Vcvtsd2siGqWqV,
     // [EVEX.LIG.F2.0F.W1 2D /r] VCVTSD2SI r64, xmm1/m64{er}
-    VCVTSD2SI_GqWq_E,
+    Vcvtsd2siGqWqE,
 
     // [F2 0F 5A /r] CVTSD2SS xmm1, xmm2/m64
-    CVTSD2SS_VdqWq,
+    Cvtsd2ssVdqWq,
     // [VEX.LIG.F2.0F.WIG 5A /r] VCVTSD2SS xmm1, xmm2, xmm3/m64
-    VCVTSD2SS_VdqHdqWq_V,
+    Vcvtsd2ssVdqHdqWqV,
     // [EVEX.LIG.F2.0F.W1 5A /r] VCVTSD2SS xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VCVTSD2SS_VdqHdqWq_E,
+    Vcvtsd2ssVdqHdqWqE,
 
     // [F2 0F 2A /r] CVTSI2SD xmm1, r/m32
-    CVTSI2SD_VdqEd,
+    Cvtsi2sdVdqEd,
     // [F2 REX.W 0F 2A /r] CVTSI2SD xmm1, r/m64
-    CVTSI2SD_VdqEq,
+    Cvtsi2sdVdqEq,
     // [VEX.LIG.F2.0F.W0 2A /r] VCVTSI2SD xmm1, xmm2, r/m32
-    VCVTSI2SD_VdqHdqEd_V,
+    Vcvtsi2sdVdqHdqEdV,
     // [EVEX.LIG.F2.0F.W0 2A /r] VCVTSI2SD xmm1, xmm2, r/m32
-    VCVTSI2SD_VdqHdqEd_E,
+    Vcvtsi2sdVdqHdqEdE,
     // [VEX.LIG.F2.0F.W1 2A /r] VCVTSI2SD xmm1, xmm2, r/m64
-    VCVTSI2SD_VdqHdqEq_V,
+    Vcvtsi2sdVdqHdqEqV,
     // [EVEX.LIG.F2.0F.W1 2A /r] VCVTSI2SD xmm1, xmm2, r/m64{er}
-    VCVTSI2SD_VdqHdqEq_E,
+    Vcvtsi2sdVdqHdqEqE,
 
     // [F3 0F 2A /r] CVTSI2SS xmm1, r/m32
-    CVTSI2SS_VdqEd,
+    Cvtsi2ssVdqEd,
     // [F2 REX.W 0F 2A /r] CVTSI2SS xmm1, r/m64
-    CVTSI2SS_VdqEq,
+    Cvtsi2ssVdqEq,
     // [VEX.LIG.F3.0F.W0 2A /r] VCVTSI2SS xmm1, xmm2, r/m32
-    VCVTSI2SS_VdqHdqEd_V,
+    Vcvtsi2ssVdqHdqEdV,
     // [EVEX.LIG.F3.0F.W0 2A /r] VCVTSI2SS xmm1, xmm2, r/m32
-    VCVTSI2SS_VdqHdqEd_E,
+    Vcvtsi2ssVdqHdqEdE,
     // [VEX.LIG.F3.0F.W1 2A /r] VCVTSI2SS xmm1, xmm2, r/m64
-    VCVTSI2SS_VdqHdqEq_V,
+    Vcvtsi2ssVdqHdqEqV,
     // [EVEX.LIG.F3.0F.W1 2A /r] VCVTSI2SS xmm1, xmm2, r/m64{er}
-    VCVTSI2SS_VdqHdqEq_E,
+    Vcvtsi2ssVdqHdqEqE,
 
     // [F3 0F 5A /r] CVTSS2SD xmm1, xmm2/m32
-    CVTSS2SD_VdqWd,
+    Cvtss2sdVdqWd,
     // [VEX.LIG.F3.0F.WIG 5A /r] VCVTSS2SD xmm1, xmm2, xmm3/m32
-    VCVTSS2SD_VdqHdqWd_V,
+    Vcvtss2sdVdqHdqWdV,
     // [EVEX.LIG.F3.0F.W0 5A /r] VCVTSS2SD xmm1 {k1}{z}, xmm2, xmm3/m32{sae}
-    VCVTSS2SD_VdqHdqWd_E,
+    Vcvtss2sdVdqHdqWdE,
 
     // [F3 0F 2D /r] CVTSS2SI r32, xmm1/m32
-    CVTSS2SI_GdWd,
+    Cvtss2siGdWd,
     // [F3 REX.W 0F 2D /r] CVTSS2SI r64, xmm1/m32
-    CVTSS2SI_GqWd,
+    Cvtss2siGqWd,
     // [VEX.LIG.F3.0F.W0 2D /r] VCVTSS2SI r32, xmm1/m32
-    VCVTSS2SI_GdWd_V,
+    Vcvtss2siGdWdV,
     // [EVEX.LIG.F3.0F.W0 2D /r] VCVTSS2SI r32, xmm1/m32{er}
-    VCVTSS2SI_GdWd_E,
+    Vcvtss2siGdWdE,
     // [VEX.LIG.F3.0F.W1 2D /r] VCVTSS2SI r64, xmm1/m32
-    VCVTSS2SI_GqWd_V,
+    Vcvtss2siGqWdV,
     // [EVEX.LIG.F3.0F.W1 2D /r] VCVTSS2SI r64, xmm1/m32{er}
-    VCVTSS2SI_GqWd_E,
+    Vcvtss2siGqWdE,
 
     // [66 0F E6 /r] CVTTPD2DQ xmm1, xmm2/m128
-    CVTTPD2DQ_VdqWdq,
+    Cvttpd2dqVdqWdq,
     // [VEX.128.66.0F.WIG E6 /r] VCVTTPD2DQ xmm1, xmm2/m128
-    VCVTTPD2DQ_VdqWdq_V128,
+    Vcvttpd2dqVdqWdqV128,
     // [VEX.256.66.0F.WIG E6 /r] VCVTTPD2DQ xmm1, ymm2/m256
-    VCVTTPD2DQ_VdqWqq_V256,
+    Vcvttpd2dqVdqWqqV256,
     // [EVEX.128.66.0F.W1 E6 /r] VCVTTPD2DQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTTPD2DQ_VdqWdq_E128,
+    Vcvttpd2dqVdqWdqE128,
     // [EVEX.256.66.0F.W1 E6 /r] VCVTTPD2DQ xmm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTTPD2DQ_VdqWqq_E256,
+    Vcvttpd2dqVdqWqqE256,
     // [EVEX.512.66.0F.W1 E6 /r] VCVTTPD2DQ ymm1 {k1}{z}, zmm2/m512/m64bcst{sae}
-    VCVTTPD2DQ_VqqWdqq_E512,
+    Vcvttpd2dqVqqWdqqE512,
 
     // [66 0F 2C /r] CVTTPD2PI mm, xmm/m128
-    CVTTPD2PI_PqWdq,
+    Cvttpd2piPqWdq,
 
     // [F3 0F 5B /r] CVTTPS2DQ xmm1, xmm2/m128
-    CVTTPS2DQ_VdqWdq,
+    Cvttps2dqVdqWdq,
     // [VEX.128.F3.0F.WIG 5B /r] VCVTTPS2DQ xmm1, xmm2/m128
-    VCVTTPS2DQ_VdqWdq_V128,
+    Vcvttps2dqVdqWdqV128,
     // [VEX.256.F3.0F.WIG 5B /r] VCVTTPS2DQ ymm1, ymm2/m256
-    VCVTTPS2DQ_VqqWqq_V256,
+    Vcvttps2dqVqqWqqV256,
     // [EVEX.128.F3.0F.W0 5B /r] VCVTTPS2DQ xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTTPS2DQ_VdqWdq_E128,
+    Vcvttps2dqVdqWdqE128,
     // [EVEX.256.F3.0F.W0 5B /r] VCVTTPS2DQ ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VCVTTPS2DQ_VqqWqq_E256,
+    Vcvttps2dqVqqWqqE256,
     // [EVEX.512.F3.0F.W0 5B /r] VCVTTPS2DQ zmm1 {k1}{z}, zmm2/m512/m32bcst
-    VCVTTPS2DQ_VdqqWdqq_E512,
+    Vcvttps2dqVdqqWdqqE512,
 
     // [NP 0F 2C /r] CVTTPS2PI mm, xmm/m64
-    CVTTPS2PI_PqWq,
+    Cvttps2piPqWq,
 
     // [F2 0F 2C /r] CVTTSD2SI r32, xmm1/m64
-    CVTTSD2SI_GdWq,
+    Cvttsd2siGdWq,
     // [F2 REX.W 0F 2C /r] CVTTSD2SI r64, xmm1/m64
-    CVTTSD2SI_GqWq,
+    Cvttsd2siGqWq,
     // [VEX.LIG.F2.0F.W0 2C /r] VCVTTSD2SI r32, xmm1/m64
-    VCVTTSD2SI_GdWq_V,
+    Vcvttsd2siGdWqV,
     // [EVEX.LIG.F2.0F.W0 2C /r] VCVTTSD2SI r32, xmm1/m64{sae}
-    VCVTTSD2SI_GdWq_E,
+    Vcvttsd2siGdWqE,
     // [VEX.LIG.F2.0F.W1 2C /r] VCVTTSD2SI r64, xmm1/m64
-    VCVTTSD2SI_GqWq_V,
+    Vcvttsd2siGqWqV,
     // [EVEX.LIG.F2.0F.W1 2C /r] VCVTTSD2SI r64, xmm1/m64{sae}
-    VCVTTSD2SI_GqWq_E,
+    Vcvttsd2siGqWqE,
 
     // [F3 0F 2C /r] CVTTSS2SI r32, xmm1/m64
-    CVTTSS2SI_GdWq,
+    Cvttss2siGdWq,
     // [F3 REX.W 0F 2C /r] CVTTSS2SI r64, xmm1/m64
-    CVTTSS2SI_GqWq,
+    Cvttss2siGqWq,
     // [VEX.LIG.F3.0F.W0 2C /r] VCVTTSS2SI r32, xmm1/m64
-    VCVTTSS2SI_GdWq_V,
+    Vcvttss2siGdWqV,
     // [EVEX.LIG.F3.0F.W0 2C /r] VCVTTSS2SI r32, xmm1/m64{sae}
-    VCVTTSS2SI_GdWq_E,
+    Vcvttss2siGdWqE,
     // [VEX.LIG.F3.0F.W1 2C /r] VCVTTSS2SI r64, xmm1/m64
-    VCVTTSS2SI_GqWq_V,
+    Vcvttss2siGqWqV,
     // [EVEX.LIG.F3.0F.W1 2C /r] VCVTTSS2SI r64, xmm1/m64{sae}
-    VCVTTSS2SI_GqWq_E,
+    Vcvttss2siGqWqE,
 
     // [99] CWD
-    CWD,
+    Cwd,
     // [99] CDQ
-    CDQ,
+    Cdq,
     // [REX.W 99]
-    CQO,
+    Cqo,
 
     // [27] DAA
-    DAA,
+    Daa,
 
     // [2F] DAS
-    DAS,
+    Das,
 
     // [FE /1] DEC r/m8
     // [REX FE /1] DEC r/m8
-    DEC_Eb,
+    DecEb,
     // [FF /1] DEC r/m16
-    DEC_Ew,
+    DecEw,
     // [FF /1] DEC r/m32
-    DEC_Ed,
+    DecEd,
     // [REX.W FF /1] DEC r/m64
-    DEC_Eq,
+    DecEq,
     // [48+rw] DEC r16
-    DEC_Gw,
+    DecGw,
     // [48+rd] DEC r32
-    DEC_Gd,
+    DecGd,
 
     // [F6 /6] DIV r/m8
     // [REX F6 /6] DIV r/m8
-    DIV_Eb,
+    DivEb,
     // [F7 /6] DIV r/m16
-    DIV_Ew,
+    DivEw,
     // [F7 /6] DIV r/m32
-    DIV_Ed,
+    DivEd,
     // [REX.W F7 /6] DIV r/m64
-    DIV_Eq,
+    DivEq,
 
     // [66 0F 5E /r] DIVPD xmm1, xmm2/m128
-    DIVPD_VdqWdq,
+    DivpdVdqWdq,
     // [VEX.128.66.0F.WIG 5E /r] VDIVPD xmm1, xmm2, xmm3/m128
-    VDIVPD_VdqHdqWdq_V128,
+    VdivpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 5E /r] VDIVPD ymm1, ymm2, ymm3/m256
-    VDIVPD_VqqHqqWqq_V256,
+    VdivpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 5E /r] VDIVPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VDIVPD_VdqHdqWdq_E128,
+    VdivpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 5E /r] VDIVPD ymm1 {k1}{z}, ymm2, ymm3/m128/m64bcst
-    VDIVPD_VqqHqqWqq_E256,
+    VdivpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 5E /r] VDIVPD zmm1 {k1}{z}, zmm2, zmm3/m128/m64bcst{er}
-    VDIVPD_VdqqHdqqWdqq_E512,
+    VdivpdVdqqHdqqWdqqE512,
 
     // [NP 0F 5E /r] DIVPD xmm1, xmm2/m128
-    DIVPS_VdqWdq,
+    DivpsVdqWdq,
     // [VEX.128.0F.WIG 5E /r] VDIVPS xmm1, xmm2, xmm3/m128
-    VDIVPS_VdqHdqWdq_V128,
+    VdivpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 5E /r] VDIVPS ymm1, ymm2, ymm3/m256
-    VDIVPS_VqqHqqWqq_V256,
+    VdivpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 5E /r] VDIVPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VDIVPS_VdqHdqWdq_E128,
+    VdivpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 5E /r] VDIVPS ymm1 {k1}{z}, ymm2, ymm3/m128/m32bcst
-    VDIVPS_VqqHqqWqq_E256,
+    VdivpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 5E /r] VDIVPS zmm1 {k1}{z}, zmm2, zmm3/m128/m32bcst{er}
-    VDIVPS_VdqqHdqqWdqq_E512,
+    VdivpsVdqqHdqqWdqqE512,
 
     // [F2 0F 5E /r] DIVSD xmm1, xmm2/m64
-    DIVSD_VdqWq,
+    DivsdVdqWq,
     // [VEX.LIG.F2.0F.WIG 5E /r] VDIVSD xmm1, xmm2, xmm3/m64
-    VDIVSD_VdqHdqWq_V,
+    VdivsdVdqHdqWqV,
     // [EVEX.LIG.F2.0F.W1 5E /r] VDIVSD xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VDIVSD_VqqHqqWq_E,
+    VdivsdVqqHqqWqE,
 
     // [F3 0F 5E /r] DIVSS xmm1, xmm2/m64
-    DIVSS_VdqWq,
+    DivssVdqWq,
     // [VEX.LIG.F3.0F.WIG 5E /r] VDIVSS xmm1, xmm2, xmm3/m32
-    VDIVSS_VdqHdqWd_V,
+    VdivssVdqHdqWdV,
     // [EVEX.LIG.F3.0F.W1 5E /r] VDIVSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
-    VDIVSS_VdqHdqWd_E,
+    VdivssVdqHdqWdE,
 
     // [EVEX.128.F3.0F38.W0 52 /r] VDPBF16PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VDPBF16PS_VdqHdqWdq_E128,
+    Vdpbf16psVdqHdqWdqE128,
     // [EVEX.256.F3.0F38.W0 52 /r] VDPBF16PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VDPBF16PS_VqqHqqWqq_E256,
+    Vdpbf16psVqqHqqWqqE256,
     // [EVEX.512.F3.0F38.W0 52 /r] VDPBF16PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VDPBF16PS_VdqqHdqqWdqq_E512,
+    Vdpbf16psVdqqHdqqWdqqE512,
 
     // [66 0F 3A 41 /r ib] DPPD xmm1, xmm2/m128, imm8
-    DPPD_VdqWdqIb,
+    DppdVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 41 /r ib] VDPPD xmm1, xmm2, xmm3/m128, imm8
-    VDPPD_VdqHdqWdqIb_V128,
+    VdppdVdqHdqWdqIbV128,
 
     // [66 0F 3A 40 /r ib] DPPS xmm1, xmm2/m128, imm8
-    DPPS_VdqWdqIb,
+    DppsVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 40 /r ib] VDPPS xmm1, xmm2, xmm3/m128, imm8
-    VDPPS_VdqHdqWdqIb_V128,
+    VdppsVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.WIG 40 /r ib] VDPPS ymm1, ymm2, ymm3/m256, imm8
-    VDPPS_VqqHqqWqqIb_V256,
+    VdppsVqqHqqWqqIbV256,
 
     // [NP 0F 77] EMMS
-    EMMS,
+    Emms,
 
     // [F3 0F 1E FB] ENDBR32
-    ENDBR32,
+    Endbr32,
 
     // [F3 0F 1E FA] ENDBR64
-    ENDBR64,
+    Endbr64,
 
     // [C8 iw ib] ENTER imm16, imm8
-    ENTER_IwIb,
+    EnterIwIb,
 
     // [66 0F 3A 17 /r ib] EXTRACTPS r/m32, xmm1, imm8
-    EXTRACTPS_EdVdqIb,
+    ExtractpsEdVdqIb,
     // [VEX.128.66.0F3A.WIG 17 /r ib] VEXTRACTPS r/m32, xmm1, imm8
-    VEXTRACTPS_EdVdqIb_V128,
+    VextractpsEdVdqIbV128,
     // [EVEX.128.66.0F3A.WIG 17 /r ib] VEXTRACTPS r/m32, xmm1, imm8
-    VEXTRACTPS_EdVdqIb_E128,
+    VextractpsEdVdqIbE128,
 
     // [D9 F0] F2XM1
-    F2XM1,
+    F2xm1,
 
     // [D9 E1] FABS
-    FABS,
+    Fabs,
 
     // [D8 /0] FADD m32fp
-    FADD_Md,
+    FaddMd,
     // [DC /0] FADD m64fp
-    FADD_Mq,
+    FaddMq,
     // [D8 C0+i] FADD ST(0), ST(i)
-    FADD_ST0STi,
+    FaddST0STi,
     // [DC C0+i] FADD ST(i), ST(0)
-    FADD_STiST0,
+    FaddSTiST0,
     // [DE C0+i] FADDP ST(i), ST(0)
     // [DE C1] FADDP <ST(1)>, <ST(0)>
-    FADDP_STiST0,
+    FaddpSTiST0,
     // [DA /0] FIADD m32int
-    FIADD_Md,
+    FiaddMd,
     // [DE /0] FIADD m16int
-    FIADD_Mw,
+    FiaddMw,
 
     // [DF /4] FBLD m80bcd
-    FBLD_Mt,
+    FbldMt,
 
     // [DF /6] FBSTP m80bcd
-    FBSTP_Mt,
+    FbstpMt,
 
     // [D9 E0] FCHS
-    FCHS,
+    Fchs,
 
     // [9B DB E2] FCLEX
-    FCLEX,
+    Fclex,
     // [DB E2] FNCLEX
-    FNCLEX,
+    Fnclex,
 
     // [DA C0+i] FCMOVB ST(0), ST(i)
-    FCMOVB_ST0STi,
+    FcmovbST0STi,
     // [DA C8+i] FCMOVE ST(0), ST(i)
-    FCMOVE_ST0STi,
+    FcmoveST0STi,
     // [DA D0+i] FCMOVBE ST(0), ST(i)
-    FCMOVBE_ST0STi,
+    FcmovbeST0STi,
     // [DA D8+i] FCMOVU ST(0), ST(i)
-    FCMOVU_ST0STi,
+    FcmovuST0STi,
     // [DB C0+i] FCMOVNB ST(0), ST(i)
-    FCMOVNB_ST0STi,
+    FcmovnbST0STi,
     // [DB C8+i] FCMOVNE ST(0), ST(i)
-    FCMOVNE_ST0STi,
+    FcmovneST0STi,
     // [DB D0+i] FCMOVNBE ST(0), ST(i)
-    FCMOVNBE_ST0STi,
+    FcmovnbeST0STi,
     // [DB D8+i] FCMOVNU ST(0), ST(i)
-    FCMOVNU_ST0STi,
+    FcmovnuST0STi,
 
     // [D8 /2] FCOM m32fp
-    FCOM_Md,
+    FcomMd,
     // [DC /2] FCOM m64fp
-    FCOM_Mq,
+    FcomMq,
     // [D8 D0+i] FCOM ST(i)
     // [D8 D1] FCOM <ST(1)>
-    FCOM_STi,
+    FcomSTi,
     // [D8 /3] FCOMP m32fp
-    FCOMP_Md,
+    FcompMd,
     // [DC /3] FCOMP m64fp
-    FCOMP_Mq,
+    FcompMq,
     // [D8 D8+i] FCOMP ST(i)
     // [D8 D9] FCOMP <ST(1)>
-    FCOMP_STi,
+    FcompSTi,
     // [DE D9] FCOMPP
-    FCOMPP,
+    Fcompp,
 
     // [DB F0+i] FCOMI ST(0), ST(i)
-    FCOMI_ST0STi,
+    FcomiST0STi,
     // [DF F0+i] FCOMIP ST(0), ST(i)
-    FCOMIP_ST0STi,
+    FcomipST0STi,
     // [DB E8+i] FUCOMI ST(0), ST(i)
-    FUCOMI_ST0STi,
+    FucomiST0STi,
     // [DF E8+i] FUCOMIP ST(0), ST(i)
-    FUCOMIP_ST0STi,
+    FucomipST0STi,
 
     // [D9 FF] FCOS
-    FCOS,
+    Fcos,
 
     // [D9 F6] FDECSTP
-    FDECSTP,
+    Fdecstp,
 
     // [D8 /6] FDIV m32fp
-    FDIV_Md,
+    FdivMd,
     // [DC /6] FDIV m64fp
-    FDIV_Mq,
+    FdivMq,
     // [D8 F0+i] FDIV ST(0), ST(i)
-    FDIV_ST0STi,
+    FdivST0STi,
     // [DC F8+i] FDIV ST(i), ST(0)
-    FDIV_STiST0,
+    FdivSTiST0,
     // [DE F8+i] FDIVP ST(i), ST(0)
     // [DE F9] FDIVP <ST(1)>, <ST(0)>
-    FDIVP_STiST0,
+    FdivpSTiST0,
     // [DA /6] FIDIV m32int
-    FIDIV_Md,
+    FidivMd,
     // [DE /6] FIDIV m16int
-    FIDIV_Mw,
+    FidivMw,
 
     // [D8 /7] FDIVR m32fp
-    FDIVR_Md,
+    FdivrMd,
     // [DC /7] FDIVR m64fp
-    FDIVR_Mq,
+    FdivrMq,
     // [D8 F8+i] FDIVR ST(0), ST(i)
-    FDIVR_ST0STi,
+    FdivrST0STi,
     // [DC F0+i] FDIVR ST(i), ST(0)
-    FDIVR_STiST0,
+    FdivrSTiST0,
     // [DE F0+i] FDIVPR ST(i), ST(0)
     // [DE F1] FDIVPR <ST(1)>, <ST(0)>
-    FDIVPR_STiST0,
+    FdivprSTiST0,
     // [DA /7] FIDIVR m32int
-    FIDIVR_Md,
+    FidivrMd,
     // [DE /7] FIDIVR m16int
-    FIDIVR_Mw,
+    FidivrMw,
 
     // [DD C0+i] FFREE ST(i)
-    FFREE_STi,
+    FfreeSTi,
 
     // [DE /2] FICOM m16int
-    FICOM_Mw,
+    FicomMw,
     // [DA /2] FICOM m32int
-    FICOM_Md,
+    FicomMd,
     // [DE /3] FICOMP m16int
-    FICOMP_Mw,
+    FicompMw,
     // [DA /3] FICOMP m32int
-    FICOMP_Md,
+    FicompMd,
 
     // [DF /0] FILD m16int
-    FILD_Mw,
+    FildMw,
     // [DB /0] FILD m32int
-    FILD_Md,
+    FildMd,
     // [DF /5] FILD m64int
-    FILD_Mq,
+    FildMq,
 
     // [D9 F7] FINCSTP
-    FINCSTP,
+    Fincstp,
 
     // [9B DB E3] FINIT
-    FINIT,
+    Finit,
     // [DB E3] FNINIT
-    FNINIT,
+    Fninit,
 
     // [DF /2] FIST m16int
-    FIST_Mw,
+    FistMw,
     // [DB /2] FIST m32int
-    FIST_Md,
+    FistMd,
     // [DF /3] FISTP m16int
-    FISTP_Mw,
+    FistpMw,
     // [DB /3] FISTP m32int
-    FISTP_Md,
+    FistpMd,
     // [DF /7] FISTP m64int
-    FISTP_Mq,
+    FistpMq,
 
     // [DF /1] FISTTP m16int
-    FISTTP_Mw,
+    FisttpMw,
     // [DB /1] FISTTP m32int
-    FISTTP_Md,
+    FisttpMd,
     // [DD /1] FISTTP m64int
-    FISTTP_Mq,
+    FisttpMq,
 
     // [D9 /0] FLD m32fp
-    FLD_Md,
+    FldMd,
     // [DD /0] FLD m64fp
-    FLD_Mq,
+    FldMq,
     // [DB /5] FLD m80fp
-    FLD_Mt,
+    FldMt,
     // [D9 C0+i] FLD ST(i)
-    FLD_STi,
+    FldSTi,
 
     // [D9 E8] FLD1
-    FLD1,
+    Fld1,
     // [D9 E9] FLDL2T
-    FLDL2T,
+    Fldl2t,
     // [D9 EA] FLDL2E
-    FLDL2E,
+    Fldl2e,
     // [D9 EB] FLDPI
-    FLDPI,
+    Fldpi,
     // [D9 EC] FLDLG2
-    FLDLG2,
+    Fldlg2,
     // [D9 ED] FLDLN2
-    FLDLN2,
+    Fldln2,
     // [D9 EE] FLDZ
-    FLDZ,
+    Fldz,
 
     // [D9 /5] FLDCW m2byte
-    FLDCW_Mw,
+    FldcwMw,
 
     // [D9 /4] FLDENV m14/24byte
-    FLDENV_M,
+    FldenvM,
 
     // [D8 /1] FMUL m32fp
-    FMUL_Md,
+    FmulMd,
     // [DC /1] FMUL m64fp
-    FMUL_Mq,
+    FmulMq,
     // [D8 C8+i] FMUL ST(0), ST(i)
-    FMUL_ST0STi,
+    FmulST0STi,
     // [DC C8+i] FMUL ST(i), ST(0)
-    FMUL_STiST0,
+    FmulSTiST0,
     // [DE C8+i] FMULP ST(i), ST(0)
     // [DE C9] FMULP <ST(1)>, <ST(0)>
-    FMULP_STiST0,
+    FmulpSTiST0,
     // [DA /1] FIMUL m32int
-    FIMUL_Md,
+    FimulMd,
     // [DE /1] FIMUL m16int
-    FIMUL_Mw,
+    FimulMw,
 
     // [D9 D0] FNOP
-    FNOP,
+    Fnop,
 
     // [D9 F3] FPATAN
-    FPATAN,
+    Fpatan,
 
     // [D9 F8] FPREM
-    FPREM,
+    Fprem,
 
     // [D9 F5] FPREM1
-    FPREM1,
+    Fprem1,
 
     // [D9 F2] FPTAN
-    FPTAN,
+    Fptan,
 
     // [D9 FC] FRNDINT
-    FRNDINT,
+    Frndint,
 
     // [DD /4] FRSTOR m94/108byte
-    FRSTOR_M,
+    FrstorM,
 
     // [9B DD /6] FSAVE m94/108byte
-    FSAVE_M,
+    FsaveM,
     // [DD /6] FNSAVE m94/108byte
-    FNSAVE_M,
+    FnsaveM,
 
     // [D9 FD] FSCALE
-    FSCALE,
+    Fscale,
 
     // [D9 FE] FSIN
-    FSIN,
+    Fsin,
 
     // [D9 FB] FSINCOS
-    FSINCOS,
+    Fsincos,
 
     // [D9 FA] FSQRT
-    FSQRT,
+    Fsqrt,
 
     // [D9 /2] FST m32fp
-    FST_Md,
+    FstMd,
     // [DD /2] FST m64fp
-    FST_Mq,
+    FstMq,
     // [DD D0+i] FST ST(i)
-    FST_STi,
+    FstSTi,
     // [D9 /3] FSTP m32fp
-    FSTP_Md,
+    FstpMd,
     // [DD /3] FSTP m64fp
-    FSTP_Mq,
+    FstpMq,
     // [DB /7] FSTP m80fp
-    FSTP_Mt,
+    FstpMt,
     // [DD D8+i] FSTP ST(i)
-    FSTP_STi,
+    FstpSTi,
 
     // [9B D9 /7] FSTCW m2byte
-    FSTCW_Mw,
+    FstcwMw,
     // [D9 /7] FNSTCW m2byte
-    FNSTCW_Mw,
+    FnstcwMw,
 
     // [9B D9 /6] FSTENV m14/28byte
-    FSTENV_M,
+    FstenvM,
     // [D9 /6] FNSTENV m14/28byte
-    FNSTENV_M,
+    FnstenvM,
 
     // [9B DD /7] FSTSW m2byte
-    FSTSW_Mw,
+    FstswMw,
     // [9B DF E0] FSTSW AX
-    FSTSW_AX,
+    FstswAX,
     // [DD /7] FNSTSW m2byte
-    FNSTSW_Mw,
+    FnstswMw,
     // [DF E0] FNSTSW AX
-    FNSTSW_AX,
+    FnstswAX,
 
     // [D8 /4] FSUB m32fp
-    FSUB_Md,
+    FsubMd,
     // [DC /4] FSUB m64fp
-    FSUB_Mq,
+    FsubMq,
     // [D8 E0+i] FSUB ST(0), ST(i)
-    FSUB_ST0STi,
+    FsubST0STi,
     // [DC E8+i] FSUB ST(i), ST(0)
-    FSUB_STiST0,
+    FsubSTiST0,
     // [DE E8+i] FSUBP ST(i), ST(0)
     // [DE E9] FSUBP <ST(1)>, <ST(0)>
-    FSUBP_STiST0,
+    FsubpSTiST0,
     // [DA /4] FISUB m32int
-    FISUB_Md,
+    FisubMd,
     // [DE /4] FISUB m16int
-    FISUB_Mw,
+    FisubMw,
 
     // [D8 /5] FSUBR m32fp
-    FSUBR_Md,
+    FsubrMd,
     // [DC /5] FSUBR m64fp
-    FSUBR_Mq,
+    FsubrMq,
     // [D8 E8+i] FSUBR ST(0), ST(i)
-    FSUBR_ST0STi,
+    FsubrST0STi,
     // [DC E0+i] FSUBR ST(i), ST(0)
-    FSUBR_STiST0,
+    FsubrSTiST0,
     // [DE E0+i] FSUBRP ST(i), ST(0)
     // [DE E1] FSUBRP <ST(1)>, <ST(0)>
-    FSUBRP_STiST0,
+    FsubrpSTiST0,
     // [DA /5] FISUBR m32int
-    FISUBR_Md,
+    FisubrMd,
     // [DE /5] FISUBR m16int
-    FISUBR_Mw,
+    FisubrMw,
 
     // [D9 E4] FTST
-    FTST,
+    Ftst,
 
     // [DD E0+i] FUCOM ST(i)
     // [DD E1] FUCOM <ST(1)>
-    FUCOM_STi,
+    FucomSTi,
     // [DD E8+i] FUCOMP ST(i)
     // [DD E9] FUCOMP <ST(1)>
-    FUCOMP_STi,
+    FucompSTi,
     // [DA E9] FUCOMPP
-    FUCOMPP,
+    Fucompp,
 
     // [D9 E5] FXAM
-    FXAM,
+    Fxam,
 
     // [D9 C8+i] FXCH ST(i)
     // [D9 C9] FXCH <ST(1)>
-    FXCH_STi,
+    FxchSTi,
 
     // [NP 0F AE /1] FXRSTOR m512byte
-    FXRSTOR_M,
+    FxrstorM,
     // [NP REX.W 0F AE /1] FXRSTOR64 m512byte
-    FXRSTOR64_M,
+    Fxrstor64M,
 
     // [NP 0F AE /0] FXSAVE m512byte
-    FXSAVE_M,
+    FxsaveM,
     // [NP REX.W 0F AE /0] FXSAVE64 m512byte
-    FXSAVE64_M,
+    Fxsave64M,
 
     // [D9 F4] FXTRACT
-    FXTRACT,
+    Fxtract,
 
     // [D9 F1] FYL2X
-    FYL2X,
+    Fyl2x,
 
     // [D9 F9] FYL2XP1
-    FYL2XP1,
+    Fyl2xp1,
 
     // [66 0F 3A CF /r ib] GF2P8AFFINEINVQB xmm1, xmm2/m128, imm8
-    GF2P8AFFINEINVQB_VdqWdqIb,
+    Gf2p8affineinvqbVdqWdqIb,
     // [VEX.128.66.0F3A.W1 CF /r ib] VGF2P8AFFINEINVQB xmm1, xmm2, xmm3/m128, imm8
-    VGF2P8AFFINEINVQB_VdqHdqWdqIb_V128,
+    Vgf2p8affineinvqbVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.W1 CF /r ib] VGF2P8AFFINEINVQB ymm1, ymm2, ymm3/m256, imm8
-    VGF2P8AFFINEINVQB_VqqHqqWqqIb_V256,
+    Vgf2p8affineinvqbVqqHqqWqqIbV256,
     // [EVEX.128.66.0F3A.W1 CF /r ib] VGF2P8AFFINEINVQB xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VGF2P8AFFINEINVQB_VdqHdqWdqIb_E128,
+    Vgf2p8affineinvqbVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 CF /r ib] VGF2P8AFFINEINVQB ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VGF2P8AFFINEINVQB_VqqHqqWqqIb_E256,
+    Vgf2p8affineinvqbVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 CF /r ib] VGF2P8AFFINEINVQB zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst, imm8
-    VGF2P8AFFINEINVQB_VdqqHdqqWdqqIb_E512,
+    Vgf2p8affineinvqbVdqqHdqqWdqqIbE512,
 
     // [66 0F 3A CE /r ib] GF2P8AFFINEQB xmm1, xmm2/m128, imm8
-    GF2P8AFFINEQB_VdqWdqIb,
+    Gf2p8affineqbVdqWdqIb,
     // [VEX.128.66.0F3A.W1 CE /r ib] VGF2P8AFFINEQB xmm1, xmm2/m128, imm8
-    VGF2P8AFFINEQB_VdqHdqWdqIb_V128,
+    Vgf2p8affineqbVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.W1 CE /r ib] VGF2P8AFFINEQB ymm1, ymm2/m256, imm8
-    VGF2P8AFFINEQB_VqqHqqWqqIb_V256,
+    Vgf2p8affineqbVqqHqqWqqIbV256,
     // [EVEX.128.66.0F3A.W1 CE /r ib] VGF2P8AFFINEQB xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VGF2P8AFFINEQB_VdqHdqWdqIb_E128,
+    Vgf2p8affineqbVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 CE /r ib] VGF2P8AFFINEQB ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VGF2P8AFFINEQB_VqqHqqWqqIb_E256,
+    Vgf2p8affineqbVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 CE /r ib] VGF2P8AFFINEQB zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst, imm8
-    VGF2P8AFFINEQB_VdqqHdqqWdqqIb_E512,
+    Vgf2p8affineqbVdqqHdqqWdqqIbE512,
 
     // [66 0F 38 CF /r ib] GF2P8MULB xmm1, xmm2/m128
-    GF2P8MULB_VdqWdq,
+    Gf2p8mulbVdqWdq,
     // [VEX.128.66.0F38.W0 CF /r ib] VGF2P8MULB xmm1, xmm2/m128
-    VGF2P8MULB_VdqHdqWdq_V128,
+    Vgf2p8mulbVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 CF /r ib] VGF2P8MULB ymm1, ymm2/m256
-    VGF2P8MULB_VqqHqqWqq_V256,
+    Vgf2p8mulbVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 CF /r ib] VGF2P8MULB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VGF2P8MULB_VdqHdqWdq_E128,
+    Vgf2p8mulbVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 CF /r ib] VGF2P8MULB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VGF2P8MULB_VqqHqqWqq_E256,
+    Vgf2p8mulbVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 CF /r ib] VGF2P8MULB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VGF2P8MULB_VdqqHdqqWdqq_E512,
+    Vgf2p8mulbVdqqHdqqWdqqE512,
 
     // [66 0F 7C /r] HADDPD xmm1, xmm2/m128
-    HADDPD_VdqWdq,
+    HaddpdVdqWdq,
     // [VEX.128.66.0F.WIG 7C /r] VHADDPD xmm1, xmm2, xmm3/m128
-    VHADDPD_VdqHdqWdq_V128,
+    VhaddpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 7C /r] VHADDPD ymm1, ymm2, ymm3/m256
-    VHADDPD_VqqHqqWqq_V256,
+    VhaddpdVqqHqqWqqV256,
 
     // [F2 0F 7C /r] HADDPD xmm1, xmm2/m128
-    HADDPS_VdqWdq,
+    HaddpsVdqWdq,
     // [VEX.128.F2.0F.WIG 7C /r] VHADDPD xmm1, xmm2, xmm3/m128
-    VHADDPS_VdqHdqWdq_V128,
+    VhaddpsVdqHdqWdqV128,
     // [VEX.256.F2.0F.WIG 7C /r] VHADDPD ymm1, ymm2, ymm3/m256
-    VHADDPS_VqqHqqWqq_V256,
+    VhaddpsVqqHqqWqqV256,
 
     // [F4] HLT
-    HLT,
+    Hlt,
 
     // [66 0F 7D /r] HSUBPD xmm1, xmm2/m128
-    HSUBPD_VdqWdq,
+    HsubpdVdqWdq,
     // [VEX.128.66.0F.WIG 7D /r] VHSUBPD xmm1, xmm2, xmm3/m128
-    VHSUBPD_VdqHdqWdq_V128,
+    VhsubpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 7D /r] VHSUBPD ymm1, ymm2, ymm3/m256
-    VHSUBPD_VqqHqqWqq_V256,
+    VhsubpdVqqHqqWqqV256,
 
     // [F2 0F 7D /r] HSUBPS xmm1, xmm2/m128
-    HSUBPS_VdqWdq,
+    HsubpsVdqWdq,
     // [VEX.128.F2.0F.WIG 7D /r] VHSUBPS xmm1, xmm2, xmm3/m128
-    VHSUBPS_VdqHdqWdq_V128,
+    VhsubpsVdqHdqWdqV128,
     // [VEX.256.F2.0F.WIG 7D /r] VHSUBPS ymm1, ymm2, ymm3/m256
-    VHSUBPS_VqqHqqWqq_V256,
+    VhsubpsVqqHqqWqqV256,
 
     // [F6 /7] IDIV r/m8
     // [REX F6 /7] IDIV r/m8
-    IDIV_Eb,
+    IdivEb,
     // [F7 /7] IDIV r/m16
-    IDIV_Ew,
+    IdivEw,
     // [F7 /7] IDIV r/m32
-    IDIV_Ed,
+    IdivEd,
     // [REX.W F7 /7] IDIV r/m64
-    IDIV_Eq,
+    IdivEq,
 
     // [F6 /5] IMUL r/m8
-    IMUL_Eb,
+    ImulEb,
     // [F7 /5] IMUL r/m16
-    IMUL_Ew,
+    ImulEw,
     // [F7 /5] IMUL r/m32
-    IMUL_Ed,
+    ImulEd,
     // [REX.W F7 /5] IMUL r/m64
-    IMUL_Eq,
+    ImulEq,
     // [0F AF /r] IMUL r16, r/m16
-    IMUL_GbEb,
+    ImulGbEb,
     // [0F AF /r] IMUL r32, r/m32
-    IMUL_GwEw,
+    ImulGwEw,
     // [REX.W 0F AF /r] IMUL r64, r/m64
-    IMUL_GqEq,
+    ImulGqEq,
     // [6B /r ib] IMUL r16, r/m16, imm8
-    IMUL_GwEwIb,
+    ImulGwEwIb,
     // [6B /r ib] IMUL r32, r/m32, imm8
-    IMUL_GdEdIb,
+    ImulGdEdIb,
     // [REX.W 6B /r ib] IMUL r64, r/m64, imm8
-    IMUL_GqEqIb,
+    ImulGqEqIb,
     // [69 /r iw] IMUL r16, r/m16, imm16
-    IMUL_GwEwIw,
+    ImulGwEwIw,
     // [69 /r id] IMUL r32, r/m32, imm32
-    IMUL_GdEdId,
+    ImulGdEdId,
     // [REX.W 69 /r id] IMUL r64, r/m64, imm32
-    IMUL_GqEqId,
+    ImulGqEqId,
 
     // [E4 ib] IN AL, imm8
-    IN_ALIb,
+    InALIb,
     // [E5 ib] IN AX, imm8
-    IN_AXIb,
+    InAXIb,
     // [E5 ib] IN EAX, imm8
-    IN_EAXIb,
+    InEAXIb,
     // [EC] IN AL, DX
-    IN_ALDX,
+    InALDX,
     // [ED] IN AX, DX
-    IN_AXDX,
+    InAXDX,
     // [ED] IN EAX, DX
-    IN_EAXDX,
+    InEAXDX,
 
     // [FE /0] INC r/m8
     // [REX FE /0] INC r/m8
-    INC_Eb,
+    IncEb,
     // [FF /0] INC r/m16
-    INC_Ew,
+    IncEw,
     // [FF /0] INC r/m32
-    INC_Ed,
+    IncEd,
     // [REX.W FF /0] INC r/m64
-    INC_Eq,
+    IncEq,
     // [40+rw] INC r16
-    INC_Gw,
+    IncGw,
     // [40+rd] INC r32
-    INC_Gd,
+    IncGd,
 
     // [F3 0F AE /5] INCSSPD r32
-    INCSSPD,
+    Incsspd,
     // [F3 REX.W 0F AE /5] INCSSPQ r64
-    INCSSPQ,
+    Incsspq,
 
     // [6C] INS m8, DX
     // [6C] INSB
-    INS_YbDX,
+    InsYbDX,
     // [6D] INS m16, DX
     // [6D] INSW
-    INS_YwDX,
+    InsYwDX,
     // [6D] INS m32, DX
     // [6D] INSD
-    INS_YdDX,
+    InsYdDX,
 
     // [66 0F 3A 21 /r ib] INSERTPS xmm1, xmm2/m32, imm8
-    INSERTPS_VdqWdIb,
+    InsertpsVdqWdIb,
     // [VEX.128.66.0F3A.WIG 21 /r ib] VINSERTPS xmm1, xmm2, xmm3/m32, imm8
-    VINSERTPS_VdqHdqWdIb_V128,
+    VinsertpsVdqHdqWdIbV128,
     // [EVEX.128.66.0F3A.W0 21 /r ib] VINSERTPS xmm1, xmm2, xmm3/m32, imm8
-    VINSERTPS_VdqHdqWdIb_E128,
+    VinsertpsVdqHdqWdIbE128,
 
     // [CC] INT3,
-    INT3,
+    Int3,
     // [CD ib] INT imm8
-    INT_Ib,
+    IntIb,
     // [CE] INTO
-    INTO,
+    Into,
     // [F1] INT1
-    INT1,
+    Int1,
 
     // [0F 08] INVD
-    INVD,
+    Invd,
 
     // [0F 01 /7] INVLPG mem
-    INVLPG_M,
+    InvlpgM,
 
     // [66 0F 38 82 /r] INVPCID r32, m128
-    INVPCID_GdMdq,
+    InvpcidGdMdq,
     // [66 0F 38 82 /r] INVPCID r64, m128
-    INVPCID_GqMdq,
+    InvpcidGqMdq,
 
     // [CF] IRET
-    IRET,
+    Iret,
     // [CF] IRETD
-    IRETD,
+    Iretd,
     // [REX.W CF] IRETQ
-    IRETQ,
+    Iretq,
 
     // [70 cb] JO rel8
-    JO_Jb,
+    JoJb,
     // [0F 80 cw] JO rel16
-    JO_Jw,
+    JoJw,
     // [0F 80 cd] JO rel32
-    JO_Jd,
+    JoJd,
     // [71 cb] JNO rel8
-    JNO_Jb,
+    JnoJb,
     // [0F 81 cw] JNO rel16
-    JNO_Jw,
+    JnoJw,
     // [0F 81 cd] JNO rel32
-    JNO_Jd,
+    JnoJd,
     // [72 cb] JB rel8
     // [72 cb] JC rel8
     // [72 cb] JNAE rel8
-    JB_Jb,
+    JbJb,
     // [0F 82 cw] JB rel16
     // [0F 82 cw] JC rel16
     // [0F 82 cw] JNAE rel16
-    JB_Jw,
+    JbJw,
     // [0F 82 cd] JB rel32
     // [0F 82 cd] JC rel32
     // [0F 82 cd] JNAE rel32
-    JB_Jd,
+    JbJd,
     // [73 cb] JAE rel8
     // [73 cb] JNB rel8
     // [73 cb] JNC rel8
-    JAE_Jb,
+    JaeJb,
     // [0F 83 cw] JAE rel16
     // [0F 83 cw] JNB rel16
     // [0F 83 cw] JNC rel16
-    JAE_Jw,
+    JaeJw,
     // [0F 83 cd] JAE rel32
     // [0F 83 cd] JNB rel32
     // [0F 83 cd] JNC rel32
-    JAE_Jd,
+    JaeJd,
     // [74 cb] JE rel8
     // [74 cb] JZ rel8
-    JE_Jb,
+    JeJb,
     // [0F 84 cw] JE rel16
     // [0F 84 cw] JZ rel16
-    JE_Jw,
+    JeJw,
     // [0F 84 cd] JE rel32
     // [0F 84 cd] JZ rel32
-    JE_Jd,
+    JeJd,
     // [75 cb] JNE rel8
     // [75 cb] JNZ rel8
-    JNE_Jb,
+    JneJb,
     // [0F 85 cw] JNE rel16
     // [0F 85 cw] JNZ rel16
-    JNE_Jw,
+    JneJw,
     // [0F 85 cd] JNE rel32
     // [0F 85 cd] JNZ rel32
-    JNE_Jd,
+    JneJd,
     // [76 cb] JBE rel8
     // [76 cb] JNA rel8
-    JBE_Jb,
+    JbeJb,
     // [0F 86 cw] JBE rel16
     // [0F 86 cw] JNA rel16
-    JBE_Jw,
+    JbeJw,
     // [0F 86 cd] JBE rel32
     // [0F 86 cd] JNA rel32
-    JBE_Jd,
+    JbeJd,
     // [77 cb] JA rel8
     // [77 cb] JNBE rel8
-    JA_Jb,
+    JaJb,
     // [0F 87 cw] JA rel16
     // [0F 87 cw] JNBE rel16
-    JA_Jw,
+    JaJw,
     // [0F 87 cd] JA rel32
     // [0F 87 cd] JNBE rel32
-    JA_Jd,
+    JaJd,
     // [78 cb] JS rel8
-    JS_Jb,
+    JsJb,
     // [0F 88 cw] JS rel16
-    JS_Jw,
+    JsJw,
     // [0F 88 cd] JS rel32
-    JS_Jd,
+    JsJd,
     // [79 cb] JNS rel8
-    JNS_Jb,
+    JnsJb,
     // [0F 89 cw] JNS rel16
-    JNS_Jw,
+    JnsJw,
     // [0F 89 cd] JNS rel32
-    JNS_Jd,
+    JnsJd,
     // [7A cb] JP rel8
     // [7A cb] JPE rel8
-    JP_Jb,
+    JpJb,
     // [0F 8A cw] JP rel16
     // [0F 8A cw] JPE rel16
-    JP_Jw,
+    JpJw,
     // [0F 8A cd] JP rel32
     // [0F 8A cd] JPE rel32
-    JP_Jd,
+    JpJd,
     // [7B cb] JNP rel8
     // [7B cb] JPO rel8
-    JNP_Jb,
+    JnpJb,
     // [0F 8B cw] JNP rel16
     // [0F 8B cw] JPO rel16
-    JNP_Jw,
+    JnpJw,
     // [0F 8B cd] JNP rel32
     // [0F 8B cd] JPO rel32
-    JNP_Jd,
+    JnpJd,
     // [7C cb] JL rel8
     // [7C cb] JNGE rel8
-    JL_Jb,
+    JlJb,
     // [0F 8C cw] JL rel16
     // [0F 8C cw] JNGE rel16
-    JL_Jw,
+    JlJw,
     // [0F 8C cd] JL rel32
     // [0F 8C cd] JNGE rel32
-    JL_Jd,
+    JlJd,
     // [7D cb] JGE rel8
     // [7D cb] JNL rel8
-    JGE_Jb,
+    JgeJb,
     // [0F 8D cw] JGE rel16
     // [0F 8D cw] JNL rel16
-    JGE_Jw,
+    JgeJw,
     // [0F 8D cd] JGE rel32
     // [0F 8D cd] JNL rel32
-    JGE_Jd,
+    JgeJd,
     // [7E cb] JLE rel8
     // [7E cb] JNG rel8
-    JLE_Jb,
+    JleJb,
     // [0F 8E cw] JLE rel16
     // [0F 8E cw] JNG rel16
-    JLE_Jw,
+    JleJw,
     // [0F 8E cd] JLE rel32
     // [0F 8E cd] JNG rel32
-    JLE_Jd,
+    JleJd,
     // [7F cb] JG rel8
     // [7F cb] JNLE rel8
-    JG_Jb,
+    JgJb,
     // [0F 8F cw] JG rel16
     // [0F 8F cw] JNLE rel16
-    JG_Jw,
+    JgJw,
     // [0F 8F cd] JG rel32
     // [0F 8F cd] JNLE rel32
-    JG_Jd,
+    JgJd,
     // [E3 cb] JCXZ rel8
     // [E3 cb] JECXZ rel8
     // [E3 cb] JRCXZ rel8
-    JCXZ_Jb,
+    JcxzJb,
 
     // [EB cb] JMP rel8
-    JMP_Jb,
+    JmpJb,
     // [E9 cw] JMP rel16
-    JMP_Jw,
+    JmpJw,
     // [E9 cd] JMP rel32
-    JMP_Jd,
+    JmpJd,
     // [FF /4] JMP r/m16
-    JMP_Ew,
+    JmpEw,
     // [FF /4] JMP r/m32
-    JMP_Ed,
+    JmpEd,
     // [FF /4] JMP r/m64
-    JMP_Eq,
+    JmpEq,
     // [EA cd] JMP ptr16:16
-    JMP_Ap_Op16,
+    JmpApOp16,
     // [EA cp] JMP ptr16:32
-    JMP_Ap_Op32,
+    JmpApOp32,
     // [FF /5] JMP m16:16
-    JMP_Ep_Op16,
+    JmpEpOp16,
     // [FF /5] JMP m16:32
-    JMP_Ep_Op32,
+    JmpEpOp32,
     // [FF /5] JMP m16:64
-    JMP_Ep_Op64,
+    JmpEpOp64,
 
     // [VEX.L1.66.0F.W0 4A /r] KADDB k1, k2, k3
-    KADDB_KGbKHbKEb,
+    KaddbKGbKHbKEb,
     // [VEX.L1.0F.W0 4A /r] KADDW k1, k2, k3
-    KADDW_KGwKHwKEw,
+    KaddwKGwKHwKEw,
     // [VEX.L1.66.0F.W1 4A /r] KADDD k1, k2, k3
-    KADDD_KGdKHdKEd,
+    KadddKGdKHdKEd,
     // [VEX.L1.0F.W1 4A /r] KADDQ k1, k2, k3
-    KADDQ_KGqKHqKEq,
+    KaddqKGqKHqKEq,
 
     // [VEX.L1.66.0F.W0 41 /r] KANDB k1, k2, k3
-    KANDB_KGbKHbKEb,
+    KandbKGbKHbKEb,
     // [VEX.L1.0F.W0 41 /r] KANDW k1, k2, k3
-    KANDW_KGwKHwKEw,
+    KandwKGwKHwKEw,
     // [VEX.L1.66.0F.W1 41 /r] KANDD k1, k2, k3
-    KANDD_KGdKHdKEd,
+    KanddKGdKHdKEd,
     // [VEX.L1.0F.W1 41 /r] KANDQ k1, k2, k3
-    KANDQ_KGqKHqKEq,
+    KandqKGqKHqKEq,
 
     // [VEX.L1.66.0F.W0 42 /r] KANDNB k1, k2, k2
-    KANDNB_KGbKHbKEb,
+    KandnbKGbKHbKEb,
     // [VEX.L1.0F.W0 42 /r] KANDNW k1, k2, k3
-    KANDNE_KGwKHwKEw,
+    KandneKGwKHwKEw,
     // [VEX.L1.66.0F.W1 42 /r] KANDND k1, k2, k3
-    KANDND_KGdKHdKEd,
+    KandndKGdKHdKEd,
     // [VEX.L1.0F.W1 42 /r] KANDNQ k1, k2, k3
-    KANDNQ_KGqKHqKEq,
+    KandnqKGqKHqKEq,
 
     // [VEX.L0.66.0F.W0 90 /r] KMOVB k1, k2/m8
-    KMOVB_KGbKEb,
+    KmovbKGbKEb,
     // [VEX.L0.0F.W0 90 /r] KMOVW k1, k2/m16
-    KMOVW_KGwKEw,
+    KmovwKGwKEw,
     // [VEX.L0.66.0F.W1 90 /r] KMOVD k1, k2/m32
-    KMOVD_KGdKEd,
+    KmovdKGdKEd,
     // [VEX.L0.0F.W1 90 /r] KMOVQ k1, k2/m64
-    KMOVQ_KGqKEq,
+    KmovqKGqKEq,
     // [VEX.L0.66.0F.W0 91 /r] KMOVB m8, k1
-    KMOVB_KEbKGb,
+    KmovbKEbKGb,
     // [VEX.L0.0F.W0 91 /r] KMOVW m16, k1
-    KMOVW_KEwKGw,
+    KmovwKEwKGw,
     // [VEX.L0.66.0F.W1 91 /r] KMOVD m32, k1
-    KMOVD_KEdKGd,
+    KmovdKEdKGd,
     // [VEX.L0.0F.W1 91 /r] KMOVQ m64, k1
-    KMOVQ_KEqKGq,
+    KmovqKEqKGq,
     // [VEX.L0.66.0F.W0 92 /r] KMOVB k1, r32
-    KMOVB_KEbGd,
+    KmovbKEbGd,
     // [VEX.L0.0F.W0 92 /r] KMOVW k1, r32
-    KMOVW_KEwGd,
+    KmovwKEwGd,
     // [VEX.L0.66.0F.W1 92 /r] KMOVD k1, r32
-    KMOVD_KEdGd,
+    KmovdKEdGd,
     // [VEX.L0.0F.W1 92 /r] KMOVQ k1, r64
-    KMOVQ_KEqGq,
+    KmovqKEqGq,
     // [VEX.L0.66.0F.W0 93 /r] KMOVB r32, k1
-    KMOVB_GdKEb,
+    KmovbGdKEb,
     // [VEX.L0.0F.W0 93 /r] KMOVW r32, k1
-    KMOVW_GdKEw,
+    KmovwGdKEw,
     // [VEX.L0.66.0F.W1 93 /r] KMOVD r32, k1
-    KMOVD_GdKEd,
+    KmovdGdKEd,
     // [VEX.L0.0F.W1 93 /r] KMOVQ r64, k1
-    KMOVQ_GqKEq,
+    KmovqGqKEq,
 
     // [VEX.L1.66.0F.W0 44 /r] KNOTB k1, k2
-    KNOTB_KGbKEb,
+    KnotbKGbKEb,
     // [VEX.L1.0F.W0 44 /r] KNOTW k1, k2
-    KNOTW_KGwKEw,
+    KnotwKGwKEw,
     // [VEX.L1.66.0F.W1 44 /r] KNOTD k1, k2
-    KNOTD_KGdKEd,
+    KnotdKGdKEd,
     // [VEX.L1.0F.W1 44 /r] KNOTQ k1, k2
-    KNOTQ_KGqKEq,
+    KnotqKGqKEq,
 
     // [VEX.L1.66.0F.W0 45 /r] KORB k1, k2, k2
-    KORB_KGbKHbKEb,
+    KorbKGbKHbKEb,
     // [VEX.L1.0F.W0 45 /r] KORW k1, k2, k3
-    KORW_KGwKHwKEw,
+    KorwKGwKHwKEw,
     // [VEX.L1.66.0F.W1 45 /r] KORD k1, k2, k3
-    KORD_KGdKHdKEd,
+    KordKGdKHdKEd,
     // [VEX.L1.0F.W1 45 /r] KORQ k1, k2, k3
-    KORQ_KGqKHqKEq,
+    KorqKGqKHqKEq,
 
     // [VEX.L1.66.0F.W0 98 /r] KORTESTB k1, k2
-    KORTESTB_KGbKEb,
+    KortestbKGbKEb,
     // [VEX.L1.0F.W0 98 /r] KORTESTW k1, k2
-    KORTESTW_KGwKEw,
+    KortestwKGwKEw,
     // [VEX.L1.66.0F.W1 98 /r] KORTESTD k1, k2
-    KORTESTD_KGdKEd,
+    KortestdKGdKEd,
     // [VEX.L1.0F.W1 98 /r] KORTESTQ k1, k2
-    KORTESTQ_KGqKEq,
+    KortestqKGqKEq,
 
     // [VEX.L0.66.0F3A.W0 32 /r] KSHIFTLB k1, k2, imm8
-    KSHIFTLB_KGbKEbIb,
+    KshiftlbKGbKEbIb,
     // [VEX.L0.66.0F3A.W1 32 /r] KSHIFTLW k1, k2, imm8
-    KSHIFTLW_KGwKEwIb,
+    KshiftlwKGwKEwIb,
     // [VEX.L0.66.0F3A.W0 33 /r] KSHIFTLD k1, k2, imm8
-    KSHIFTLD_KGdKEdIb,
+    KshiftldKGdKEdIb,
     // [VEX.L0.66.0F3A.W1 33 /r] KSHIFTLQ k1, k2, imm8
-    KSHIFTLQ_KGqKEqIb,
+    KshiftlqKGqKEqIb,
 
     // [VEX.L0.66.0F3A.W0 30 /r] KSHIFTRB k1, k2, imm8
-    KSHIFTRB_KGbKEbIb,
+    KshiftrbKGbKEbIb,
     // [VEX.L0.66.0F3A.W1 30 /r] KSHIFTRW k1, k2, imm8
-    KSHIFTRW_KGwKEwIb,
+    KshiftrwKGwKEwIb,
     // [VEX.L0.66.0F3A.W0 31 /r] KSHIFTRD k1, k2, imm8
-    KSHIFTRD_KGdKEdIb,
+    KshiftrdKGdKEdIb,
     // [VEX.L0.66.0F3A.W1 31 /r] KSHIFTRQ k1, k2, imm8
-    KSHIFTRQ_KGqKEqIb,
+    KshiftrqKGqKEqIb,
 
     // [VEX.L0.66.0F.W0 99 /r] KTESTB k1, k2
-    KTESTB_KGbKEb,
+    KtestbKGbKEb,
     // [VEX.L0.0F.W0 99 /r] KTESTW k1, k2
-    KTESTW_KGwKEw,
+    KtestwKGwKEw,
     // [VEX.L0.66.0F.W1 99 /r] KTESTD k1, k2
-    KTESTD_KGdKEd,
+    KtestdKGdKEd,
     // [VEX.L0.0F.W1 99 /r] KTESTQ k1, k2
-    KTESTQ_KGqKEq,
+    KtestqKGqKEq,
 
     // [VEX.L1.66.0F.W0 4B /r] KUNPCKBW k1, k2, k3
-    KUNPCKBW_KGwKHbKEb,
+    KunpckbwKGwKHbKEb,
     // [VEX.L1.0F.W0 4B /r] KUNPCKWD k1, k2, k3
-    KUNPCKBD_KGdKHwKEw,
+    KunpckbdKGdKHwKEw,
     // [VEX.L1.0F.W1 4B /r] KUNPCKDQ k1, k2, k3
-    KUNPCKBQ_KGqKHdKEd,
+    KunpckbqKGqKHdKEd,
 
     // [VEX.L1.66.0F.W0 46 /r] KXNORB k1, k2, k3
-    KXNORB_KGbKHbKEb,
+    KxnorbKGbKHbKEb,
     // [VEX.L1.0F.W0 46 /r] KXNORW k1, k2, k3
-    KXNORW_KGwKHwKEw,
+    KxnorwKGwKHwKEw,
     // [VEX.L1.66.0F.W1 46 /r] KXNORD k1, k2, k3
-    KXNORD_KGdKHdKEd,
+    KxnordKGdKHdKEd,
     // [VEX.L1.0F.W1 46 /r] KXNORQ k1, k2, k3
-    KXNORQ_KGqKHqKEq,
+    KxnorqKGqKHqKEq,
 
     // [VEX.L1.66.0F.W0 47 /r] KXORB k1, k2, k3
-    KXORB_KGbKHbKEb,
+    KxorbKGbKHbKEb,
     // [VEX.L1.0F.W0 47 /r] KXORW k1, k2, k3
-    KXORW_KGwKHwKEw,
+    KxorwKGwKHwKEw,
     // [VEX.L1.66.0F.W1 47 /r] KXORD k1, k2, k3
-    KXORD_KGdKHdKEd,
+    KxordKGdKHdKEd,
     // [VEX.L1.0F.W1 47 /r] KXORQ k1, k2, k3
-    KXORQ_KGqKHqKEq,
+    KxorqKGqKHqKEq,
 
     // [9F] LAHF
-    LAHF,
+    Lahf,
 
     // [0F 02 /r] LAR r16, r/m16
-    LAR_GwEw,
+    LarGwEw,
     // [0F 02 /r] LAR reg, r32/m16
-    LAR_GdEw,
+    LarGdEw,
 
     // [F2 0F F0 /r] LDDQU xmm1, m128
-    LDDQU_VdqMdq,
+    LddquVdqMdq,
     // [VEX.128.F2.0F.WIG F0 /r] VLDDQU xmm1, m128
-    VLDDQU_VdqMdq_V128,
+    VlddquVdqMdqV128,
     // [VEX.256.F2.0F.WIG F0 /r] VLDDQU ymm1, m256
-    VLDDQU_VqqMqq_V256,
+    VlddquVqqMqqV256,
 
     // [NP 0F AE /2] LDMXCSR m32
-    LDMXCSR_Md,
+    LdmxcsrMd,
     // [VEX.LZ.0F.WIG AE /2] VLDMXCSR m32
-    VLDMXCSR_Md,
+    VldmxcsrMd,
 
     // [C5 /r] LDS r16, m16:16
-    LDS_GwMp,
+    LdsGwMp,
     // [C5 /r] LDS r32, m16:32
-    LDS_GdMp,
+    LdsGdMp,
     // [0F B2 /r] LSS r16, m16:16
-    LSS_GwMp,
+    LssGwMp,
     // [0F B2 /r] LSS r32, m16:32
-    LSS_GdMp,
+    LssGdMp,
     // [REX 0F B2 /r] LSS r64, m16:64
-    LSS_GqMp,
+    LssGqMp,
     // [C4 /r] LES r16, m16:16
-    LES_GwMp,
+    LesGwMp,
     // [C4 /r] LES r32, m16:32
-    LES_GdMp,
+    LesGdMp,
 
     // [0F B4 /r] LFS r16, m16:16
-    LFS_GwMp,
+    LfsGwMp,
     // [0F B4 /r] LFS r32, m16:32
-    LFS_GdMp,
+    LfsGdMp,
     // [REX 0F B4 /r] LFS r64, m16:64
-    LFS_GqMp,
+    LfsGqMp,
 
     // [0F B5 /r] LGS r16, m16:16
-    LGS_GwMp,
+    LgsGwMp,
     // [0F B5 /r] LGS r32, m16:32
-    LGS_GdMp,
+    LgsGdMp,
     // [REX 0F B5 /r] LGS r64, m16:64
-    LGS_GqMp,
+    LgsGqMp,
 
     // [8D /r] LEA r16, m
-    LEA_GwM,
+    LeaGwM,
     // [8D /r] LEA r32, m
-    LEA_GdM,
+    LeaGdM,
     // [REX.W 8D /r] LEA r64, m
-    LEA_GqM,
+    LeaGqM,
 
     // [C9] LEAVE
-    LEAVE,
+    Leave,
 
     // [NP 0F AE E8] LFENCE
-    LFENCE,
+    Lfence,
 
     // [0F 01 /2] GDT m16&32
-    LGDT_Ms_Op32,
+    LgdtMsOp32,
     // [0F 01 /2] LGDT m16&64
-    LGDT_Ms_Op64,
+    LgdtMsOp64,
     // [0F 01 /3] IDT m16&32
-    LIDT_Ms_Op32,
+    LidtMsOp32,
     // [0F 01 /3] LIDT m16&64
-    LIDT_Ms_Op64,
+    LidtMsOp64,
 
     // [0F 00 /2] LLDT r/m16
-    LLDT_Ew,
+    LldtEw,
 
     // [0F 01 /6] LMSW r/m16
-    LMSW_Ew,
+    LmswEw,
 
     // [F0] LOCK
-    LOCK,
+    Lock,
 
     // [AC] LODSB
-    LODSB,
+    Lodsb,
     // [AD] LODSW
-    LODSW,
+    Lodsw,
     // [AD] LODSD
-    LODSD,
+    Lodsd,
     // [REX.W AD] LODSQ
-    LODSQ,
+    Lodsq,
 
     // [E2 cb] LOOP rel8
-    LOOP_Jb,
+    LoopJb,
     // [E1 cb] LOOPE rel8
-    LOOPE_Jb,
+    LoopeJb,
     // [E0 cb] LOOPNE rel8
-    LOOPNE_Jb,
+    LoopneJb,
 
     // [0F 03 /r] LSL r16, r/m16
-    LSL_GwEw,
+    LslGwEw,
     // [0F 03 /r] LSL r32, r32/m16
-    LSL_GdEw,
+    LslGdEw,
     // [REX.W 0F 03 /r] LSL r64, r32/m16
-    LSL_GqEw,
+    LslGqEw,
 
     // [0F 00 /3] LTR r/m16
-    LTR_Ew,
+    LtrEw,
 
     // [F3 0F BD /r] LZCNT r16, r/m16
-    LZCNT_GwEw,
+    LzcntGwEw,
     // [F3 0F BD /r] LZCNT r32, r/m32
-    LZCNT_GdEd,
+    LzcntGdEd,
     // [F3 REX.W 0F BD /r] LZCNT r64, r/m64
-    LZCNT_GqEq,
+    LzcntGqEq,
 
     // [66 0F F7 /r] MASKMOVDQU xmm1, xmm2
-    MASKMOVDQU_VdqUdq,
+    MaskmovdquVdqUdq,
     // [VEX.128.66.0F.WIG F7 /r] VMASKMOVDQU xmm1, xmm2
-    VMASKMOVDQU_VdqUdq_V128,
+    VmaskmovdquVdqUdqV128,
 
     // [NP 0F F7 /r] MASKMOVQ mm1, mm2
-    MASKMOVQ_PqQq,
+    MaskmovqPqQq,
 
     // [66 0F 5F /r] MAXPD xmm1, xmm2/m128
-    MAXPD_VdqWdq,
+    MaxpdVdqWdq,
     // [VEX.128.66.0F.WIG 5F /r] VMAXPD xmm1, xmm2, xmm3/m128
-    VMAXPD_VdqHdqWdq_V128,
+    VmaxpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 5F /r] VMAXPD ymm1, ymm2, ymm3/m256
-    VMAXPD_VqqHqqWqq_V256,
+    VmaxpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 5F /r] VMAXPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VMAXPD_VdqHdqWdq_E128,
+    VmaxpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 5F /r] VMAXPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VMAXPD_VqqHqqWqq_E256,
+    VmaxpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 5F /r] VMAXPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{sae}
-    VMAXPD_VdqqHdqqWdqq_E512,
+    VmaxpdVdqqHdqqWdqqE512,
 
     // [NP 0F 5F /r] MAXPS xmm1, xmm2/m128
-    MAXPS_VdqWdq,
+    MaxpsVdqWdq,
     // [VEX.128.0F.WIG 5F /r] VMAXPS xmm1, xmm2, xmm3/m128
-    VMAXPS_VdqHdqWdq_V128,
+    VmaxpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 5F /r] VMAXPS ymm1, ymm2, ymm3/m256
-    VMAXPS_VqqHqqWqq_V256,
+    VmaxpsVqqHqqWqqV256,
     // [EVEX.128.0F.W0 5F /r] VMAXPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VMAXPS_VdqHdqWdq_E128,
+    VmaxpsVdqHdqWdqE128,
     // [EVEX.256.0F.W0 5F /r] VMAXPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VMAXPS_VqqHqqWqq_E256,
+    VmaxpsVqqHqqWqqE256,
     // [EVEX.512.0F.W0 5F /r] VMAXPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{sae}
-    VMAXPS_VdqqHdqqWdqq_E512,
+    VmaxpsVdqqHdqqWdqqE512,
 
     // [F2 0F 5F /r] MAXSD xmm1, xmm2/m64
-    MAXSD_VdqWq,
+    MaxsdVdqWq,
     // [VEX.LIG.F2.0F.WIG 5F /r] VMAXSD xmm1, xmm2, xmm3/m64
-    VMAXSD_VdqHdqWq_V,
+    VmaxsdVdqHdqWqV,
     // [EVEX.LIG.F2.0F.W1 5F /r] VMAXSD xmm1 {k1}{z}, xmm2, xmm3/m64{sae}
-    VMAXSD_VdqHdqWq_E,
+    VmaxsdVdqHdqWqE,
 
     // [F3 0F 5F /r] MAXSS xmm1, xmm2/m32
-    MAXSS_VdqWd,
+    MaxssVdqWd,
     // [VEX.LIG.F3.0F.WIG 5F /r] VMAXSS xmm1, xmm2, xmm3/m32
-    VMAXSS_VdqHdqWd_V,
+    VmaxssVdqHdqWdV,
     // [EVEX.LIG.F3.0F.W1 5F /r] VMAXSS xmm1 {k1}{z}, xmm2, xmm3/m32{sae}
-    VMAXSS_VdqHdqWd_E,
+    VmaxssVdqHdqWdE,
 
     // [NP 0F AE F0] MFENCE
-    MFENCE,
+    Mfence,
 
     // [66 0F 5D /r] MINPD xmm1, xmm2/m128
-    MINPD_VdqWdq,
+    MinpdVdqWdq,
     // [VEX.128.66.0F.WIG 5D /r] VMINPD xmm1, xmm2, xmm3/m128
-    VMINPD_VdqHdqWdq_V128,
+    VminpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 5D /r] VMINPD ymm1, ymm2, ymm3/m256
-    VMINPD_VqqHqqWqq_V256,
+    VminpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 5D /r] VMINPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VMINPD_VdqHdqWdq_E128,
+    VminpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 5D /r] VMINPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VMINPD_VqqHqqWqq_E256,
+    VminpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 5D /r] VMINPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{sae}
-    VMINPD_VdqqHdqqWdqq_E512,
+    VminpdVdqqHdqqWdqqE512,
 
     // [NP 0F 5D /r] MINPD xmm1, xmm2/m128
-    MINPS_VdqWdq,
+    MinpsVdqWdq,
     // [VEX.128.0F.WIG 5D /r] VMINPS xmm1, xmm2, xmm3/m128
-    VMINPS_VdqHdqWdq_V128,
+    VminpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 5D /r] VMINPS ymm1, ymm2, ymm3/m256
-    VMINPS_VqqHqqWqq_V256,
+    VminpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 5D /r] VMINPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VMINPS_VdqHdqWdq_E128,
+    VminpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 5D /r] VMINPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VMINPS_VqqHqqWqq_E256,
+    VminpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 5D /r] VMINPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{sae}
-    VMINPS_VdqqHdqqWdqq_E512,
+    VminpsVdqqHdqqWdqqE512,
 
     // [F2 0F 5D /r] MINSD xmm1, xmm2/m64
-    MINSD_VdqWq,
+    MinsdVdqWq,
     // [VEX.LIG.F2.0F.WIG 5D /r] VMINSD xmm1, xmm2, xmm3/m64
-    VMINSD_VdqHdqWq_V,
+    VminsdVdqHdqWqV,
     // [EVEX.LIG.F2.0F.W1 5D /r] VMINSD xmm1 {k1}{z}, xmm2, xmm3/m64{sae}
-    VMINSD_VdqHdqWq_E,
+    VminsdVdqHdqWqE,
 
     // [F3 0F 5D /r] MINSS xmm1, xmm2/m32
-    MINSS_VdqWd,
+    MinssVdqWd,
     // [VEX.LIG.F3.0F.WIG 5D /r] VMINSS xmm1, xmm2, xmm3/m32
-    VMINSS_VdqHdqWd_V,
+    VminssVdqHdqWdV,
     // [EVEX.LIG.F3.0F.W0 5D /r] VMINSS xmm1 {k1}{z}, xmm2, xmm3/m32{sae}
-    VMINSS_VdqHdqWd_E,
+    VminssVdqHdqWdE,
 
     // [0F 01 C8] MONITOR
-    MONITOR,
+    Monitor,
 
     // [88 /r] MOV r/m8, r8
     // [REX 88 /r] MOV r/m8, r8
-    MOV_EbGb,
+    MovEbGb,
     // [89 /r] MOV r/m16, r16
-    MOV_EwGw,
+    MovEwGw,
     // [89 /r] MOV r/m32, r32
-    MOV_EdGd,
+    MovEdGd,
     // [REX.W 89 /r] MOV r/m64, r64
-    MOV_EqGq,
+    MovEqGq,
     // [8A /r] MOV r8, r/m8
     // [REX 8A /r] MOV r8, r/m8
-    MOV_GbEb,
+    MovGbEb,
     // [8B /r] MOV r16, r/m16
-    MOV_GwEw,
+    MovGwEw,
     // [8B /r] MOV r32, r/m32
-    MOV_GdEd,
+    MovGdEd,
     // [REX.W 8B /r] MOV r64, r/m64
-    MOV_GqEq,
+    MovGqEq,
     // [8C /r] MOV r/m16, sreg
-    MOV_EwSw,
+    MovEwSw,
     // [8C /r] MOV r16/r32/m16, sreg
-    MOV_EdSw,
+    MovEdSw,
     // [REX.W 8C /r] MOV r64/m16, sreg
-    MOV_EqSw,
+    MovEqSw,
     // [8E /r] MOV sreg, r/m16
     // [REX.W 8E /r] MOV sreg, r/m64
-    MOV_SwEw,
+    MovSwEw,
     // [A0 ob] MOV AL, moffs8
     // [REX.W A0 ob] MOV AL, moffs8
-    MOV_ALOb,
+    MovALOb,
     // [A1 ow] MOV AX, moffs16
-    MOV_AXOw,
+    MovAXOw,
     // [A1 od] MOV EAX, moffs32
-    MOV_EAXOd,
+    MovEAXOd,
     // [REX.W A1 oq] MOV RAX, moffs64
-    MOV_RAXOq,
+    MovRAXOq,
     // [A2 ob] MOV moffs8, AL
     // [REX.W A2 ob] MOV moffs8, AL
-    MOV_ObAL,
+    MovObAL,
     // [A3 ow] MOV moffs16, AX
-    MOV_OwAX,
+    MovOwAX,
     // [A3 od] MOV moffs32, EAX
-    MOV_OdEAX,
+    MovOdEAX,
     // [REX.W A3 oq] MOV moffs64, RAX
-    MOV_OqRAX,
+    MovOqRAX,
     // [B0+rb ib] MOV r8, imm8
     // [REX B0+rb ib] MOV r8, imm8
-    MOV_GbIb,
+    MovGbIb,
     // [B8+rw iw] MOV r16, imm16
-    MOV_GwIb,
+    MovGwIb,
     // [B8+rd id] MOV r32, imm32
-    MOV_GdIb,
+    MovGdIb,
     // [REX.W B8+rd io] MOV r64, imm64
-    MOV_GqIb,
+    MovGqIb,
     // [C6 /0 ib] MOV r/m8, imm8
     // [REX C6 /0 ib] MOV r/m8, imm8
-    MOV_EbIb,
+    MovEbIb,
     // [C7 /0 iw] MOV r/m16, imm16
-    MOV_EwIw,
+    MovEwIw,
     // [C7 /0 id] MOV r/m32, imm32
-    MOV_EdId,
+    MovEdId,
     // [REX.W C7 /0 id] MOV r/m64, imm32
-    MOV_EqId,
+    MovEqId,
 
     // [0F 20 /r] MOV r32, CR0-7
-    MOV_RdCd,
+    MovRdCd,
     // [0F 20 /r] MOV r64, CR0-7
-    MOV_RqCq,
+    MovRqCq,
     // [REX.R 0F 20 /0] MOV r64, CR8
-    MOV_RqCR8,
+    MovRqCR8,
     // [0F 22 /r] MOV CR0-7, r32
-    MOV_CdRd,
+    MovCdRd,
     // [0F 22 /r] MOV CR0-7, r64
-    MOV_CqRq,
+    MovCqRq,
     // [REX.R 0F 22 /r] MOV CR8, r64
-    MOV_CR8Rq,
+    MovCR8Rq,
 
     // [0F 21 /r] MOV r32, DR0-7
-    MOV_RdDd,
+    MovRdDd,
     // [0F 21 /r] MOV r64, DR0-7
-    MOV_RqDq,
+    MovRqDq,
     // [0F 23 /r] MOV DR0-7, r32
-    MOV_DdRd,
+    MovDdRd,
     // [0F 23 /r] MOV DR0-7, r64
-    MOV_DqRq,
+    MovDqRq,
 
     // [66 0F 28 /r] MOVAPD xmm1, xmm2/m128
-    MOVAPD_VdqWdq,
+    MovapdVdqWdq,
     // [66 0F 29 /r] MOVAPD xmm1/m128, xmm2
-    MOVAPD_WdqVdq,
+    MovapdWdqVdq,
     // [VEX.128.66.0F.WIG 28 /r] VMOVAPD xmm1, xmm2/m128
-    VMOVAPD_VdqWdq_V128,
+    VmovapdVdqWdqV128,
     // [VEX.128.66.0F.WIG 29 /r] VMOVAPD xmm1/m128, xmm2
-    VMOVAPD_WdqVdq_V128,
+    VmovapdWdqVdqV128,
     // [VEX.256.66.0F.WIG 28 /r] VMOVAPD ymm1, ymm2/m256
-    VMOVAPD_VqqWqq_V256,
+    VmovapdVqqWqqV256,
     // [VEX.256.66.0F.WIG 29 /r] VMOVAPD ymm1/m256, ymm2
-    VMOVAPD_WqqVqq_V256,
+    VmovapdWqqVqqV256,
     // [EVEX.128.66.0F.W1 28 /r] VMOVAPD xmm1 {k1}{z}, xmm2/m128
-    VMOVAPD_VdqWdq_E128,
+    VmovapdVdqWdqE128,
     // [EVEX.256.66.0F.W1 28 /r] VMOVAPD ymm1 {k1}{z}, ymm2/m256
-    VMOVAPD_VqqWqq_E256,
+    VmovapdVqqWqqE256,
     // [EVEX.512.66.0F.W1 28 /r] VMOVAPD zmm1 {k1}{z}, zmm2/m512
-    VMOVAPD_VdqqWdqq_E512,
+    VmovapdVdqqWdqqE512,
     // [EVEX.128.66.0F.W1 28 /r] VMOVAPD xmm1/m128 {k1}{z}, xmm2
-    VMOVAPD_WdqVdq_E128,
+    VmovapdWdqVdqE128,
     // [EVEX.256.66.0F.W1 28 /r] VMOVAPD ymm1/m256 {k1}{z}, ymm2
-    VMOVAPD_WqqVqq_E256,
+    VmovapdWqqVqqE256,
     // [EVEX.512.66.0F.W1 28 /r] VMOVAPD zmm1/m512 {k1}{z}, zmm2
-    VMOVAPD_WdqqVdqq_E512,
+    VmovapdWdqqVdqqE512,
 
     // [NP 0F 28 /r] MOVAPD xmm1, xmm2/m128
-    MOVAPS_VdqWdq,
+    MovapsVdqWdq,
     // [NP 0F 29 /r] MOVAPD xmm1/m128, xmm2
-    MOVAPS_WdqVdq,
+    MovapsWdqVdq,
     // [VEX.128.0F.WIG 28 /r] VMOVAPS xmm1, xmm2/m128
-    VMOVAPS_VdqWdq_V128,
+    VmovapsVdqWdqV128,
     // [VEX.128.0F.WIG 29 /r] VMOVAPS xmm1/m128, xmm2
-    VMOVAPS_WdqVdq_V128,
+    VmovapsWdqVdqV128,
     // [VEX.256.0F.WIG 28 /r] VMOVAPS ymm1, ymm2/m256
-    VMOVAPS_VqqWqq_V256,
+    VmovapsVqqWqqV256,
     // [VEX.256.0F.WIG 29 /r] VMOVAPS ymm1/m256, ymm2
-    VMOVAPS_WqqVqq_V256,
+    VmovapsWqqVqqV256,
     // [EVEX.128.0F.W1 28 /r] VMOVAPS xmm1 {k1}{z}, xmm2/m128
-    VMOVAPS_VdqWdq_E128,
+    VmovapsVdqWdqE128,
     // [EVEX.256.0F.W1 28 /r] VMOVAPS ymm1 {k1}{z}, ymm2/m256
-    VMOVAPS_VqqWqq_E256,
+    VmovapsVqqWqqE256,
     // [EVEX.512.0F.W1 28 /r] VMOVAPS zmm1 {k1}{z}, zmm2/m512
-    VMOVAPS_VdqqWdqq_E512,
+    VmovapsVdqqWdqqE512,
     // [EVEX.128.0F.W1 28 /r] VMOVAPS xmm1/m128 {k1}{z}, xmm2
-    VMOVAPS_WdqVdq_E128,
+    VmovapsWdqVdqE128,
     // [EVEX.256.0F.W1 28 /r] VMOVAPS ymm1/m256 {k1}{z}, ymm2
-    VMOVAPS_WqqVqq_E256,
+    VmovapsWqqVqqE256,
     // [EVEX.512.0F.W1 28 /r] VMOVAPS zmm1/m512 {k1}{z}, zmm2
-    VMOVAPS_WdqqVdqq_E512,
+    VmovapsWdqqVdqqE512,
 
     // [0F 38 F0 /r] MOVBE r16, m16
-    MOVBE_GwMw,
+    MovbeGwMw,
     // [0F 38 F0 /r] MOVBE r32, m32
-    MOVBE_GdMd,
+    MovbeGdMd,
     // [REX.W 0F 38 F0 /r] MOVBE r64, m64
-    MOVBE_GqMq,
+    MovbeGqMq,
     // [0F 38 F1 /r] MOVBE m16, r16
-    MOVBE_MwGw,
+    MovbeMwGw,
     // [0F 38 F1 /r] MOVBE m32, r32
-    MOVBE_MdGd,
+    MovbeMdGd,
     // [REX.W 0F 38 F1 /r] MOVBE m64, r64
-    MOVBE_MqGq,
+    MovbeMqGq,
 
     // [NP 0F 6E /r] MOVD mm, r/m32
-    MOVD_PqEd,
+    MovdPqEd,
     // [NP REX.W 0F 6E /r] MOVQ mm, r/m64
-    MOVQ_PqEq,
+    MovqPqEq,
     // [NP 0F 7E /r] MOVD r/m32, mm
-    MOVD_EdPq,
+    MovdEdPq,
     // [NP REX.W 0F 7E /r] MOVQ r/m64, mm
-    MOVQ_EqPq,
+    MovqEqPq,
     // [66 0F 6E /r] MOVD xmm1, r/m32
-    MOVD_VdqEd,
+    MovdVdqEd,
     // [66 REX.W 0F 6E /r] MOVQ xmm1, r/m64
-    MOVQ_VdqEq,
+    MovqVdqEq,
     // [66 0F 7E /r] MOVD r/m32, xmm1
-    MOVD_EdVdq,
+    MovdEdVdq,
     // [66 REX.W 0F 7E /r] MOVQ r/m64, xmm1
-    MOVQ_VdqEd,
+    MovqVdqEd,
     // [VEX.128.66.0F.W0 6E /r] VMOVD xmm1, r/m32
-    VMOVD_VdqEd_V128,
+    VmovdVdqEdV128,
     // [EVEX.128.66.0F.W0 6E /r] VMOVD xmm1, r/m32
-    VMOVD_VdqEd_E128,
+    VmovdVdqEdE128,
     // [VEX.128.66.0F.W1 6E /r] VMOVQ xmm1, r/m64
-    VMOVQ_VdqEq_V128,
+    VmovqVdqEqV128,
     // [EVEX.128.66.0F.Wq 6E /r] VMOVD xmm1, r/m64
-    VMOVQ_VdqEq_E128,
+    VmovqVdqEqE128,
     // [VEX.128.66.0F.W0 7E /r] VMOVD r/m32, xmm1
-    VMOVD_EdVdq_V128,
+    VmovdEdVdqV128,
     // [EVEX.128.66.0F.W0 7E /r] VMOVD r/m32, xmm1
-    VMOVD_EdVdq_E128,
+    VmovdEdVdqE128,
     // [VEX.128.66.0F.W1 7E /r] VMOVQ r/m64, xmm1
-    VMOVQ_VdqEd_V128,
+    VmovqVdqEdV128,
     // [EVEX.128.66.0F.W1 7E /r] VMOVD r/m64, xmm1
-    VMOVQ_VdqEd_E128,
+    VmovqVdqEdE128,
 
     // [F2 0F 12 /r] MOVDDUP xmm1, xmm2/m64
-    MOVDDUP_VdqWq,
+    MovddupVdqWq,
     // [VEX.128.F2.0F.WIG 12 /r] VMOVDDUP xmm1, xmm2/m64
     // NOTE: Intel manual says m64; TODO: Is this correct?
-    VMOVDDUP_VdqWq_V128,
+    VmovddupVdqWqV128,
     // [VEX.256.F2.0F.WIG 12 /r] VMOVDDUP ymm1, ymm2/m256
-    VMOVDDUP_VqqWqq_V256,
+    VmovddupVqqWqqV256,
     // [EVEX.128.F2.0F.W1 12 /r] VMOVDDUP xmm1 {k1}{z}, xmm2/m64
     // NOTE: Intel manual says m64; TODO: Is this correct
-    VMOVDDUP_VdqWq_E128,
+    VmovddupVdqWqE128,
     // [EVEX.256.F2.0F.W1 12 /r] VMOVDDUP ymm1 {k1}{z}, ymm2/m256
-    VMOVDDUP_VqqWqq_E256,
+    VmovddupVqqWqqE256,
     // [EVEX.512.F2.0F.W1 12 /r] VMOVDDUP zmm1 {k1}{z}, zmm2/m512
-    VMOVDDUP_VdqqWdqq_E512,
+    VmovddupVdqqWdqqE512,
 
     // [NP 0F 38 F9 /r] MOVDIRI m32, r32
-    MOVDIRI_MdGd,
+    MovdiriMdGd,
     // [NP REX.W 0F 38 F9 /r] MOVDIRI m64, r64
-    MOVDIRI_MqGq,
+    MovdiriMqGq,
 
     // [66 0F 38 F8 /r] MOVDIR64B r16, m512
-    MOVDIR64B_GwM,
+    Movdir64bGwM,
     // [66 0F 38 F8 /r] MOVDIR64B r32, m512
-    MOVDIR64B_GdM,
+    Movdir64bGdM,
     // [66 0F 38 F8 /r] MOVDIR64B r64, m512
-    MOVDIR64B_GqM,
+    Movdir64bGqM,
 
     // [66 0F 6F /r] MOVDQA xmm1, xmm2/m128
-    MOVDQA_VdqWdq,
+    MovdqaVdqWdq,
     // [66 0F 7F /r] MOVDQA xmm1/m128, xmm2
-    MOVDQA_WdqVdq,
+    MovdqaWdqVdq,
     // [VEX.128.66.0F.WIG 6F /r] VMOVDQA xmm1, xmm2/m128
-    VMOVDQA_VdqWdq_V128,
+    VmovdqaVdqWdqV128,
     // [VEX.128.66.0F.WIG 7F /r] VMOVDQA xmm1/m128, xmm2
-    VMOVDQA_WdqVdq_V128,
+    VmovdqaWdqVdqV128,
     // [VEX.256.66.0F.WIG 6F /r] VMOVDQA ymm1, ymm2/m256
-    VMOVDQA_VqqWqq_V256,
+    VmovdqaVqqWqqV256,
     // [VEX.256.66.0F.WIG 7F /r] VMOVDQA ymm1/m256, ymm2
-    VMOVDQA_WqqVqq_V256,
+    VmovdqaWqqVqqV256,
     // [EVEX.128.66.0F.W0 6F /r] VMOVDQA32 xmm1 {k1}{z}, xmm2/m128
-    VMOVDQA32_VdqWdq_E128,
+    Vmovdqa32VdqWdqE128,
     // [EVEX.256.66.0F.W0 6F /r] VMOVDQA32 ymm1 {k1}{z}, ymm2/m256
-    VMOVDQA32_VqqWqq_E256,
+    Vmovdqa32VqqWqqE256,
     // [EVEX.512.66.0F.W0 6F /r] VMOVDQA32 zmm1 {k1}{z}, zmm2/m512
-    VMOVDQA32_VdqqWdqq_E512,
+    Vmovdqa32VdqqWdqqE512,
     // [EVEX.128.66.0F.W0 7F /r] VMOVDQA32 xmm1/m128 {k1}{z}, xmm2
-    VMOVDQA32_WdqVdq_E128,
+    Vmovdqa32WdqVdqE128,
     // [EVEX.256.66.0F.W0 7F /r] VMOVDQA32 ymm1/m256 {k1}{z}, ymm2
-    VMOVDQA32_WqqVqq_E256,
+    Vmovdqa32WqqVqqE256,
     // [EVEX.512.66.0F.W0 7F /r] VMOVDQA32 zmm1/m512 {k1}{z}, zmm2
-    VMOVDQA32_WdqqVdqq_E512,
+    Vmovdqa32WdqqVdqqE512,
     // [EVEX.128.66.0F.W1 6F /r] VMOVDQA64 xmm1 {k1}{z}, xmm2/m128
-    VMOVDQA64_VdqWdq_E128,
+    Vmovdqa64VdqWdqE128,
     // [EVEX.256.66.0F.W1 6F /r] VMOVDQA64 ymm1 {k1}{z}, ymm2/m256
-    VMOVDQA64_VqqWqq_E256,
+    Vmovdqa64VqqWqqE256,
     // [EVEX.512.66.0F.W1 6F /r] VMOVDQA64 zmm1 {k1}{z}, zmm2/m512
-    VMOVDQA64_VdqqWdqq_E512,
+    Vmovdqa64VdqqWdqqE512,
     // [EVEX.128.66.0F.W1 7F /r] VMOVDQA64 xmm1/m128 {k1}{z}, xmm2
-    VMOVDQA64_WdqVdq_E128,
+    Vmovdqa64WdqVdqE128,
     // [EVEX.256.66.0F.W1 7F /r] VMOVDQA64 ymm1/m256 {k1}{z}, ymm2
-    VMOVDQA64_WqqVqq_E256,
+    Vmovdqa64WqqVqqE256,
     // [EVEX.512.66.0F.W1 7F /r] VMOVDQA64 zmm1/m512 {k1}{z}, zmm2
-    VMOVDQA64_WdqqVdqq_E512,
+    Vmovdqa64WdqqVdqqE512,
 
     // [F3 0F 6F /r] MOVDQU xmm1, xmm2/m128
-    MOVDQU_VdqWdq,
+    MovdquVdqWdq,
     // [F3 0F 7F /r] MOVDQU xmm1/m128, xmm2
-    MOVDQU_WdqVdq,
+    MovdquWdqVdq,
     // [VEX.128.F3.0F.WIG 6F /r] VMOVDQU xmm1, xmm2/m128
-    VMOVDQU_VdqWdq_V128,
+    VmovdquVdqWdqV128,
     // [VEX.128.F3.0F.WIG 7F /r] VMOVDQU xmm1/m128, xmm2
-    VMOVDQU_WdqVdq_V128,
+    VmovdquWdqVdqV128,
     // [VEX.256.F3.0F.WIG 6F /r] VMOVDQU ymm1, ymm2/m256
-    VMOVDQU_VqqWqq_V256,
+    VmovdquVqqWqqV256,
     // [VEX.256.F3.0F.WIG 7F /r] VMOVDQU ymm1/m256, ymm2
-    VMOVDQU_WqqVqq_V256,
+    VmovdquWqqVqqV256,
     // [EVEX.128.F2.0F.W0 6F /r] VMOVDQU8 xmm1 {k1}{z}, xmm2/m128
-    VMOVDQU8_VdqWdq_E128,
+    Vmovdqu8VdqWdqE128,
     // [EVEX.256.F2.0F.W0 6F /r] VMOVDQU8 ymm1 {k1}{z}, ymm2/m256
-    VMOVDQU8_VqqWqq_E256,
+    Vmovdqu8VqqWqqE256,
     // [EVEX.512.F2.0F.W0 6F /r] VMOVDQU8 zmm1 {k1}{z}, zmm2/m512
-    VMOVDQU8_VdqqWdqq_E512,
+    Vmovdqu8VdqqWdqqE512,
     // [EVEX.128.F2.0F.W0 7F /r] VMOVDQU8 xmm1/m128 {k1}{z}, xmm2
-    VMOVDQU8_WdqVdq_E128,
+    Vmovdqu8WdqVdqE128,
     // [EVEX.256.F2.0F.W0 7F /r] VMOVDQU8 ymm1/m256 {k1}{z}, ymm2
-    VMOVDQU8_WqqVqq_E256,
+    Vmovdqu8WqqVqqE256,
     // [EVEX.512.F2.0F.W0 7F /r] VMOVDQU8 zmm1/m512 {k1}{z}, zmm2
-    VMOVDQU8_WdqqVdqq_E512,
+    Vmovdqu8WdqqVdqqE512,
     // [EVEX.128.F2.0F.W1 6F /r] VMOVDQU16 xmm1 {k1}{z}, xmm2/m128
-    VMOVDQU16_VdqWdq_E128,
+    Vmovdqu16VdqWdqE128,
     // [EVEX.256.F2.0F.W1 6F /r] VMOVDQU16 ymm1 {k1}{z}, ymm2/m256
-    VMOVDQU16_VqqWqq_E256,
+    Vmovdqu16VqqWqqE256,
     // [EVEX.512.F2.0F.W1 6F /r] VMOVDQU16 zmm1 {k1}{z}, zmm2/m512
-    VMOVDQU16_VdqqWdqq_E512,
+    Vmovdqu16VdqqWdqqE512,
     // [EVEX.128.F2.0F.W1 7F /r] VMOVDQU16 xmm1/m128 {k1}{z}, xmm2
-    VMOVDQU16_WdqVdq_E128,
+    Vmovdqu16WdqVdqE128,
     // [EVEX.256.F2.0F.W1 7F /r] VMOVDQU16 ymm1/m256 {k1}{z}, ymm2
-    VMOVDQU16_WqqVqq_E256,
+    Vmovdqu16WqqVqqE256,
     // [EVEX.512.F2.0F.W1 7F /r] VMOVDQU16 zmm1/m512 {k1}{z}, zmm2
-    VMOVDQU16_WdqqVdqq_E512,
+    Vmovdqu16WdqqVdqqE512,
     // [EVEX.128.F3.0F.W0 6F /r] VMOVDQU32 xmm1 {k1}{z}, xmm2/m128
-    VMOVDQU32_VdqWdq_E128,
+    Vmovdqu32VdqWdqE128,
     // [EVEX.256.F3.0F.W0 6F /r] VMOVDQU32 ymm1 {k1}{z}, ymm2/m256
-    VMOVDQU32_VqqWqq_E256,
+    Vmovdqu32VqqWqqE256,
     // [EVEX.512.F3.0F.W0 6F /r] VMOVDQU32 zmm1 {k1}{z}, zmm2/m512
-    VMOVDQU32_VdqqWdqq_E512,
+    Vmovdqu32VdqqWdqqE512,
     // [EVEX.128.F3.0F.W0 7F /r] VMOVDQU32 xmm1/m128 {k1}{z}, xmm2
-    VMOVDQU32_WdqVdq_E128,
+    Vmovdqu32WdqVdqE128,
     // [EVEX.256.F3.0F.W0 7F /r] VMOVDQU32 ymm1/m256 {k1}{z}, ymm2
-    VMOVDQU32_WqqVqq_E256,
+    Vmovdqu32WqqVqqE256,
     // [EVEX.512.F3.0F.W0 7F /r] VMOVDQU32 zmm1/m512 {k1}{z}, zmm2
-    VMOVDQU32_WdqqVdqq_E512,
+    Vmovdqu32WdqqVdqqE512,
     // [EVEX.128.F3.0F.W1 6F /r] VMOVDQU64 xmm1 {k1}{z}, xmm2/m128
-    VMOVDQU64_VdqWdq_E128,
+    Vmovdqu64VdqWdqE128,
     // [EVEX.256.F3.0F.W1 6F /r] VMOVDQU64 ymm1 {k1}{z}, ymm2/m256
-    VMOVDQU64_VqqWqq_E256,
+    Vmovdqu64VqqWqqE256,
     // [EVEX.512.F3.0F.W1 6F /r] VMOVDQU64 zmm1 {k1}{z}, zmm2/m512
-    VMOVDQU64_VdqqWdqq_E512,
+    Vmovdqu64VdqqWdqqE512,
     // [EVEX.128.F3.0F.W1 7F /r] VMOVDQU64 xmm1/m128 {k1}{z}, xmm2
-    VMOVDQU64_WdqVdq_E128,
+    Vmovdqu64WdqVdqE128,
     // [EVEX.256.F3.0F.W1 7F /r] VMOVDQU64 ymm1/m256 {k1}{z}, ymm2
-    VMOVDQU64_WqqVqq_E256,
+    Vmovdqu64WqqVqqE256,
     // [EVEX.512.F3.0F.W1 7F /r] VMOVDQU64 zmm1/m512 {k1}{z}, zmm2
-    VMOVDQU64_WdqqVdqq_E512,
+    Vmovdqu64WdqqVdqqE512,
 
     // [F2 0F D6 /r] MOVDQ2Q mm, xmm
-    MOVDQ2Q_PqUdq,
+    Movdq2qPqUdq,
 
     // [NP 0F 12 /r] MOVHLPS xmm1, xmm2
-    MOVHLPS_VdqUdq,
+    MovhlpsVdqUdq,
     // [VEX.128.0F.WIG 12 /r] VMOVHLPS xmm1, xmm2, xmm3
-    VMOVHLPS_VdqHdqUdq_V128,
+    VmovhlpsVdqHdqUdqV128,
     // [EVEX.128.0F.W0 12 /r] VMOVHLPS xmm1, xmm2, xmm3
-    VMOVHLPS_VdqHdqUdq_E128,
+    VmovhlpsVdqHdqUdqE128,
 
     // [66 0F 16 /r] MOVHPD xmm1, m64
-    MOVHPD_VdqMq,
+    MovhpdVdqMq,
     // [VEX.128.66.0F.WIG 16 /r] VMOVHPD xmm1, xmm2, m64
-    VMOVHPD_VdqHdqMq_V128,
+    VmovhpdVdqHdqMqV128,
     // [EVEX.128.66.0F.W1 16 /r] VMOVHPD xmm1, xmm2, m64
-    VMOVHPD_VdqHdqMq_E128,
+    VmovhpdVdqHdqMqE128,
     // [66 0F 17 /r] MOVHPD m64, xmm1
-    MOVHPD_MqVdq,
+    MovhpdMqVdq,
     // [VEX.128.66.0F.WIG 17 /r] VMOVHPD m64, xmm1
-    VMOVHPD_MqVdq_V128,
+    VmovhpdMqVdqV128,
     // [EVEX.128.66.0F.W1 17 /r] VMOVHPD m64, xmm1
-    VMOVHPD_MqVdq_E128,
+    VmovhpdMqVdqE128,
 
     // [NP 0F 16 /r] MOVHPS xmm1, m64
-    MOVHPS_VdqMq,
+    MovhpsVdqMq,
     // [VEX.128.0F.WIG 16 /r] VMOVHPS xmm1, xmm2, m64
-    VMOVHPS_VdqHdqMq_V128,
+    VmovhpsVdqHdqMqV128,
     // [EVEX.128.0F.W1 16 /r] VMOVHPS xmm1, xmm2, m64
-    VMOVHPS_VdqHdqMq_E128,
+    VmovhpsVdqHdqMqE128,
     // [NP 0F 17 /r] MOVHPS m64, xmm1
-    MOVHPS_MqVdq,
+    MovhpsMqVdq,
     // [VEX.128.0F.WIG 17 /r] VMOVHPS m64, xmm1
-    VMOVHPS_MqVdq_V128,
+    VmovhpsMqVdqV128,
     // [EVEX.128.0F.W1 17 /r] VMOVHPS m64, xmm1
-    VMOVHPS_MqVdq_E128,
+    VmovhpsMqVdqE128,
 
     // [NP 0F 16 /r] MOVLHPS xmm1, xmm2
-    MOVLHPS_VdqWdq,
+    MovlhpsVdqWdq,
     // [VEX.128.0F.WIG 16 /r] VMOVLHPS xmm1, xmm2, xmm3
-    VMOVLHPS_VdqHdqWdq_V128,
+    VmovlhpsVdqHdqWdqV128,
     // [EVEX.128.0F.W0 16 /r] VMOVLHPS xmm1, xmm2, xmm3
-    VMOVLHPS_VdqHdqWdq_E128,
+    VmovlhpsVdqHdqWdqE128,
 
     // [66 0F 12 /r] MOVLPD xmm1, m64
-    MOVLPD_VdqMq,
+    MovlpdVdqMq,
     // [VEX.128.66.0F.WIG 12 /r] VMOVLPD xmm1, xmm2, m64
-    VMOVLPD_VdqHdqMq_V128,
+    VmovlpdVdqHdqMqV128,
     // [EVEX.128.66.0F.W1 12 /r] VMOVLPD xmm1, xmm2, m64
-    VMOVLPD_VdqHdqMq_E128,
+    VmovlpdVdqHdqMqE128,
     // [66 0F 13 /r] MOVLPD m64, xmm1
-    MOVLPD_MqVdq,
+    MovlpdMqVdq,
     // [VEX.128.66.0F.WIG 13 /r] VMOVLPD m64, xmm1
-    VMOVLPD_MqVdq_V128,
+    VmovlpdMqVdqV128,
     // [EVEX.128.66.0F.W1 13 /r] VMOVLPD m64, xmm1
-    VMOVLPD_MqVdq_E128,
+    VmovlpdMqVdqE128,
 
     // [NP 0F 12 /r] MOVLPS xmm1, m64
-    MOVLPS_VdqMq,
+    MovlpsVdqMq,
     // [VEX.128.66.0F.WIG 12 /r] VMOVLPS xmm1, xmm2, m64
-    VMOVLPS_VdqHdqMq_V128,
+    VmovlpsVdqHdqMqV128,
     // [EVEX.128.66.0F.W1 12 /r] VMOVLPS xmm1, xmm2, m64
-    VMOVLPS_VdqHdqMq_E128,
+    VmovlpsVdqHdqMqE128,
     // [NP 0F 13 /r] MOVLPS m64, xmm1
     // NOTE: Intel manual doesn't have `NP`
-    MOVLPS_MqVdq,
+    MovlpsMqVdq,
     // [VEX.128.0F.WIG 13 /r] VMOVLPS m64, xmm1
-    VMOVLPS_MqVdq_V128,
+    VmovlpsMqVdqV128,
     // [EVEX.128.0F.W1 13 /r] VMOVLPS m64, xmm1
-    VMOVLPS_MqVdq_E128,
+    VmovlpsMqVdqE128,
 
     // [66 0F 50 /r] MOVMSKPD reg, xmm
-    MOVMSKPD_GdUdq,
+    MovmskpdGdUdq,
     // [VEX.128.66.0F.WIG 50 /r] VMOVMSKPD reg, xmm
-    VMOVMSKPD_GdUdq_V128,
+    VmovmskpdGdUdqV128,
     // [VEX.256.66.0F.WIG 50 /r] VMOVMSKPD reg, ymm
-    VMOVMSKPD_GdUqq_V256,
+    VmovmskpdGdUqqV256,
 
     // [NP 0F 50 /r] MOVMSKPS reg, xmm
-    MOVMSKPS_GdUdq,
+    MovmskpsGdUdq,
     // [VEX.128.0F.WIG 50 /r] VMOVMSKPS reg, xmm
-    VMOVMSKPS_GdUdq_V128,
+    VmovmskpsGdUdqV128,
     // [VEX.256.0F.WIG 50 /r] VMOVMSKPS reg, ymm
-    VMOVMSKPS_GdUqq_V256,
+    VmovmskpsGdUqqV256,
 
     // [66 0F 38 2A /r] MOVNTDQA xmm1, m128
-    MOVNTDQA_VdqMdq,
+    MovntdqaVdqMdq,
     // [VEX.128.66.0F38.WIG 2A /r] VMOVNTDQA xmm1, m128
-    VMOVNTDQA_VdqMdq_V128,
+    VmovntdqaVdqMdqV128,
     // [VEX.256.66.0F38.WIG 2A /r] VMOVNTDQA ymm1, m256
-    VMOVNTDQA_VqqMqq_V256,
+    VmovntdqaVqqMqqV256,
     // [EVEX.128.66.0F38.W0 2A /r] VMOVNTDQA xmm1, m128
-    VMOVNTDQA_VdqMdq_E128,
+    VmovntdqaVdqMdqE128,
     // [EVEX.256.66.0F38.W0 2A /r] VMOVNTDQA ymm1, m256
-    VMOVNTDQA_VqqMqq_E256,
+    VmovntdqaVqqMqqE256,
     // [EVEX.512.66.0F38.W0 2A /r] VMOVNTDQA zmm1, m512
-    VMOVNTDQA_VdqqMdqq_E512,
+    VmovntdqaVdqqMdqqE512,
 
     // [66 0F E7 /r] MOVNTDQ m128, xmm1
-    MOVNTDQ_MdqVdq,
+    MovntdqMdqVdq,
     // [VEX.128.66.0F.WIG E7 /r] VMOVNTDQ m128, xmm1
-    VMOVNTDQ_MdqVdq_V128,
+    VmovntdqMdqVdqV128,
     // [VEX.256.66.0F.WIG E7 /r] VMOVNTDQ m256, ymm1
-    VMOVNTDQ_MqqVqq_V256,
+    VmovntdqMqqVqqV256,
     // [EVEX.128.66.0F.W0 E7 /r] VMOVNTDQ m128, xmm1
-    VMOVNTDQ_MdqVdq_E128,
+    VmovntdqMdqVdqE128,
     // [EVEX.256.66.0F.W0 E7 /r] VMOVNTDQ m256, ymm1
-    VMOVNTDQ_MqqVqq_E256,
+    VmovntdqMqqVqqE256,
     // [EVEX.512.66.0F.W0 E7 /r] VMOVNTDQ m512, zmm1
-    VMOVNTDQ_MdqqVdqq_E512,
+    VmovntdqMdqqVdqqE512,
 
     // [NP 0F C3 /r] MOVNTI m32, r32
-    MOVNTI_MdGd,
+    MovntiMdGd,
     // [NP REX.W 0F C3 /r] MOVNTI m64, r64
-    MOVNTI_MqGq,
+    MovntiMqGq,
 
     // [66 0F 2B /r] MOVNTPD m128, xmm1
-    MOVNTPD_MdqVdq,
+    MovntpdMdqVdq,
     // [VEX.128.66.0F.WIG 2B /r] VMOVNTPD m128, xmm1
-    VMOVNTPD_MdqVdq_V128,
+    VmovntpdMdqVdqV128,
     // [VEX.256.66.0F.WIG 2B /r] VMOVNTPD m256, ymm1
-    VMOVNTPD_MqqVqq_V256,
+    VmovntpdMqqVqqV256,
     // [EVEX.128.66.0F.W1 2B /r] VMOVNTPD m128, xmm1
-    VMOVNTPD_MdqVdq_E128,
+    VmovntpdMdqVdqE128,
     // [EVEX.256.66.0F.W1 2B /r] VMOVNTPD m256, ymm1
-    VMOVNTPD_MqqVqq_E256,
+    VmovntpdMqqVqqE256,
     // [EVEX.512.66.0F.W1 2B /r] VMOVNTPD m512, zmm1
-    VMOVNTPD_MdqqVdqq_E512,
+    VmovntpdMdqqVdqqE512,
 
     // [NP 0F 2B /r] MOVNTPS m128, xmm1
-    MOVNTPS_MdqVdq,
+    MovntpsMdqVdq,
     // [VEX.128.0F.WIG 2B /r] VMOVNTPS m128, xmm1
-    VMOVNTPS_MdqVdq_V128,
+    VmovntpsMdqVdqV128,
     // [VEX.256.0F.WIG 2B /r] VMOVNTPS m256, ymm1
-    VMOVNTPS_MqqVqq_V256,
+    VmovntpsMqqVqqV256,
     // [EVEX.128.0F.W0 2B /r] VMOVNTPS m128, xmm1
-    VMOVNTPS_MdqVdq_E128,
+    VmovntpsMdqVdqE128,
     // [EVEX.256.0F.W0 2B /r] VMOVNTPS m256, ymm1
-    VMOVNTPS_MqqVqq_E256,
+    VmovntpsMqqVqqE256,
     // [EVEX.512.0F.W0 2B /r] VMOVNTPS m512, zmm1
-    VMOVNTPS_MdqqVdqq_E512,
+    VmovntpsMdqqVdqqE512,
 
     // [NP 0F E7 /r] MOVNTQ m64, mm
-    MOVNTQ_MqPq,
+    MovntqMqPq,
 
     // [NP 0F 6F /r] MOVQ mm, mm/m64
-    MOVQ_PqQq,
+    MovqPqQq,
     // [NP 0F 7F /r] MOVQ mm/m64, mm
-    MOVQ_QqPq,
+    MovqQqPq,
     // [F3 0F 7E /r] MOVQ xmm1, xmm2/m64
-    MOVQ_VdqWq,
+    MovqVdqWq,
     // [VEX.128.F3.0F.WIG 7E /r] VMOVQ xmm1, xmm2/m64
-    VMOVQ_VdqWq_V128,
+    VmovqVdqWqV128,
     // [EVEX.128.F3.0F.W1 7E /r] VMOVQ xmm1, xmm2/m64
-    VMOVQ_VdqWq_E128,
+    VmovqVdqWqE128,
     // [66 0F D6 /r] MOVQ xmm1/m64, xmm2
-    MOVQ_WqVdq,
+    MovqWqVdq,
     // [VEX.128.66.0F.WIG D6 /r] VMOVQ xmm1/m64, xmm2
-    VMOVQ_EqVdq_V128,
+    VmovqEqVdqV128,
     // [EVEX.128.66.0F.W1 D6 /r] VMOVQ xmm1/m64, xmm2
-    VMOVQ_EqVdq_E128,
+    VmovqEqVdqE128,
 
     // [F3 0F D6 /r] MOVQ2DQ xmm1, mm1
-    MOVQ2DQ_VdqQq,
+    Movq2dqVdqQq,
 
     // [A4] MOVS m8, m8
     // [A4] MOVSB
-    MOVS_YbXb,
+    MovsYbXb,
     // [A5] MOVS m16, m16
     // [A5] MOVSW
-    MOVS_YwXw,
+    MovsYwXw,
     // [A5] MOVS m32, m32
     // [A5] MOVSD
-    MOVS_YdXd,
+    MovsYdXd,
     // [REX.W A5] MOVS m64, m64
     // [REX.W A5] MOVSQ
-    MOVS_YqXq,
+    MovsYqXq,
 
     // [F2 0F 10 /r] MOVSD xmm1, xmm2
     // [F2 0F 10 /r] MOVSD xmm1, m64
-    MOVSD_VdqWq,
+    MovsdVdqWq,
     // [F2 0F 11 /r] MOVSD xmm1/m64, xmm2
-    MOVSD_WqVdq,
+    MovsdWqVdq,
     // [VEX.LIG.F2.0F.WIG 10 /r] VMOVSD xmm1, xmm2, xmm3
     // [VEX.LIG.F2.0F.WIG 10 /r] VMOVSD xmm1, m64
-    VMOVSD_VdqHdqWdq_V,
+    VmovsdVdqHdqWdqV,
     // [VEX.LIG.F2.0F.WIG 11 /r] VMOVSD xmm1, xmm2, xmm3
     // [VEX.LIG.F2.0F.WIG 11 /r] VMOVSD m64, xmm1
-    VMOVSD_WdqHdqVdq_V,
+    VmovsdWdqHdqVdqV,
     // [EVEX.LIG.F2.0F.W1 10 /r] VMOVSD xmm1 {k1}{z}, xmm2, xmm3
     // [EVEX.LIG.F2.0F.W1 10 /r] VMOVSD xmm1 {k1}{z}, m64
-    VMOVSD_VdqHdqWdq_E,
+    VmovsdVdqHdqWdqE,
     // [EVEX.LIG.F2.0F.W1 11 /r] VMOVSD xmm1 {k1}{z}, xmm2, xmm3
     // [EVEX.LIG.F2.0F.W1 11 /r] VMOVSD m64 {k1}{z}, xmm1
-    VMOVSD_WdqHdqVdq_E,
+    VmovsdWdqHdqVdqE,
 
     // [F3 0F 16 /r] MOVSHDUP xmm1, xmm2/m128
-    MOVSHDUP_VdqWdq,
+    MovshdupVdqWdq,
     // [VEX.128.F3.0F.WIG 16 /r] VMOVSHDUP xmm1, xmm2/m128
-    VMOVSHDUP_VdqWdq_V128,
+    VmovshdupVdqWdqV128,
     // [VEX.256.F3.0F.WIG 16 /r] VMOVSHDUP ymm1, ymm2/m256
-    VMOVSHDUP_VqqWqq_V256,
+    VmovshdupVqqWqqV256,
     // [EVEX.128.F3.0F.W0 16 /r] VMOVSHDUP xmm1 {k1}{z}, xmm2/m128
-    VMOVSHDUP_VdqWdq_E128,
+    VmovshdupVdqWdqE128,
     // [EVEX.256.F3.0F.W0 16 /r] VMOVSHDUP ymm1 {k1}{z}, ymm2/m256
-    VMOVSHDUP_VqqWqq_E256,
+    VmovshdupVqqWqqE256,
     // [EVEX.512.F3.0F.W0 16 /r] VMOVSHDUP zmm1 {k1}{z}, zmm2/m512
-    VMOVSHDUP_VdqqWdqq_E512,
+    VmovshdupVdqqWdqqE512,
 
     // [F3 0F 12 /r] MOVSLDUP xmm1, xmm2/m128
-    MOVSLDUP_VdqWdq,
+    MovsldupVdqWdq,
     // [VEX.128.F3.0F.WIG 12 /r] VMOVSLDUP xmm1, xmm2/m128
-    VMOVSLDUP_VdqWdq_V128,
+    VmovsldupVdqWdqV128,
     // [VEX.256.F3.0F.WIG 12 /r] VMOVSLDUP ymm1, ymm2/m256
-    VMOVSLDUP_VqqWqq_V256,
+    VmovsldupVqqWqqV256,
     // [EVEX.128.F3.0F.W0 12 /r] VMOVSLDUP xmm1 {k1}{z}, xmm2/m128
-    VMOVSLDUP_VdqWdq_E128,
+    VmovsldupVdqWdqE128,
     // [EVEX.256.F3.0F.W0 12 /r] VMOVSLDUP ymm1 {k1}{z}, ymm2/m256
-    VMOVSLDUP_VqqWqq_E256,
+    VmovsldupVqqWqqE256,
     // [EVEX.512.F3.0F.W0 12 /r] VMOVSLDUP zmm1 {k1}{z}, zmm2/m512
-    VMOVSLDUP_VdqqWdqq_E512,
+    VmovsldupVdqqWdqqE512,
 
     // [F3 0F 10 /r] MOVSS xmm1, xmm2
     // [F3 0F 10 /r] MOVSS xmm1, m32
-    MOVSS_VdqWd,
+    MovssVdqWd,
     // [VEX.LIG.F3.0F.WIG 10 /r] VMOVSS xmm1, xmm2, xmm3
     // [VEX.LIG.F3.0F.WIG 10 /r] VMOVSS xmm1, m32
-    VMOVSS_VdqHdqWdq_V,
+    VmovssVdqHdqWdqV,
     // [F3 0F 11 /r] MOVSS xmm1/m32, xmm1
-    MOVSS_WdVdq,
+    MovssWdVdq,
     // [VEX.LIG.F3.0F.WIG 11 /r] VMOVSS xmm1, xmm2, xmm3
     // [VEX.LIG.F3.0F.WIG 11 /r] VMOVSS m32, xmm1
-    VMOVSS_WdqHdqVdq_V,
+    VmovssWdqHdqVdqV,
     // [EVEX.LIG.F3.0F.W0 10 /r] VMOVSS xmm1 {k1}{z}, xmm2, xmm3
     // [EVEX.LIG.F3.0F.W0 10 /r] VMOVSS xmm1 {k1}{z}, m32
-    VMOVSS_VdqHdqWdq_E,
+    VmovssVdqHdqWdqE,
     // [EVEX.LIG.F3.0F.W0 11 /r] VMOVSS xmm1 {k1}{z}, xmm2, xmm3
     // [EVEX.LIG.F3.0F.W0 11 /r] VMOVSS m32 {k1}{z}, xmm1
-    VMOVSS_WdqHdqVdq_E,
+    VmovssWdqHdqVdqE,
 
     // [0F BE /r] MOVSX r16, r/m8
-    MOVSX_GwEb,
+    MovsxGwEb,
     // [0F BE /r] MOVSX r32, r/m8
-    MOVSX_GdEb,
+    MovsxGdEb,
     // [REX.W 0F BE /r] MOVSX r64, r/m8
-    MOVSX_GqEb,
+    MovsxGqEb,
     // [0F BF /r] MOVSX r32, r/m16
-    MOVSX_GdEw,
+    MovsxGdEw,
     // [REX.W 0F BF /r] MOVSX r64, r/m16
-    MOVSX_GqEw,
+    MovsxGqEw,
     // [63 /r] MOVSXD r16, r/m16
-    MOVSXD_GwEw,
+    MovsxdGwEw,
     // [63 /r] MOVSXD r32, r/m32
-    MOVSXD_GdEd,
+    MovsxdGdEd,
     // [REX.W 63 /r] MOVSXD r64, r/m32
-    MOVSXD_GqEd,
+    MovsxdGqEd,
 
     // [66 0F 10 /r] MOVUPD xmm1, xmm2/m128
-    MOVUPD_VdqWdq,
+    MovupdVdqWdq,
     // [66 0F 11 /r] MOVUPD xmm1/m128, xmm2
-    MOVUPD_WdqVdq,
+    MovupdWdqVdq,
     // [VEX.128.66.0F.WIG 10 /r] VMOVUPD xmm1, xmm2/m128
-    VMOVUPD_VdqWdq_V128,
+    VmovupdVdqWdqV128,
     // [VEX.128.66.0F.WIG 11 /r] VMOVUPD xmm1/m128, xmm2
-    VMOVUPD_WdqVdq_V128,
+    VmovupdWdqVdqV128,
     // [VEX.256.66.0F.WIG 10 /r] VMOVUPD ymm1, ymm2/m256
-    VMOVUPD_VqqWqq_V256,
+    VmovupdVqqWqqV256,
     // [VEX.256.66.0F.WIG 11 /r] VMOVUPD ymm1/m256, ymm2
-    VMOVUPD_WqqVqq_V256,
+    VmovupdWqqVqqV256,
     // [EVEX.128.66.0F.W1 10 /r] VMOVUPD xmm1 {k1}{z}, xmm2/m128
-    VMOVUPD_VdqWdq_E128,
+    VmovupdVdqWdqE128,
     // [EVEX.128.66.0F.W1 11 /r] VMOVUPD xmm1/m128 {k1}{z}, xmm2
-    VMOVUPD_WdqVdq_E128,
+    VmovupdWdqVdqE128,
     // [EVEX.256.66.0F.W1 10 /r] VMOVUPD ymm1 {k1}{z}, ymm2/m256
-    VMOVUPD_VqqWqq_E256,
+    VmovupdVqqWqqE256,
     // [EVEX.256.66.0F.W1 11 /r] VMOVUPD ymm1/m256 {k1}{z}, ymm2
-    VMOVUPD_WqqVqq_E256,
+    VmovupdWqqVqqE256,
     // [EVEX.512.66.0F.W1 10 /r] VMOVUPD zmm1 {k1}{z}, zmm2/m512
-    VMOVUPD_VdqqWdqq_E512,
+    VmovupdVdqqWdqqE512,
     // [EVEX.512.66.0F.W1 11 /r] VMOVUPD zmm1/m512 {k1}{z}, zmm2
-    VMOVUPD_WdqqVdqq_E512,
+    VmovupdWdqqVdqqE512,
 
     // [NP 0F 10 /r] MOVUPS xmm1, xmm2/m128
-    MOVUPS_VdqWdq,
+    MovupsVdqWdq,
     // [NP 0F 11 /r] MOVUPS xmm1/m128, xmm2
-    MOVUPS_WdqVdq,
+    MovupsWdqVdq,
     // [VEX.128.0F.WIG 10 /r] VMOVUPS xmm1, xmm2/m128
-    VMOVUPS_VdqWdq_V128,
+    VmovupsVdqWdqV128,
     // [VEX.128.0F.WIG 11 /r] VMOVUPS xmm1/m128, xmm2
-    VMOVUPS_WdqVdq_V128,
+    VmovupsWdqVdqV128,
     // [VEX.256.0F.WIG 10 /r] VMOVUPS ymm1, ymm2/m256
-    VMOVUPS_VqqWqq_V256,
+    VmovupsVqqWqqV256,
     // [VEX.256.0F.WIG 11 /r] VMOVUPS ymm1/m256, ymm2
-    VMOVUPS_WqqVqq_V256,
+    VmovupsWqqVqqV256,
     // [EVEX.128.0F.W1 10 /r] VMOVUPS xmm1 {k1}{z}, xmm2/m128
-    VMOVUPS_VdqWdq_E128,
+    VmovupsVdqWdqE128,
     // [EVEX.256.0F.W1 10 /r] VMOVUPS ymm1 {k1}{z}, ymm2/m256
-    VMOVUPS_VqqWqq_E256,
+    VmovupsVqqWqqE256,
     // [EVEX.512.0F.W1 10 /r] VMOVUPS zmm1 {k1}{z}, zmm2/m512
-    VMOVUPS_VdqqWdqq_E512,
+    VmovupsVdqqWdqqE512,
     // [EVEX.128.0F.W1 11 /r] VMOVUPS xmm1/m128 {k1}{z}, xmm2
-    VMOVUPS_WdqVdq_E128,
+    VmovupsWdqVdqE128,
     // [EVEX.256.0F.W1 11 /r] VMOVUPS ymm1/m256 {k1}{z}, ymm2
-    VMOVUPS_WqqVqq_E256,
+    VmovupsWqqVqqE256,
     // [EVEX.512.0F.W1 11 /r] VMOVUPS zmm1/m512 {k1}{z}, zmm2
-    VMOVUPS_WdqqVdqq_E512,
+    VmovupsWdqqVdqqE512,
 
     // [0F B6 /r] MOVZX r16, r/m8
-    MOVZX_GwEb,
+    MovzxGwEb,
     // [0F B6 /r] MOVZX r32, r/m8
-    MOVZX_GdEb,
+    MovzxGdEb,
     // [REX.W 0F B6 /r] MOVZX r64, r/m8
-    MOVZX_GqEb,
+    MovzxGqEb,
     // [0F B7 /r] MOVZX r32, r/m16
-    MOVZW_GdEw,
+    MovzwGdEw,
     // [REX.W 0F B7 /r] MOVZX r64, r/m16
-    MOVZW_GqEw,
+    MovzwGqEw,
 
     // [66 0F 3A 42 /r ib] MPSADBW xmm1, xmm2/m128, imm8
-    MPSADBW_VdqWdqIb,
+    MpsadbwVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 42 /r ib] VMPSADBW xmm1, xmm2, xmm3/m128, imm8
-    VMPSADBW_VdqHdqWdqIb_V128,
+    VmpsadbwVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.WIG 42 /r ib] VMPSADBW ymm1, ymm2, ymm3/m256, imm8
-    VMPSADBW_VqqHqqWqqIb_V256,
+    VmpsadbwVqqHqqWqqIbV256,
 
     // [F6 /4] MUL r/m8
     // [REX F6 /4] MUL r/m8
-    MUL_Eb,
+    MulEb,
     // [F7 /4] MUL r/m16
-    MUL_Ew,
+    MulEw,
     // [F7 /4] MUL r/m32
-    MUL_Ed,
+    MulEd,
     // [REX.W F7 /4] MUL r/m64
-    MUL_Eq,
+    MulEq,
 
     // [66 0F 59 /r] MULPD xmm1, xmm2/m128
-    MULPD_VdqWdq,
+    MulpdVdqWdq,
     // [VEX.128.66.0F.WIG 59 /r] VMULPD xmm1, xmm2, xmm3/m128
-    VMULPD_VdqHdqWdq_V128,
+    VmulpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 59 /r] VMULPD ymm1, ymm2, ymm3/m256
-    VMULPD_VqqHqqWqq_V256,
+    VmulpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 59 /r] VMULPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VMULPD_VdqHdqWdq_E128,
+    VmulpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 59 /r] VMULPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VMULPD_VqqHqqWqq_E256,
+    VmulpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 59 /r] VMULPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VMULPD_VdqqHdqqWdqq_E512,
+    VmulpdVdqqHdqqWdqqE512,
 
     // [NP 0F 59 /r] MULPS xmm1, xmm2/m128
-    MULPS_VdqWdq,
+    MulpsVdqWdq,
     // [VEX.128.0F.WIG 59 /r] VMULPS xmm1, xmm2, xmm3/m128
-    VMULPS_VdqHdqWdq_V128,
+    VmulpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 59 /r] VMULPS ymm1, ymm2, ymm3/m256
-    VMULPS_VqqHqqWqq_V256,
+    VmulpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 59 /r] VMULPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VMULPS_VdqHdqWdq_E128,
+    VmulpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 59 /r] VMULPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VMULPS_VqqHqqWqq_E256,
+    VmulpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 59 /r] VMULPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VMULPS_VdqqHdqqWdqq_E512,
+    VmulpsVdqqHdqqWdqqE512,
 
     // [F2 0F 59 /r] MULSD xmm1, xmm2/m64
-    MULSD_VdqWq,
+    MulsdVdqWq,
     // [VEX.LIG.F2.0F.WIG 59 /r] VMULSD xmm1, xmm2, xmm3/m64
-    VMULSD_VdqHdqWq_V,
+    VmulsdVdqHdqWqV,
     // [EVEX.LIG.F2.0F.W1 59 /r] VMULSD xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VMULSD_VdqHdqWq_E,
+    VmulsdVdqHdqWqE,
 
     // [F3 0F 59 /r] MULSS xmm1, xmm2/m32
-    MULSS_VdqWd,
+    MulssVdqWd,
     // [VEX.LIG.F3.0F.WIG 59 /r] VMULSS xmm1, xmm2, xmm3/m32
-    VMULSS_VdqHdqWd_V,
+    VmulssVdqHdqWdV,
     // [EVEX.LIG.F3.0F.W1 59 /r] VMULSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
-    VMULSS_VdqHdqWd_E,
+    VmulssVdqHdqWdE,
 
     // [VEX.LZ.F2.0F38.W0 F6 /r] MULX r32a, r32b, r/m32
-    MULX_GdBdEd,
+    MulxGdBdEd,
     // [VEX.LZ.F2.0F38.W1 F6 /r] MULX r64a, r64b, r/m64
-    MULX_GqBqEq,
+    MulxGqBqEq,
 
     // [0F 01 C9] MWAIT
-    MWAIT,
+    Mwait,
 
     // [F6 /3] NEG r/m8
     // [REX F6 /3] NEG r/m8
-    NEG_Eb,
+    NegEb,
     // [F7 /3] NEG r/m16
-    NEG_Ew,
+    NegEw,
     // [F7 /3] NEG r/m32
-    NEG_Ed,
+    NegEd,
     // [REX.W F7 /3] NEG r/m64
-    NEG_Eq,
+    NegEq,
 
     // [NP 90] NOP
-    NOP,
+    Nop,
     // [NP 0F 1F /0] NOP r/m16
-    NOP_Ew,
+    NopEw,
     // [NP 0F 1F /0] NOP r/m32
-    NOP_Ed,
+    NopEd,
 
     // [F6 /2] NOT r/m8
     // [REX F6 /2] NOT r/m8
-    NOT_Eb,
+    NotEb,
     // [F7 /2] NOT r/m16
-    NOT_Ew,
+    NotEw,
     // [F7 /2] NOT r/m32
-    NOT_Ed,
+    NotEd,
     // [REX.W F7 /2] NOT r/m64
-    NOT_Eq,
+    NotEq,
 
     // [0C ib] OR AL, imm8
-    OR_ALIb,
+    OrALIb,
     // [0D iw] OR AX, imm16
-    OR_AXIw,
+    OrAXIw,
     // [0D id] OR EAX, imm32
-    OR_EAXId,
+    OrEAXId,
     // [REX.W 0D id] OR RAX, imm32
-    OR_RAXId,
+    OrRAXId,
     // [80 /1 ib] OR r/m8, imm8
     // [REX 80 /1 ib] OR r/m8, imm8
-    OR_EbIb,
+    OrEbIb,
     // [81 /1 iw] OR r/m16, imm16
-    OR_EwIw,
+    OrEwIw,
     // [81 /1 id] OR r/m32, imm32
-    OR_EdId,
+    OrEdId,
     // [REX.W 81 /1 id] OR r/m64, imm32
-    OR_EqId,
+    OrEqId,
     // [83 /1 ib] OR r/m16, imm8
-    OR_EwIb,
+    OrEwIb,
     // [83 /1 ib] OR r/m32, imm8
-    OR_EdIb,
+    OrEdIb,
     // [REX.W 83 /1 ib] OR r/m64, imm8
-    OR_EqIb,
+    OrEqIb,
     // [08 /r] OR r/m8, r8
     // [REX 08 /r] OR r/m8, r8
-    OR_EbGb,
+    OrEbGb,
     // [09 /r] OR r/m16, r16
-    OR_EwGw,
+    OrEwGw,
     // [09 /r] OR r/m32, r32
-    OR_EdGd,
+    OrEdGd,
     // [REX.W 09 /r] OR r/m64, r64
-    OR_EqGq,
+    OrEqGq,
     // [0A /r] OR r8, r/m8
     // [REX 0A /r] OR r8, r/m8
-    OR_GbEb,
+    OrGbEb,
     // [0B /r] OR r16, r/m16
-    OR_GwEw,
+    OrGwEw,
     // [0B /r] OR r32, r/m32
-    OR_GdEd,
+    OrGdEd,
     // [REX.W 0B /r] OR r64, r/m64
-    OR_GqEq,
+    OrGqEq,
 
     // [66 0F 56 /r] ORPD xmm1, xmm2/m128
-    ORPD_VdqWdq,
+    OrpdVdqWdq,
     // [VEX.128.66.0F 56 /r] VORPD xmm1, xmm2, xmm3/m128
-    VORPD_VdqHdqWdq_V128,
+    VorpdVdqHdqWdqV128,
     // [VEX.256.66.0F 56 /r] VORPD ymm1, ymm2, ymm3/m256
-    VORPD_VqqHqqWqq_V256,
+    VorpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 56 /r] VORPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VORPD_VdqHdqWdq_E128,
+    VorpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 56 /r] VORPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VORPD_VqqHqqWqq_E256,
+    VorpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 56 /r] VORPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VORPD_VdqqHdqqWdqq_E512,
+    VorpdVdqqHdqqWdqqE512,
 
     // [NP 0F 56 /r] ORPS xmm1, xmm2/m128
-    ORPS_VdqWdq,
+    OrpsVdqWdq,
     // [VEX.128.0F 56 /r] VORPS xmm1, xmm2, xmm3/m128
-    VORPS_VdqHdqWdq_V128,
+    VorpsVdqHdqWdqV128,
     // [VEX.256.0F 56 /r] VORPS ymm1, ymm2, ymm3/m256
-    VORPS_VqqHqqWqq_V256,
+    VorpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 56 /r] VORPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VORPS_VdqHdqWdq_E128,
+    VorpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 56 /r] VORPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VORPS_VqqHqqWqq_E256,
+    VorpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 56 /r] VORPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VORPS_VdqqHdqqWdqq_E512,
+    VorpsVdqqHdqqWdqqE512,
 
     // [E6 ib] OUT imm8, AL
-    OUT_IbAL,
+    OutIbAL,
     // [E7 ib] OUT imm8, AX
-    OUT_IbAX,
+    OutIbAX,
     // [E7 ib] OUT imm8, EAX
-    OUT_IbEAX,
+    OutIbEAX,
     // [EE] OUT DX, AL
-    OUT_DXAL,
+    OutDXAL,
     // [EF] OUT DX, AX
-    OUT_DXAX,
+    OutDXAX,
     // [EF] OUT DX, EAX
-    OUT_DXEAX,
+    OutDXEAX,
 
     // [6E] OUTS m8, DX
     // [6E] OUTSB
-    OUTSB,
+    Outsb,
     // [6F] OUTS m16, DX
     // [6F] OUTSW,
-    OUTSW,
+    Outsw,
     // [6F] OUTS m32, DX
     // [6F] OUTSD
-    OUTSD,
+    Outsd,
 
     // [EVEX.NDS.128.F2.0F38.W0 68 /r] VP2INTERSECTD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VP2INTERSECTD_VdqHdqWdq_E128,
+    Vp2intersectdVdqHdqWdqE128,
     // [EVEX.NDS.256.F2.0F38.W0 68 /r] VP2INTERSECTD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VP2INTERSECTD_VqqHqqWqq_E256,
+    Vp2intersectdVqqHqqWqqE256,
     // [EVEX.NDS.512.F2.0F38.W0 68 /r] VP2INTERSECTD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VP2INTERSECTD_VdqqHdqqWdqq_E512,
+    Vp2intersectdVdqqHdqqWdqqE512,
     // [EVEX.NDS.128.F2.0F38.W1 68 /r] VP2INTERSECTQ xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VP2INTERSECTQ_VdqHdqWdq_E128,
+    Vp2intersectqVdqHdqWdqE128,
     // [EVEX.NDS.256.F2.0F38.W1 68 /r] VP2INTERSECTQ ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VP2INTERSECTQ_VqqHqqWqq_E256,
+    Vp2intersectqVqqHqqWqqE256,
     // [EVEX.NDS.512.F2.0F38.W1 68 /r] VP2INTERSECTQ zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VP2INTERSECTQ_VdqqHdqqWdqq_E512,
+    Vp2intersectqVdqqHdqqWdqqE512,
 
     // [NP 0F 38 1C /r] PABSB mm1, mm2/m64
-    PABSB_PqQq,
+    PabsbPqQq,
     // [66 0F 38 1C /r] PABSB xmm1, xmm2/m128
-    PABSB_VdqWdq,
+    PabsbVdqWdq,
     // [NP 0F 38 1D /r] PABSW mm1, mm2/m64
-    PABSW_PqQq,
+    PabswPqQq,
     // [66 0F 38 1D /r] PABSW xmm1, xmm2/m128
-    PABSW_VdqWdp,
+    PabswVdqWdp,
     // [NP 0F 38 1E /r] PABSD mm1, mm2/m64
-    PABSD_PqQq,
+    PabsdPqQq,
     // [66 0F 38 1E /r] PABSD xmm1, xmm2/m128
-    PABSD_VdqWdq,
+    PabsdVdqWdq,
     // [VEX.128.66.0F38.WIG 1C /r] VPABSB xmm1, xmm2/m128
-    VPABSB_VdqWdq_V128,
+    VpabsbVdqWdqV128,
     // [VEX.128.66.0F38.WIG 1D /r] VPABSW xmm1, xmm2/m128
-    VPABSW_VdqWdq_V128,
+    VpabswVdqWdqV128,
     // [VEX.128.66.0F38.WIG 1E /r] VPABSD xmm1, xmm2/m128
-    VPABSD_VdqWdq_V128,
+    VpabsdVdqWdqV128,
     // [VEX.256.66.0F38.WIG 1C /r] VPABSB ymm1, ymm2/m256
-    VPABSB_VqqWqq_V256,
+    VpabsbVqqWqqV256,
     // [VEX.256.66.0F38.WIG 1D /r] VPABSW ymm1, ymm2/m256
-    VPABSW_VqqWqq_V256,
+    VpabswVqqWqqV256,
     // [VEX.256.66.0F38.WIG 1E /r] VPABSD ymm1, ymm2/m256
-    VPABSD_VqqWqq_V256,
+    VpabsdVqqWqqV256,
     // [EVEX.128.66.0F38.WIG 1C /r] VPABSB xmm1 {k1}{z}, xmm2/m128
-    VPABSB_VdqWdq_E128,
+    VpabsbVdqWdqE128,
     // [EVEX.256.66.0F38.WIG 1C /r] VPABSB ymm1 {k1}{z}, ymm2/m256
-    VPABSB_VqqWqq_E256,
+    VpabsbVqqWqqE256,
     // [EVEX.512.66.0F38.WIG 1C /r] VPABSB zmm1 {k1}{z}, zmm2/m512
-    VPABSB_VdqqWdqq_E512,
+    VpabsbVdqqWdqqE512,
     // [EVEX.128.66.0F38.WIG 1D /r] VPABSW xmm1 {k1}{z}, xmm2/m128
-    VPABSW_VdqWdq_E128,
+    VpabswVdqWdqE128,
     // [EVEX.256.66.0F38.WIG 1D /r] VPABSW ymm1 {k1}{z}, ymm2/m256
-    VPABSW_VqqWqq_E256,
+    VpabswVqqWqqE256,
     // [EVEX.512.66.0F38.WIG 1D /r] VPABSW zmm1 {k1}{z}, zmm2/m512
-    VPABSW_VdqqWdqq_E512,
+    VpabswVdqqWdqqE512,
     // [EVEX.128.66.0F38.WIG 1E /r] VPABSD xmm1 {k1}{z}, xmm2/m128
-    VPABSD_VdqWdq_E128,
+    VpabsdVdqWdqE128,
     // [EVEX.256.66.0F38.WIG 1E /r] VPABSD ymm1 {k1}{z}, ymm2/m256
-    VPABSD_VqqWqq_E256,
+    VpabsdVqqWqqE256,
     // [EVEX.512.66.0F38.WIG 1E /r] VPABSD zmm1 {k1}{z}, zmm2/m512
-    VPABSD_VdqqWdqq_E512,
+    VpabsdVdqqWdqqE512,
 
     // [NP 0F 63 /r] PACKSSWB mm1, mm2/m64
-    PACKSSWB_PqQq,
+    PacksswbPqQq,
     // [66 0F 63 /r] PACKSSWB xmm1, xmm2/m128
-    PACKSSWB_VdqWdq,
+    PacksswbVdqWdq,
     // [NP 0F 6B /r] PACKSSDW mm1, mm2/m64
-    PACKSSDW_PqQq,
+    PackssdwPqQq,
     // [66 0F 6B /r] PACKSSDW xmm1, xmm2/m128
-    PACKSSDW_VdqWdq,
+    PackssdwVdqWdq,
     // [VEX.128.66.0F.WIG 63 /r] VPACKSSWB xmm1, xmm2, xmm3/m128
-    VPACKSSWB_VdqHdqWdq_V128,
+    VpacksswbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 6B /r] VPACKSSDW xmm1, xmm2, xmm3/m128
-    VPACKSSDW_VdqHdqWdq_V128,
+    VpackssdwVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 63 /r] VPACKSSWB ymm1, ymm2, ymm3/m256
-    VPACKSSWB_VqqHqqWqq_V256,
+    VpacksswbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 6B /r] VPACKSSDW ymm1, ymm2, ymm3/m256
-    VPACKSSDW_VqqHqqWqq_V256,
+    VpackssdwVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG 63 /r] VPACKSSWB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPACKSSWB_VdqHdqWdq_E128,
+    VpacksswbVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 63 /r] VPACKSSWB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPACKSSWB_VqqHqqWqq_E256,
+    VpacksswbVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 63 /r] VPACKSSWB zmm1 {k1}{z}, zmm2, xmm3/m512
-    VPACKSSWB_VdqqHdqqWdqq_E512,
+    VpacksswbVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.W0 6B /r] VPACKSSDW xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPACKSSDW_VdqHdqWdq_E128,
+    VpackssdwVdqHdqWdqE128,
     // [EVEX.256.66.0F.W0 6B /r] VPACKSSDW ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPACKSSDW_VqqHqqWqq_E256,
+    VpackssdwVqqHqqWqqE256,
     // [EVEX.512.66.0F.W0 6B /r] VPACKSSDW zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPACKSSDW_VdqqHdqqWdqq_E512,
+    VpackssdwVdqqHdqqWdqqE512,
 
     // [66 0F 38 2B /r] PACKUSDW xmm1, xmm2/m128
-    PACKUSDW_VdqWdq,
+    PackusdwVdqWdq,
     // [VEX.128.66.0F38.WIG 2B /r] VPACKUSDW xmm1, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPACKUSDW_VdqHdqWdq_V128,
+    VpackusdwVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 2B /r] VPACKUSDW ymm1, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPACKUSDW_VqqHqqWqq_V256,
+    VpackusdwVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 2B /r] VPACKUSDW xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPACKUSDW_VdqHdqWdq_E128,
+    VpackusdwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 2B /r] VPACKUSDW ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPACKUSDW_VqqHqqWqq_E256,
+    VpackusdwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 2B /r] VPACKUSDW zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPACKUSDW_VdqqHdqqWdqq_E512,
+    VpackusdwVdqqHdqqWdqqE512,
 
     // [NP 0F 67 /r] PACKUSWB mm1, mm2/m64
-    PACKUSWB_PqQq,
+    PackuswbPqQq,
     // [66 0F 67 /r] PACKUSWB xmm1, xmm2/m128
-    PACKUSWB_VdqWdq,
+    PackuswbVdqWdq,
     // [VEX.128.66.0F.WIG 67 /r] VPACKUSWB xmm1, xmm2, xmm3/m128
-    VPACKUSWB_VdqHdqWdq_V128,
+    VpackuswbVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 67 /r] VPACKUSWB ymm1, ymm2, ymm3/m128
-    VPACKUSWB_VqqHqqWqq_V256,
+    VpackuswbVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG 67 /r] VPACKUSWB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPACKUSWB_VdqHdqWdq_E128,
+    VpackuswbVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 67 /r] VPACKUSWB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPACKUSWB_VqqHqqWqq_E256,
+    VpackuswbVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 67 /r] VPACKUSWB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPACKUSWB_VdqqHdqqWdqq_E512,
+    VpackuswbVdqqHdqqWdqqE512,
 
     // [NP 0F FC /r] PADDB mm1, mm2/m64
-    PADDB_PqQq,
+    PaddbPqQq,
     // [NP 0F FD /r] PADDW mm1, mm2/m64
-    PADDW_PqQq,
+    PaddwPqQq,
     // [NP 0F FE /r] PADDD mm1, mm2/m64
-    PADDD_PqQq,
+    PadddPqQq,
     // [NP 0F D4 /r] PADDQ mm1, mm2/m64
-    PADDQ_PqQq,
+    PaddqPqQq,
     // [66 0F FC /r] PADDB xmm1, xmm2/m128
-    PADDB_VdqWdq,
+    PaddbVdqWdq,
     // [66 0F FD /r] PADDW xmm1, xmm2/m128
-    PADDW_VdqWdq,
+    PaddwVdqWdq,
     // [66 0F FE /r] PADDD xmm1, xmm2/m128
-    PADDD_VdqWdq,
+    PadddVdqWdq,
     // [66 0F D4 /r] PADDQ xmm1, xmm2/m128
-    PADDQ_VdqWdq,
+    PaddqVdqWdq,
     // [VEX.128.66.0F.WIG FC /r] VPADDB xmm1, xmm2, xmm3/m128
-    VPADDB_VdqHdqWdq_V128,
+    VpaddbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG FD /r] VPADDW xmm1, xmm2, xmm3/m128
-    VPADDW_VdqHdqWdq_V128,
+    VpaddwVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG FE /r] VPADDD xmm1, xmm2, xmm3/m128
-    VPADDD_VdqHdqWdq_V128,
+    VpadddVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG D4 /r] VPADDQ xmm1, xmm2, xmm3/m128
-    VPADDQ_VdqHdqWdq_V128,
+    VpaddqVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG FC /r] VPADDB ymm1, ymm2, ymm3/m256
-    VPADDB_VqqHqqWqq_V256,
+    VpaddbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG FD /r] VPADDW ymm1, ymm2, ymm3/m256
-    VPADDW_VqqHqqWqq_V256,
+    VpaddwVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG FE /r] VPADDD ymm1, ymm2, ymm3/m256
-    VPADDD_VqqHqqWqq_V256,
+    VpadddVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG D4 /r] VPADDQ ymm1, ymm2, ymm3/m256
-    VPADDQ_VqqHqqWqq_V256,
+    VpaddqVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG FC /r] VPADDB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPADDB_VdqHdqWdq_E128,
+    VpaddbVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG FD /r] VPADDW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPADDW_VdqHdqWdq_E128,
+    VpaddwVdqHdqWdqE128,
     // [EVEX.128.66.0F.W0 FE /r] VPADDD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPADDD_VdqHdqWdq_E128,
+    VpadddVdqHdqWdqE128,
     // [EVEX.128.66.0F.W1 D4 /r] VPADDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPADDQ_VdqHdqWdq_E128,
+    VpaddqVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG FC /r] VPADDB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPADDB_VqqHqqWqq_E256,
+    VpaddbVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG FD /r] VPADDW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPADDW_VqqHqqWqq_E256,
+    VpaddwVqqHqqWqqE256,
     // [EVEX.256.66.0F.W0 FE /r] VPADDD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPADDD_VqqHqqWqq_E256,
+    VpadddVqqHqqWqqE256,
     // [EVEX.256.66.0F.W1 D4 /r] VPADDQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPADDQ_VqqHqqWqq_E256,
+    VpaddqVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG FC /r] VPADDB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPADDB_VdqqHdqqWdqq_E512,
+    VpaddbVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG FD /r] VPADDW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPADDW_VdqqHdqqWdqq_E512,
+    VpaddwVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.W0 FE /r] VPADDD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPADDD_VdqqHdqqWdqq_E512,
+    VpadddVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.W1 D4 /r] VPADDQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPADDQ_VdqqHdqqWdqq_E512,
+    VpaddqVdqqHdqqWdqqE512,
 
     // [NP 0F EC /r] PADDSB mm1, mm2/m64
-    PADDSB_PqQq,
+    PaddsbPqQq,
     // [66 0F EC /r] PADDSB xmm1, xmm2/m128
-    PADDSB_VdqWdq,
+    PaddsbVdqWdq,
     // [NP 0F ED /r] PADDSW mm1, mm2/m64
-    PADDSW_PqQq,
+    PaddswPqQq,
     // [66 0F ED /r] PADDSW xmm1, xmm2/m128
-    PADDSW_VdqWdq,
+    PaddswVdqWdq,
     // [VEX.128.66.0F.WIG EC /r] VPADDSB xmm1, xmm2, xmm3/m128
-    VPADDSB_VdqHdqWdq_V128,
+    VpaddsbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG ED /r] VPADDSW xmm1, xmm2, xmm3/m128
-    VPADDSW_VdqHdqWdq_V128,
+    VpaddswVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG EC /r] VPADDSB ymm1, ymm2, ymm3/m256
-    VPADDSB_VqqHqqWqq_V256,
+    VpaddsbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG ED /r] VPADDSW ymm1, ymm2, ymm3/m256
-    VPADDSW_VqqHqqWqq_V256,
+    VpaddswVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG EC /r] VPADDSB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPADDSB_VdqHdqWdq_E128,
+    VpaddsbVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG ED /r] VPADDSW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPADDSW_VdqHdqWdq_E128,
+    VpaddswVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG EC /r] VPADDSB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPADDSB_VqqHqqWqq_E256,
+    VpaddsbVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG ED /r] VPADDSW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPADDSW_VqqHqqWqq_E256,
+    VpaddswVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG EC /r] VPADDSB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPADDSB_VdqqHdqqWdqq_E512,
+    VpaddsbVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG ED /r] VPADDSW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPADDSW_VdqqHdqqWdqq_E512,
+    VpaddswVdqqHdqqWdqqE512,
 
     // [NP 0F DC /r] PADDUSB mm1, mm2/m64
-    PADDUSB_PqQq,
+    PaddusbPqQq,
     // [66 0F DC /r] PADDUSB xmm1, xmm2/m128
-    PADDUSB_VdqWdq,
+    PaddusbVdqWdq,
     // [NP 0F DD /r] PADDUSW mm1, mm2/m64
-    PADDUSW_PqQq,
+    PadduswPqQq,
     // [66 0F DD /r] PADDUSW xmm1, xmm2/m128
-    PADDUSW_VdqWdq,
+    PadduswVdqWdq,
     // [VEX.128.66.0F.WIG DC /r] VPADDUSB xmm1, xmm2, xmm3/m128
-    VPADDUSB_VdqHdqWdq_V128,
+    VpaddusbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG DD /r] VPADDUSW xmm1, xmm2, xmm3/m128
-    VPADDUSW_VdqHdqWdq_V128,
+    VpadduswVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG DC /r] VPADDUSB ymm1, ymm2, ymm3/m256
-    VPADDUSB_VqqHqqWqq_V256,
+    VpaddusbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG DD /r] VPADDUSW ymm1, ymm2, ymm3/m256
-    VPADDUSW_VqqHqqWqq_V256,
+    VpadduswVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG DC /r] VPADDUSB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPADDUSB_VdqHdqWdq_E128,
+    VpaddusbVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG DD /r] VPADDUSW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPADDUSW_VdqHdqWdq_E128,
+    VpadduswVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG DC /r] VPADDUSB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPADDUSB_VqqHqqWqq_E256,
+    VpaddusbVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG DD /r] VPADDUSW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPADDUSW_VqqHqqWqq_E256,
+    VpadduswVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG DC /r] VPADDUSB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPADDUSB_VdqqHdqqWdqq_E512,
+    VpaddusbVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG DD /r] VPADDUSW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPADDUSW_VdqqHdqqWdqq_E512,
+    VpadduswVdqqHdqqWdqqE512,
 
     // [NP 0F 3A 0F /r ib] PALIGNR mm1, mm2/m64, imm8
-    PALIGNR_PqQqIb,
+    PalignrPqQqIb,
     // [66 0F 3A 0F /r ib] PALIGNR xmm1, xmm2/m128, imm8
-    PALIGNR_VdqWdqIb,
+    PalignrVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 0F /r ib] VPALIGNR xmm1, xmm2, xmm3/m128, imm8
-    VPALIGNR_VdqHdqWdqIb_V128,
+    VpalignrVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.WIG 0F /r ib] VPALIGNR ymm1, ymm2, ymm3/m256, imm8
-    VPALIGNR_VqqHqqWqqIb_V256,
+    VpalignrVqqHqqWqqIbV256,
     // [EVEX.128.66.0F3A.WIG 0F /r ib] VPALIGNR xmm1 {k1}{z}, xmm2, xmm3/m128, imm8
-    VPALIGNR_VdqHdqWdqIb_E128,
+    VpalignrVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.WIG 0F /r ib] VPALIGNR ymm1 {k1}{z}, ymm2, ymm3/m256, imm8
-    VPALIGNR_VqqHqqWqqIb_E256,
+    VpalignrVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.WIG 0F /r ib] VPALIGNR zmm1 {k1}{z}, zmm2, zmm3/m512, imm8
-    VPALIGNR_VdqqHdqqWdqqIb_E512,
+    VpalignrVdqqHdqqWdqqIbE512,
 
     // [NP 0F DB /r] PAND mm1, mm2/m64
-    PAND_PqQq,
+    PandPqQq,
     // [66 0F DB /r] PAND xmm1, xmm2/m128
-    PAND_VdqWdq,
+    PandVdqWdq,
     // [VEX.128.66.0F.WIG DB /r] VPAND xmm1, xmm2, xmm3/m128
-    PAND_VdqHdqWdq_V128,
+    PandVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG DB /r] VPAND ymm1, ymm2, ymm3/m256
-    PAND_VqqHqqWqq_V256,
+    PandVqqHqqWqqV256,
     // [EVEX.128.66.0F.W0 DB /r] VPANDD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPANDD_VdqHdqWdq_E128,
+    VpanddVdqHdqWdqE128,
     // [EVEX.256.66.0F.W0 DB /r] VPANDD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPANDD_VqqHqqWqq_E256,
+    VpanddVqqHqqWqqE256,
     // [EVEX.512.66.0F.W0 DB /r] VPANDD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPANDD_VdqqHdqqWdqq_E512,
+    VpanddVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.W1 DB /r] VPANDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPANDQ_VdqHdqWdq_E128,
+    VpandqVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 DB /r] VPANDQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPANDQ_VqqHqqWqq_E256,
+    VpandqVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 DB /r] VPANDQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPANDQ_VdqqHdqqWdqq_E512,
+    VpandqVdqqHdqqWdqqE512,
 
     // [NP 0F DF /r] PANDN mm1, mm2/m64
-    PANDN_PqQq,
+    PandnPqQq,
     // [66 0F DF /r] PANDN xmm1, xmm2/m128
-    PANDN_VdqWdq,
+    PandnVdqWdq,
     // [VEX.128.66.0F.WIG DF /r] VPANDN xmm1, xmm2, xmm3/m128
-    PANDN_VdqHdqWdq_V128,
+    PandnVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG DF /r] VPANDN ymm1, ymm2, ymm3/m256
-    PANDN_VqqHqqWqq_V256,
+    PandnVqqHqqWqqV256,
     // [EVEX.128.66.0F.W0 DF /r] VPANDND xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPANDND_VdqHdqWdq_E128,
+    VpandndVdqHdqWdqE128,
     // [EVEX.256.66.0F.W0 DF /r] VPANDND ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPANDND_VqqHqqWqq_E256,
+    VpandndVqqHqqWqqE256,
     // [EVEX.512.66.0F.W0 DF /r] VPANDND zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPANDND_VdqqHdqqWdqq_E512,
+    VpandndVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.W1 DF /r] VPANDNQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPANDNQ_VdqHdqWdq_E128,
+    VpandnqVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 DF /r] VPANDNQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPANDNQ_VqqHqqWqq_E256,
+    VpandnqVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 DF /r] VPANDNQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPANDNQ_VdqqHdqqWdqq_E512,
+    VpandnqVdqqHdqqWdqqE512,
 
     // [F3 90] PAUSE
-    PAUSE,
+    Pause,
 
     // [NP 0F E0 /r] PAVGB mm1, mm2/m64
-    PAVGB_PqQq,
+    PavgbPqQq,
     // [66 0F E0 /r] PAVGB xmm1, xmm2/m128
-    PAVGB_VdqWdq,
+    PavgbVdqWdq,
     // [NP 0F E3 /r] PAVGW mm1, mm2/m64
-    PAVGW_PqQq,
+    PavgwPqQq,
     // [66 0F E3 /r] PAVGW xmm1, xmm2/m128
-    PAVGW_VdqWdq,
+    PavgwVdqWdq,
     // [VEX.128.66.0F.WIG E0 /r] VPAVGB xmm1, xmm2, xmm3/m128
-    VPAVGB_VdqHdqWdq_V128,
+    VpavgbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG E3 /r] VPAVGW xmm1, xmm2, xmm3/m128
-    VPAVGW_VdqHdqWdq_V128,
+    VpavgwVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG E0 /r] VPAVGB ymm1, ymm2, ymm3/m256
-    VPAVGB_VqqHqqWqq_V256,
+    VpavgbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG E3 /r] VPAVGW ymm1, ymm2, ymm3/m256
-    VPAVGW_VqqHqqWqq_V256,
+    VpavgwVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG E0 /r] VPAVGB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPAVGB_VdqHdqWdq_E128,
+    VpavgbVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG E0 /r] VPAVGB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPAVGB_VqqHqqWqq_E256,
+    VpavgbVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG E0 /r] VPAVGB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPAVGB_VdqqHdqqWdqq_E512,
+    VpavgbVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG E3 /r] VPAVGW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPAVGW_VdqHdqWdq_E128,
+    VpavgwVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG E3 /r] VPAVGW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPAVGW_VqqHqqWqq_E256,
+    VpavgwVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG E3 /r] VPAVGW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPAVGW_VdqqHdqqWdqq_E512,
+    VpavgwVdqqHdqqWdqqE512,
 
     // [66 0F 38 10 /r] PBLENDVB xmm1, xmm2/m128, <XMM0>
-    PBLENDVB_VdqWdq,
+    PblendvbVdqWdq,
     // [VEX.128.66.0F3A.W0 4C /r /is4] VPBLENDVB xmm1, xmm2, xmm3/m128, xmm4
-    VPBLENDVB_VdqHdqWdqIb_V128,
+    VpblendvbVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.W0 4C /r /is4] VPBLENDVB ymm1, ymm2, ymm3/m256, ymm4
-    VPBLENDVB_VqqHqqWqqIb_V256,
+    VpblendvbVqqHqqWqqIbV256,
 
     // [66 0F 38 0E /r] PBLENDVW xmm1, xmm2/m128, imm8
-    PBLENDVW_VdqWdqIb,
+    PblendvwVdqWdqIb,
     // [VEX.128.66.0F3A.W0 0E /r ib] VPBLENDVW xmm1, xmm2, xmm3/m128, imm8
-    VPBLENDVW_VdqHdqWdqIb_V128,
+    VpblendvwVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.W0 0E /r ib] VPBLENDVW ymm1, ymm2, ymm3/m256, imm8
-    VPBLENDVW_VqqHqqWqqIb_V256,
+    VpblendvwVqqHqqWqqIbV256,
 
     // [66 0F 3A 44 /r ib] PCLMULQDQ xmm1, xmm2/m128, imm8
-    PCLMULQDQ_VdqWdqIb,
+    PclmulqdqVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 44 /r ib] VPCLMULQDQ xmm1, xmm2, xmm3/m128, imm8
-    VPCLMULQDQ_VdqHdqWdqIb_V128,
+    VpclmulqdqVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.WIG 44 /r ib] VPCLMULQDQ ymm1, ymm2, ymm3/m256, imm8
-    VPCLMULQDQ_VqqHqqWqqIb_V256,
+    VpclmulqdqVqqHqqWqqIbV256,
     // [EVEX.128.66.0F3A.WIG 44 /r ib] VPCLMULQDQ xmm1, xmm2, xmm3/m128, imm8
-    VPCLMULQDQ_VdqHdqWdqIb_E128,
+    VpclmulqdqVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.WIG 44 /r ib] VPCLMULQDQ ymm1, ymm2, ymm3/m256, imm8
-    VPCLMULQDQ_VqqHqqWqqIb_E256,
+    VpclmulqdqVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.WIG 44 /r ib] VPCLMULQDQ zmm1, zmm2, zmm3/m512, imm8
-    VPCLMULQDQ_VdqqHdqqWdqqIb_E512,
+    VpclmulqdqVdqqHdqqWdqqIbE512,
 
     // [NP 0F 74 /r] PCMPEQB mm1, mm2/m64
-    PCMPEQB_PqQq,
+    PcmpeqbPqQq,
     // [66 0F 74 /r] PCMPEQB xmm1, xmm2/m128
-    PCMPEQB_VdqWdq,
+    PcmpeqbVdqWdq,
     // [NP 0F 75 /r] PCMPEQW mm1, mm2/m64
-    PCMPEQW_PqQq,
+    PcmpeqwPqQq,
     // [66 0F 75 /r] PCMPEQW xmm1, xmm2/m128
-    PCMPEQW_VdqWdq,
+    PcmpeqwVdqWdq,
     // [NP 0F 76 /r] PCMPEQD mm1, mm2/m64
-    PCMPEQD_PqQq,
+    PcmpeqdPqQq,
     // [66 0F 76 /r] PCMPEQD xmm1, xmm2/m128
-    PCMPEQD_VdqWdq,
+    PcmpeqdVdqWdq,
     // [VEX.128.66.0F.WIG 74 /r] VCMPEQB xmm1, xmm2, xmm3/m128
-    VCMPEQB_VdqHdqWdq_V128,
+    VcmpeqbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 75 /r] VCMPEQW xmm1, xmm2, xmm3/m128
-    VCMPEQW_VdqHdqWdq_V128,
+    VcmpeqwVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 76 /r] VCMPEQD xmm1, xmm2, xmm3/m128
-    VCMPEQD_VdqHdqWdq_V128,
+    VcmpeqdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 74 /r] VCMPEQB ymm1, ymm2, ymm3/m256
-    VCMPEQB_VqqHqqWqq_V256,
+    VcmpeqbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 75 /r] VCMPEQW ymm1, ymm2, ymm3/m256
-    VCMPEQW_VqqHqqWqq_V256,
+    VcmpeqwVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 76 /r] VCMPEQD ymm1, ymm2, ymm3/m256
-    VCMPEQD_VqqHqqWqq_V256,
+    VcmpeqdVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG 74 /r] VCMPEQB k1 {k2}, xmm2, xmm3/m128
-    VPCMPEQB_KGqHdqWdq_E128,
+    VpcmpeqbKGqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 74 /r] VCMPEQB k1 {k2}, ymm2, ymm3/m256
-    VPCMPEQB_KGqHqqWqq_E256,
+    VpcmpeqbKGqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 74 /r] VCMPEQB k1 {k2}, zmm2, zmm3/m512
-    VPCMPEQB_KGqHdqqWdqq_E512,
+    VpcmpeqbKGqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG 75 /r] VCMPEQW k1 {k2}, xmm2, xmm3/m128
-    VPCMPEQW_KGqHdqWdq_E128,
+    VpcmpeqwKGqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 75 /r] VCMPEQW k1 {k2}, ymm2, ymm3/m256
-    VPCMPEQW_KGqHqqWqq_E256,
+    VpcmpeqwKGqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 75 /r] VCMPEQW k1 {k2}, zmm2, zmm3/m512
-    VPCMPEQW_KGqHdqqWdqq_E512,
+    VpcmpeqwKGqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG 76 /r] VCMPEQD k1 {k2}, xmm2, xmm3/m128/m32bcst
-    VPCMPEQD_KGqHdqWdq_E128,
+    VpcmpeqdKGqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 76 /r] VCMPEQD k1 {k2}, ymm2, ymm3/m256/m32bcst
-    VPCMPEQD_KGqHqqWqq_E256,
+    VpcmpeqdKGqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 76 /r] VCMPEQD k1 {k2}, zmm2, zmm3/m512/m32bcst
-    VPCMPEQD_KGqHdqqWdqq_E512,
+    VpcmpeqdKGqHdqqWdqqE512,
 
     // [66 0F 38 29 /r] PCMPEQQ xmm1, xmm2/m128
-    PCMPEQQ_VdqWdq,
+    PcmpeqqVdqWdq,
     // [VEX.128.66.0F38.WIG 29 /r] VPCMPEQQ xmm1, xmm2, xmm3/m128
-    VPCMPEQQ_VdqHdqWdq_V128,
+    VpcmpeqqVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 29 /r] VPCMPEQQ ymm1, ymm2, ymm3/m256
-    VPCMPEQQ_VqqHqqWqq_V256,
+    VpcmpeqqVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 29 /r] VPCMPEQQ k1 {k2}, xmm2, xmm3/m128/m64bcst
-    VPCMPEQQ_KgqHdqWdq_E128,
+    VpcmpeqqKgqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 29 /r] VPCMPEQQ k1 {k2}, ymm2, ymm3/m256/m64bcst
-    VPCMPEQQ_KgqHqqWqq_E256,
+    VpcmpeqqKgqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 29 /r] VPCMPEQQ k1 {k2}, zmm2, zmm3/m512/m64bcst
-    VPCMPEQQ_KgqHdqqWdqq_E512,
+    VpcmpeqqKgqHdqqWdqqE512,
 
     // [66 0F 3A 61 /r ib] PCMPESTRI xmm1, xmm2/m128, imm8
-    PCMPESTRI_VdqWdqIb,
+    PcmpestriVdqWdqIb,
     // [VEX.128.66.0F3A 61 /r ib] VPCMPESTRI xmm1, xmm2/m128, imm8
-    VPCMPESTRI_VdqHdqWdqIb_V128,
+    VpcmpestriVdqHdqWdqIbV128,
 
     // [66 0F 3A 60 /r ib] PCMPESTRM xmm1, xmm2/m128, imm8
-    PCMPESTRM_VdqWdqIb,
+    PcmpestrmVdqWdqIb,
     // [VEX.128.66.0F3A 60 /r ib] VPCMPESTRM xmm1, xmm2/m128, imm8
-    VPCMPESTRM_VdqHdqWdqIb_V128,
+    VpcmpestrmVdqHdqWdqIbV128,
 
     // [NP 0F 64 /r] PCMPGTB mm1, mm2/m64
-    PCMPGTB_PqQq,
+    PcmpgtbPqQq,
     // [66 0F 64 /r] PCMPGTB xmm1, xmm2/m128
-    PCMPGTB_VdqWdq,
+    PcmpgtbVdqWdq,
     // [NP 0F 65 /r] PCMPGTB mm1, mm2/m64
-    PCMPGTW_PqQq,
+    PcmpgtwPqQq,
     // [66 0F 65 /r] PCMPGTB xmm1, xmm2/m128
-    PCMPGTW_VdqWdq,
+    PcmpgtwVdqWdq,
     // [NP 0F 66 /r] PCMPGTB mm1, mm2/m64
-    PCMPGTD_PqQq,
+    PcmpgtdPqQq,
     // [66 0F 66 /r] PCMPGTB xmm1, xmm2/m128
-    PCMPGTD_VdqWdq,
+    PcmpgtdVdqWdq,
     // [VEX.128.66.0F.WIG 64 /r] VCMPGTB xmm1, xmm2, xmm3/m128
-    VPCMPGTB_VdqHdqWdq_V128,
+    VpcmpgtbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 65 /r] VCMPGTW xmm1, xmm2, xmm3/m128
-    VPCMPGTW_VdqHdqWdq_V128,
+    VpcmpgtwVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 66 /r] VCMPGTD xmm1, xmm2, xmm3/m128
-    VPCMPGTD_VdqHdqWdq_V128,
+    VpcmpgtdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 64 /r] VCMPGTB ymm1, ymm2, ymm3/m256
-    VPCMPGTB_VqqHqqWqq_V256,
+    VpcmpgtbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 65 /r] VCMPGTW ymm1, ymm2, ymm3/m256
-    VPCMPGTW_VqqHqqWqq_V256,
+    VpcmpgtwVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 66 /r] VCMPGTD ymm1, ymm2, ymm3/m256
-    VPCMPGTD_VqqHqqWqq_V256,
+    VpcmpgtdVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG 64 /r] VCMPPGTB k1 {k2}, xmm2, xmm3/m128
-    VPCMPGTB_KGqHdqWdq_E128,
+    VpcmpgtbKGqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 64 /r] VCMPPGTB k1 {k2}, ymm2, ymm3/m256
-    VPCMPGTB_KGqHqqWqq_E256,
+    VpcmpgtbKGqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 64 /r] VCMPPGTB k1 {k2}, zmm2, zmm3/m512
-    VPCMPGTB_KGqHdqqWdqq_E512,
+    VpcmpgtbKGqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG 65 /r] VCMPPGTW k1 {k2}, xmm2, xmm3/m128
-    VPCMPGTW_KGqHdqWdq_E128,
+    VpcmpgtwKGqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 65 /r] VCMPPGTW k1 {k2}, ymm2, ymm3/m256
-    VPCMPGTW_KGqHqqWqq_E256,
+    VpcmpgtwKGqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 65 /r] VCMPPGTW k1 {k2}, zmm2, zmm3/m512
-    VPCMPGTW_KGqHdqqWdqq_E512,
+    VpcmpgtwKGqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG 66 /r] VCMPPGTD k1 {k2}, xmm2, xmm3/m128/m32bcst
-    VPCMPGTD_KGqHdqWdq_E128,
+    VpcmpgtdKGqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 66 /r] VCMPPGTD k1 {k2}, ymm2, ymm3/m256/m32bcst
-    VPCMPGTD_KGqHqqWqq_E256,
+    VpcmpgtdKGqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 66 /r] VCMPPGTD k1 {k2}, zmm2, zmm3/m512/m32bcst
-    VPCMPGTD_KGqHdqqWdqq_E512,
+    VpcmpgtdKGqHdqqWdqqE512,
 
     // [66 0F 38 37 /r] PCMPGTQ xmm1, xmm2/m128
-    PCMPGTQ_VdqWdq,
+    PcmpgtqVdqWdq,
     // [VEX.128.66.0F38.WIG 37 /r] VCMPGTQ xmm1, xmm2, xmm3/m128
-    VPCMPGTQ_VdqHdqWdq_V128,
+    VpcmpgtqVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 37 /r] VCMPGTQ ymm1, ymm2, ymm3/m256
-    VPCMPGTQ_VqqHqqWqq_V256,
+    VpcmpgtqVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 37 /r] VCMPGTQ k1 {k2}, xmm2, xmm3/m128/m64bcst
-    VPCMPGTQ_VdqHdqWdq_E128,
+    VpcmpgtqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 37 /r] VCMPGTQ k1 {k2}, ymm2, ymm3/m256/m64bcst
-    VPCMPGTQ_VqqHqqWqq_E256,
+    VpcmpgtqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 37 /r] VCMPGTQ k1 {k2}, zmm2, zmm3/m512/m64bcst
-    VPCMPGTQ_VdqqHdqqWdqq_E512,
+    VpcmpgtqVdqqHdqqWdqqE512,
 
     // [66 0F 3A 63 /r ib] PCMPISTRI xmm1, xmm2/m128, imm8
-    PCMPISTRI_VdqWdqIb,
+    PcmpistriVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 63 /r ib] VPCMPISTRI xmm1, xmm2/m128, imm8
-    VPCMPISTRI_VdqHdqWdqIb,
+    VpcmpistriVdqHdqWdqIb,
 
     // [66 0F 3A 62 /r ib] PCMPISTRM xmm1, xmm2/m128, imm8
-    PCMPISTRM_VdqWdqIb,
+    PcmpistrmVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 62 /r ib] VPCMPISTRM xmm1, xmm2/m128, imm8
-    VPCMPISTRM_VdqHdqWdqIb,
+    VpcmpistrmVdqHdqWdqIb,
 
     // [VEX.LZ.F2.0F38.W0 F5 /r] PDEP r32a, r32b, r/m32
-    PDEP_GdBdEd,
+    PdepGdBdEd,
     // [VEX.LZ.F2.0F38.W1 F5 /r] PDEP r64a, r64b, r/m64
-    PDEP_GqBqEq,
+    PdepGqBqEq,
 
     // [VEX.LZ.F3.0F38.W0 F5 /r] PEXT r32a, r32b, r/m32
-    PEXT_GdBdEd,
+    PextGdBdEd,
     // [VEX.LZ.F3.0F38.W1 F5 /r] PEXT r64a, r64b, r/m64
-    PEXT_GqBqEq,
+    PextGqBqEq,
 
     // [66 0F 3A 14 /r ib] PEXTRB r/m8, xmm1, imm8
-    PEXTRB_EdVdqIb,
+    PextrbEdVdqIb,
     // [66 0F 3A 16 /r ib] PEXTRD r/m32, xmm1, imm8
-    PEXTRD_EdVdqIb,
+    PextrdEdVdqIb,
     // [66 REX.W 0F 3A 16 /r ib] PEXTRQ r/m64, xmm1, imm8
-    PEXTRQ_EqVdqIb,
+    PextrqEqVdqIb,
     // [VEX.128.66.0F3A.W0 14 /r ib] VPEXTRB r/m8, xmm1, imm8
-    VPEXTRB_EbVdqIb_V128,
+    VpextrbEbVdqIbV128,
     // [VEX.128.66.0F3A.W0 16 /r ib] VPEXTRD r/m32, xmm1, imm8
-    VPEXTRD_EdVdqIb_V128,
+    VpextrdEdVdqIbV128,
     // [VEX.128.66.0F3A.W1 16 /r ib] VPEXTRQ r/m64, xmm1, imm8
-    VPEXTRQ_EqVdqIb_V128,
+    VpextrqEqVdqIbV128,
     // [EVEX.128.66.0F3A.WIG 14 /r ib] VPEXTRB r/m8, xmm1, imm8
-    VPEXTRB_EbVdqIb_E128,
+    VpextrbEbVdqIbE128,
     // [EVEX.128.66.0F3A.W0 16 /r ib] VPEXTRD r/m32, xmm1, imm8
-    VPEXTRD_EdVdqIb_E128,
+    VpextrdEdVdqIbE128,
     // [EVEX.128.66.0F3A.W1 16 /r ib] VPEXTRQ r/m64, xmm1, imm8
-    VPEXTRQ_EqVdqIb_E128,
+    VpextrqEqVdqIbE128,
 
     // [NP 0F C5 /r ib] PEXTRW reg, mm1, imm8
-    PEXTRW_GwNqIb,
+    PextrwGwNqIb,
     // [66 0F C5 /r ib] PEXTRW reg, xmm1, imm8
-    PEXTRW_GwUdqIb,
+    PextrwGwUdqIb,
     // [66 0F 3A 15 /r ib] PEXTRW r/m16, xmm1, imm8
-    PEXTRW_EwVdqIb,
+    PextrwEwVdqIb,
     // [VEX.128.66.0F.W0 C5 /r ib] VPEXTRW reg, xmm1, imm8
-    VPEXTRW_GwUdqIb_V128,
+    VpextrwGwUdqIbV128,
     // [VEX.128.66.0F3A.W0 15 /r ib] VPEXTRW r/m16, xmm1, imm8
-    VPEXTRW_EwVdqIb_V128,
+    VpextrwEwVdqIbV128,
     // [EVEX.128.66.0F.WIG C5 /r ib] VPEXTRW reg, xmm1, imm8
-    VPEXTRW_GwUdqIb_E128,
+    VpextrwGwUdqIbE128,
     // [EVEX.128.66.0F3A.WIG 15 /r ib] VPEXTRW r/m16, xmm1, imm8
-    VPEXTRW_EwVdqIb_E128,
+    VpextrwEwVdqIbE128,
 
     // [NP 0F 38 01 /r] PHADDW mm1, mm2/m64
-    PHADDW_PqQq,
+    PhaddwPqQq,
     // [66 0F 38 01 /r] PHADDW xmm1, xmm2/m128
-    PHADDW_VdqWdq,
+    PhaddwVdqWdq,
     // [NP 0F 38 02 /r] PHADDD mm1, mm2/m64
-    PHADDD_PqQq,
+    PhadddPqQq,
     // [66 0F 38 02 /r] PHADDD xmm1, xmm2/m128
-    PHADDD_VdqWdq,
+    PhadddVdqWdq,
     // [VEX.128.66.0F38.WIG 01 /r] VPHADDW xmm1, xmm2, xmm3/m128
-    VPHADDW_VdqHdqWdq_V128,
+    VphaddwVdqHdqWdqV128,
     // [VEX.128.66.0F38.WIG 02 /r] VPHADDD xmm1, xmm2, xmm3/m128
-    VPHADDD_VdqHdqWdq_V128,
+    VphadddVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 01 /r] VPHADDW ymm1, ymm2, ymm3/m256
-    VPHADDW_VqqHqqWqq_V256,
+    VphaddwVqqHqqWqqV256,
     // [VEX.256.66.0F38.WIG 02 /r] VPHADDD ymm1, ymm2, ymm3/m256
-    VPHADDD_VqqHqqWqq_V256,
+    VphadddVqqHqqWqqV256,
 
     // [NP 0F 38 03 /r] PHADDSW mm1, mm2/m64
-    PHADDSW_PqQq,
+    PhaddswPqQq,
     // [66 0F 38 03 /r] PHADDSW xmm1, xmm2/m128
-    PHADDSW_VdqWdq,
+    PhaddswVdqWdq,
     // [VEX.128.66.0F38.WIG 03 /r] VPHADDSW xmm1, xmm2, xmm3/m128
-    VPHADDSW_VdqHdqWdq_V128,
+    VphaddswVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 03 /r] VPHADDSW ymm1, ymm2, ymm3/m256
-    VPHADDSW_VqqHqqWqq_V256,
+    VphaddswVqqHqqWqqV256,
 
     // [66 0F 38 41 /r] PHMINPOSUW xmm1, xmm2/m128
-    PHMINPOSUW_VdqWdq,
+    PhminposuwVdqWdq,
     // [VEX.128.66.0F38.WIG 41 /r] VPHMINPOSUW xmm1, xmm2/m128
-    VPHMINPOSUW_VdqWdq_V128,
+    VphminposuwVdqWdqV128,
 
     // [NP 0F 38 05 /r] PHSUBW mm1, mm2/m64
-    PHSUBW_PqQq,
+    PhsubwPqQq,
     // [66 0F 38 05 /r] PHSUBW xmm1, xmm2/m128
-    PHSUBW_VdqWdq,
+    PhsubwVdqWdq,
     // [NP 0F 38 06 /r] PHSUBD mm1, mm2/m64
-    PHSUBD_PqQq,
+    PhsubdPqQq,
     // [66 0F 38 06 /r] PHSUBD xmm1, xmm2/m128
-    PHSUBD_VdqWdq,
+    PhsubdVdqWdq,
     // [VEX.128.66.0F38.WIG 05 /r] VPHSUBW xmm1, xmm2, xmm3/m128
-    VPHSUBW_VdqHdqWdq_V128,
+    VphsubwVdqHdqWdqV128,
     // [VEX.128.66.0F38.WIG 06 /r] VPHSUBD xmm1, xmm2, xmm3/m128
-    VPHSUBD_VdqHdqWdq_V128,
+    VphsubdVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 05 /r] VPHSUBW ymm1, ymm2, ymm3/m256
-    VPHSUBW_VqqHqqWqq_V256,
+    VphsubwVqqHqqWqqV256,
     // [VEX.256.66.0F38.WIG 06 /r] VPHSUBD ymm1, ymm2, ymm3/m256
-    VPHSUBD_VqqHqqWqq_V256,
+    VphsubdVqqHqqWqqV256,
 
     // [NP 0F 38 07 /r] PHSUBSW mm1, mm2/m64
-    PHSUBSW_PqQq,
+    PhsubswPqQq,
     // [66 0F 38 07 /r] PHSUBSW xmm1, xmm2/m128
-    PHSUBSW_VdqWdq,
+    PhsubswVdqWdq,
     // [VEX.128.66.0F38.WIG 07 /r] VPHSUBSW xmm1, xmm2, xmm3/m128
-    VPHSUBSW_VdqHdqWdq_V128,
+    VphsubswVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 07 /r] VPHSUBSW ymm1, ymm2, ymm3/m256
-    VPHSUBSW_VqqHqqWqq_V256,
+    VphsubswVqqHqqWqqV256,
 
     // [66 0F 3A 20 /r ib] PINSRB xmm1, r32/m8, imm8
-    PINSRB_VdqEbIb,
+    PinsrbVdqEbIb,
     // [66 0F 3A 22 /r ib] PINSRD xmm1, r/m32, imm8
-    PINSRD_VdqEdIb,
+    PinsrdVdqEdIb,
     // [66 REX.W 0F 3A 22 /r ib] PINSRQ xmm1, r/m64, imm8
-    PINSRQ_VdqEqIb,
+    PinsrqVdqEqIb,
     // [VEX.128.66.0F3A.W0 20 /r ib] VPINSRB xmm1, xmm2, r32/m8, imm8
-    VPINSRB_VdqHdqEbIb_V128,
+    VpinsrbVdqHdqEbIbV128,
     // [VEX.128.66.0F3A.W0 22 /r ib] VPINSRD xmm1, xmm2, r/m32, imm8
-    VPINSRD_VdqHdqEdIb_V128,
+    VpinsrdVdqHdqEdIbV128,
     // [VEX.128.66.0F3A.W1 22 /r ib] VPINSRQ xmm1, xmm2, r/m64, imm8
-    VPINSRQ_VdqHdqEqIb_V128,
+    VpinsrqVdqHdqEqIbV128,
     // [EVEX.128.66.0F3A.WIG 20 /r ib] VPINSRB xmm1, xmm2, r32/m8, imm8
-    VPINSRB_VdqHdqEbIb_E128,
+    VpinsrbVdqHdqEbIbE128,
     // [EVEX.128.66.0F3A.W0 22 /r ib] VPINSRD xmm1, xmm2, r/m32, imm8
-    VPINSRD_VdqHdqEdIb_E128,
+    VpinsrdVdqHdqEdIbE128,
     // [EVEX.128.66.0F3A.W1 22 /r ib] VPINSRQ xmm1, xmm2, r/m64, imm8
-    VPINSRQ_VdqHdqEqIb_E128,
+    VpinsrqVdqHdqEqIbE128,
 
     // [NP 0F C4 /r ib] PINSRW mm1, r32/m16, imm8
-    PINSRW_PqEwIb,
+    PinsrwPqEwIb,
     // [66 0F C4 /r ib] PINSRW xmm1, r32/m16, imm8
-    PINSRW_VdqEwIb,
+    PinsrwVdqEwIb,
     // [VEX.128.66.0F.W0 C4 /r ib] VPINSRW xmm1, xmm2, r32/m16, imm8
-    VPINSRW_VdqHdqEwIb_V128,
+    VpinsrwVdqHdqEwIbV128,
     // [EVEX.128.66.0F.WIG C4 /r ib] VPINSRW xmm1, xmm2, r32/m16, imm8
-    VPINSRW_VdqHdqEWIb_E128,
+    VpinsrwVdqHdqEWIbE128,
 
     // [NP 0F 38 04 /r] PMADDUBSW mm1, mm2/m64
-    PMADDUBSW_PqQq,
+    PmaddubswPqQq,
     // [66 0F 38 04 /r] PMADDUBSW xmm1, xmm2/m128
-    PMADDUBSW_VdqWdq,
+    PmaddubswVdqWdq,
     // [VEX.128.66.0F38.WIG 04 /r] VPMADDUBSW xmm1, xmm2, xmm3/m128
-    VPMADDUBSW_VdqHdqWdq_V128,
+    VpmaddubswVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 04 /r] VPMADDUBSW ymm1, ymm2, ymm3/m256
-    VPMADDUBSW_VqqHqqWqq_V256,
+    VpmaddubswVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG 04 /r] VPMADDUBSW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMADDUBSW_VdqHdqWdq_E128,
+    VpmaddubswVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG 04 /r] VPMADDUBSW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMADDUBSW_VqqHqqWqq_E256,
+    VpmaddubswVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG 04 /r] VPMADDUBSW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMADDUBSW_VdqqHdqqWdqq_E512,
+    VpmaddubswVdqqHdqqWdqqE512,
 
     // [NP 0F F5 /r] PMADDWD mm1, mm2/m64
-    PMADDWD_PqQq,
+    PmaddwdPqQq,
     // [66 0F F5 /r] PMADDWD xmm1, xmm2/m128
-    PMADDWD_VdqWdq,
+    PmaddwdVdqWdq,
     // [VEX.128.66.0F.WIG F5 /r] VPMADDWD xmm1, xmm2, xmm3/m128
-    VPMADDWD_VdqHdqWdq_V128,
+    VpmaddwdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG F5 /r] VPMADDWD ymm1, ymm2, ymm3/m256
-    VPMADDWD_VqqHqqWqq_V256,
+    VpmaddwdVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG F5 /r] VPMADDWD xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMADDWD_VdqHdqWdq_E128,
+    VpmaddwdVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG F5 /r] VPMADDWD ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMADDWD_VqqHqqWqq_E256,
+    VpmaddwdVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG F5 /r] VPMADDWD zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMADDWD_VdqqHdqqWdqq_E512,
+    VpmaddwdVdqqHdqqWdqqE512,
 
     // [NP 0F EE /r] PMAXSW mm1, mm2/m64
-    PMAXSW_PqQq,
+    PmaxswPqQq,
     // [66 0F 38 3C /r] PMAXSB xmm1, xmm2/m128
-    PMAXSB_VdqWdq,
+    PmaxsbVdqWdq,
     // [66 0F EE /r] PMAXSW xmm1, xmm2/m128
-    PMAXSW_VdqWdq,
+    PmaxswVdqWdq,
     // [66 0F 38 3D /r] PMAXSD xmm1, xmm2/m128
-    PMAXSD_VdqWdq,
+    PmaxsdVdqWdq,
     // [VEX.128.66.0F38.WIG 3C /r] VPMAXSB xmm1, xmm2, xmm3/m128
-    VPMAXSB_VdqHdqWdq_V128,
+    VpmaxsbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG EE /r] VPMAXSW xmm1, xmm2, xmm3/m128
-    VPMAXSW_VdqHdqWdq_V128,
+    VpmaxswVdqHdqWdqV128,
     // [VEX.128.66.0F38.WIG 3D /r] VPMAXSD xmm1, xmm2, xmm3/m128
-    VPMAXSD_VdqHdqWdq_V128,
+    VpmaxsdVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 3C /r] VPMAXSB ymm1, ymm2, ymm3/m256
-    VPMAXSB_VqqHqqWqq_V256,
+    VpmaxsbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG EE /r] VPMAXSW ymm1, ymm2, ymm3/m256
-    VPMAXSW_VqqHqqWqq_V256,
+    VpmaxswVqqHqqWqqV256,
     // [VEX.256.66.0F38.WIG 3D /r] VPMAXSD ymm1, ymm2, ymm3/m256
-    VPMAXSD_VqqHqqWqq_V256,
+    VpmaxsdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG 3C /r] VPMAXSB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMAXSB_VdqHdqWdq_E128,
+    VpmaxsbVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG 3C /r] VPMAXSB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMAXSB_VqqHqqWqq_E256,
+    VpmaxsbVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG 3C /r] VPMAXSB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMAXSB_VdqqHdqqWdqq_E512,
+    VpmaxsbVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG EE /r] VPMAXSW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMAXSW_VdqHdqWdq_E128,
+    VpmaxswVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG EE /r] VPMAXSW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMAXSW_VqqHqqWqq_E256,
+    VpmaxswVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG EE /r] VPMAXSW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMAXSW_VdqqHdqqWdqq_E512,
+    VpmaxswVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 3D /r] VPMAXSD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPMAXSD_VdqHdqWdq_E128,
+    VpmaxsdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 3D /r] VPMAXSD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPMAXSD_VqqHqqWqq_E256,
+    VpmaxsdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 3D /r] VPMAXSD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPMAXSD_VdqqHdqqWdqq_E512,
+    VpmaxsdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 3D /r] VPMAXSQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPMAXSQ_VdqHdqWdq_E128,
+    VpmaxsqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 3D /r] VPMAXSQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPMAXSQ_VdqHqqWqq_E256,
+    VpmaxsqVdqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 3D /r] VPMAXSQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPMAXSQ_VdqqHdqqWdqq_E512,
+    VpmaxsqVdqqHdqqWdqqE512,
 
     // [NP 0F DE /r] PMAXUB mm1, mm2/m64
-    PMAXUB_PqQq,
+    PmaxubPqQq,
     // [66 0F DE /r] PMAXUB xmm1, xmm2/m128
-    PMAXUB_VdqWdq,
+    PmaxubVdqWdq,
     // [66 0F 38 3E /r] PMAXUW xmm1, xmm2/m128
-    PMAXUW_VdqWdq,
+    PmaxuwVdqWdq,
     // [VEX.128.66.0F.WIG DE /r] VPMAXUB xmm1, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMAXUB_VdqHdqWdq_V128,
+    VpmaxubVdqHdqWdqV128,
     // [VEX.128.66.0F38.WIG 3E /r] VPMAXUW xmm1, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMAXUW_VdqHdqWdq_V128,
+    VpmaxuwVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG DE /r] VPMAXUB ymm1, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMAXUB_VqqHqqWqq_V256,
+    VpmaxubVqqHqqWqqV256,
     // [VEX.256.66.0F38.WIG 3E /r] VPMAXUW ymm1, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMAXUW_VqqHqqWqq_V256,
+    VpmaxuwVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG DE /r] VPMAXUB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMAXUB_VdqHdqWdq_E128,
+    VpmaxubVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG DE /r] VPMAXUB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMAXUB_VqqHqqWqq_E256,
+    VpmaxubVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG DE /r] VPMAXUB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMAXUB_VdqqHdqqWdqq_E512,
+    VpmaxubVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.WIG 3E /r] VPMAXUW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMAXUW_VdqHdqWdq_E128,
+    VpmaxuwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG 3E /r] VPMAXUW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMAXUW_VqqHqqWqq_E256,
+    VpmaxuwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG 3E /r] VPMAXUW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMAXUW_VdqqHdqqWdqq_E512,
+    VpmaxuwVdqqHdqqWdqqE512,
 
     // [66 0F 38 3F /r] PMAXUD xmm1, xmm2/m128
-    PMAXUD_VdqWdq,
+    PmaxudVdqWdq,
     // [VEX.128.66.0F38.WIG 3F /r] VPMAXUD xmm1, xmm2, xmm3/m128
-    VPMAXUD_VdqHdqWdq_V128,
+    VpmaxudVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 3F /r] VPMAXUD ymm1, ymm2, ymm3/m256
-    VPMAXUD_VqqHqqWqq_V256,
+    VpmaxudVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 3F /r] VPMAXUD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPMAXUD_VdqHdqWdq_E128,
+    VpmaxudVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 3F /r] VPMAXUD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPMAXUD_VqqHqqWqq_E256,
+    VpmaxudVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 3F /r] VPMAXUD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPMAXUD_VdqqHdqqWdqq_E512,
+    VpmaxudVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 3F /r] VPMAXUQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPMAXUQ_VdqHdqWdq_E128,
+    VpmaxuqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 3F /r] VPMAXUQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPMAXUQ_VqqHqqWqq_E256,
+    VpmaxuqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 3F /r] VPMAXUQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPMAXUQ_VdqqHdqqWdqq_E512,
+    VpmaxuqVdqqHdqqWdqqE512,
 
     // [NP 0F EA /r] PMINSW mm1, mm2/m64
-    PMINSW_PqQq,
+    PminswPqQq,
     // [66 0F 38 38 /r] PMINSB xmm1, xmm2/m128
-    PMINSB_VdqWdq,
+    PminsbVdqWdq,
     // [66 0F EA /r] PMINSW xmm1, xmm2/m128
-    PMINSW_VdqWdq,
+    PminswVdqWdq,
     // [VEX.128.66.0F38.WIG 38 /r] VPMINSB xmm1, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINSB_VdqHdqWdq_V128,
+    VpminsbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG EA /r] VPMINSW xmm1, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINSW_VdqHdqWdq_V128,
+    VpminswVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 38 /r] VPMINSB ymm1, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINSB_VqqHqqWqq_V256,
+    VpminsbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG EA /r] VPMINSW ymm1, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINSW_VqqHqqWqq_V256,
+    VpminswVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG 38 /r] VPMINSB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMINSB_VdqHdqWdq_E128,
+    VpminsbVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG 38 /r] VPMINSB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMINSB_VqqHqqWqq_E256,
+    VpminsbVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG 38 /r] VPMINSB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMINSB_VdqqHdqqWdqq_E512,
+    VpminsbVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG EA /r] VPMINSW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMINSW_VdqHdqWdq_E128,
+    VpminswVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG EA /r] VPMINSW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMINSW_VqqHqqWqq_E256,
+    VpminswVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG EA /r] VPMINSW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMINSW_VdqqHdqqWdqq_E512,
+    VpminswVdqqHdqqWdqqE512,
 
     // [66 0F 38 39 /r] PMINSD xmm1, xmm2/m128
-    PMINSD_VdqWdq,
+    PminsdVdqWdq,
     // [VEX.128.66.0F38.WIG 39 /r] VPMINSD xmm1, xmm2, xmm3/m128
-    VPMINSD_VdqHdqWdq_V128,
+    VpminsdVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 39 /r] VPMINSD ymm1, ymm2, ymm3/m256
-    VPMINSD_VqqHqqWqq_V256,
+    VpminsdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 39 /r] VPMINSD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPMINSD_VdqHdqWdq_E128,
+    VpminsdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 39 /r] VPMINSD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPMINSD_VqqHqqWqq_E256,
+    VpminsdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 39 /r] VPMINSD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPMINSD_VdqqHdqqWdqq_E512,
+    VpminsdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 39 /r] VPMINSQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPMINSQ_VdqHdqWdq_E128,
+    VpminsqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 39 /r] VPMINSQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPMINSQ_VqqHqqWqq_E256,
+    VpminsqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 39 /r] VPMINSQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPMINSQ_VdqqHdqqWdqq_E512,
+    VpminsqVdqqHdqqWdqqE512,
 
     // [NP 0F DA /r] PMINUB mm1, mm2/m64
-    PMINUB_PqQq,
+    PminubPqQq,
     // [66 0F DA /r] PMINUB xmm1, xmm2/m128
-    PMINUB_VdqWdq,
+    PminubVdqWdq,
     // [66 0F 38 3A /r] PMINUW xmm1, xmm2/m128
-    PMINUW_VdqWdq,
+    PminuwVdqWdq,
     // [VEX.128.66.0F.WIG DA /r] VPMINUB xmm1, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUB_VdqHdqWdq_V128,
+    VpminubVdqHdqWdqV128,
     // [VEX.128.66.0F38.WIG 3A/r] VPMINUW xmm1, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUW_VdqHdqWdq_V128,
+    VpminuwVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG DA /r] VPMINUB ymm1, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUB_VdqHdqWdq_V256,
+    VpminubVdqHdqWdqV256,
     // [VEX.256.66.0F38.WIG 3A /r] VPMINUW ymm1, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUW_VqqHqqWqq_V256,
+    VpminuwVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG DA /r] VPMINUB xmm1 {k1}{z}, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUB_VdqHdqWdq_E128,
+    VpminubVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG DA /r] VPMINUB ymm1 {k1}{z}, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUB_VqqHqqWqq_E256,
+    VpminubVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG DA /r] VPMINUB zmm1 {k1}{z}, zmm2, zmm3/m512
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUB_VdqqHdqqWdqq_E512,
+    VpminubVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.WIG 3A /r] VPMINUW xmm1 {k1}{z}, xmm2, xmm3/m128
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUW_VdqHdqWdq_E128,
+    VpminuwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG 3A /r] VPMINUW ymm1 {k1}{z}, ymm2, ymm3/m256
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUW_VqqHqqWqq_E256,
+    VpminuwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG 3A /r] VPMINUW zmm1 {k1}{z}, zmm2, zmm3/m512
     // NOTE: Intel manual doesn't mention `WIG`
-    VPMINUW_VdqqHdqqWdqq_E512,
+    VpminuwVdqqHdqqWdqqE512,
 
     // [66 0F 38 3B /r] PMINUD xmm1, xmm2/m128
-    PMINUD_VdqWdq,
+    PminudVdqWdq,
     // [VEX.128.66.0F38.WIG 3B /r] VPMINUD xmm1, xmm2, xmm3/m128
-    VPMINUD_VdqHdqWdq_V128,
+    VpminudVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 3B /r] VPMINUD ymm1, ymm2, ymm3/m256
-    VPMINUD_VqqHqqWqq_V256,
+    VpminudVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 3B /r] VPMINUD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPMINUD_VdqHdqWdq_E128,
+    VpminudVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 3B /r] VPMINUD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPMINUD_VqqHqqWqq_E256,
+    VpminudVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 3B /r] VPMINUD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPMINUD_VdqqHdqqWdqq_E512,
+    VpminudVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 3B /r] VPMINUQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPMINUQ_VdqHdqWdq_E128,
+    VpminuqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 3B /r] VPMINUQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPMINUQ_VqqHqqWqq_E256,
+    VpminuqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 3B /r] VPMINUQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPMINUQ_VdqqHdqqWdqq_E512,
+    VpminuqVdqqHdqqWdqqE512,
 
     // [NP 0F D7 /r] PMOVMSKB reg, mm1
-    PMOVMSKB_GdNq,
+    PmovmskbGdNq,
     // [66 0F D7 /r] PMOVMSKB reg, xmm1
-    PMOVMSKB_GdUdq,
+    PmovmskbGdUdq,
     // [VEX.128.66.0F.WIG D7 /r] VPMOVMSKB reg, xmm1
-    VPMOVMSKB_GdUdq_V128,
+    VpmovmskbGdUdqV128,
     // [VEX.256.66.0F.WIG D7 /r] VPMOVMSKB reg, ymm1
-    VPMOVMSKB_GdUqq_V256,
+    VpmovmskbGdUqqV256,
 
     // [66 0F 38 20 /r] PMOVSXBW xmm1, xmm2/m64
-    PMOVSXBW_VdqWq,
+    PmovsxbwVdqWq,
     // [66 0F 38 21 /r] PMOVSXBD xmm1, xmm2/m32
-    PMOVSXBD_VdqWd,
+    PmovsxbdVdqWd,
     // [66 0F 38 22 /r] PMOVSXBQ xmm1, xmm2/m16
-    PMOVSXBQ_VdqWw,
+    PmovsxbqVdqWw,
     // [66 0F 38 23 /r] PMOVSXWD xmm1, xmm2/m64
-    PMOVSXWD_VdqWq,
+    PmovsxwdVdqWq,
     // [66 0F 38 24 /r] PMOVSXWQ xmm1, xmm2/m32
-    PMOVSXWQ_VdqWd,
+    PmovsxwqVdqWd,
     // [66 0F 38 25 /r] PMOVSXDQ xmm1, xmm2/m64
-    PMOVSXDQ_VdqWq,
+    PmovsxdqVdqWq,
     // [VEX.128.66.0F38.WIG 20 /r] VPMOVSXBW xmm1, xmm2/m64
-    VPMOVSXBW_VdqWq_V128,
+    VpmovsxbwVdqWqV128,
     // [VEX.128.66.0F38.WIG 21 /r] VPMOVSXBD xmm1, xmm2/m32
-    VPMOVSXBD_VdqWd_V128,
+    VpmovsxbdVdqWdV128,
     // [VEX.128.66.0F38.WIG 22 /r] VPMOVSXBQ xmm1, xmm2/m16
-    VPMOVSXBQ_VdqWw_V128,
+    VpmovsxbqVdqWwV128,
     // [VEX.128.66.0F38.WIG 23 /r] VPMOVSXWD xmm1, xmm2/m64
-    VPMOVSXWD_VdqWq_V128,
+    VpmovsxwdVdqWqV128,
     // [VEX.128.66.0F38.WIG 24 /r] VPMOVSXWQ xmm1, xmm2/m32
-    VPMOVSXWQ_VdqWd_V128,
+    VpmovsxwqVdqWdV128,
     // [VEX.128.66.0F38.WIG 25 /r] VPMOVSXDQ xmm1, xmm2/m64
-    VPMOVSXDQ_VdqWq_V128,
+    VpmovsxdqVdqWqV128,
     // [VEX.256.66.0F38.WIG 20 /r] VPMOVSXBW ymm1, xmm2/m128
-    VPMOVSXBW_VqqWdq_V256,
+    VpmovsxbwVqqWdqV256,
     // [VEX.256.66.0F38.WIG 21 /r] VPMOVSXBD ymm1, ymm2/m64
-    VPMOVSXBD_VqqWq_V256,
+    VpmovsxbdVqqWqV256,
     // [VEX.256.66.0F38.WIG 22 /r] VPMOVSXBQ ymm1, ymm2/m32
-    VPMOVSXBQ_VqqWd_V256,
+    VpmovsxbqVqqWdV256,
     // [VEX.256.66.0F38.WIG 23 /r] VPMOVSXWD ymm1, ymm2/m128
-    VPMOVSXWD_VqqWdq_V256,
+    VpmovsxwdVqqWdqV256,
     // [VEX.256.66.0F38.WIG 24 /r] VPMOVSXWQ ymm1, ymm2/m64
-    VPMOVSXWQ_VqqWq_V256,
+    VpmovsxwqVqqWqV256,
     // [VEX.256.66.0F38.WIG 25 /r] VPMOVSXDQ ymm1, ymm2/m128
-    VPMOVSXDQ_VqqWdq_V256,
+    VpmovsxdqVqqWdqV256,
     // [EVEX.128.66.0F38.WIG 20 /r] VPMOVSXBW xmm1 {k1}{z}, xmm2/m64
-    VPMOVSXBW_VdqWq_E128,
+    VpmovsxbwVdqWqE128,
     // [EVEX.256.66.0F38.WIG 20 /r] VPMOVSXBW ymm1 {k1}{z}, xmm2/m128
-    VPMOVSXBW_VqqWdq_E256,
+    VpmovsxbwVqqWdqE256,
     // [EVEX.512.66.0F38.WIG 20 /r] VPMOVSXBW zmm1 {k1}{z}, ymm2/m256
-    VPMOVSXBW_VdqqWqq_E512,
+    VpmovsxbwVdqqWqqE512,
     // [EVEX.128.66.0F38.WIG 21 /r] VPMOVSXBD xmm1 {k1}{z}, xmm2/m32
-    VPMOVSXBD_VdqWd_E128,
+    VpmovsxbdVdqWdE128,
     // [EVEX.256.66.0F38.WIG 21 /r] VPMOVSXBD ymm1 {k1}{z}, xmm2/m64
-    VPMOVSXBD_VqqWq_E256,
+    VpmovsxbdVqqWqE256,
     // [EVEX.512.66.0F38.WIG 21 /r] VPMOVSXBD zmm1 {k1}{z}, xmm2/m128
-    VPMOVSXBD_VdqqWdq_E512,
+    VpmovsxbdVdqqWdqE512,
     // [EVEX.128.66.0F38.WIG 22 /r] VPMOVSXBQ xmm1 {k1}{z}, xmm2/m16
-    VPMOVSXBQ_VdqWw_E128,
+    VpmovsxbqVdqWwE128,
     // [EVEX.256.66.0F38.WIG 22 /r] VPMOVSXBQ ymm1 {k1}{z}, xmm2/m32
-    VPMOVSXBQ_VqqWd_E256,
+    VpmovsxbqVqqWdE256,
     // [EVEX.512.66.0F38.WIG 22 /r] VPMOVSXBQ zmm1 {k1}{z}, xmm2/m64
-    VPMOVSXBQ_VdqqWq_E512,
+    VpmovsxbqVdqqWqE512,
     // [EVEX.128.66.0F38.WIG 23 /r] VPMOVSXWD xmm1 {k1}{z}, xmm2/m64
-    VPMOVSXWD_VdqWq_E128,
+    VpmovsxwdVdqWqE128,
     // [EVEX.256.66.0F38.WIG 23 /r] VPMOVSXWD ymm1 {k1}{z}, xmm2/m128
-    VPMOVSXWD_VqqWdq_E256,
+    VpmovsxwdVqqWdqE256,
     // [EVEX.512.66.0F38.WIG 23 /r] VPMOVSXWD zmm1 {k1}{z}, ymm2/m256
-    VPMOVSXWD_VdqqWqq_E512,
+    VpmovsxwdVdqqWqqE512,
     // [EVEX.128.66.0F38.WIG 24 /r] VPMOVSXWQ xmm1 {k1}{z}, xmm2/m32
-    VPMOVSXWQ_VdqWd_E128,
+    VpmovsxwqVdqWdE128,
     // [EVEX.256.66.0F38.WIG 24 /r] VPMOVSXWQ ymm1 {k1}{z}, xmm2/m64
-    VPMOVSXWQ_VqqWq_E256,
+    VpmovsxwqVqqWqE256,
     // [EVEX.512.66.0F38.WIG 24 /r] VPMOVSXWQ zmm1 {k1}{z}, xmm2/m128
-    VPMOVSXWQ_VdqqWdq_E512,
+    VpmovsxwqVdqqWdqE512,
     // [EVEX.128.66.0F38.W0 25 /r] VPMOVSXDQ xmm1 {k1}{z}, xmm2/m64
-    VPMOVSXDQ_VdqWq_E128,
+    VpmovsxdqVdqWqE128,
     // [EVEX.256.66.0F38.W0 25 /r] VPMOVSXDQ ymm1 {k1}{z}, xmm2/m128
-    VPMOVSXDQ_VqqWdq_E256,
+    VpmovsxdqVqqWdqE256,
     // [EVEX.512.66.0F38.W0 25 /r] VPMOVSXDQ zmm1 {k1}{z}, ymm2/m256
-    VPMOVSXDQ_VdqqWqq_E512,
+    VpmovsxdqVdqqWqqE512,
 
     // [66 0F 38 30 /r] PMOVZXBW xmm1, xmm2/m64
-    PMOVZXBW_VdqWq,
+    PmovzxbwVdqWq,
     // [66 0F 38 31 /r] PMOVZXBD xmm1, xmm2/m32
-    PMOVZXBD_VdqWd,
+    PmovzxbdVdqWd,
     // [66 0F 38 32 /r] PMOVZXBQ xmm1, xmm2/m16
-    PMOVZXBQ_VdqWw,
+    PmovzxbqVdqWw,
     // [66 0F 38 33 /r] PMOVZXWD xmm1, xmm2/m64
-    PMOVZXWD_VdqWq,
+    PmovzxwdVdqWq,
     // [66 0F 38 34 /r] PMOVZXWQ xmm1, xmm2/m32
-    PMOVZXWQ_VdqWd,
+    PmovzxwqVdqWd,
     // [66 0F 38 35 /r] PMOVZXDQ xmm1, xmm2/m64
-    PMOVZXDQ_VdqWq,
+    PmovzxdqVdqWq,
     // [VEX.128.66.0F38.WIG 30 /r] VPMOVZXBW xmm1, xmm2/m64
-    VPMOVZXBW_VdqWq_V128,
+    VpmovzxbwVdqWqV128,
     // [VEX.128.66.0F38.WIG 31 /r] VPMOVZXBD xmm1, xmm2/m32
-    VPMOVZXBD_VdqWd_V128,
+    VpmovzxbdVdqWdV128,
     // [VEX.128.66.0F38.WIG 32 /r] VPMOVZXBQ xmm1, xmm2/m16
-    VPMOVZXBQ_VdqWw_V128,
+    VpmovzxbqVdqWwV128,
     // [VEX.128.66.0F38.WIG 33 /r] VPMOVZXWD xmm1, xmm2/m64
-    VPMOVZXWD_VdqWq_V128,
+    VpmovzxwdVdqWqV128,
     // [VEX.128.66.0F38.WIG 34 /r] VPMOVZXWQ xmm1, xmm2/m32
-    VPMOVZXWQ_VdqWd_V128,
+    VpmovzxwqVdqWdV128,
     // [VEX.128.66.0F38.WIG 35 /r] VPMOVZXDQ xmm1, xmm2/m64
-    VPMOVZXDQ_VdqWq_V128,
+    VpmovzxdqVdqWqV128,
     // [VEX.256.66.0F38.WIG 30 /r] VPMOVZXBW ymm1, ymm2/m128
-    VPMOVZXBW_VqqWqq_V256,
+    VpmovzxbwVqqWqqV256,
     // [VEX.256.66.0F38.WIG 31 /r] VPMOVZXBD ymm1, ymm2/m64
-    VPMOVZXBD_VqqWq_V256,
+    VpmovzxbdVqqWqV256,
     // [VEX.256.66.0F38.WIG 32 /r] VPMOVZXBQ ymm1, ymm2/m32
-    VPMOVZXBQ_VqqWd_V256,
+    VpmovzxbqVqqWdV256,
     // [VEX.256.66.0F38.WIG 33 /r] VPMOVZXWD ymm1, ymm2/m128
-    VPMOVZXWD_VqqWdq_V256,
+    VpmovzxwdVqqWdqV256,
     // [VEX.256.66.0F38.WIG 34 /r] VPMOVZXWQ ymm1, ymm2/m64
-    VPMOVZXWQ_VqqWq_V256,
+    VpmovzxwqVqqWqV256,
     // [VEX.256.66.0F38.WIG 35 /r] VPMOVZXDQ ymm1, ymm2/m128
-    VPMOVZXDQ_VqqWdq_V256,
+    VpmovzxdqVqqWdqV256,
     // [EVEX.128.66.0F38.WIG 30 /r] VPMOVZXBW xmm1 {k1}{z}, xmm2/m64
-    VPMOVZXBW_VdqWq_E128,
+    VpmovzxbwVdqWqE128,
     // [EVEX.256.66.0F38.WIG 30 /r] VPMOVZXBW ymm1 {k1}{z}, xmm2/m128
-    VPMOVZXBW_VdqWdq_E256,
+    VpmovzxbwVdqWdqE256,
     // [EVEX.512.66.0F38.WIG 30 /r] VPMOVZXBW zmm1 {k1}{z}, ymm2/m256
-    VPMOVZXBW_VdqqWqq_E512,
+    VpmovzxbwVdqqWqqE512,
     // [EVEX.128.66.0F38.WIG 31 /r] VPMOVZXBD xmm1 {k1}{z}, xmm2/m32
-    VPMOVZXBD_VdqWd_E128,
+    VpmovzxbdVdqWdE128,
     // [EVEX.256.66.0F38.WIG 31 /r] VPMOVZXBD ymm1 {k1}{z}, xmm2/m64
-    VPMOVZXBD_VqqWq_E256,
+    VpmovzxbdVqqWqE256,
     // [EVEX.512.66.0F38.WIG 31 /r] VPMOVZXBD zmm1 {k1}{z}, xmm2/m128
-    VPMOVZXBD_VdqqWdq_E512,
+    VpmovzxbdVdqqWdqE512,
     // [EVEX.128.66.0F38.WIG 32 /r] VPMOVZXBQ xmm1 {k1}{z}, xmm2/m16
-    VPMOVZXBQ_VdqWw_E128,
+    VpmovzxbqVdqWwE128,
     // [EVEX.256.66.0F38.WIG 32 /r] VPMOVZXBQ ymm1 {k1}{z}, xmm2/m32
-    VPMOVZXBQ_VqqWd_E256,
+    VpmovzxbqVqqWdE256,
     // [EVEX.512.66.0F38.WIG 32 /r] VPMOVZXBQ zmm1 {k1}{z}, xmm2/m64
-    VPMOVZXBQ_VdqqWq_E512,
+    VpmovzxbqVdqqWqE512,
     // [EVEX.128.66.0F38.WIG 33 /r] VPMOVZXWD xmm1 {k1}{z}, xmm2/m64
-    VPMOVZXWD_VdqWq_E128,
+    VpmovzxwdVdqWqE128,
     // [EVEX.256.66.0F38.WIG 33 /r] VPMOVZXWD ymm1 {k1}{z}, xmm2/m128
-    VPMOVZXWD_VqqWdq_E256,
+    VpmovzxwdVqqWdqE256,
     // [EVEX.512.66.0F38.WIG 33 /r] VPMOVZXWD zmm1 {k1}{z}, ymm2/m256
-    VPMOVZXWD_VdqqWqq_E512,
+    VpmovzxwdVdqqWqqE512,
     // [EVEX.128.66.0F38.WIG 34 /r] VPMOVZXWQ xmm1 {k1}{z}, xmm2/m32
-    VPMOVZXWQ_VdqWd_E128,
+    VpmovzxwqVdqWdE128,
     // [EVEX.256.66.0F38.WIG 34 /r] VPMOVZXWQ ymm1 {k1}{z}, xmm2/m64
-    VPMOVZXWQ_VqqWq_E256,
+    VpmovzxwqVqqWqE256,
     // [EVEX.512.66.0F38.WIG 34 /r] VPMOVZXWQ zmm1 {k1}{z}, xmm2/m128
-    VPMOVZXWQ_VdqqWdq_E512,
+    VpmovzxwqVdqqWdqE512,
     // [EVEX.128.66.0F38.W0 35 /r] VPMOVZXDQ xmm1 {k1}{z}, xmm2/m64
-    VPMOVZXDQ_VdqWq_E128,
+    VpmovzxdqVdqWqE128,
     // [EVEX.256.66.0F38.W0 35 /r] VPMOVZXDQ ymm1 {k1}{z}, xmm2/m128
-    VPMOVZXDQ_VqqWdq_E256,
+    VpmovzxdqVqqWdqE256,
     // [EVEX.512.66.0F38.W0 35 /r] VPMOVZXDQ zmm1 {k1}{z}, ymm2/m256
-    VPMOVZXDQ_VdqqWqq_E512,
+    VpmovzxdqVdqqWqqE512,
 
     // [66 0F 38 28 /r] PMULDQ xmm1, xmm2/m128
-    PMULDQ_VdqWdq,
+    PmuldqVdqWdq,
     // [VEX.128.66.0F38.WIG 28 /r] VPMULDQ xmm1, xmm2, xmm3/m128
-    VPMULDQ_VdqHdqWdq_V128,
+    VpmuldqVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 28 /r] VPMULDQ ymm1, ymm2, ymm3/m256
-    VPMULDQ_VqqHqqWqq_V256,
+    VpmuldqVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 28 /r] VPMULDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPMULDQ_VdqHdqWdq_E128,
+    VpmuldqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 28 /r] VPMULDQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPMULDQ_VqqHqqWqq_E256,
+    VpmuldqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 28 /r] VPMULDQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPMULDQ_VdqqHdqqWdqq_E512,
+    VpmuldqVdqqHdqqWdqqE512,
 
     // [NP 0F 38 0B /r] PMULHRSW mm1, mm2/m64
-    PMULHRSW_PqQq,
+    PmulhrswPqQq,
     // [66 0F 38 0B /r] PMULHRSW xmm1, xmm2/m128
-    PMULHRSW_VdqWdq,
+    PmulhrswVdqWdq,
     // [VEX.128.66.0F38.WIG 0B /r] VPMULHRSW xmm1, xmm2, xmm3/m128
-    VPMULHRSW_VdqHdqWdq_V128,
+    VpmulhrswVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 0B /r] VPMULHRSW ymm1, ymm2, ymm3/m256
-    VPMULHRSW_VqqHqqWqq_V256,
+    VpmulhrswVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG 0B /r] VPMULHRSW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMULHRSW_VdqHdqWdq_E128,
+    VpmulhrswVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG 0B /r] VPMULHRSW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMULHRSW_VqqHqqWqq_E256,
+    VpmulhrswVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG 0B /r] VPMULHRSW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMULHRSW_VdqqHdqqWdqq_E512,
+    VpmulhrswVdqqHdqqWdqqE512,
 
     // [NP 0F E4 /r] PMULHUW mm1, mm2/m64
-    PMULHUW_PqQq,
+    PmulhuwPqQq,
     // [66 0F E4 /r] PMULHUW xmm1, xmm2/m128
-    PMULHUW_VdqWdq,
+    PmulhuwVdqWdq,
     // [VEX.128.66.0F.WIG E4 /r] VPMULHUW xmm1, xmm2, xmm3/m128
-    VPMULHUW_VdqHdqWdq_V128,
+    VpmulhuwVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG E4 /r] VPMULHUW ymm1, ymm2, ymm3/m256
-    VPMULHUW_VqqHqqWqq_V256,
+    VpmulhuwVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG E4 /r] VPMULHUW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMULHUW_VdqHdqWdq_E128,
+    VpmulhuwVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG E4 /r] VPMULHUW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMULHUW_VqqHqqWqq_E256,
+    VpmulhuwVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG E4 /r] VPMULHUW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMULHUW_VdqqHdqqWdqq_E512,
+    VpmulhuwVdqqHdqqWdqqE512,
 
     // [NP 0F E5 /r] PMULHW mm1, mm2/m64
-    PMULHW_PqQq,
+    PmulhwPqQq,
     // [66 0F E5 /r] PMULHW xmm1, xmm2/m128
-    PMULHW_VdqWdq,
+    PmulhwVdqWdq,
     // [VEX.128.66.0F.WIG E5 /r] VPMULHW xmm1, xmm2, xmm3/m128
-    VPMULHW_VdqHdqWdq_V128,
+    VpmulhwVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG E5 /r] VPMULHW ymm1, ymm2, ymm3/m256
-    VPMULHW_VqqHqqWqq_V256,
+    VpmulhwVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG E5 /r] VPMULHW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMULHW_VdqHdqWdq_E128,
+    VpmulhwVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG E5 /r] VPMULHW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMULHW_VqqHqqWqq_E256,
+    VpmulhwVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG E5 /r] VPMULHW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMULHW_VdqqHdqqWdqq_E512,
+    VpmulhwVdqqHdqqWdqqE512,
 
     // [66 0F 38 40 /r] PMULLD xmm1, xmm2/m128
-    PMULLD_VdqWdq,
+    PmulldVdqWdq,
     // [VEX.128.66.0F38.WIG 40 /r] VPMULLD xmm1, xmm2, xmm3/m128
-    VPMULLD_VdqHdqWdq_V128,
+    VpmulldVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 40 /r] VPMULLD ymm1, ymm2, ymm3/m256
-    VPMULLD_VqqHqqWqq_V256,
+    VpmulldVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 40 /r] VPMULLD xmm1, xmm2, xmm3/m128/m32bcst
-    VPMULLD_VdqHdqWdq_E128,
+    VpmulldVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 40 /r] VPMULLD ymm1, ymm2, ymm3/m256/m32bcst
-    VPMULLD_VqqHqqWqq_E256,
+    VpmulldVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 40 /r] VPMULLD zmm1, zmm2, zmm3/m512/m32bcst
-    VPMULLD_VdqqHdqqWdqq_E512,
+    VpmulldVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 40 /r] VPMULLD xmm1, xmm2, xmm3/m128/m64bcst
-    VPMULLQ_VdqHdqWdq_E128,
+    VpmullqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 40 /r] VPMULLD ymm1, ymm2, ymm3/m256/m64bcst
-    VPMULLQ_VqqHqqWqq_E256,
+    VpmullqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 40 /r] VPMULLD zmm1, zmm2, zmm3/m512/m64bcst
-    VPMULLQ_VdqqHdqqWdqq_E512,
+    VpmullqVdqqHdqqWdqqE512,
 
     // [NP 0F D5 /r] PMULLW mm1, mm/m64
-    PMULLW_PqQq,
+    PmullwPqQq,
     // [66 0F D5 /r] PMULLW xmm1, xmm2/m128
-    PMULLW_VdqWdq,
+    PmullwVdqWdq,
     // [VEX.128.66.0F.WIG D5 /r] VPMULLW xmm1, xmm2, xmm3/m128
-    VPMULLW_VdqHdqWdq_V128,
+    VpmullwVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG D5 /r] VPMULLW ymm1, ymm2, ymm3/m256
-    VPMULLW_VqqHqqWqq_V256,
+    VpmullwVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG D5 /r] VPMULLW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPMULLW_VdqHdqWdq_E128,
+    VpmullwVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG D5 /r] VPMULLW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPMULLW_VqqHqqWqq_E256,
+    VpmullwVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG D5 /r] VPMULLW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPMULLW_VdqqHdqqWdqq_E512,
+    VpmullwVdqqHdqqWdqqE512,
 
     // [NP 0F F4 /r] PMULUDQ mm1, mm2/m64
-    PMULUDQ_PqQq,
+    PmuludqPqQq,
     // [66 0F F4 /r] PMULUDQ xmm1, xmm2/m128
-    PMULUDQ_VdqWdq,
+    PmuludqVdqWdq,
     // [VEX.128.66.0F.WIG F4 /r] VPMULUDQ xmm1, xmm2, xmm3/m128
-    VPMULUDQ_VdqHdqWdq_V128,
+    VpmuludqVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG F4 /r] VPMULUDQ ymm1, ymm2, ymm3/m256
-    VPMULUDQ_VqqHqqWqq_V256,
+    VpmuludqVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 F4 /r] VPMULUDQ xmm1, xmm2, xmm3/m128/m64bcst
-    VPMULUDQ_VdqHdqWdq_E128,
+    VpmuludqVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 F4 /r] VPMULUDQ ymm1, ymm2, ymm3/m256/m64bcst
-    VPMULUDQ_VqqHqqWqq_E256,
+    VpmuludqVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 F4 /r] VPMULUDQ zmm1, zmm2, zmm3/m512/m64bcst
-    VPMULUDQ_VdqqHdqqWdqq_E512,
+    VpmuludqVdqqHdqqWdqqE512,
 
     // [8F /0] POP r/m16
-    POP_Ew,
+    PopEw,
     // [8F /0] POP r/m32
-    POP_Ed,
+    PopEd,
     // [8F /0] POP r/m64
-    POP_Eq,
+    PopEq,
     // [58+rw] POP r16
-    POP_Gw,
+    PopGw,
     // [58+rd] POP r32
-    POP_Gd,
+    PopGd,
     // [REX.W 58+rq] POP r64
     // NOTE: Intel manual doesn't mention REX.W
-    POP_Gq,
+    PopGq,
     // [0F] POP CS
     // NOTE: Not valid on 80186 or newer
-    POP_CS,
+    PopCS,
     // [1F] POP DS
-    POP_DS,
+    PopDS,
     // [17] POP SS
-    POP_SS,
+    PopSS,
     // [OF A1] POP FS
-    POP_FS,
+    PopFS,
     // [0F A9] POP GS
-    POP_GS,
+    PopGS,
 
     // [61] POPA
-    POPA,
+    Popa,
     // [61] POPAD
-    POPAD,
+    Popad,
 
     // [F3 0F B8 /r] POPCNT r16, r/m16
-    POPCNT_EwGw,
+    PopcntEwGw,
     // [F3 0F B8 /r] POPCNT r32, r/m32
-    POPCNT_EdGd,
+    PopcntEdGd,
     // [F3 REX.W 0F B8 /r] POPCNT r64, r/m64
-    POPCNT_EqGq,
+    PopcntEqGq,
 
     // [9D] POPF
-    POPF,
+    Popf,
     // [9D] POPFD
-    POPFD,
+    Popfd,
     // [9D] POPFQ
-    POPFQ,
+    Popfq,
 
     // [NP 0F EB /r] POR mm1, mm2/m64
-    POR_PqQq,
+    PorPqQq,
     // [66 0F EB /r] POR xmm1, xmm2/m128
-    POR_VdqWdq,
+    PorVdqWdq,
     // [VEX.128.66.0F.WIG EB /r] VPOR xmm1, xmm2, xmm3/m128
-    VPOR_VdqHdqWdq_V128,
+    VporVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG EB /r] VPOR ymm1, ymm2, ymm3/m256
-    VPOR_VqqHqqWqq_V256,
+    VporVqqHqqWqqV256,
     // [EVEX.128.66.0F.W0 EB /r] VPORD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPORD_VdqHdqWdq_E128,
+    VpordVdqHdqWdqE128,
     // [EVEX.256.66.0F.W0 EB /r] VPORD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPORD_VqqHqqWqq_E256,
+    VpordVqqHqqWqqE256,
     // [EVEX.512.66.0F.W0 EB /r] VPORD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPORD_VdqqHdqqWdqq_E512,
+    VpordVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.W1 EB /r] VPORQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPORQ_VdqHdqWdq_E128,
+    VporqVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 EB /r] VPORQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPORQ_VqqHqqWqq_E256,
+    VporqVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 EB /r] VPORQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPORQ_VdqqHdqqWdqq_E512,
+    VporqVdqqHdqqWdqqE512,
 
     // [0F 18 /1] PREFETCH0 m8
-    PREFETCH0_Mb,
+    Prefetch0Mb,
     // [0F 18 /2] PREFETCH1 m8
-    PREFETCH1_Mb,
+    Prefetch1Mb,
     // [0F 18 /3] PREFETCH2 m8
-    PREFETCH2_Mb,
+    Prefetch2Mb,
     // [0F 18 /0] PREFETCHNTA m8
-    PREFETCHNTA_Mb,
+    PrefetchntaMb,
 
     // [0F 0D /1] PREFETCHW m8
-    PREFETCHW_Mb,
+    PrefetchwMb,
 
     // [NP 0F F6 /r] PSADBW mm1, mm2/m64
-    PSADBW_PqQq,
+    PsadbwPqQq,
     // [66 0F F6 /r] PSADBW xmm1, xmm2/m128
-    PSADBW_VdqWdq,
+    PsadbwVdqWdq,
     // [VEX.128.66.0F.WIG F6 /r] VPSADBW xmm1, xmm2, xmm3/m128
-    VPSADBW_VdqHdqWdq_V128,
+    VpsadbwVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG F6 /r] VPSADBW ymm1, ymm2, ymm3/m256
-    VPSADBW_VqqHqqWqq_V256,
+    VpsadbwVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG F6 /r] VPSADBW xmm1, xmm2, xmm3/m128
-    VPSADBW_VdqHdqWdq_E128,
+    VpsadbwVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG F6 /r] VPSADBW ymm1, ymm2, ymm3/m256
-    VPSADBW_VqqHqqWqq_E256,
+    VpsadbwVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG F6 /r] VPSADBW zmm1, zmm2, zmm3/m512
-    VPSADBW_VdqqHdqqWdqq_E512,
+    VpsadbwVdqqHdqqWdqqE512,
 
     // [NP 0F 38 00 /r] PSHUFB mm1, mm2/m64
-    PSHUFB_PqQq,
+    PshufbPqQq,
     // [66 0F 38 00 /r] PSHUFB xmm1, xmm2/m128
-    PSHUFB_VdqWdq,
+    PshufbVdqWdq,
     // [VEX.128.66.0F38.WIG 00 /r] VPSHUFB xmm1, xmm2, xmm3/m128
-    VPSHUFB_VdqHdqWdq_V128,
+    VpshufbVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 00 /r] VPSHUFB ymm1, ymm2, ymm3/m256
-    VPSHUFB_VqqHqqWqq_V256,
+    VpshufbVqqHqqWqqV256,
     // [EVEX.128.66.0F38.WIG 00 /r] VPSHUFB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSHUFB_VdqHdqWdq_E128,
+    VpshufbVdqHdqWdqE128,
     // [EVEX.256.66.0F38.WIG 00 /r] VPSHUFB xmm1 {k1}{z}, xmm2, xmm3/m256
-    VPSHUFB_VqqHqqWqq_E256,
+    VpshufbVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG 00 /r] VPSHUFB xmm1 {k1}{z}, xmm2, xmm3/m512
-    VPSHUFB_VdqqHdqqWdqq_E512,
+    VpshufbVdqqHdqqWdqqE512,
 
     // [66 0F 70 /r ib] PSHUFD xmm1, xmm2/m128, imm8
-    PSHUFD_VdqWdqIb,
+    PshufdVdqWdqIb,
     // [VEX.128.66.0F.WIG 70 /r ib] VPSHUFD xmm1, xmm2/m128, imm8
-    VPSHUFD_VdqWdqIb_V128,
+    VpshufdVdqWdqIbV128,
     // [VEX.256.66.0F.WIG 70 /r ib] VPSHUFD ymm1, ymm2/m256, imm8
-    VPSHUFD_VqqWqqIb_V256,
+    VpshufdVqqWqqIbV256,
     // [EVEX.128.66.0F.WIG 70 /r ib] VPSHUFD xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VPSHUFD_VdqWdqIb_E128,
+    VpshufdVdqWdqIbE128,
     // [EVEX.256.66.0F.WIG 70 /r ib] VPSHUFD ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VPSHUFD_VqqWqqIb_E256,
+    VpshufdVqqWqqIbE256,
     // [EVEX.512.66.0F.WIG 70 /r ib] VPSHUFD zmm1 {k1}{z}, zmm2/m512/m32bcst, imm8
-    VPSHUFD_VdqqWdqqIb_E512,
+    VpshufdVdqqWdqqIbE512,
 
     // [F3 0F 70 /r ib] PSHUFHW xmm1, xmm2/m128, imm8
-    PSHUFHW_VdqWdqIb,
+    PshufhwVdqWdqIb,
     // [VEX.128.F3.0F.WIG 70 /r ib] VPSHUFHW xmm1, xmm2/m128, imm8
-    VPSHUFHW_VdqWdqIb_V128,
+    VpshufhwVdqWdqIbV128,
     // [VEX.256.F3.0F.WIG 70 /r ib] VPSHUFHW ymm1, ymm2/m256, imm8
-    VPSHUFHW_VqqWqqIb_V256,
+    VpshufhwVqqWqqIbV256,
     // [EVEX.128.F3.0F.WIG 70 /r ib] VPSHUFHW xmm1 {k1}{z}, xmm2/m128, imm8
-    VPSHUFHW_VdqWdqIb_E128,
+    VpshufhwVdqWdqIbE128,
     // [EVEX.256.F3.0F.WIG 70 /r ib] VPSHUFHW ymm1 {k1}{z}, ymm2/m256, imm8
-    VPSHUFHW_VqqWqqIb_E256,
+    VpshufhwVqqWqqIbE256,
     // [EVEX.512.F3.0F.WIG 70 /r ib] VPSHUFHW zmm1 {k1}{z}, zmm2/m512, imm8
-    VPSHUFHW_VdqqWdqqIb_E512,
+    VpshufhwVdqqWdqqIbE512,
 
     // [F2 0F 70 /r ib] PSHUFLW xmm1, xmm2/m128, imm8
-    PSHUFLW_VdqWdqIb,
+    PshuflwVdqWdqIb,
     // [VEX.128.F2.0F.WIG 70 /r ib] VPSHUFLW xmm1, xmm2/m128, imm8
-    VPSHUFLW_VdqWdqIb_V128,
+    VpshuflwVdqWdqIbV128,
     // [VEX.256.F2.0F.WIG 70 /r ib] VPSHUFLW ymm1, ymm2/m256, imm8
-    VPSHUFLW_VqqWqqIb_V256,
+    VpshuflwVqqWqqIbV256,
     // [EVEX.128.F2.0F.WIG 70 /r ib] VPSHUFLW xmm1 {k1}{z}, xmm2/m128, imm8
-    VPSHUFLW_VdqWdqIb_E128,
+    VpshuflwVdqWdqIbE128,
     // [EVEX.256.F2.0F.WIG 70 /r ib] VPSHUFLW ymm1 {k1}{z}, ymm2/m256, imm8
-    VPSHUFLW_VqqWqqIb_E256,
+    VpshuflwVqqWqqIbE256,
     // [EVEX.512.F2.0F.WIG 70 /r ib] VPSHUFLW zmm1 {k1}{z}, zmm2/m512, imm8
-    VPSHUFLW_VdqqWdqqIb_E512,
+    VpshuflwVdqqWdqqIbE512,
 
     // [NP 0F 70 /r ib] PSHUFW mm1, mm2/m64, imm8
-    PSHUFW_PqQqIb,
+    PshufwPqQqIb,
 
     // [NP 0F 38 08 /r] PSIGNB mm1, mm2/m64
-    PSIGNB_PqQq,
+    PsignbPqQq,
     // [66 0F 38 08 /r] PSIGNB xmm1, xmm2/m128
-    PSIGNB_VdqWdq,
+    PsignbVdqWdq,
     // [NP 0F 38 09 /r] PSIGNW mm1, mm2/m64
-    PSIGNW_PqQq,
+    PsignwPqQq,
     // [66 0F 38 09 /r] PSIGNW xmm1, xmm2/m128
-    PSIGNW_VdqWdq,
+    PsignwVdqWdq,
     // [NP 0F 38 0A /r] PSIGND mm1, mm2/m64
-    PSIGND_PqQq,
+    PsigndPqQq,
     // [66 0F 38 0A /r] PSIGND xmm1, xmm2/m128
-    PSIGND_VdqWdq,
+    PsigndVdqWdq,
     // [VEX.128.66.0F38.WIG 08 /r] VPSIGNB xmm1, xmm2, xmm3/m128
-    VPSIGNB_VdqHdqWdq_V128,
+    VpsignbVdqHdqWdqV128,
     // [VEX.128.66.0F38.WIG 09 /r] VPSIGNW xmm1, xmm2, xmm3/m128
-    VPSIGNW_VdqHdqWdq_V128,
+    VpsignwVdqHdqWdqV128,
     // [VEX.128.66.0F38.WIG 0A /r] VPSIGND xmm1, xmm2, xmm3/m128
-    VPSIGND_VdqHdqWdq_V128,
+    VpsigndVdqHdqWdqV128,
     // [VEX.256.66.0F38.WIG 08 /r] VPSIGNB ymm1, ymm2, ymm3/m256
-    VPSIGNB_VqqHqqWqq_V256,
+    VpsignbVqqHqqWqqV256,
     // [VEX.256.66.0F38.WIG 09 /r] VPSIGNW ymm1, ymm2, ymm3/m256
-    VPSIGNW_VqqHqqWqq_V256,
+    VpsignwVqqHqqWqqV256,
     // [VEX.256.66.0F38.WIG 0A /r] VPSIGND ymm1, ymm2, ymm3/m256
-    VPSIGND_VqqHqqWqq_V256,
+    VpsigndVqqHqqWqqV256,
 
     // [66 0F 73 /7 ib] PSLLDQ xmm1, imm8
-    PSLLDQ_UdqIb,
+    PslldqUdqIb,
     // [VEX.128.66.0F.WIG 73 /7 ib] VPSLLDQ xmm1, xmm2, imm8
-    VPSLLDQ_HdqUdqIb_V128,
+    VpslldqHdqUdqIbV128,
     // [VEX.256.66.0F.WIG 73 /7 ib] VPSLLDQ ymm1, ymm2, imm8
-    VPSLLDQ_HqqUqqIb_V256,
+    VpslldqHqqUqqIbV256,
     // [EVEX.128.66.0F.WIG 73 /7 ib] VPSLLDQ xmm1, xmm2/m128, imm8
-    VPSLLDQ_HdqUdqIb_E128,
+    VpslldqHdqUdqIbE128,
     // [EVEX.256.66.0F.WIG 73 /7 ib] VPSLLDQ ymm1, ymm2/m256, imm8
-    VPSLLDQ_HqqUqqIb_E256,
+    VpslldqHqqUqqIbE256,
     // [EVEX.512.66.0F.WIG 73 /7 ib] VPSLLDQ zmm1, zmm2/m512, imm8
-    VPSLLDQ_HdqqUdqqIb_E512,
+    VpslldqHdqqUdqqIbE512,
 
     // [NP 0F F1 /r] PSLLW mm1, mm2/m64
-    PSLLW_PqQq,
+    PsllwPqQq,
     // [66 0F F1 /r] PSLLW xmm1, xmm2/m128
-    PSLLW_VdqWdq,
+    PsllwVdqWdq,
     // [NP 0F 71 /6 ib] PSLLW mm, imm8
-    PSLLW_NqIb,
+    PsllwNqIb,
     // [66 0F 71 /6 ib] PSLLW xmm1, xmm2/m128
-    PSLLW_UdqIb,
+    PsllwUdqIb,
     // [NP 0F F2 /r] PSLLD mm, mm2/m64
-    PSLLD_PqQq,
+    PslldPqQq,
     // [66 0F F2 /r] PSLLD xmm1, xmm2/m128
-    PSLLD_VdqWdq,
+    PslldVdqWdq,
     // [NP 0F 72 /6 ib] PSLLD mm, imm8
-    PSLLD_NqIb,
+    PslldNqIb,
     // [66 0F 72 /6 ib] PSLLD xmm, imm8
-    PSLLD_UdqIb,
+    PslldUdqIb,
     // [NP 0F F3 /r] PSLLQ mm1, mm2/m64
-    PSLLQ_PqQq,
+    PsllqPqQq,
     // [66 0F F3 /r] PSLLQ xmm1, xmm2/m128
-    PSLLQ_VdqWdq,
+    PsllqVdqWdq,
     // [VEX.128.66.0F.WIG F1 /r] VPSLLW xmm1, xmm2, xmm3/m128
-    VPSLLW_VdqHdqWdq_V128,
+    VpsllwVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 71 /6 ib] VPSLLW xmm1, xmm2, imm8
-    VPSLLW_HdqUdqIb_V128,
+    VpsllwHdqUdqIbV128,
     // [VEX.128.66.0F.WIG F2 /r] VPSLLD xmm1, xmm2, xmm3/m128
-    VPSLLD_VdqHdqWdq_V128,
+    VpslldVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 72 /6 ib] VPSLLD xmm1, xmm2, imm8
-    VPSLLD_HdqUdqIb_V128,
+    VpslldHdqUdqIbV128,
     // [VEX.128.66.0F.WIG F3 /r] VPSLLQ xmm1, xmm2, xmm3/m128
-    VPSLLQ_VdqHdqWdq_V128,
+    VpsllqVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 73 /6 ib] VPSLLQ xmm1, xmm2, imm8
-    VPSLLQ_HdqUdqIb_V128,
+    VpsllqHdqUdqIbV128,
     // [VEX.256.66.0F.WIG F1 /r] VPSLLW ymm1, ymm2, ymm3/m128
-    VPSLLW_VqqHqqWqq_V256,
+    VpsllwVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 71 /6 ib] VPSLLW ymm1, ymm2, imm8
-    VPSLLW_HqqUqqIb_V256,
+    VpsllwHqqUqqIbV256,
     // [VEX.256.66.0F.WIG F2 /r] VPSLLD ymm1, ymm2, ymm3/m128
-    VPSLLD_VqqHqqWqq_V256,
+    VpslldVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 72 /6 ib] VPSLLD ymm1, ymm2, imm8
-    VPSLLD_HqqUqqIb_V256,
+    VpslldHqqUqqIbV256,
     // [VEX.256.66.0F.WIG F3 /r] VPSLLQ ymm1, ymm2, ymm3/m128
-    VPSLLQ_VqqHqqWqq_V256,
+    VpsllqVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 73 /6 ib] VPSLLQ ymm1, ymm2, imm8
-    VPSLLQ_HqqUqqIb_V256,
+    VpsllqHqqUqqIbV256,
     // [EVEX.128.66.0F.WIG F1 /r] VPSLLW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSLLW_VdqHdqWdq_E128,
+    VpsllwVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG F1 /r] VPSLLW ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSLLW_VqqHqqWdq_E256,
+    VpsllwVqqHqqWdqE256,
     // [EVEX.256.66.0F.WIG F1 /r] VPSLLW ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSLLW_VdqqHdqqWdq_E512,
+    VpsllwVdqqHdqqWdqE512,
     // [EVEX.128.66.0F.WIG 71 /6 ib] VPSLLW xmm1 {k1}{z}, xmm2/m128, imm8
-    VPSLLW_HdqUdqIb_E128,
+    VpsllwHdqUdqIbE128,
     // [EVEX.256.66.0F.WIG 71 /6 ib] VPSLLW ymm1 {k1}{z}, ymm2/m256, imm8
-    VPSLLW_HqqUqqIb_E256,
+    VpsllwHqqUqqIbE256,
     // [EVEX.512.66.0F.WIG 71 /6 ib] VPSLLW zmm1 {k1}{z}, zmm2/m512, imm8
-    VPSLLW_HdqqUdqqIb_E512,
+    VpsllwHdqqUdqqIbE512,
     // [EVEX.128.66.0F.W0 F2 /r] VPSLLD xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSLLD_VdqHdqWdq_E128,
+    VpslldVdqHdqWdqE128,
     // [EVEX.256.66.0F.W0 F2 /r] VPSLLD ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSLLD_VqqHqqWdq_E256,
+    VpslldVqqHqqWdqE256,
     // [EVEX.512.66.0F.W0 F2 /r] VPSLLD zmm1 {k1}{z}, zmm2, xmm3/m128
-    VPSLLD_VdqqHdqqWdq_E512,
+    VpslldVdqqHdqqWdqE512,
     // [EVEX.128.66.0F.W0 72 /6 ib] VPSLLD xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VPSLLD_HdqUdqIb_E128,
+    VpslldHdqUdqIbE128,
     // [EVEX.256.66.0F.W0 72 /6 ib] VPSLLD ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VPSLLD_HqqUqqIb_E256,
+    VpslldHqqUqqIbE256,
     // [EVEX.512.66.0F.W0 72 /6 ib] VPSLLD zmm1 {k1}{z}, zmm2/m512/m32bcst, imm8
-    VPSLLD_HdqqUdqqIb_E512,
+    VpslldHdqqUdqqIbE512,
     // [EVEX.128.66.0F.W1 F3 /r] VPSLLQ xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSLLQ_VdqHdqWdq_E128,
+    VpsllqVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 F3 /r] VPSLLQ ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSLLQ_VqqHqqWqq_E256,
+    VpsllqVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 F3 /r] VPSLLQ zmm1 {k1}{z}, zmm2, xmm3/m128
-    VPSLLQ_VdqqHdqqWdqq_E512,
+    VpsllqVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.W1 73 /6 ib] VPSLLQ xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VPSLLQ_HdqUdqIb_E128,
+    VpsllqHdqUdqIbE128,
     // [EVEX.256.66.0F.W1 73 /6 ib] VPSLLQ ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VPSLLQ_HqqUqqIb_E256,
+    VpsllqHqqUqqIbE256,
     // [EVEX.512.66.0F.W1 73 /6 ib] VPSLLQ zmm1 {k1}{z}, zmm2/m512/m64bcst, imm8
-    VPSLLQ_HdqqUdqqIb_E512,
+    VpsllqHdqqUdqqIbE512,
 
     // [NP 0F E1 /r] PSRAW mm1, mm2/m64
-    PSRAW_PqQq,
+    PsrawPqQq,
     // [66 0F E1 /r] PSRAW xmm1, xmm2/m128
-    PSRAW_VdqWdq,
+    PsrawVdqWdq,
     // [NP 0F 71 /4 ib] PSRAW mm, imm8
-    PSRAW_NqIb,
+    PsrawNqIb,
     // [66 0F 71 /4 ib] PSRAW xmm, imm8
-    PSRAW_UdqIb,
+    PsrawUdqIb,
     // [NP 0F E2 /r] PSRAD mm1, mm2/m64
-    PSRAD_PqQq,
+    PsradPqQq,
     // [66 0F E2 /r] PSRAD xmm1, xmm2/m128
-    PSRAD_VdqWdq,
+    PsradVdqWdq,
     // [NP 0F 72 /4 ib] PSRAD mm, imm8
-    PSRAD_NqIb,
+    PsradNqIb,
     // [66 0F 72 /4 ib] PSRAD xmm, imm8
-    PSRAD_UdqIb,
+    PsradUdqIb,
     // [VEX.128.66.0F.WIG E1 /r] VPSRAW xmm1, xmm2, xmm3/m128
-    VPSRAW_VdqHdqWdq_V128,
+    VpsrawVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 71 /4 ib] VPSRAW xmm1, xmm2, imm8
-    VPSRAW_HdqUdqIb_V128,
+    VpsrawHdqUdqIbV128,
     // [VEX.128.66.0F.WIG E2 /r] VPSRAD xmm1, xmm2, xmm3/m128
-    VPSRAD_VdqHdqWdq_V128,
+    VpsradVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 72 /4 ib] VPSRAD xmm1, xmm2, imm8
-    VPSRAD_HdqUdqIb_V128,
+    VpsradHdqUdqIbV128,
     // [VEX.256.66.0F.WIG E1 /r] VPSRAW ymm1, ymm2, xmm3/m128
-    VPSRAW_VqqHqqWdq_V256,
+    VpsrawVqqHqqWdqV256,
     // [VEX.256.66.0F.WIG 71 /4 ib] VPSRAW ymm1, ymm2, imm8
-    VPSRAW_HqqUqqIb_V256,
+    VpsrawHqqUqqIbV256,
     // [VEX.256.66.0F.WIG E2 /r] VPSRAD ymm1, ymm2, xmm3/m128
-    VPSRAD_VqqHqqWdq_V256,
+    VpsradVqqHqqWdqV256,
     // [VEX.256.66.0F.WIG 72 /4 ib] VPSRAD ymm1, ymm2, imm8
-    VPSRAD_HqqUqqIb_V256,
+    VpsradHqqUqqIbV256,
     // [EVEX.128.66.0F.WIG E1 /r] VPSRAW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSRAW_VdqHdqWdq_E128,
+    VpsrawVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG E1 /r] VPSRAW ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSRAW_VqqHqqWdq_E256,
+    VpsrawVqqHqqWdqE256,
     // [EVEX.512.66.0F.WIG E1 /r] VPSRAW zmm1 {k1}{z}, zmm2, xmm3/m128
-    VPSRAW_VdqqHdqqWdq_E512,
+    VpsrawVdqqHdqqWdqE512,
     // [EVEX.128.66.0F.WIG 71 /4 ib] VPSRAW xmm1 {k1}{z}, xmm2/m128, imm8
-    VPSRAW_HdqUdqIb_E128,
+    VpsrawHdqUdqIbE128,
     // [EVEX.256.66.0F.WIG 71 /4 ib] VPSRAW ymm1 {k1}{z}, ymm2/m128, imm8
-    VPSRAW_HqqUqqIb_E256,
+    VpsrawHqqUqqIbE256,
     // [EVEX.512.66.0F.WIG 71 /4 ib] VPSRAW zmm1 {k1}{z}, zmm2/m128, imm8
-    VPSRAW_HdqqUdqqIb_E512,
+    VpsrawHdqqUdqqIbE512,
     // [EVEX.128.66.0F.W0 E2 /r] VPSRAD xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSRAD_VdqHdqWdq_E128,
+    VpsradVdqHdqWdqE128,
     // [EVEX.256.66.0F.W0 E2 /r] VPSRAD ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSRAD_VqqHqqWdq_E256,
+    VpsradVqqHqqWdqE256,
     // [EVEX.512.66.0F.W0 E2 /r] VPSRAD zmm1 {k1}{z}, zmm2, xmm3/m128
-    VPSRAD_VdqqHdqqWdq_E512,
+    VpsradVdqqHdqqWdqE512,
     // [EVEX.128.66.0F.W0 72 /4 ib] VPSRAD xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VPSRAD_HdqUdqIb_E128,
+    VpsradHdqUdqIbE128,
     // [EVEX.256.66.0F.W0 72 /4 ib] VPSRAD ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VPSRAD_HqqUqqIb_E256,
+    VpsradHqqUqqIbE256,
     // [EVEX.512.66.0F.W0 72 /4 ib] VPSRAD zmm1 {k1}{z}, zmm2/m512/m32bcst, imm8
-    VPSRAD_HdqqUdqqIb_E512,
+    VpsradHdqqUdqqIbE512,
     // [EVEX.128.66.0F.W1 E2 /r] VPSRAQ xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSRAQ_VdqHdqWdq_E128,
+    VpsraqVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 E2 /r] VPSRAQ ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSRAQ_VqqHqqWdq_E256,
+    VpsraqVqqHqqWdqE256,
     // [EVEX.512.66.0F.W1 E2 /r] VPSRAQ zmm1 {k1}{z}, zmm2, xmm3/m128
-    VPSRAQ_VdqqHdqqWdq_E512,
+    VpsraqVdqqHdqqWdqE512,
     // [EVEX.128.66.0F.W1 72 /4 ib] VPSRAQ xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VPSRAQ_HdqUdqIb_E128,
+    VpsraqHdqUdqIbE128,
     // [EVEX.256.66.0F.W1 72 /4 ib] VPSRAQ ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VPSRAQ_HqqUqqIb_E256,
+    VpsraqHqqUqqIbE256,
     // [EVEX.512.66.0F.W1 72 /4 ib] VPSRAQ zmm1 {k1}{z}, zmm2/m512/m64bcst, imm8
-    VPSRAQ_HdqqUdqqIb_E512,
+    VpsraqHdqqUdqqIbE512,
 
     // [66 0F 73 /3 ib] PSRLDQ xmm1, imm8
-    PSRLDQ_UdqIb,
+    PsrldqUdqIb,
     // [VEX.128.66.0F.WIG 73 /3 ib] VPSRLDQ xmm1, xmm2, imm8
-    VPSRLDQ_HdqUdqIb_V128,
+    VpsrldqHdqUdqIbV128,
     // [VEX.256.66.0F.WIG 73 /3 ib] VPSRLDQ ymm1, ymm2, imm8
-    VPSRLDQ_HqqUqqIb_V256,
+    VpsrldqHqqUqqIbV256,
     // [EVEX.128.66.0F.WIG 73 /3 ib] VPSRLDQ xmm1, xmm2/m128, imm8
-    VPSRLDQ_HdqUdqIb_E128,
+    VpsrldqHdqUdqIbE128,
     // [EVEX.256.66.0F.WIG 73 /3 ib] VPSRLDQ ymm1, ymm2/m256, imm8
-    VPSRLDQ_HqqUqqIb_E256,
+    VpsrldqHqqUqqIbE256,
     // [EVEX.512.66.0F.WIG 73 /3 ib] VPSRLDQ zmm1, zmm2/m512, imm8
-    VPSRLDQ_HdqqUdqqIb_E512,
+    VpsrldqHdqqUdqqIbE512,
 
     // [NP 0F D1 /r] PSRLW mm1, mm2/m64
-    PSRLW_PqQq,
+    PsrlwPqQq,
     // [66 0F D1 /r] PSRLW xmm1, xmm2/m128
-    PSRLW_VdqWdq,
+    PsrlwVdqWdq,
     // [NP 0F 71 /2 ib] PSRLW mm, imm8
-    PSRLW_NqIb,
+    PsrlwNqIb,
     // [66 0F 71 /2 ib] PSRLW xmm1, imm8
-    PSRLW_UdqIb,
+    PsrlwUdqIb,
     // [NP 0F D2 /r] PSRLD mm1, mm2/m64
-    PSRLD_PqQq,
+    PsrldPqQq,
     // [66 0F D2 /r] PSRLD xmm1, xmm2/m128
-    PSRLD_VdqWdq,
+    PsrldVdqWdq,
     // [NP 0F 72 /2 ib] PSRLD mm, imm8
-    PSRLD_NqIb,
+    PsrldNqIb,
     // [66 0F 72 /2 ib] PSRLD xmm, imm8
-    PSRLD_UdqIb,
+    PsrldUdqIb,
     // [NP 0F D3 /r] PSRLQ mm1, mm2/m64
-    PSRLQ_PqQq,
+    PsrlqPqQq,
     // [66 0F D3 /r] PSRLQ xmm1, xmm2/m128
-    PSRLQ_VdqWdq,
+    PsrlqVdqWdq,
     // [NP 0F 73 /2 ib] PSRLQ mm, imm8
-    PSRLQ_NqIb,
+    PsrlqNqIb,
     // [66 0F 73 /2 ib] PSRLQ xmm, imm8
-    PSRLQ_UdqIb,
+    PsrlqUdqIb,
     // [VEX.128.66.0F.WIG D1 /r] VPSRLW xmm1, xmm2, xmm3/m128
-    VPSRLW_VdqHdqWdq_V128,
+    VpsrlwVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 71 /2 ib] VPSRLW xmm1, xmm2, imm8
-    VPSRLW_HdqUdqIb_V128,
+    VpsrlwHdqUdqIbV128,
     // [VEX.128.66.0F.WIG D2 /r] VPSRLD xmm1, xmm2, xmm3/m128
-    VPSRLD_VdqHdqWdq_V128,
+    VpsrldVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 72 /2 ib] VPSRLD xmm1, xmm2, imm8
-    VPSRLD_HdqUdqIb_V128,
+    VpsrldHdqUdqIbV128,
     // [VEX.128.66.0F.WIG D3 /r] VPSRLQ xmm1, xmm2, xmm3/m128
-    VPSRLQ_VdqHdqWdq_V128,
+    VpsrlqVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 73 /2 ib] VPSRLQ xmm1, xmm2, imm8
-    VPSRLQ_HdqUdqIb_V128,
+    VpsrlqHdqUdqIbV128,
     // [VEX.256.66.0F.WIG D1 /r] VPSRLW ymm1, ymm2, xmm3/m128
-    VPSRLW_VqqHqqWdq_V128,
+    VpsrlwVqqHqqWdqV128,
     // [VEX.256.66.0F.WIG 71 /2 ib] VPSRLW ymm1, ymm2, imm8
-    VPSRLW_HqqUdqIb_V128,
+    VpsrlwHqqUdqIbV128,
     // [VEX.256.66.0F.WIG D2 /r] VPSRLD ymm1, ymm2, xmm3/m128
-    VPSRLD_VqqHqqWdq_V128,
+    VpsrldVqqHqqWdqV128,
     // [VEX.256.66.0F.WIG 72 /2 ib] VPSRLD ymm1, ymm2, imm8
-    VPSRLD_HqqUdqIb_V128,
+    VpsrldHqqUdqIbV128,
     // [VEX.256.66.0F.WIG D3 /r] VPSRLQ ymm1, ymm2, xmm3/m128
-    VPSRLQ_VqqHqqWdq_V128,
+    VpsrlqVqqHqqWdqV128,
     // [VEX.256.66.0F.WIG 73 /2 ib] VPSRLQ ymm1, ymm2, imm8
-    VPSRLQ_HqqUdqIb_V128,
+    VpsrlqHqqUdqIbV128,
     // [EVEX.128.66.0F.WIG D1 /r] VPSRLW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSRLW_VdqHdqWdq_E128,
+    VpsrlwVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG D1 /r] VPSRLW ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSRLW_VqqHqqWdq_E256,
+    VpsrlwVqqHqqWdqE256,
     // [EVEX.512.66.0F.WIG D1 /r] VPSRLW zmm1 {k1}{z}, zmm2, xmm3/m128
-    VPSRLW_VdqqHdqqWdq_E512,
+    VpsrlwVdqqHdqqWdqE512,
     // [EVEX.128.66.0F.WIG 71 /2 ib] VPSRLW xmm1 {k1}{z}, xmm2/m128, imm8
-    VPSRLW_HdqUdqIb_E128,
+    VpsrlwHdqUdqIbE128,
     // [EVEX.256.66.0F.WIG 71 /2 ib] VPSRLW ymm1 {k1}{z}, ymm2/m256, imm8
-    VPSRLW_HdqUdqIb_E256,
+    VpsrlwHdqUdqIbE256,
     // [EVEX.512.66.0F.WIG 71 /2 ib] VPSRLW zmm1 {k1}{z}, zmm2/m512, imm8
-    VPSRLW_HdqUdqIb_E512,
+    VpsrlwHdqUdqIbE512,
     // [EVEX.128.66.0F.WIG D2 /r] VPSRLD xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSRLD_VdqHdqWdq_E128,
+    VpsrldVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG D2 /r] VPSRLD ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSRLD_VqqHqqWdq_E256,
+    VpsrldVqqHqqWdqE256,
     // [EVEX.512.66.0F.WIG D2 /r] VPSRLD zmm1 {k1}{z}, zmm2, xmm3/m128
-    VPSRLD_VdqqHdqqWdq_E512,
+    VpsrldVdqqHdqqWdqE512,
     // [EVEX.128.66.0F.WIG 72 /2 ib] VPSRLD xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VPSRLD_HdqUdqIb_E128,
+    VpsrldHdqUdqIbE128,
     // [EVEX.256.66.0F.WIG 72 /2 ib] VPSRLD ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VPSRLD_HdqUdqIb_E256,
+    VpsrldHdqUdqIbE256,
     // [EVEX.512.66.0F.WIG 72 /2 ib] VPSRLD zmm1 {k1}{z}, zmm2/m512/m32bcst, imm8
-    VPSRLD_HdqUdqIb_E512,
+    VpsrldHdqUdqIbE512,
     // [EVEX.128.66.0F.WIG D3 /r] VPSRLQ xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSRLQ_VdqHdqWdq_E128,
+    VpsrlqVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG D3 /r] VPSRLQ ymm1 {k1}{z}, ymm2, xmm3/m128
-    VPSRLQ_VqqHqqWdq_E256,
+    VpsrlqVqqHqqWdqE256,
     // [EVEX.512.66.0F.WIG D3 /r] VPSRLQ zmm1 {k1}{z}, zmm2, xmm3/m128
-    VPSRLQ_VdqqHdqqWdq_E512,
+    VpsrlqVdqqHdqqWdqE512,
     // [EVEX.128.66.0F.WIG 73 /2 ib] VPSRLQ xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VPRSLW_HdqUdqIb_E128,
+    VprslwHdqUdqIbE128,
     // [EVEX.256.66.0F.WIG 73 /2 ib] VPSRLQ ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VPRSLW_HdqUdqIb_E256,
+    VprslwHdqUdqIbE256,
     // [EVEX.512.66.0F.WIG 73 /2 ib] VPSRLQ zmm1 {k1}{z}, zmm2/m512/m64bcst, imm8
-    VPRSLW_HdqUdqIb_E512,
+    VprslwHdqUdqIbE512,
 
     // [NP 0F F8 /r] PSUBB mm1, mm2/m64
-    PSUBB_PqQq,
+    PsubbPqQq,
     // [66 0F F8 /r] PSUBB xmm1, xmm2/m128
-    PSUBB_VdqWdq,
+    PsubbVdqWdq,
     // [NP 0F F9 /r] PSUBW mm1, mm2/m64
-    PSUBW_PqQq,
+    PsubwPqQq,
     // [66 0F F9 /r] PSUBW xmm1, xmm2/m128
-    PSUBW_VdqWdq,
+    PsubwVdqWdq,
     // [NP 0F FA /r] PSUBD mm1, mm2/m64
-    PSUBD_PqQq,
+    PsubdPqQq,
     // [66 0F FA /r] PSUBD xmm1, xmm2/m128
-    PSUBD_VdqWdq,
+    PsubdVdqWdq,
     // [VEX.128.66.0F.WIG F8 /r] VSUBB xmm1, xmm2, xmm3/m128
-    VPSUBB_VdqHdqWdq_V128,
+    VpsubbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG F9 /r] VSUBW xmm1, xmm2, xmm3/m128
-    VPSUBW_VdqHdqWdq_V128,
+    VpsubwVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG FA /r] VSUBD xmm1, xmm2, xmm3/m128
-    VPSUBD_VdqHdqWdq_V128,
+    VpsubdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG F8 /r] VSUBB ymm1, ymm2, ymm3/m256
-    VPSUBB_VqqHqqWqq_V256,
+    VpsubbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG F9 /r] VSUBW ymm1, ymm2, ymm3/m256
-    VPSUBW_VqqHqqWqq_V256,
+    VpsubwVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG FA /r] VSUBD ymm1, ymm2, ymm3/m256
-    VPSUBD_VqqHqqWqq_V256,
+    VpsubdVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG F8 /r] VSUBB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSUBB_VdqHdqWdq_E128,
+    VpsubbVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG F9 /r] VSUBW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSUBW_VdqHdqWdq_E128,
+    VpsubwVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG FA /r] VSUBD xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSUBD_VdqHdqWdq_E128,
+    VpsubdVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG F8 /r] VSUBB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSUBB_VqqHqqWqq_E256,
+    VpsubbVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG F9 /r] VSUBW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSUBW_VqqHqqWqq_E256,
+    VpsubwVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG FA /r] VSUBD ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSUBD_VqqHqqWqq_E256,
+    VpsubdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W0 F8 /r] VSUBB zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPSUBB_VdqqHdqqWdqq_E512,
+    VpsubbVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.W0 F9 /r] VSUBW zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPSUBW_VdqqHdqqWdqq_E512,
+    VpsubwVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.W0 FA /r] VSUBD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPSUBD_VdqqHdqqWdqq_E512,
+    VpsubdVdqqHdqqWdqqE512,
 
     // [NP 0F FB /r] PSUBQ mm1, mm2/m64
-    PSUBQ_PqQq,
+    PsubqPqQq,
     // [66 0F FB /r] PSUBQ xmm1, xmm2/m128
-    PSUBQ_VdqWdq,
+    PsubqVdqWdq,
     // [VEX.128.66.0F.WIG FB /r] VPSUBQ xmm1, xmm2, xmm3/m128
-    VPSUBQ_VdqHdqWdq_V128,
+    VpsubqVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG FB /r] VPSUBQ ymm1, ymm2, ymm3/m256
-    VPSUBQ_VqqHqqWqq_V256,
+    VpsubqVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 FB /r] VPSUBQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPSUBQ_VdqHdqWdq_E128,
+    VpsubqVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 FB /r] VPSUBQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPSUBQ_VqqHqqWqq_E256,
+    VpsubqVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 FB /r] VPSUBQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPSUBQ_VdqqHdqqWdqq_E512,
+    VpsubqVdqqHdqqWdqqE512,
 
     // [NP 0F E8 /r] PSUBSB mm1, mm2/m64
-    PSUBSB_PqQq,
+    PsubsbPqQq,
     // [66 0F E8 /r] PSUBSB xmm1, xmm2/m128
-    PSUBSB_VdqWdq,
+    PsubsbVdqWdq,
     // [NP 0F E9 /r] PSUBSW mm1, mm2/m64
-    PSUBSW_PqQq,
+    PsubswPqQq,
     // [66 0F E9 /r] PSUBSW xmm1, xmm2/m128
-    PSUBSW_VdqWdq,
+    PsubswVdqWdq,
     // [VEX.128.66.0F.WIG E8 /r] VPSUBSB xmm1, xmm2, xmm3/m128
-    VPSUBSB_VdqHdqWdq_V128,
+    VpsubsbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG E9 /r] VPSUBSW xmm1, xmm2, xmm3/m128
-    VPSUBSW_VdqHdqWdq_V128,
+    VpsubswVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG E8 /r] VPSUBSB ymm1, ymm2, ymm3/m256
-    VPSUBSB_VqqHqqWqq_V256,
+    VpsubsbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG E9 /r] VPSUBSW ymm1, ymm2, ymm3/m256
-    VPSUBSW_VqqHqqWqq_V256,
+    VpsubswVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG E8 /r] VPSUBSB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSUBSB_VdqHdqWdq_E128,
+    VpsubsbVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG E8 /r] VPSUBSB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSUBSB_VqqHqqWqq_E256,
+    VpsubsbVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG E8 /r] VPSUBSB zmm1 {k1}{z}, xmm2, zmm3/m512
-    VPSUBSB_VdqqHdqqWdqq_E512,
+    VpsubsbVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG E9 /r] VPSUBSW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSUBSW_VdqHdqWdq_E128,
+    VpsubswVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG E9 /r] VPSUBSW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSUBSW_VqqHqqWqq_E256,
+    VpsubswVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG E9 /r] VPSUBSW zmm1 {k1}{z}, xmm2, zmm3/m512
-    VPSUBSW_VdqqHdqqWdqq_E512,
+    VpsubswVdqqHdqqWdqqE512,
 
     // [NP 0F D8 /r] PSUBUSB mm1, mm2/m64
-    PSUBUSB_PqQq,
+    PsubusbPqQq,
     // [66 0F D8 /r] PSUBUSB xmm1, xmm2/m128
-    PSUBUSB_VdqWdq,
+    PsubusbVdqWdq,
     // [NP 0F D9 /r] PSUBUSW mm1, mm2/m64
-    PSUBUSW_PqQq,
+    PsubuswPqQq,
     // [66 0F D9 /r] PSUBUSW xmm1, xmm2/m128
-    PSUBUSW_VdqWdq,
+    PsubuswVdqWdq,
     // [VEX.128.66.0F.WIG D8 /r] VPSUBUSB xmm1, xmm2, xmm3/m128
-    VPSUBUSB_VdqHdqWdq_V128,
+    VpsubusbVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG D9 /r] VPSUBUSW xmm1, xmm2, xmm3/m128
-    VPSUBUSW_VdqHdqWdq_V128,
+    VpsubuswVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG D8 /r] VPSUBUSB ymm1, ymm2, ymm3/m256
-    VPSUBUSB_VqqHqqWqq_V256,
+    VpsubusbVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG D9 /r] VPSUBUSW ymm1, ymm2, ymm3/m256
-    VPSUBUSW_VqqHqqWqq_V256,
+    VpsubuswVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG D8 /r] VPSUBUSB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSUBUSB_VdqHdqWdq_E128,
+    VpsubusbVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG D8 /r] VPSUBUSB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSUBUSB_VqqHqqWqq_E256,
+    VpsubusbVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG D8 /r] VPSUBUSB zmm1 {k1}{z}, xmm2, zmm3/m512
-    VPSUBUSB_VdqqHdqqWdqq_E512,
+    VpsubusbVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.WIG D9 /r] VPSUBUSW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSUBUSW_VdqHdqWdq_E128,
+    VpsubuswVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG D9 /r] VPSUBUSW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSUBUSW_VqqHqqWqq_E256,
+    VpsubuswVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG D9 /r] VPSUBUSW zmm1 {k1}{z}, xmm2, zmm3/m512
-    VPSUBUSW_VdqqHdqqWdqq_E512,
+    VpsubuswVdqqHdqqWdqqE512,
 
     // [66 0F 38 17 /r] PTEST xmm1, xmm2/m128
-    PTEST_VdqWdq,
+    PtestVdqWdq,
     // [VEX.128.66.0F38.WIG 17 /r] VPTEST xmm1, xmm2/m128
-    VPTEST_VdqWdq_V128,
+    VptestVdqWdqV128,
     // [VEX.256.66.0F38.WIG 17 /r] VPTEST ymm1, ymm2/m256
-    VPTEST_VqqWqq_V256,
+    VptestVqqWqqV256,
 
     // [F3 0F AE /4] PTWRITE r/m32
-    PTWRITE_Ed,
+    PtwriteEd,
     // [F3 REX.W 0F AE /4] PTWRITE r/m64
-    PTWRITE_Eq,
+    PtwriteEq,
 
     // [NP 0F 68 /r] PUNPCKHBW mm1, mm2/m64
-    PUNPCKHBW_PqQq,
+    PunpckhbwPqQq,
     // [66 0F 68 /r] PUNPCKHBW xmm1, xmm2/m128
-    PUNPCKHBW_VdqWdq,
+    PunpckhbwVdqWdq,
     // [NP 0F 69 /r] PUNPCKHWD mm1, mm2/m64
-    PUNPCKHWD_PqQq,
+    PunpckhwdPqQq,
     // [66 0F 69 /r] PUNPCKHWD xmm1, xmm2/m128
-    PUNPCKHWD_VdqWdq,
+    PunpckhwdVdqWdq,
     // [NP 0F 6A /r] PUNPCKHDQ mm1, mm2/m64
-    PUNPCKHDQ_PqQq,
+    PunpckhdqPqQq,
     // [66 0F 6A /r] PUNPCKHDQ xmm1, xmm2/m128
-    PUNPCKHDQ_VdqWdq,
+    PunpckhdqVdqWdq,
     // [66 0F 6D /r] PUNPCKHQDQ xmm1, xmm2/m128
-    PUNPCKHQDQ_VdqWdq,
+    PunpckhqdqVdqWdq,
     // [VEX.128.66.0F.WIG 68 /r] VPUNPCKHBW xmm1, xmm2, xmm3/m128
-    VPUNPCKHBW_VdqHdqWdq_V128,
+    VpunpckhbwVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 69 /r] VPUNPCKHWD xmm1, xmm2, xmm3/m128
-    VPUNPCKHWD_VdqHdqWdq_V128,
+    VpunpckhwdVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 6A /r] VPUNPCKHDQ xmm1, xmm2, xmm3/m128
-    VPUNPCKHDQ_VdqHdqWdq_V128,
+    VpunpckhdqVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 6D /r] VPUNPCKHQDQ xmm1, xmm2, xmm3/m128
-    VPUNPCKHQDQ_VdqHdqWdq_V128,
+    VpunpckhqdqVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 68 /r] VPUNPCKHBW ymm1, ymm2, ymm3/m256
-    VPUNPCKHBW_VqqHqqWqq_V256,
+    VpunpckhbwVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 69 /r] VPUNPCKHWD ymm1, ymm2, ymm3/m256
-    VPUNPCKHWD_VqqHqqWqq_V256,
+    VpunpckhwdVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 6A /r] VPUNPCKHDQ ymm1, ymm2, ymm3/m256
-    VPUNPCKHDQ_VqqHqqWqq_V256,
+    VpunpckhdqVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 6D /r] VPUNPCKHQDQ ymm1, ymm2, ymm3/m256
-    VPUNPCKHQDQ_VqqHqqWqq_V256,
+    VpunpckhqdqVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG 68 /r] VPUNPCKHBW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPUNPCKHBW_VdqHdqWdq_E128,
+    VpunpckhbwVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG 69 /r] VPUNPCKHWD xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPUNPCKHWD_VdqHdqWdq_E128,
+    VpunpckhwdVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG 6A /r] VPUNPCKHDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPUNPCKHDQ_VdqHdqWdq_E128,
+    VpunpckhdqVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG 6D /r] VPUNPCKHQDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPUNPCKHQDQ_VdqHdqWdq_E128,
+    VpunpckhqdqVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 68 /r] VPUNPCKHBW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPUNPCKHBW_VqqHqqWqq_E256,
+    VpunpckhbwVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG 69 /r] VPUNPCKHWD ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPUNPCKHWD_VqqHqqWqq_E256,
+    VpunpckhwdVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG 6A /r] VPUNPCKHDQ ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPUNPCKHDQ_VqqHqqWqq_E256,
+    VpunpckhdqVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG 6D /r] VPUNPCKHQDQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPUNPCKHQDQ_VqqHqqWqq_E256,
+    VpunpckhqdqVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 68 /r] VPUNPCKHBW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPUNPCKHBW_VdqqHdqqWdqq_E512,
+    VpunpckhbwVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG 69 /r] VPUNPCKHWD zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPUNPCKHWD_VdqqHdqqWdqq_E512,
+    VpunpckhwdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG 6A /r] VPUNPCKHDQ zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPUNPCKHDQ_VdqqHdqqWdqq_E512,
+    VpunpckhdqVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG 6D /r] VPUNPCKHQDQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPUNPCKHQDQ_VdqqHdqqWdqq_E512,
+    VpunpckhqdqVdqqHdqqWdqqE512,
 
     // [NP 0F 60 /r] PUNPCKLBW mm1, mm2/m64
-    PUNPCKLBW_PqQq,
+    PunpcklbwPqQq,
     // [66 0F 60 /r] PUNPCKLBW xmm1, xmm2/m128
-    PUNPCKLBW_VdqWdq,
+    PunpcklbwVdqWdq,
     // [NP 0F 61 /r] PUNPCKLWD mm1, mm2/m64
-    PUNPCKLWD_PqQq,
+    PunpcklwdPqQq,
     // [66 0F 61 /r] PUNPCKLWD xmm1, xmm2/m128
-    PUNPCKLWD_VdqWdq,
+    PunpcklwdVdqWdq,
     // [NP 0F 62 /r] PUNPCKLDQ mm1, mm2/m64
-    PUNPCKLDQ_PqQq,
+    PunpckldqPqQq,
     // [66 0F 62 /r] PUNPCKLDQ xmm1, xmm2/m128
-    PUNPCKLDQ_VdqWdq,
+    PunpckldqVdqWdq,
     // [66 0F 6C /r] PUNPCKLQDQ xmm1, xmm2/m128
-    PUNPCKLQDQ_VdqWdq,
+    PunpcklqdqVdqWdq,
     // [VEX.128.66.0F.WIG 60 /r] VPUNPCKLBW xmm1, xmm2, xmm3/m128
-    VPUNPCKLBW_VdqHdqWdq_V128,
+    VpunpcklbwVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 61 /r] VPUNPCKLWD xmm1, xmm2, xmm3/m128
-    VPUNPCKLWD_VdqHdqWdq_V128,
+    VpunpcklwdVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 62 /r] VPUNPCKLDQ xmm1, xmm2, xmm3/m128
-    VPUNPCKLDQ_VdqHdqWdq_V128,
+    VpunpckldqVdqHdqWdqV128,
     // [VEX.128.66.0F.WIG 6C /r] VPUNPCKLQDQ xmm1, xmm2, xmm3/m128
-    VPUNPCKLQDQ_VdqHdqWdq_V128,
+    VpunpcklqdqVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 60 /r] VPUNPCKLBW ymm1, ymm2, ymm3/m256
-    VPUNPCKLBW_VqqHqqWqq_V256,
+    VpunpcklbwVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 61 /r] VPUNPCKLWD ymm1, ymm2, ymm3/m256
-    VPUNPCKLWD_VqqHqqWqq_V256,
+    VpunpcklwdVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 62 /r] VPUNPCKLDQ ymm1, ymm2, ymm3/m256
-    VPUNPCKLDQ_VqqHqqWqq_V256,
+    VpunpckldqVqqHqqWqqV256,
     // [VEX.256.66.0F.WIG 6C /r] VPUNPCKLQDQ ymm1, ymm2, ymm3/m256
-    VPUNPCKLQDQ_VqqHqqWqq_V256,
+    VpunpcklqdqVqqHqqWqqV256,
     // [EVEX.128.66.0F.WIG 60 /r] VPUNPCKLBW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPUNPCKLBW_VdqHdqWdq_E128,
+    VpunpcklbwVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG 61 /r] VPUNPCKLWD xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPUNPCKLWD_VdqHdqWdq_E128,
+    VpunpcklwdVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG 62 /r] VPUNPCKLDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPUNPCKLDQ_VdqHdqWdq_E128,
+    VpunpckldqVdqHdqWdqE128,
     // [EVEX.128.66.0F.WIG 6C /r] VPUNPCKLQDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPUNPCKLQDQ_VdqHdqWdq_E128,
+    VpunpcklqdqVdqHdqWdqE128,
     // [EVEX.256.66.0F.WIG 60 /r] VPUNPCKLBW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPUNPCKLBW_VqqHqqWqq_E256,
+    VpunpcklbwVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG 61 /r] VPUNPCKLWD ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPUNPCKLWD_VqqHqqWqq_E256,
+    VpunpcklwdVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG 62 /r] VPUNPCKLDQ ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPUNPCKLDQ_VqqHqqWqq_E256,
+    VpunpckldqVqqHqqWqqE256,
     // [EVEX.256.66.0F.WIG 6C /r] VPUNPCKLQDQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPUNPCKLQDQ_VqqHqqWqq_E256,
+    VpunpcklqdqVqqHqqWqqE256,
     // [EVEX.512.66.0F.WIG 60 /r] VPUNPCKLBW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPUNPCKLBW_VdqqHdqqWdqq_E512,
+    VpunpcklbwVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG 61 /r] VPUNPCKLWD zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPUNPCKLWD_VdqqHdqqWdqq_E512,
+    VpunpcklwdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG 62 /r] VPUNPCKLDQ zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPUNPCKLDQ_VdqqHdqqWdqq_E512,
+    VpunpckldqVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F.WIG 6C /r] VPUNPCKLQDQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPUNPCKLQDQ_VdqqHdqqWdqq_E512,
+    VpunpcklqdqVdqqHdqqWdqqE512,
 
     // [FF /6] PUSH r/m16
-    PUSH_Ew,
+    PushEw,
     // [FF /6] PUSH r/m32
-    PUSH_Ed,
+    PushEd,
     // [FF /6] PUSH r/m64
-    PUSH_Eq,
+    PushEq,
     // [50+rw] PUSH r16
-    PUSH_Gw,
+    PushGw,
     // [50+rd] PUSH r32
-    PUSH_Gd,
+    PushGd,
     // [50+rd] PUSH r64
-    PUSH_Gq,
+    PushGq,
     // [6A ib] PUSH imm8
-    PUSH_Ib,
+    PushIb,
     // [68 iw] PUSH imm16
-    PUSH_Iw,
+    PushIw,
     // [68 iw] PUSH imm32
-    PUSH_Id,
+    PushId,
     // [0E] PUSH CS
-    PUSH_CS,
+    PushCS,
     // [16] PUSH SS
-    PUSH_SS,
+    PushSS,
     // [1E] PUSH DS
-    PUSH_DS,
+    PushDS,
     // [06] PUSH ES
-    PUSH_ES,
+    PushES,
     // [0F A0] PUSH FS
-    PUSH_FS,
+    PushFS,
     // [0F A8] PUSH GS
-    PUSH_GS,
+    PushGS,
 
     // [60] PUSHA
-    PUSHA,
+    Pusha,
     // [60] PUSHAD
-    PUSHAD,
+    Pushad,
 
     // [9C] PUSHF
-    PUSHF,
+    Pushf,
     // [9C] PUSHFD
-    PUSHFD,
+    Pushfd,
     // [9C] PUSHFQ
-    PUSHFQ,
+    Pushfq,
 
     // [NP 0F EF /r] PXOR mm1, mm2/m64
-    PXOR_PqQq,
+    PxorPqQq,
     // [66 0F EF /r] PXOR xmm1, xmm2/m128
-    PXOR_VdqWdq,
+    PxorVdqWdq,
     // [VEX.128.66.0F.WIG EF /r] VPXOR xmm1, xmm2, xmm3/m128
-    VPXOR_VdqHdqWdq_V128,
+    VpxorVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG EF /r] VPXOR ymm1, ymm2, ymm3/m256
-    VPXOR_VqqHqqWqq_V256,
+    VpxorVqqHqqWqqV256,
     // [EVEX.128.66.0F.W0 EF /r] VPXORD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPXORD_VdqHdqWdq_E128,
+    VpxordVdqHdqWdqE128,
     // [EVEX.256.66.0F.W0 EF /r] VPXORD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPXORD_VqqHqqWqq_E256,
+    VpxordVqqHqqWqqE256,
     // [EVEX.512.66.0F.W0 EF /r] VPXORD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPXORD_VdqqHdqqWdqq_E512,
+    VpxordVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F.W1 EF /r] VPXORQ xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPXORQ_VdqHdqWdq_E128,
+    VpxorqVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 EF /r] VPXORQ ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPXORQ_VqqHqqWqq_E256,
+    VpxorqVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 EF /r] VPXORQ zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPXORQ_VdqqHdqqWdqq_E512,
+    VpxorqVdqqHdqqWdqqE512,
 
     // [D0 /2] RCL r/m8, 1
     // [REX D0 /2] RCL r/m8, 1
-    RCL_Eb1,
+    RclEb1,
     // [D2 /2] RCL r/m8, CL
     // [REX D2 /2] RCL r/m8, CL
-    RCL_EbCL,
+    RclEbCL,
     // [C0 /2 ib] RCL r/m8, imm8
     // [REX C0 /2 ib] RCL r/m8, imm8
-    RCL_EbIb,
+    RclEbIb,
     // [D1 /2] RCL r/m16, 1
-    RCL_Ew1,
+    RclEw1,
     // [D3 /2] RCL r/m16, CL
-    RCL_EwCL,
+    RclEwCL,
     // [C1 /2 ib] RCL r/m16, imm8
-    RCL_EwIb,
+    RclEwIb,
     // [D1 /2] RCL r/m32, 1
-    RCL_Ed1,
+    RclEd1,
     // [REX.W D1 /2] RCL r/m64, 1
-    RCL_Eq1,
+    RclEq1,
     // [D3 /2] RCL r/m32, CL
-    RCL_EdCL,
+    RclEdCL,
     // [REX.W D3 /2] RCL r/m64, CL
-    RCL_EqCL,
+    RclEqCL,
     // [C1 /2 ib] RCL r/m32, imm8
-    RCL_EdIb,
+    RclEdIb,
     // [REX.W C1 /2 ib] RCL r/m64, imm8
-    RCL_EqIb,
+    RclEqIb,
     // [D0 /3] RCR r/m8, 1
     // [REX D0 /3] RCR r/m8, 1
-    RCR_Eb1,
+    RcrEb1,
     // [D2 /3] RCR r/m8, CL
     // [REX D2 /3] RCR r/m8, CL
-    RCR_EbCL,
+    RcrEbCL,
     // [C0 /3 ib] RCR r/m8, imm8
     // [REX C0 /3 ib] RCR r/m8, imm8
-    RCR_EbIb,
+    RcrEbIb,
     // [D1 /3] RCR r/m16, 1
-    RCR_Ew1,
+    RcrEw1,
     // [D3 /3] RCR r/m16, CL
-    RCR_EwCL,
+    RcrEwCL,
     // [C1 /3 ib] RCR r/m16, imm8
-    RCR_EwIb,
+    RcrEwIb,
     // [D1 /3] RCR r/m32, 1
-    RCR_Ed1,
+    RcrEd1,
     // [REX.W D1 /3] RCR r/m64, 1
-    RCR_Eq1,
+    RcrEq1,
     // [D3 /3] RCR r/m32, CL
-    RCR_EdCL,
+    RcrEdCL,
     // [REX.W D3 /3] RCR r/m64, CL
-    RCR_EqCL,
+    RcrEqCL,
     // [C1 /3 ib] RCR r/m32, imm8
-    RCR_EdIb,
+    RcrEdIb,
     // [REX.W C1 /3 ib] RCR r/m64, imm8
-    RCR_EqIb,
+    RcrEqIb,
     // [D0 /0] ROL r/m8, 1
     // [REX D0 /0] ROL r/m8, 1
-    ROL_Eb1,
+    RolEb1,
     // [D2 /0] ROL r/m8, CL
     // [REX D2 /0] ROL r/m8, CL
-    ROL_EbCL,
+    RolEbCL,
     // [C0 /0 ib] ROL r/m8, imm8
     // [REX C0 /0 ib] ROL r/m8, imm8
-    ROL_EbIb,
+    RolEbIb,
     // [D1 /0] ROL r/m16, 1
-    ROL_Ew1,
+    RolEw1,
     // [D3 /0] ROL r/m16, CL
-    ROL_EwCL,
+    RolEwCL,
     // [C1 /0 ib] ROL r/m16, imm8
-    ROL_EwIb,
+    RolEwIb,
     // [D1 /0] ROL r/m32, 1
-    ROL_Ed1,
+    RolEd1,
     // [REX.W D1 /0] ROL r/m64, 1
-    ROL_Eq1,
+    RolEq1,
     // [D3 /0] ROL r/m32, CL
-    ROL_EdCL,
+    RolEdCL,
     // [REX.W D3 /0] ROL r/m64, CL
-    ROL_EqCL,
+    RolEqCL,
     // [C1 /0 ib] ROL r/m32, imm8
-    ROL_EdIb,
+    RolEdIb,
     // [REX.W C1 /0 ib] ROL r/m64, imm8
-    ROL_EqIb,
+    RolEqIb,
     // [D0 /1] ROR r/m8, 1
     // [REX D0 /1] ROR r/m8, 1
-    ROR_Eb1,
+    RorEb1,
     // [D2 /1] ROR r/m8, CL
     // [REX D2 /1] ROR r/m8, CL
-    ROR_EbCL,
+    RorEbCL,
     // [C0 /1 ib] ROR r/m8, imm8
     // [REX C0 /1 ib] ROR r/m8, imm8
-    ROR_EbIb,
+    RorEbIb,
     // [D1 /1] ROR r/m16, 1
-    ROR_Ew1,
+    RorEw1,
     // [D3 /1] ROR r/m16, CL
-    ROR_EwCL,
+    RorEwCL,
     // [C1 /1 ib] ROR r/m16, imm8
-    ROR_EwIb,
+    RorEwIb,
     // [D1 /1] ROR r/m32, 1
-    ROR_Ed1,
+    RorEd1,
     // [REX.W D1 /1] ROR r/m64, 1
-    ROR_Eq1,
+    RorEq1,
     // [D3 /1] ROR r/m32, CL
-    ROR_EdCL,
+    RorEdCL,
     // [REX.W D3 /1] ROR r/m64, CL
-    ROR_EqCL,
+    RorEqCL,
     // [C1 /1 ib] ROR r/m32, imm8
-    ROR_EdIb,
+    RorEdIb,
     // [REX.W C1 /1 ib] ROR r/m64, imm8
-    ROR_EqIb,
+    RorEqIb,
 
     // [NP 0F 53 /r] RCPPS xmm1, xmm2/m128
-    RCPPS_VdqWdq,
+    RcppsVdqWdq,
     // [VEX.128.0F.WIG 53 /r] VRCPPS xmm1, xmm2/m128
-    VRCPPS_VdqWdq_V128,
+    VrcppsVdqWdqV128,
     // [VEX.256.0F.WIG 53 /r] VRCPPS ymm1, ymm2/m256
-    VRCPPS_VqqWqq_V256,
+    VrcppsVqqWqqV256,
 
     // [F3 0F 53 /r] RCPPS xmm1, xmm2/m32
-    RCPSS_VdqWd,
+    RcpssVdqWd,
     // [VEX.128.F3.0F.WIG 53 /r] VRCPSS xmm1, xmm2, xmm3/m32
-    VRCPSS_VdqHdqWd_V128,
+    VrcpssVdqHdqWdV128,
 
     // [F3 0F AE /0] RDFSBASE r32
-    RDFSBASE_Gd,
+    RdfsbaseGd,
     // [F3 REX.W 0F AE /0] RDFSBASE r64
-    RDFSBASE_Gq,
+    RdfsbaseGq,
     // [F3 0F AE /1] RDGSBASE r32
-    RDGSBASE_Gd,
+    RdgsbaseGd,
     // [F3 REX.W 0F AE /1] RDGSBASE r64
-    RDGSBASE_Gq,
+    RdgsbaseGq,
 
     // [0F 32] RDMSR
-    RDMSR,
+    Rdmsr,
 
     // [F3 0F C7 /7] RDPID r32
-    RDPID_Gd,
+    RdpidGd,
     // [F3 0F C7 /7] RDPID r64
-    RDPID_Gq,
+    RdpidGq,
 
     // [NP 0F 01 EE] RDPKRU
-    RDPKRU,
+    Rdpkru,
 
     // [0F 33] RDPMC
-    RDPMC,
+    Rdpmc,
 
     // [NFx 0F C7 /6] RDRAND r16
-    RDRAND_Gw,
+    RdrandGw,
     // [NFx 0F C7 /6] RDRAND r32
-    RDRAND_Gd,
+    RdrandGd,
     // [NFx REX.W 0F C7 /6] RDRAND r64
-    RDRAND_Gq,
+    RdrandGq,
 
     // [NFx 0F C7 /7] RDSEED r16
-    RDSEED_Gw,
+    RdseedGw,
     // [NFx 0F C7 /7] RDSEED r32
-    RDSEED_Gd,
+    RdseedGd,
     // [NFx REX.W 0F C7 /7] RDSEED r64
-    RDSEED_Gq,
+    RdseedGq,
 
     // [F3 0F 1E /1 (mod=11)] RDSSPD r32
-    RDSSPD_Gd,
+    RdsspdGd,
     // [F3 REX.W 0F 1E /1 (mod=11)] RDSSPQ r64
-    RDSSPQ_Gq,
+    RdsspqGq,
 
     // [0F 31] RDTSC
-    RDTSC,
+    Rdtsc,
 
     // [0F 01 F9] RDTSCP
-    RDTSCP,
+    Rdtscp,
 
     // [F3 6C] REP INS m8, DX
-    REP_INS_YbDX,
+    RepInsYbDX,
     // [F3 6D] REP INS m16, DX
-    REP_INS_YwDX,
+    RepInsYwDX,
     // [F3 6D] REP INS m32, DX
-    REP_INS_YDX,
+    RepInsYDX,
     // [F3 6D] REP INS r/m32, DX
-    REP_INS_YdDX,
+    RepInsYdDX,
     // [F3 A4] REP MOVS m8, m8
     // [F3 REX.W A4] REP MOVS m8, m8
-    REP_MOVS_YbXb,
+    RepMovsYbXb,
     // [F3 A5] REP MOVS m16, m16
-    REP_MOVS_YwXw,
+    RepMovsYwXw,
     // [F3 A5] REP MOVS m32, m32
-    REP_MOVS_YdXd,
+    RepMovsYdXd,
     // [F3 REX.W A5] REP MOVS m64, m64
-    REP_MOVS_YqXq,
+    RepMovsYqXq,
     // [F3 6E] REP OUTS DX, r/m8
     // [F3 REX.W 6E] REP OUTS DX, r/m8
-    REP_OUTS_DXYb,
+    RepOutsDXYb,
     // [F3 6F] REP OUTS DX, r/m16
-    REP_OUTS_DXYw,
+    RepOutsDXYw,
     // [F3 6F] REP OUTS DX, r/m32
     // [F3 REX.W 6F] REP OUTS DX, r/m32
-    REP_OUTS_DXYd,
+    RepOutsDXYd,
     // [F3 AC] REP LODS AL
     // [F3 REX.W AC] REP LODS AL
-    REP_LODS_ALXb,
+    RepLodsALXb,
     // [F3 AD] REP LODS AX
-    REP_LODS_AXXw,
+    RepLodsAXXw,
     // [F3 AD] REP LODS EAX
-    REP_LODS_EAXXd,
+    RepLodsEAXXd,
     // [F3 REX.W AD] REP LODS RAX
-    REP_LODS_RAXXq,
+    RepLodsRAXXq,
     // [F3 AA] REP STOS m8
     // [F3 REX.W AA] REP STOS m8
-    REP_STOS_YbAL,
+    RepStosYbAL,
     // [F3 AB] REP STOS m16
-    REP_STOS_YwAX,
+    RepStosYwAX,
     // [F3 AB] REP STOS m32
-    REP_STOS_YdEAX,
+    RepStosYdEAX,
     // [F3 REX.W AB] REP STOS m64
-    REP_STOS_YqRAX,
+    RepStosYqRAX,
     // [F3 A6] REPE CMPS m8, m8
     // [F3 REX.W A6] REPE CMPS m8, m8
-    REP_CMPS_XbYb,
+    RepCmpsXbYb,
     // [F3 A7] REPE CMPS m16, m16
-    REP_CMPS_XwYw,
+    RepCmpsXwYw,
     // [F3 A7] REPE CMPS m32, m32
-    REP_CMPS_XdYd,
+    RepCmpsXdYd,
     // [F3 REX.W A7] REPE CMPS m64, m64
-    REP_CMPS_XqYq,
+    RepCmpsXqYq,
     // [F3 AE] REPE SCAS m8
     // [F3 REX.W AE] REPE SCAS m8
-    REPE_SCAS_ALYb,
+    RepeScasALYb,
     // [F3 AF] REPE SCAS m16
-    REPE_SCAS_AXYw,
+    RepeScasAXYw,
     // [F3 AF] REPE SCAS m32
-    REPE_SCAS_EAXYd,
+    RepeScasEAXYd,
     // [F3 REX.W AF] REPE SCAS m64
-    REPE_SCAS_RAXYq,
+    RepeScasRAXYq,
     // [F2 A6] REPNE CMPS m8, m8
     // [F2 REX.W A6] REPNE CMPS m8, m8
-    REPNE_CMPS_XbYb,
+    RepneCmpsXbYb,
     // [F2 A7] REPNE CMPS m16, m16
-    REPNE_CMPS_XwYw,
+    RepneCmpsXwYw,
     // [F2 A7] REPNE CMPS m32, m32
-    REPNE_CMPS_XdYd,
+    RepneCmpsXdYd,
     // [F2 REX.W A7] REPNE CMPS m64, m64
-    REPNE_CMPS_XqYq,
+    RepneCmpsXqYq,
     // [F2 AE] REPNE SCAS m8
     // [F2 REX.W AE] REPNE SCAS m8
-    REPNE_SCAS_ALYb,
+    RepneScasALYb,
     // [F2 AF] REPNE SCAS m16
-    REPNE_SCAS_AXYw,
+    RepneScasAXYw,
     // [F2 AF] REPNE SCAS m32
-    REPNE_SCAS_EAXYd,
+    RepneScasEAXYd,
     // [F2 REX.W AF] REPNE SCAS m64
-    REPNE_SCAS_RAXYq,
+    RepneScasRAXYq,
 
     // [C3] RET
-    RET,
+    Ret,
     // [CB] RET
-    RETF,
+    Retf,
     // [C2 iw] RET imm16
-    RET_Iw,
+    RetIw,
     // [CA iw] RET imm16
-    RETF_Iw,
+    RetfIw,
 
     // [VEX.LZ.F2.0F3A.W0 F0 /r ib] RORX r32, r/m32, imm8
-    RORX_GdEdIb_V,
+    RorxGdEdIbV,
     // [VEX.LZ.F2.0F3A.W1 F0 /r ib] RORX r64, r/m64, imm8
-    RORX_GqEqIb_V,
+    RorxGqEqIbV,
 
     // [66 0F 3A 09 /r ib] ROUNDPD xmm1, xmm2/m128, imm8
-    ROUNDPD_VdqWdqIb,
+    RoundpdVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 09 /r ib] VROUNDPD xmm1, xmm2/m128, imm8
-    VROUNDPD_VdqWdqIb_V128,
+    VroundpdVdqWdqIbV128,
     // [VEX.256.66.0F3A.WIG 09 /r ib] VROUNDPD ymm1, ymm2/m256, imm8
-    VROUNDPD_VqqWqqIb_V256,
+    VroundpdVqqWqqIbV256,
 
     // [66 0F 3A 08 /r ib] ROUNDPS xmm1, xmm2/m128, imm8
-    ROUNDPS_VdqWdqIb,
+    RoundpsVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 08 /r ib] VROUNDPS xmm1, xmm2/m128, imm8
-    VROUNDPS_VdqWdqIb_V128,
+    VroundpsVdqWdqIbV128,
     // [VEX.256.66.0F3A.WIG 08 /r ib] VROUNDPS ymm1, ymm2/m256, imm8
-    VROUNDPS_VqqWqqIb_V256,
+    VroundpsVqqWqqIbV256,
 
     // [66 0F 3A 0B /r ib] ROUNDSD xmm1, xmm2/m64, imm8
-    ROUNDSD_VdqWq,
+    RoundsdVdqWq,
     // [VEX.LIG.66.0F3A.WIG 0B /r ib] VROUNDSD xmm1, xmm2, xmm3/m64, imm8
-    VROUNDSD_VdqHdqWqIb_V,
+    VroundsdVdqHdqWqIbV,
 
     // [66 0F 3A 0B /r ib] ROUNDSS xmm1, xmm2/m32, imm8
-    ROUNDSS_VdqWd,
+    RoundssVdqWd,
     // [VEX.LIG.66.0F3A.WIG 0B /r ib] VROUNDSS xmm1, xmm2, xmm3/m32, imm8
-    VROUNDSS_VdqHdqWdIb_V,
+    VroundssVdqHdqWdIbV,
 
     // [0F AA] RSM
-    RSM,
+    Rsm,
 
     // [NP 0F 52 /r] RSQRTPS xmm1, xmm2/m128
-    RSQRTPS_VdqWdq,
+    RsqrtpsVdqWdq,
     // [VEX.128.0F.WIG 52 /r] VRSQRTPS xmm1, xmm2/m128
-    VRSQRTPS_VdqWdq_V128,
+    VrsqrtpsVdqWdqV128,
     // [VEX.256.0F.WIG 52 /r] VRSQRTPS ymm1, ymm2/m256
-    VRSQRTPS_VqqWqq_V256,
+    VrsqrtpsVqqWqqV256,
 
     // [F3 0F 52 /r] RSQRTSS xmm1, xmm2/m32
-    RSQRTSS_VdqWd,
+    RsqrtssVdqWd,
     // [VEX.LIG.F3.0F.WIG 52 /r] VRSQRTSS xmm1, xmm2, xmm3/m32
-    VRSQRTSS_VdqHdqWd_V,
+    VrsqrtssVdqHdqWdV,
 
     // [F3 0F 01 /5 (mod!=11, /5, mem-only)] RSTORSSP m64
-    RSTORSSP_Mq,
+    RstorsspMq,
 
     // [9E] SAHF
-    SAHF,
+    Sahf,
 
     // [D0 /4] SAL r/m8, 1
     // [REX D0 /4] SAL r/m8, 1
     // [D0 /4] SHL r/m8, 1
     // [REX D0 /4] SHL r/m8, 1
-    SAL_Eb1,
+    SalEb1,
     // [D2 /4] SAL r/m8, CL
     // [REX D2 /4] SAL r/m8, CL
     // [D2 /4] SHL r/m8, CL
     // [REX D2 /4] SHL r/m8, CL
-    SAL_EbCL,
+    SalEbCL,
     // [C0 /4 ib] SAL r/m8, imm8
     // [REX C0 /4 ib] SAL r/m8, imm8
     // [C0 /4 ib] SHL r/m8, imm8
     // [REX C0 /4 ib] SHL r/m8, imm8
-    SAL_EbIb,
+    SalEbIb,
     // [D1 /4] SAL r/m16, 1
     // [D1 /4] SAL r/m16, 1
-    SAL_Ew1,
+    SalEw1,
     // [D3 /4] SAL r/m16, CL
     // [D3 /4] SHL r/m16, CL
-    SAL_EwCL,
+    SalEwCL,
     // [C1 /4 ib] SAL r/m32, imm8
     // [C1 /4 ib] SHL r/m32, imm8
-    SAL_EdIb,
+    SalEdIb,
     // [D1 /4] SAL r/m32, 1
     // [D1 /4] SHL r/m32, 1
-    SAL_Ed1,
+    SalEd1,
     // [REX.W D1 /4] SAL r/m64, 1
     // [REX.W D1 /4] SHL r/m64, 1
-    SAL_Eq1,
+    SalEq1,
     // [D3 /4] SAL r/m32, CL
     // [D3 /4] SHL r/m32, CL
-    SAL_EdCL,
+    SalEdCL,
     // [REX.W D3 /4] SAL r/m64, CL
     // [REX.W D3 /4] SHL r/m64, CL
-    SAL_EqCL,
+    SalEqCL,
     // [REX.W C1 /4 ib] SAL r/m64, imm8
     // [REX.W C1 /4 ib] SHL r/m64, imm8
-    SAL_EqIb,
+    SalEqIb,
     // [D0 /7] SAR r/m8, 1
-    SAR_Eb1,
+    SarEb1,
     // [D2 /7] SAR r/m8, CL
     // [REX D2 /7] SAR r/m8, CL
-    SAR_EbCL,
+    SarEbCL,
     // [C0 /7 ib] SAR r/m8, imm8
     // [REX C0 /7 ib] SAR r/m8, imm8
-    SAR_EbIb,
+    SarEbIb,
     // [D1 /7] SAR r/m16, 1
-    SAR_Ew1,
+    SarEw1,
     // [D3 /7] SAR r/m16, CL
-    SAR_EwCL,
+    SarEwCL,
     // [C1 /7 ib] SAR r/m32, imm8
-    SAR_EdIb,
+    SarEdIb,
     // [D1 /7] SAR r/m32, 1
-    SAR_Ed1,
+    SarEd1,
     // [REX.W D1 /7] SAR r/m64, 1
-    SAR_Eq1,
+    SarEq1,
     // [D3 /7] SAR r/m32, CL
-    SAR_EdCL,
+    SarEdCL,
     // [REX.W D3 /7] SAR r/m64, CL
-    SAR_EqCL,
+    SarEqCL,
     // [REX.W C1 /7 ib] SAR r/m64, imm8
-    SAR_EqIb,
+    SarEqIb,
     // [D0 /5] SHR r/m8, 1
     // [REX D0 /5] SHR r/m8, 1
-    SHR_Eb1,
+    ShrEb1,
     // [D2 /5] SHR r/m8, CL
     // [REX D2 /5] SHR r/m8, CL
-    SHR_EbCL,
+    ShrEbCL,
     // [C0 /5 ib] SHR r/m8, imm8
     // [REX C0 /5 ib] SHR r/m8, imm8
-    SHR_EbIb,
+    ShrEbIb,
     // [D1 /5] SHR r/m16, 1
-    SHR_Ew1,
+    ShrEw1,
     // [D3 /5] SHR r/m16, CL
-    SHR_EwCL,
+    ShrEwCL,
     // [C1 /5 ib] SHR r/m32, imm8
-    SHR_EdIb,
+    ShrEdIb,
     // [D1 /5] SHR r/m32, 1
-    SHR_Ed1,
+    ShrEd1,
     // [REX.W D1 /5] SHR r/m64, 1
-    SHR_Eq1,
+    ShrEq1,
     // [D3 /5] SHR r/m32, CL
-    SHR_EdCL,
+    ShrEdCL,
     // [REX.W D3 /5] SHR r/m64, CL
-    SHR_EqCL,
+    ShrEqCL,
     // [REX.W C1 /5 ib] SHR r/m64, imm8
-    SHR_EqIb,
+    ShrEqIb,
 
     // [VEX.LZ.F3.0F38.W0 F7 /r] SARX r32a, r/m32, r32b
-    SARX_GdEdBd,
+    SarxGdEdBd,
     // [VEX.LZ.66.0F38.W0 F7 /r] SHLX r32a, r/m32, r32b
-    SHLX_GdEdBd,
+    ShlxGdEdBd,
     // [VEX.LZ.F2.0F38.W0 F7 /r] SHRX r32a, r/m32, r32b
-    SHRX_GdEdBd,
+    ShrxGdEdBd,
     // [VEX.LZ.F3.0F38.W1 F7 /r] SARX r64a, r/m64, r64b
-    SARX_GqEqBq,
+    SarxGqEqBq,
     // [VEX.LZ.66.0F38.W1 F7 /r] SHLX r64a, r/m64, r64b
-    SHLX_GqEqBq,
+    ShlxGqEqBq,
     // [VEX.LZ.F2.0F38.W1 F7 /r] SHRX r64a, r/m64, r64b
-    SHRX_GqEqBq,
+    ShrxGqEqBq,
 
     // [F3 0F 01 EA (mod!=11, /5, rm=010)] SAVEPREVSSP
-    SAVEPREVSSP,
+    Saveprevssp,
 
     // [1C ib] SBB AL, imm8
-    SBB_ALIb,
+    SbbALIb,
     // [1D iw] SBB AX, imm16
-    SBB_AXIw,
+    SbbAXIw,
     // [1D id] SBB EAX, imm32
-    SBB_EAXId,
+    SbbEAXId,
     // [REX.W 1D id] SBB RAX, imm32
-    SBB_RAXId,
+    SbbRAXId,
     // [80 /3 ib] SBB r/m8, imm8
     // [REX 80 /3 ib] SBB r/m8, imm8
-    SBB_EbIb,
+    SbbEbIb,
     // [81 /3 iw] SBB r/m16, imm16
-    SBB_EwIw,
+    SbbEwIw,
     // [81 /3 id] SBB r/m32, imm32
-    SBB_EdId,
+    SbbEdId,
     // [REX.W 81 /3 id] SBB r/m64, imm32
-    SBB_EqId,
+    SbbEqId,
     // [83 /3 ib] SBB r/m16, imm8
-    SBB_EwIb,
+    SbbEwIb,
     // [83 /3 ib] SBB r/m32, imm8
-    SBB_EdIb,
+    SbbEdIb,
     // [REX.W 83 /3 ib] SBB r/m64, imm8
-    SBB_EqIb,
+    SbbEqIb,
     // [18 /r] SBB r/m8, r8
-    SBB_EbGb,
+    SbbEbGb,
     // [19 /r] SBB r/m16, r16
-    SBB_EwGw,
+    SbbEwGw,
     // [19 /r] SBB r/m32, r32
-    SBB_EdGd,
+    SbbEdGd,
     // [REX.W 19 /r] SBB r/m64, r64
-    SBB_EqGq,
+    SbbEqGq,
     // [1A /r] SBB r8, r/m8
     // [REX 1A /r] SBB r8, r/m8
-    SBB_GbEb,
+    SbbGbEb,
     // [1B /r] SBB r16, r/m16
-    SBB_GwEw,
+    SbbGwEw,
     // [1B /r] SBB r32, r/m32
-    SBB_GdEd,
+    SbbGdEd,
     // [REX.W 1B /r] SBB r64, r/m64
-    SBB_GqEq,
+    SbbGqEq,
 
     // [AE] SCAS m8
     // [AE] SCASB
-    SCAS_ALYb,
+    ScasALYb,
     // [AF] SCAS m16
     // [AF] SCASW
-    SCAS_AXYw,
+    ScasAXYw,
     // [AF] SCAS m32
     // [AF] SCASD
-    SCAS_EAXYd,
+    ScasEAXYd,
     // [REX.W AF] SCAS m64
     // [REX.W AF] SCASQ
-    SCAS_RAXYq,
+    ScasRAXYq,
 
     // [0F 90] SETO r/m8
     // [REX 0F 90] SETO r/m8
-    SETO_Eb,
+    SetoEb,
     // [0F 91] SETNO r/m8
     // [REX 0F 91] SETNO r/m8
-    SETNO_Eb,
+    SetnoEb,
     // [0F 92] SETB r/m8
     // [REX 0F 92] SETB r/m8
     // [0F 92] SETC r/m8
     // [REX 0F 92] SETC r/m8
     // [0F 92] SETAE r/m8
     // [REX 0F 92] SETAE r/m8
-    SETB_Eb,
+    SetbEb,
     // [0F 93] SETAE r/m8
     // [REX 0F 93] SETAE r/m8
     // [0F 93] SETNB r/m8
     // [REX 0F 93] SETNB r/m8
     // [0F 93] SETNC r/m8
     // [REX 0F 93] SETNC r/m8
-    SETAE_Eb,
+    SetaeEb,
     // [0F 94] SETE r/m8
     // [REX 0F 94] SETE r/m8
     // [0F 94] SETZ r/m8
     // [REX 0F 94] SETZ r/m8
-    SETE_Eb,
+    SeteEb,
     // [0F 95] SETNE r/m8
     // [REX 0F 95] SETNE r/m8
     // [0F 95] SETNZ r/m8
     // [REX 0F 95] SETNZ r/m8
-    SETNE_Eb,
+    SetneEb,
     // [0F 96] SETBE r/m8
     // [REX 0F 96] SETBE r/m8
     // [0F 96] SETNA r/m8
     // [REX 0F 96] SETNA r/m8
-    SETBE_Eb,
+    SetbeEb,
     // [0F 97] SETA r/m8
     // [REX 0F 97] SETA r/m8
     // [0F 97] SETNBE r/m8
     // [REX 0F 97] SETNBE r/m8
-    SETA_Eb,
+    SetaEb,
     // [0F 98] SETS r/m8
     // [REX 0F 98] SETS r/m8
-    SETS_Eb,
+    SetsEb,
     // [0F 99] SETNS r/m8
     // [REX 0F 99] SETNS r/m8
-    SETNS_Eb,
+    SetnsEb,
     // [0F 9A] SETP r/m8
     // [REX 0F 9A] SETP r/m8
     // [0F 9A] SETPE r/m8
     // [REX 0F 9A] SETPE r/m8
-    SETP_Eb,
+    SetpEb,
     // [0F 9B] SETNP r/m8
     // [REX 0F 9B] SETNP r/m8
     // [0F 9B] SETPO r/m8
     // [REX 0F 9B] SETPO r/m8
-    SETNP_Eb,
+    SetnpEb,
     // [0F 9C] SETL r/m8
     // [REX 0F 9C] SETL r/m8
     // [0F 9C] SETNGE r/m8
     // [REX 0F 9C] SETNGE r/m8
-    SETL_Eb,
+    SetlEb,
     // [0F 9D] SETGE r/m8
     // [REX 0F 9D] SETGE r/m8
     // [0F 9D] SETNL r/m8
     // [REX 0F 9D] SETNL r/m8
-    SETGE_Eb,
+    SetgeEb,
     // [0F 9E] SETLE r/m8
     // [REX 0F 9E] SETLE r/m8
     // [0F 9E] SETNG r/m8
     // [REX 0F 9E] SETNG r/m8
-    SETLE_Eb,
+    SetleEb,
     // [0F 9F] SETG r/m8
     // [REX 0F 9F] SETG r/m8
     // [0F 9F] SETNLE r/m8
     // [REX 0F 9F] SETNLE r/m8
-    SETG_Eb,
+    SetgEb,
 
     // [F3 0F 01 E8] SETSSBSY
-    SETSSBSY,
+    Setssbsy,
 
     // [NP 0F AE F8] SFENCE
-    SFENCE,
+    Sfence,
 
     // [0F 01 /0] SGDT mem
-    SGDT_M,
+    SgdtM,
 
     // [NP 0F 3A CC /r ib] SHA1RNDS4 xmm1, xmm2/m128, imm8
-    SHA1RNDS4_VdqWdqIb,
+    Sha1rnds4VdqWdqIb,
 
     // [NP 0F 38 C8 /r] SHA1NEXTE xmm1, xmm2/m128
-    SHA1NEXTE_VdqWdq,
+    Sha1nexteVdqWdq,
 
     // [NP 0F 38 C9 /r] SHA1MSG1 xmm1, xmm2/m128
-    SHA1MSG1_VdqWdq,
+    Sha1msg1VdqWdq,
 
     // [NP 0F 38 CA /r] SHA1MSG2 xmm1, xmm2/m128
-    SHA1MSG2_VdqWdq,
+    Sha1msg2VdqWdq,
 
     // [NP 0F 38 CB /r] SHA256RNDS2 xmm1, xmm2/m128, <XMM0>
-    SHA256RNDS2_VdqWdq,
+    Sha256rnds2VdqWdq,
 
     // [NP 0F 38 CC /r] SHA256MSG1 xmm1, xmm2/m128
-    SHA256MSG1_VdqWdq,
+    Sha256msg1VdqWdq,
 
     // [NP 0F 38 CD /r] SHA256MSG2 xmm1, xmm2/m128
-    SHA256MSG2_VdqWdq,
+    Sha256msg2VdqWdq,
 
     // [0F A4 /r ib] SHLD r/m16, r16, imm8
-    SHLD_EwGwIb,
+    ShldEwGwIb,
     // [0F A5 /r] SHLD r/m16, r16, CL
-    SHLD_EwGwCL,
+    ShldEwGwCL,
     // [0F A4 /r ib] SHLD r/m32, r32, imm8
-    SHLD_EdGdIb,
+    ShldEdGdIb,
     // [0F A5 /r] SHLD r/m32, r32, CL
-    SHLD_EdGdCL,
+    ShldEdGdCL,
     // [REX.W 0F A4 /r ib] SHLD r/m64, r64, imm8
-    SHLD_EqGqIb,
+    ShldEqGqIb,
     // [REX.W 0F A5 /r] SHLD r/m64, r64, CL
-    SHLD_EqGqCL,
+    ShldEqGqCL,
 
     // [0F AC /r ib] SHRD r/m16, r16, imm8
-    SHRD_EwGwIb,
+    ShrdEwGwIb,
     // [0F AD /r] SHRD r/m16, r16, CL
-    SHRD_EwGwCL,
+    ShrdEwGwCL,
     // [0F AC /r ib] SHRD r/m32, r32, imm8
-    SHRD_EdGdIb,
+    ShrdEdGdIb,
     // [0F AD /r] SHRD r/m32, r32, CL
-    SHRD_EdGdCL,
+    ShrdEdGdCL,
     // [REX.W 0F AC /r ib] SHRD r/m64, r64, imm8
-    SHRD_EqGqIb,
+    ShrdEqGqIb,
     // [REX.W 0F AD /r] SHRD r/m64, r64, CL
-    SHRD_EqGqCL,
+    ShrdEqGqCL,
 
     // [66 0F C6 /r ib] SHUFPD xmm1, xmm2/m128, imm8
-    SHUFPD_VdqWdqIb,
+    ShufpdVdqWdqIb,
     // [VEX.128.66.0F.WIG C6 /r ib] VSHUFPD xmm1, xmm2, xmm3/m128, imm8
-    VSHUFPD_VdqHdqWdqIb_V128,
+    VshufpdVdqHdqWdqIbV128,
     // [VEX.256.66.0F.WIG C6 /r ib] VSHUFPD ymm1, ymm2, ymm3/m256, imm8
-    VSHUFPD_VqqHqqWqqIb_V256,
+    VshufpdVqqHqqWqqIbV256,
     // [EVEX.128.66.0F.W1 C6 /r ib] VSHUFPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VSHUFPD_VdqHdqWdqIb_E128,
+    VshufpdVdqHdqWdqIbE128,
     // [EVEX.256.66.0F.W1 C6 /r ib] VSHUFPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VSHUFPD_VqqHqqWqqIb_E256,
+    VshufpdVqqHqqWqqIbE256,
     // [EVEX.512.66.0F.W1 C6 /r ib] VSHUFPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst, imm8
-    VSHUFPD_VdqqHdqqWdqqIb_E512,
+    VshufpdVdqqHdqqWdqqIbE512,
 
     // [NP 0F C6 /r ib] SHUFPS xmm1, xmm2/m128, imm8
-    SHUFPS_VdqWdqIb,
+    ShufpsVdqWdqIb,
     // [VEX.128.0F.WIG C6 /r ib] VSHUFPS xmm1, xmm2, xmm3/m128, imm8
-    VSHUFPS_VdqHdqWdqIb_V128,
+    VshufpsVdqHdqWdqIbV128,
     // [VEX.256.0F.WIG C6 /r ib] VSHUFPS ymm1, ymm2, ymm3/m256, imm8
-    VSHUFPS_VqqHqqWqqIb_V256,
+    VshufpsVqqHqqWqqIbV256,
     // [EVEX.128.0F.W0 C6 /r ib] VSHUFPS xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VSHUFPS_VdqHdqWdqIb_E128,
+    VshufpsVdqHdqWdqIbE128,
     // [EVEX.256.0F.W0 C6 /r ib] VSHUFPS ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VSHUFPS_VqqHqqWqqIb_E256,
+    VshufpsVqqHqqWqqIbE256,
     // [EVEX.512.0F.W0 C6 /r ib] VSHUFPS zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst, imm8
-    VSHUFPS_VdqqHdqqWdqqIb_E512,
+    VshufpsVdqqHdqqWdqqIbE512,
 
     // [0F 01 /1] SIDT mem
-    SIDT_M,
+    SidtM,
 
     // [0F 00 /0] SLDT r/m16
-    SLDT_Ew,
+    SldtEw,
     // [REX.W 0F 00 /0] SLDT r64/m16
-    SLDT_Eq,
+    SldtEq,
 
     // [0F 01 /4] SMSW r/m16
-    SMSW_Ew,
+    SmswEw,
     // [0F 01 /4] SMSW r32/m16
-    SMSW_Ed,
+    SmswEd,
     // [REX.W 0F 01 /4] SMSW r64/m16
-    SMSW_Eq,
+    SmswEq,
 
     // [66 0F 51 /r] SQRTPD xmm1, xmm2/m128
-    SQRTPD_VdqWdq,
+    SqrtpdVdqWdq,
     // [VEX.128.66.0F.WIG 51 /r] VSQRTPD xmm1, xmm2/m128
-    VSQRTPD_VdqWdq_V128,
+    VsqrtpdVdqWdqV128,
     // [VEX.256.66.0F.WIG 51 /r] VSQRTPD ymm1, ymm2/m256
-    VSQRTPD_VqqWqq_V256,
+    VsqrtpdVqqWqqV256,
     // [EVEX.128.66.0F.W1 51 /r] VSQRTPD xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VSQRTPD_VdqWdq_E128,
+    VsqrtpdVdqWdqE128,
     // [EVEX.256.66.0F.W1 51 /r] VSQRTPD ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VSQRTPD_VqqWqq_E256,
+    VsqrtpdVqqWqqE256,
     // [EVEX.512.66.0F.W1 51 /r] VSQRTPD zmm1 {k1}{z}, zmm2/m512/m64bcst{er}
-    VSQRTPD_VdqqWdqq_E512,
+    VsqrtpdVdqqWdqqE512,
 
     // [NP 0F 51 /r] SQRTPS xmm1, xmm2/m128
-    SQRTPS_VdqWdq,
+    SqrtpsVdqWdq,
     // [VEX.128.0F.WIG 51 /r] VSQRTPS xmm1, xmm2/m128
-    VSQRTPS_VdqWdq_V128,
+    VsqrtpsVdqWdqV128,
     // [VEX.256.0F.WIG 51 /r] VSQRTPS ymm1, ymm2/m256
-    VSQRTPS_VqqWqq_V256,
+    VsqrtpsVqqWqqV256,
     // [EVEX.128.0F.W1 51 /r] VSQRTPS xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VSQRTPS_VdqWdq_E128,
+    VsqrtpsVdqWdqE128,
     // [EVEX.256.0F.W1 51 /r] VSQRTPS ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VSQRTPS_VqqWqq_E256,
+    VsqrtpsVqqWqqE256,
     // [EVEX.512.0F.W1 51 /r] VSQRTPS zmm1 {k1}{z}, zmm2/m512/m32bcst{er}
-    VSQRTPS_VdqqWdqq_E512,
+    VsqrtpsVdqqWdqqE512,
 
     // [F2 0F 51 /r] SQRTSD xmm1, xmm2/m64
-    SQRTSD_VdqWq,
+    SqrtsdVdqWq,
     // [VEX.LIG.F2.0F.WIG 51 /r] VSQRTSD xmm1, xmm2, xmm3/m64
-    VSQRTSD_VdqHdqWq_V,
+    VsqrtsdVdqHdqWqV,
     // [EVEX.LIG.F2.0F.W1 51 /r] VSQRTSD xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VSQRTSD_VdqHdqWq_E,
+    VsqrtsdVdqHdqWqE,
 
     // [F2 0F 51 /r] SQRTSS xmm1, xmm2/m64
-    SQRTSS_VdqWq,
+    SqrtssVdqWq,
     // [VEX.LIG.F2.0F.WIG 51 /r] VSQRTSS xmm1, xmm2, xmm3/m32
-    VSQRTSS_VdqHdqWd_V,
+    VsqrtssVdqHdqWdV,
     // [EVEX.LIG.F2.0F.W1 51 /r] VSQRTSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
-    VSQRTSS_VdqHdqWd_E,
+    VsqrtssVdqHdqWdE,
 
     // [NP 0F 01 CB] STAC
-    STAC,
+    Stac,
 
     // [F9] STC
-    STC,
+    Stc,
 
     // [FD] STD
-    STD,
+    Std,
 
     // [FB] STI
-    STI,
+    Sti,
 
     // [NP 0F AE /3] STMXCSR m32
-    STMXCSR_Md,
+    StmxcsrMd,
     // [VEX.LZ.0F.WIG AE /3] VSTMXCSR m32
-    VSTMXCSR_Md_V,
+    VstmxcsrMdV,
 
     // [AA] STOS m8
     // [AA] STOSB
-    STOS_YbAL,
+    StosYbAL,
     // [AB] STOS m16
     // [AB] STOSW
-    STOS_YwAX,
+    StosYwAX,
     // [AB] STOS m32
     // [AB] STOSD
-    STOS_YdEAX,
+    StosYdEAX,
     // [REX.W AB] STOS m64
     // [REX.W AB] STOSQ
-    STOS_YqRAX,
+    StosYqRAX,
 
     // [0F 00 /1] STR r/m16
-    STR_Ew,
+    StrEw,
 
     // [2C ib] SUB AL, imm8
-    SUB_ALIb,
+    SubALIb,
     // [2D iw] SUB AX, imm16
-    SUB_AXIw,
+    SubAXIw,
     // [2D id] SUB EAX, imm32
-    SUB_EAXId,
+    SubEAXId,
     // [REX.W 2D id] SUB RAX, imm32
-    SUB_RAXId,
+    SubRAXId,
     // [80 /5 ib] SUB r/m8, imm8
     // [REX 80 /5 ib] SUB r/m8, imm8
-    SUB_EbIb,
+    SubEbIb,
     // [81 /5 iw] SUB r/m16, imm16
-    SUB_EwIw,
+    SubEwIw,
     // [81 /5 id] SUB r/m32, imm32
-    SUB_EdId,
+    SubEdId,
     // [REX.W 81 /5 id] SUB r/m64, imm32
-    SUB_EqId,
+    SubEqId,
     // [83 /5 ib] SUB r/m16, imm8
-    SUB_EwIb,
+    SubEwIb,
     // [83 /5 ib] SUB r/m32, imm8
-    SUB_EdIb,
+    SubEdIb,
     // [REX.W 83 /5 ib] SUB r/m64, imm8
-    SUB_EqIb,
+    SubEqIb,
     // [28 /r] SUB r/m8, r8
     // [REX 28 /r] SUB r/m8, r8
-    SUB_EbGb,
+    SubEbGb,
     // [29 /r] SUB r/m16, r16
-    SUB_EwGw,
+    SubEwGw,
     // [29 /r] SUB r/m32, r32
-    SUB_EdGd,
+    SubEdGd,
     // [REX.W 29 /r] SUB r/m64, r64
-    SUB_EqGq,
+    SubEqGq,
     // [2A /r] SUB r8, r/m8
     // [REX 2A /r] SUB r8, r/m8
-    SUB_GbEb,
+    SubGbEb,
     // [2B /r] SUB r16, r/m16
-    SUB_GwEw,
+    SubGwEw,
     // [2B /r] SUB r32, r/m32
-    SUB_GdEd,
+    SubGdEd,
     // [REX.W 2B /r] SUB r64, r/m64
-    SUB_GqEq,
+    SubGqEq,
 
     // [66 0F 5C /r] SUBPD xmm1, xmm2/m128
-    SUBPD_VdqWdq,
+    SubpdVdqWdq,
     // [VEX.128.66.0F.WIG 5C /r] VSUBPD xmm1, xmm2, xmm3/m128
-    VSUBPD_VdqHdqWdq_V128,
+    VsubpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 5C /r] VSUBPD ymm1, ymm2, ymm3/m256
-    VSUBPD_VqqHqqWqq_V256,
+    VsubpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 5C /r] VSUBPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VSUBPD_VdqHdqWdq_E128,
+    VsubpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 5C /r] VSUBPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VSUBPD_VqqHqqWqq_E256,
+    VsubpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 5C /r] VSUBPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VSUBPD_VdqqHdqqWdqq_E512,
+    VsubpdVdqqHdqqWdqqE512,
 
     // [NP 0F 5C /r] SUBPS xmm1, xmm2/m128
-    SUBPS_VdqWdq,
+    SubpsVdqWdq,
     // [VEX.128.0F.WIG 5C /r] VSUBPS xmm1, xmm2, xmm3/m128
-    VSUBPS_VdqHdqWdq_V128,
+    VsubpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 5C /r] VSUBPS ymm1, ymm2, ymm3/m256
-    VSUBPS_VqqHqqWqq_V256,
+    VsubpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 5C /r] VSUBPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VSUBPS_VdqHdqWdq_E128,
+    VsubpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 5C /r] VSUBPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VSUBPS_VqqHqqWqq_E256,
+    VsubpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 5C /r] VSUBPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VSUBPS_VdqqHdqqWdqq_E512,
+    VsubpsVdqqHdqqWdqqE512,
 
     // [F2 0F 5C /r] SUBSD xmm1, xmm2/m64
-    SUBSD_VdqWq,
+    SubsdVdqWq,
     // [VEX.LIG.F2.0F.WIG 5C /r] VSUBSD xmm1, xmm2, xmm3/m64
-    VSUBSD_VdqHdqWq_V,
+    VsubsdVdqHdqWqV,
     // [EVEX.LIG.F2.0F.W1 5C /r] VSUBSD xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VSUBSD_VdqHdqWq_E,
+    VsubsdVdqHdqWqE,
 
     // [F3 0F 5C /r] SUBSS xmm1, xmm2/m32
-    SUBSS_VdqWd,
+    SubssVdqWd,
     // [VEX.LIG.F2.0F.WIG 5C /r] VSUBSS xmm1, xmm2, xmm3/m32
-    VSUBSS_VdqHdqWd_V,
+    VsubssVdqHdqWdV,
     // [EVEX.LIG.F2.0F.W1 5C /r] VSUBSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
-    VSUBSS_VdqHdqWd_E,
+    VsubssVdqHdqWdE,
 
     // [0F 01 F8] SWAPGS
-    SWAPGS,
+    Swapgs,
 
     // [0F 05] SYSCALL
-    SYSCALL,
+    Syscall,
 
     // [0F 34] SYSENTER
-    SYSENTER,
+    Sysenter,
 
     // [0F 35] SYSEXIT
     // [REX.W 0F 35] SYSEXIT
-    SYSEXIT,
+    Sysexit,
 
     // [0F 07] SYSRET
     // [REX.W 0F 07] SYSRET
-    SYSRET,
+    Sysret,
 
     // [A8 ib] TEST AL, imm8
-    TEST_ALIb,
+    TestALIb,
     // [A9 iw] TEST AX, imm16
-    TEST_AXIw,
+    TestAXIw,
     // [A9 id] TEST EAX, imm32
-    TEST_EAXId,
+    TestEAXId,
     // [REX.W A9 id] TEST RAX, imm32
-    TEST_RAXId,
+    TestRAXId,
     // [F6 /0 ib] TEST r/m8, imm8
     // [REX F6 /0 ib] TEST r/m8, imm8
-    TEST_EbIb,
+    TestEbIb,
     // [F7 /0 iw] TEST r/m16, imm16
-    TEST_EwIw,
+    TestEwIw,
     // [F7 /0 id] TEST r/m32, imm32
-    TEST_EdId,
+    TestEdId,
     // [REX.W F7 /0 id] TEST r/m64, imm32
-    TEST_EqId,
+    TestEqId,
     // [84 /r] TEST r/m8, r8
     // [REX 84 /r] TEST r/m8, r8
-    TEST_EbGb,
+    TestEbGb,
     // [85 /r] TEST r/m16, r16
-    TEST_EwGw,
+    TestEwGw,
     // [85 /r] TEST r/m32, r32
-    TEST_EdGd,
+    TestEdGd,
     // [REX.W 85 /r] TEST r/m64, r64
-    TEST_EqGq,
+    TestEqGq,
 
     // [66 0F AE /6] TPAUSE r32
-    TPAUSE_Gd,
+    TpauseGd,
 
     // [F3 0F BC /r] TZCNT r16, r/m16
-    TZCNT_GwEw,
+    TzcntGwEw,
     // [F3 0F BC /r] TZCNT r32, r/m32
-    TZCNT_GdEd,
+    TzcntGdEd,
     // [F3 REX.W 0F BC /r] TZCNT r64, r/m64
-    TZCNT_GqEq,
+    TzcntGqEq,
 
     // [66 0F 2E /r] UCOMISD xmm1, xmm2/m64
-    UCOMISD_VdqWq,
+    UcomisdVdqWq,
     // [VEX.LIG.66.0F.WIG 2E /r] VUCOMISD xmm1, xmm2/m64
-    VUCOMISD_VdqWq_V,
+    VucomisdVdqWqV,
     // [EVEX.LIG.66.0F.W1 2E /r] VUCOMISD xmm1, xmm2/m64{sae}
-    VUCOMISD_VdqWq_E,
+    VucomisdVdqWqE,
 
     // [NP 0F 2E /r] UCOMISS xmm1, xmm2/m32
-    UCOMISS_VdqWd,
+    UcomissVdqWd,
     // [VEX.LIG.0F.WIG 2E /r] VUCOMISS xmm1, xmm2/m32
-    VUCOMISS_VdqWd_V,
+    VucomissVdqWdV,
     // [EVEX.LIG.0F.W1 2E /r] VUCOMISS xmm1, xmm2/m32{sae}
-    VUCOMISS_VdqWd_E,
+    VucomissVdqWdE,
 
     // [0F FF /r] UD0 r32, r/m32
-    UD0_GdEd,
+    Ud0GdEd,
     // [0F B9 /r] UD1 r32, r/m32
-    UD1_GdEd,
+    Ud1GdEd,
     // [0F 0B] UD2
-    UD2,
+    Ud2,
 
     // [F3 0F AE /6] UMONITOR r16/r32/r64
-    UMONITOR_E,
+    UmonitorE,
 
     // [F2 0F AE /6] UMWAIT r32
-    UMWAIT_Gd,
+    UmwaitGd,
 
     // [66 0F 15 /r] UNPCKHPD xmm1, xmm2/m128
-    UNPCKHPD_VdqWdq,
+    UnpckhpdVdqWdq,
     // [VEX.128.66.0F.WIG 15 /r] VUNPCKHPD xmm1, xmm2, xmm3/m128
-    VUNPCKHPD_VdqHdqWdq_V128,
+    VunpckhpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 15 /r] VUNPCKHPD ymm1, ymm2, ymm3/m256
-    VUNPCKHPD_VqqHqqWqq_V256,
+    VunpckhpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 15 /r] VUNPCKHPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VUNPCKHPD_VdqHdqWdq_E128,
+    VunpckhpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 15 /r] VUNPCKHPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VUNPCKHPD_VqqHqqWqq_E256,
+    VunpckhpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 15 /r] VUNPCKHPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VUNPCKHPD_VdqqHdqqWdqq_E512,
+    VunpckhpdVdqqHdqqWdqqE512,
 
     // [NP 0F 15 /r] UNPCKHPS xmm1, xmm2/m128
-    UNPCKHPS_VdqWdq,
+    UnpckhpsVdqWdq,
     // [VEX.128.0F.WIG 15 /r] VUNPCKHPS xmm1, xmm2, xmm3/m128
-    VUNPCKHPS_VdqHdqWdq_V128,
+    VunpckhpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 15 /r] VUNPCKHPS ymm1, ymm2, ymm3/m256
-    VUNPCKHPS_VqqHqqWqq_V256,
+    VunpckhpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 15 /r] VUNPCKHPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VUNPCKHPS_VdqHdqWdq_E128,
+    VunpckhpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 15 /r] VUNPCKHPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VUNPCKHPS_VqqHqqWqq_E256,
+    VunpckhpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 15 /r] VUNPCKHPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VUNPCKHPS_VdqqHdqqWdqq_E512,
+    VunpckhpsVdqqHdqqWdqqE512,
 
     // [66 0F 14 /r] UNPCKLPD xmm1, xmm2/m128
-    UNPCKLPD_VdqWdq,
+    UnpcklpdVdqWdq,
     // [VEX.128.66.0F.WIG 14 /r] VUNPCKLPD xmm1, xmm2, xmm3/m128
-    VUNPCKLPD_VdqHdqWdq_V128,
+    VunpcklpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 14 /r] VUNPCKLPD ymm1, ymm2, ymm3/m256
-    VUNPCKLPD_VqqHqqWqq_V256,
+    VunpcklpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 14 /r] VUNPCKLPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VUNPCKLPD_VdqHdqWdq_E128,
+    VunpcklpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 14 /r] VUNPCKLPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VUNPCKLPD_VqqHqqWqq_E256,
+    VunpcklpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 14 /r] VUNPCKLPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VUNPCKLPD_VdqqHdqqWdqq_E512,
+    VunpcklpdVdqqHdqqWdqqE512,
 
     // [NP 0F 14 /r] UNPCKLPS xmm1, xmm2/m128
-    UNPCKLPS_VdqWdq,
+    UnpcklpsVdqWdq,
     // [VEX.128.0F.WIG 14 /r] VUNPCKLPS xmm1, xmm2, xmm3/m128
-    VUNPCKLPS_VdqHdqWdq_V128,
+    VunpcklpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 14 /r] VUNPCKLPS ymm1, ymm2, ymm3/m256
-    VUNPCKLPS_VqqHqqWqq_V256,
+    VunpcklpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 14 /r] VUNPCKLPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VUNPCKLPS_VdqHdqWdq_E128,
+    VunpcklpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 14 /r] VUNPCKLPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VUNPCKLPS_VqqHqqWqq_E256,
+    VunpcklpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 14 /r] VUNPCKLPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VUNPCKLPS_VdqqHdqqWdqq_E512,
+    VunpcklpsVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F3A.W0 03 /r ib] VALIGND xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst, imm8
-    VALIGND_VdqHdqWdqIb_E128,
+    ValigndVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 03 /r ib] VALIGND ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst, imm8
-    VALIGND_VqqHqqWqqIb_E256,
+    ValigndVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 03 /r ib] VALIGND zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst, imm8
-    VALIGND_VdqqHdqqWdqqIb_E256,
+    ValigndVdqqHdqqWdqqIbE256,
     // [EVEX.128.66.0F3A.W1 03 /r ib] VALIGNQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VALIGNQ_VdqHdqWdqIb_E128,
+    ValignqVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 03 /r ib] VALIGNQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VALIGNQ_VqqHqqWqqIb_E256,
+    ValignqVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 03 /r ib] VALIGNQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst, imm8
-    VALIGNQ_VdqqHdqqWdqqIb_E256,
+    ValignqVdqqHdqqWdqqIbE256,
 
     // [EVEX.128.66.0F38.W1 65 /r] VBLENDMPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VBLENDMPD_VdqHdqWdq_E128,
+    VblendmpdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 65 /r] VBLENDMPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VBLENDMPD_VqqHqqWqq_E256,
+    VblendmpdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 65 /r] VBLENDMPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VBLENDMPD_VdqqHdqqWdqq_E512,
+    VblendmpdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 65 /r] VBLENDMPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VBLENDMPS_VdqHdqWdq_E128,
+    VblendmpsVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 65 /r] VBLENDMPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VBLENDMPS_VqqHqqWqq_E256,
+    VblendmpsVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 65 /r] VBLENDMPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VBLENDMPS_VdqqHdqqWdqq_E512,
+    VblendmpsVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 18 /r] VBROADCASTSS xmm1, m32
     // [VEX.128.66.0F38.W0 18 /r] VBROADCASTSS xmm1, xmm2
-    VBROADCASTSS_VdqWd_V128,
+    VbroadcastssVdqWdV128,
     // [VEX.256.66.0F38.W0 18 /r] VBROADCASTSS ymm1, m32
     // [VEX.128.66.0F38.W0 18 /r] VBROADCASTSS ymm1, xmm2
-    VBROADCASTSS_VqqWd_V256,
+    VbroadcastssVqqWdV256,
     // [VEX.256.66.0F38.W0 19 /r] VBROADCASTSD ymm1, m64
     // [VEX.256.66.0F38.W0 19 /r] VBROADCASTSD ymm1, xmm2
-    VBROADCASTSD_VqqWq_V256,
+    VbroadcastsdVqqWqV256,
     // [VEX.256.66.0F38.W0 1A /r] VBROADCASTF128 ymm1, m128
-    VBROADCASTF128_VqqMdq_V256,
+    Vbroadcastf128VqqMdqV256,
     // [EVEX.256.66.0F38.W1 19 /r] VBROADCASTSD ymm1 {k1}{z}, xmm2/m64
-    VBROADCASTSD_VqqWq_E256,
+    VbroadcastsdVqqWqE256,
     // [EVEX.512.66.0F38.W1 19 /r] VBROADCASTSD zmm1 {k1}{z}, xmm2/m64
-    VBROADCASTSD_VdqqWq_E512,
+    VbroadcastsdVdqqWqE512,
     // [EVEX.256.66.0F38.W0 19 /r] VBROADCASTF32X2 ymm1 {k1}{z}, xmm2/m64
-    VBROADCASTF32X2_VqqWq_E256,
+    Vbroadcastf32x2VqqWqE256,
     // [EVEX.512.66.0F38.W0 19 /r] VBROADCASTF32X2 zmm1 {k1}{z}, xmm2/m64
-    VBROADCASTF32X2_VdqqWq_E512,
+    Vbroadcastf32x2VdqqWqE512,
     // [EVEX.128.66.0F38.W0 18 /r] VBROADCASTSS xmm1 {k1}{z}, xmm2/m32
-    VBROADCASTSS_VdqWd_E128,
+    VbroadcastssVdqWdE128,
     // [EVEX.256.66.0F38.W0 18 /r] VBROADCASTSS ymm1 {k1}{z}, xmm2/m32
-    VBROADCASTSS_VqqWd_E256,
+    VbroadcastssVqqWdE256,
     // [EVEX.512.66.0F38.W0 18 /r] VBROADCASTSS zmm1 {k1}{z}, xmm2/m32
-    VBROADCASTSS_VdqqWd_E512,
+    VbroadcastssVdqqWdE512,
     // [EVEX.256.66.0F38.W0 1A /r] VBROADCASTF32X4 ymm1 {k1}{z}, m128
-    VBROADCASTF32X4_VqqWdq_E256,
+    Vbroadcastf32x4VqqWdqE256,
     // [EVEX.512.66.0F38.W0 1A /r] VBROADCASTF32X4 zmm1 {k1}{z}, m128
-    VBROADCASTF32X4_VdqqWdq_E512,
+    Vbroadcastf32x4VdqqWdqE512,
     // [EVEX.256.66.0F38.W1 1A /r] VBROADCASTF64X2 ymm1 {k1}{z}, m128
-    VBROADCASTF64X2_VqqWdq_E256,
+    Vbroadcastf64x2VqqWdqE256,
     // [EVEX.512.66.0F38.W1 1A /r] VBROADCASTF64X2 zmm1 {k1}{z}, m128
-    VBROADCASTF64X2_VdqqWdq_E512,
+    Vbroadcastf64x2VdqqWdqE512,
     // [EVEX.512.66.0F38.W0 1B /r] VBROADCASTF32X8 zmm1 {k1}{z}, m256
-    VBROADCASTF32X8_VdqqWqq_E512,
+    Vbroadcastf32x8VdqqWqqE512,
     // [EVEX.512.66.0F38.W1 1B /r] VBROADCASTF64X4 zmm1 {k1}{z}, m256
-    VBROADCASTF64X4_VdqqWqq_E512,
+    Vbroadcastf64x4VdqqWqqE512,
 
     // [EVEX.128.66.0F38.W1 8A /r] VCOMPRESSPD xmm1/m128 {k1}{z}, xmm2
-    VCOMPRESSPD_WdqVdq_E128,
+    VcompresspdWdqVdqE128,
     // [EVEX.256.66.0F38.W1 8A /r] VCOMPRESSPD ymm1/m256 {k1}{z}, xmm2
-    VCOMPRESSPD_WqqVqq_E256,
+    VcompresspdWqqVqqE256,
     // [EVEX.512.66.0F38.W1 8A /r] VCOMPRESSPD zmm1/m512 {k1}{z}, xmm2
-    VCOMPRESSPD_WdqqVdqq_E512,
+    VcompresspdWdqqVdqqE512,
 
     // [EVEX.128.66.0F38.W0 8A /r] VCOMPRESSPS xmm1/m128 {k1}{z}, xmm2
-    VCOMPRESSPS_WdqVdq_E128,
+    VcompresspsWdqVdqE128,
     // [EVEX.256.66.0F38.W0 8A /r] VCOMPRESSPS ymm1/m256 {k1}{z}, xmm2
-    VCOMPRESSPS_WqqVqq_E256,
+    VcompresspsWqqVqqE256,
     // [EVEX.512.66.0F38.W0 8A /r] VCOMPRESSPS zmm1/m512 {k1}{z}, xmm2
-    VCOMPRESSPS_WdqqVdqq_E512,
+    VcompresspsWdqqVdqqE512,
 
     // [EVEX.128.66.0F.W1 7B /r] VCVTPD2QQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTPD2QQ_VdqWdq_E128,
+    Vcvtpd2qqVdqWdqE128,
     // [EVEX.256.66.0F.W1 7B /r] VCVTPD2QQ ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTPD2QQ_VqqWqq_E256,
+    Vcvtpd2qqVqqWqqE256,
     // [EVEX.512.66.0F.W1 7B /r] VCVTPD2QQ zmm1 {k1}{z}, zmm2/m512/m64bcst
-    VCVTPD2QQ_VdqqWdqq_E512,
+    Vcvtpd2qqVdqqWdqqE512,
 
     // [EVEX.128.0F.W1 79 /r] VCVTPD2UDQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTPD2UDQ_VdqWdq_E128,
+    Vcvtpd2udqVdqWdqE128,
     // [EVEX.256.0F.W1 79 /r] VCVTPD2UDQ ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTPD2UDQ_VqqWqq_E256,
+    Vcvtpd2udqVqqWqqE256,
     // [EVEX.512.0F.W1 79 /r] VCVTPD2UDQ zmm1 {k1}{z}, zmm2/m512/m64bcst
-    VCVTPD2UDQ_VdqqWdqq_E512,
+    Vcvtpd2udqVdqqWdqqE512,
 
     // [EVEX.128.66.0F.W1 79 /r] VCVTPD2UQQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTPD2UQQ_VdqWdq_E128,
+    Vcvtpd2uqqVdqWdqE128,
     // [EVEX.256.66.0F.W1 79 /r] VCVTPD2UQQ ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTPD2UQQ_VqqWqq_E256,
+    Vcvtpd2uqqVqqWqqE256,
     // [EVEX.512.66.0F.W1 79 /r] VCVTPD2UQQ zmm1 {k1}{z}, zmm2/m512/m64bcst
-    VCVTPD2UQQ_VdqqWdqq_E512,
+    Vcvtpd2uqqVdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 13 /r] VCVTPH2PS xmm1, xmm2/m64
-    VCVTPH2PS_VdqWq_V128,
+    Vcvtph2psVdqWqV128,
     // [VEX.256.66.0F38.W0 13 /r] VCVTPH2PS ymm1, xmm2/m128
-    VCVTPH2PS_VqqWdq_V256,
+    Vcvtph2psVqqWdqV256,
     // [EVEX.128.66.0F38.W0 13 /r] VCVTPH2PS xmm1 {k1}{z}, xmm2/m64
-    VCVTPH2PS_VdqWq_E128,
+    Vcvtph2psVdqWqE128,
     // [EVEX.256.66.0F38.W0 13 /r] VCVTPH2PS ymm1 {k1}{z}, xmm2/m128
-    VCVTPH2PS_VqqWdq_E256,
+    Vcvtph2psVqqWdqE256,
     // [EVEX.512.66.0F38.W0 13 /r] VCVTPH2PS zmm1 {k1}{z}, ymm2/m256{sae}
-    VCVTPH2PS_VdqqWqq_E512,
+    Vcvtph2psVdqqWqqE512,
 
     // [VEX.128.66.0F3A.W0 1D /r ib] VCVTPS2PH xmm1/m64, xmm2, imm8
-    VCVTPS2PH_WqVdqIb_V128,
+    Vcvtps2phWqVdqIbV128,
     // [VEX.256.66.0F3A.W0 1D /r ib] VCVTPS2PH xmm1/m128, ymm2, imm8
-    VCVTPS2PH_WdqVqqIb_V256,
+    Vcvtps2phWdqVqqIbV256,
     // [EVEX.128.66.0F3A.W0 1D /r ib] VCVTPS2PH xmm1/m64 {k1}{z}, xmm2, imm8
-    VCVTPS2PH_WqVdqIb_E128,
+    Vcvtps2phWqVdqIbE128,
     // [EVEX.256.66.0F3A.W0 1D /r ib] VCVTPS2PH xmm1/m128 {k1}{z}, ymm2, imm8
-    VCVTPS2PH_WdqVqqIb_E256,
+    Vcvtps2phWdqVqqIbE256,
     // [EVEX.512.66.0F3A.W0 1D /r ib] VCVTPS2PH ymm1/m256 {k1}{z}, zmm2{sae}, imm8
-    VCVTPS2PH_WqqVdqqIb_E512,
+    Vcvtps2phWqqVdqqIbE512,
 
     // [EVEX.128.0F.W0 79 /r] VCVTPS2UDQ xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTPS2UDQ_VdqWdq_E128,
+    Vcvtps2udqVdqWdqE128,
     // [EVEX.256.0F.W0 79 /r] VCVTPS2UDQ ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VCVTPS2UDQ_VqqWqq_E256,
+    Vcvtps2udqVqqWqqE256,
     // [EVEX.512.0F.W0 79 /r] VCVTPS2UDQ zmm1 {k1}{z}, zmm2/m512/m32bcst{er}
-    VCVTPS2UDQ_VdqqWdqq_E512,
+    Vcvtps2udqVdqqWdqqE512,
 
     // [EVEX.128.66.0F.W0 7B /r] VCVTPS2QQ xmm1 {k1}{z}, xmm2/m64/m32bcst
-    VCVTPS2QQ_VdqWq_E128,
+    Vcvtps2qqVdqWqE128,
     // [EVEX.256.66.0F.W0 7B /r] VCVTPS2QQ ymm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTPS2QQ_VqqWdq_E256,
+    Vcvtps2qqVqqWdqE256,
     // [EVEX.512.66.0F.W0 7B /r] VCVTPS2QQ zmm1 {k1}{z}, ymm2/m256/m32bcst{er}
-    VCVTPS2QQ_VdqqWqq_E512,
+    Vcvtps2qqVdqqWqqE512,
 
     // [EVEX.128.66.0F.W0 79 /r] VCVTPS2UQQ xmm1 {k1}{z}, xmm2/m64/m32bcst
-    VCVTPS2UQQ_VdqWq_E128,
+    Vcvtps2uqqVdqWqE128,
     // [EVEX.256.66.0F.W0 79 /r] VCVTPS2UQQ ymm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTPS2UQQ_VqqWdq_E256,
+    Vcvtps2uqqVqqWdqE256,
     // [EVEX.512.66.0F.W0 79 /r] VCVTPS2UQQ zmm1 {k1}{z}, ymm2/m256/m32bcst{er}
-    VCVTPS2UQQ_VdqqWqq_E512,
+    Vcvtps2uqqVdqqWqqE512,
 
     // [EVEX.128.F3.0F.W1 E6 /r] VCVTQQ2PD xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTQQ2PD_VdqWdq_E128,
+    Vcvtqq2pdVdqWdqE128,
     // [EVEX.256.F3.0F.W1 E6 /r] VCVTQQ2PD ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTQQ2PD_VqqWqq_E256,
+    Vcvtqq2pdVqqWqqE256,
     // [EVEX.512.F3.0F.W1 E6 /r] VCVTQQ2PD zmm1 {k1}{z}, zmm2/m512/m64bcst{er}
-    VCVTQQ2PD_VdqqWdqq_E512,
+    Vcvtqq2pdVdqqWdqqE512,
 
     // [EVEX.128.0F.W1 5B /r] VCVTQQ2PS xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTQQ2PS_VdqWdq_E128,
+    Vcvtqq2psVdqWdqE128,
     // [EVEX.256.0F.W1 5B /r] VCVTQQ2PS ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTQQ2PS_VqqWqq_E256,
+    Vcvtqq2psVqqWqqE256,
     // [EVEX.512.0F.W1 5B /r] VCVTQQ2PS zmm1 {k1}{z}, zmm2/m512/m64bcst{er}
-    VCVTQQ2PS_VdqqWdqq_E512,
+    Vcvtqq2psVdqqWdqqE512,
 
     // [EVEX.LIG.F2.0F.W0 79 /r] VCVTSD2USI r32, xmm1/m64{er}
-    VCVTSD2USI_GdVq_E,
+    Vcvtsd2usiGdVqE,
     // [EVEX.LIG.F2.0F.W1 79 /r] VCVTSD2USI r64, xmm1/m64{er}
-    VCVTSD2USI_GqVq_E,
+    Vcvtsd2usiGqVqE,
 
     // [EVEX.LIG.F3.0F.W0 79 /r] VCVTSS2USI r32, xmm1/m32{er}
-    VCVTSS2USI_GdVd_E,
+    Vcvtss2usiGdVdE,
     // [EVEX.LIG.F3.0F.W1 79 /r] VCVTSS2USI r64, xmm1/m32{er}
-    VCVTSS2USI_GqVd_E,
+    Vcvtss2usiGqVdE,
 
     // [EVEX.128.66.0F.W1 7A /r] VCVTTPD2QQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTTPD2QQ_VdqWdq_E128,
+    Vcvttpd2qqVdqWdqE128,
     // [EVEX.256.66.0F.W1 7A /r] VCVTTPD2QQ ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTTPD2QQ_VqqWqq_E256,
+    Vcvttpd2qqVqqWqqE256,
     // [EVEX.512.66.0F.W1 7A /r] VCVTTPD2QQ zmm1 {k1}{z}, zmm2/m512/m64bcst{sae}
-    VCVTTPD2QQ_VdqqWdqq_E512,
+    Vcvttpd2qqVdqqWdqqE512,
 
     // [EVEX.128.0F.W1 78 /r] VCVTTPD2UDQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTTPD2UDQ_VdqWdq_E128,
+    Vcvttpd2udqVdqWdqE128,
     // [EVEX.256.0F.W1 78 /r] VCVTTPD2UDQ ymm1 {k1}{z}, ymm2/m256/m64bcst
     // NOTE: Intel manual lists the opcode as `... 78 02 /r`
-    VCVTTPD2UDQ_VqqWqq_E256,
+    Vcvttpd2udqVqqWqqE256,
     // [EVEX.512.0F.W1 78 /r] VCVTTPD2UDQ zmm1 {k1}{z}, zmm2/m512/m64bcst{sae}
-    VCVTTPD2UDQ_VdqqWdqq_E512,
+    Vcvttpd2udqVdqqWdqqE512,
 
     // [EVEX.128.66.0F.W1 78 /r] VCVTTPD2UQQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTTPD2UQQ_VdqWdq_E128,
+    Vcvttpd2uqqVdqWdqE128,
     // [EVEX.256.66.0F.W1 78 /r] VCVTTPD2UQQ ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VCVTTPD2UQQ_VqqWqq_E256,
+    Vcvttpd2uqqVqqWqqE256,
     // [EVEX.512.66.0F.W1 78 /r] VCVTTPD2UQQ zmm1 {k1}{z}, zmm2/m512/m64bcst{sae}
-    VCVTTPD2UQQ_VdqqWdqq_E512,
+    Vcvttpd2uqqVdqqWdqqE512,
 
     // [EVEX.128.66.0F.W1 7A /r] VCVTTPS2QQ xmm1 {k1}{z}, xmm2/m64/m32bcst
-    VCVTTPS2QQ_VdqWq_E128,
+    Vcvttps2qqVdqWqE128,
     // [EVEX.256.66.0F.W1 7A /r] VCVTTPS2QQ ymm1 {k1}{z}, ymm2/m128/m32bcst
-    VCVTTPS2QQ_VqqWdq_E256,
+    Vcvttps2qqVqqWdqE256,
     // [EVEX.512.66.0F.W1 7A /r] VCVTTPS2QQ zmm1 {k1}{z}, zmm2/m256/m32bcst{sae}
-    VCVTTPS2QQ_VdqqWqq_E512,
+    Vcvttps2qqVdqqWqqE512,
 
     // [EVEX.128.66.0F.W1 78 /r] VCVTTPS2UQQ xmm1 {k1}{z}, xmm2/m64/m32bcst
-    VCVTTPS2UQQ_VdqWq_E128,
+    Vcvttps2uqqVdqWqE128,
     // [EVEX.256.66.0F.W1 78 /r] VCVTTPS2UQQ ymm1 {k1}{z}, ymm2/m128/m32bcst
-    VCVTTPS2UQQ_VqqWdq_E256,
+    Vcvttps2uqqVqqWdqE256,
     // [EVEX.512.66.0F.W1 78 /r] VCVTTPS2UQQ zmm1 {k1}{z}, zmm2/m256/m32bcst{sae}
-    VCVTTPS2UQQ_VdqqWqq_E512,
+    Vcvttps2uqqVdqqWqqE512,
 
     // [EVEX.LIG.F2.0F.W0 78 /r] VCVTTSD2USI r32, xmm1/m64{sae}
-    VCVTTSD2USI_GdWq_E,
+    Vcvttsd2usiGdWqE,
     // [EVEX.LIG.F2.0F.W1 78 /r] VCVTTSD2USI r64, xmm1/m64{sae}
-    VCVTTSD2USI_GqWq_E,
+    Vcvttsd2usiGqWqE,
 
     // [EVEX.LIG.F3.0F.W0 78 /r] VCVTTSS2USI r32, xmm1/m64{sae}
-    VCVTTSS2USI_GdWq_E,
+    Vcvttss2usiGdWqE,
     // [EVEX.LIG.F3.0F.W1 78 /r] VCVTTSS2USI r64, xmm1/m64{sae}
-    VCVTTSS2USI_GqWq_E,
+    Vcvttss2usiGqWqE,
 
     // [EVEX.128.F3.0F.W0 7A /r] VCVTUDQ2PD xmm1 {k1}{z}, xmm2/m64/m32bcst
-    VCVTUDQ2PD_VdqWq_E128,
+    Vcvtudq2pdVdqWqE128,
     // [EVEX.256.F3.0F.W0 7A /r] VCVTUDQ2PD ymm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTUDQ2PD_VqqWdq_E256,
+    Vcvtudq2pdVqqWdqE256,
     // [EVEX.512.F3.0F.W0 7A /r] VCVTUDQ2PD zmm1 {k1}{z}, ymm2/m256/m32bcst
-    VCVTUDQ2PD_VdqqWqq_E512,
+    Vcvtudq2pdVdqqWqqE512,
 
     // [EVEX.128.F2.0F.W0 7A /r] VCVTUDQ2PS xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VCVTUDQ2PS_VdqWdq_E128,
+    Vcvtudq2psVdqWdqE128,
     // [EVEX.256.F2.0F.W0 7A /r] VCVTUDQ2PS ymm1 {k1}{z}, xmm2/m256/m32bcst
-    VCVTUDQ2PS_VqqWqq_E256,
+    Vcvtudq2psVqqWqqE256,
     // [EVEX.512.F2.0F.W0 7A /r] VCVTUDQ2PS zmm1 {k1}{z}, ymm2/m512/m32bcst{er}
-    VCVTUDQ2PS_VdqqWdqq_E512,
+    Vcvtudq2psVdqqWdqqE512,
 
     // [EVEX.128.F3.0F.W1 7A /r] VCVTUQQ2PD xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTUQQ2PD_VdqWdq_E128,
+    Vcvtuqq2pdVdqWdqE128,
     // [EVEX.256.F3.0F.W1 7A /r] VCVTUQQ2PD ymm1 {k1}{z}, xmm2/m256/m64bcst
-    VCVTUQQ2PD_VqqWqq_E256,
+    Vcvtuqq2pdVqqWqqE256,
     // [EVEX.512.F3.0F.W1 7A /r] VCVTUQQ2PD zmm1 {k1}{z}, ymm2/m512/m64bcst{er]
-    VCVTUQQ2PD_VdqqWdqq_E512,
+    Vcvtuqq2pdVdqqWdqqE512,
 
     // [EVEX.128.F2.0F.W1 7A /r] VCVTUQQ2PS xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VCVTUQQ2PS_VdqWdq_E128,
+    Vcvtuqq2psVdqWdqE128,
     // [EVEX.256.F2.0F.W1 7A /r] VCVTUQQ2PS ymm1 {k1}{z}, xmm2/m256/m64bcst
-    VCVTUQQ2PS_VqqWqq_E256,
+    Vcvtuqq2psVqqWqqE256,
     // [EVEX.512.F2.0F.W1 7A /r] VCVTUQQ2PS zmm1 {k1}{z}, ymm2/m512/m64bcst[er}
-    VCVTUQQ2PS_VdqqWdqq_E512,
+    Vcvtuqq2psVdqqWdqqE512,
 
     // [EVEX.LIG.F2.0F.W0 7B /r] VCVTUSI2SD xmm1, xmm2, r/m32
-    VCVTUSI2SD_VdqHdqWd_E,
+    Vcvtusi2sdVdqHdqWdE,
     // [EVEX.LIG.F2.0F.W1 7B /r] VCVTUSI2SD xmm1, xmm2, r/m64{er}
-    VCVTUSI2SD_VdqHdqWq_E,
+    Vcvtusi2sdVdqHdqWqE,
 
     // [EVEX.LIG.F3.0F.W0 7B /r] VCVTUSI2SS xmm1, xmm2, r/m32
-    VCVTUSI2SS_VdqHdqWd_E,
+    Vcvtusi2ssVdqHdqWdE,
     // [EVEX.LIG.F3.0F.W1 7B /r] VCVTUSI2SS xmm1, xmm2, r/m64{er}
-    VCVTUSI2SS_VdqHdqWq_E,
+    Vcvtusi2ssVdqHdqWqE,
 
     // [EVEX.128.66.0F3A.W0 42 /r ib] VDBPSADBW xmm1 {k1}{z}, xmm2, xmm3/m128, imm8
-    VDBPSADBW_VdqHdqWdqIb_E128,
+    VdbpsadbwVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 42 /r ib] VDBPSADBW ymm1 {k1}{z}, ymm2, ymm3/m256, imm8
-    VDBPSADBW_VqqHqqWqqIb_E256,
+    VdbpsadbwVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 42 /r ib] VDBPSADBW zmm1 {k1}{z}, zmm2, zmm3/m512, imm8
-    VDBPSADBW_VdqqHdqqWdqqIb_E512,
+    VdbpsadbwVdqqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F38.W1 88 /r] VEXPANDPD xmm1 {k1}{z}, xmm2/m128
-    VEXPANDPD_VdqWdq_E128,
+    VexpandpdVdqWdqE128,
     // [EVEX.256.66.0F38.W1 88 /r] VEXPANDPD ymm1 {k1}{z}, ymm2/m256
-    VEXPANDPD_VqqWqq_E256,
+    VexpandpdVqqWqqE256,
     // [EVEX.512.66.0F38.W1 88 /r] VEXPANDPD zmm1 {k1}{z}, zmm2/m512
-    VEXPANDPD_VdqqWdqq_E512,
+    VexpandpdVdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 88 /r] VEXPANDPS xmm1 {k1}{z}, xmm2/m128
-    VEXPANDPS_VdqWdq_E128,
+    VexpandpsVdqWdqE128,
     // [EVEX.256.66.0F38.W0 88 /r] VEXPANDPS ymm1 {k1}{z}, ymm2/m256
-    VEXPANDPS_VqqWqq_E256,
+    VexpandpsVqqWqqE256,
     // [EVEX.512.66.0F38.W0 88 /r] VEXPANDPS zmm1 {k1}{z}, zmm2/m512
-    VEXPANDPS_VdqqWdqq_E512,
+    VexpandpsVdqqWdqqE512,
 
     // [0F 00 /4] VERR r/m16
-    VERR_Ew,
+    VerrEw,
     // [0F 00 /5] VERW r/m16
-    VERW_Ew,
+    VerwEw,
 
     // [VEX.256.66.0F3A.W0 19 /r ib] VEXTRACTF128 xmm1/m128, ymm2, imm8
-    VEXTRACTF128_WdqVqqIb_V256,
+    Vextractf128WdqVqqIbV256,
     // [EVEX.256.66.0F3A.W0 19 /r ib] VEXTRACTF32X4 xmm1/m128 {k1}{z}, ymm2, imm8
-    VEXTRACTF32X4_WdqVqqIb_E256,
+    Vextractf32x4WdqVqqIbE256,
     // [EVEX.512.66.0F3A.W0 19 /r ib] VEXTRACTF32X4 xmm1/m128 {k1}{z}, zmm2, imm8
-    VEXTRACTF32X4_WdqWdqqIb_E512,
+    Vextractf32x4WdqWdqqIbE512,
     // [EVEX.256.66.0F3A.W1 19 /r ib] VEXTRACTF64X2 xmm1/m128 {k1}{z}, ymm2, imm8
-    VEXTRACTF64X2_WdqVqqIb_E256,
+    Vextractf64x2WdqVqqIbE256,
     // [EVEX.512.66.0F3A.W1 19 /r ib] VEXTRACTF64X2 xmm1/m128 {k1}{z}, zmm2, imm8
-    VEXTRACTF64X2_WdqVdqqIb_E512,
+    Vextractf64x2WdqVdqqIbE512,
     // [EVEX.512.66.0F3A.W0 1B /r ib] VEXTRACTF32X8 ymm1/m256 {k1}{z}, zmm2, imm8
-    VEXTRACTF32X8_WqqVdqqIb_E512,
+    Vextractf32x8WqqVdqqIbE512,
     // [EVEX.512.66.0F3A.W1 1B /r ib] VEXTRACTF64X4 ymm1/m256 {k1}{z}, zmm2, imm8
-    VEXTRACTF64X4_WqqVdqqIb_E512,
+    Vextractf64x4WqqVdqqIbE512,
 
     // [VEX.256.66.0F3A.W0 39 /r ib] VEXTRACTI128 xmm1/m128, ymm2, imm8
-    VEXTRACTI128_WdqVqqIb_V256,
+    Vextracti128WdqVqqIbV256,
     // [EVEX.256.66.0F3A.W0 39 /r ib] VEXTRACTI32X4 xmm1/m128 {k1}{z}, ymm2, imm8
-    VEXTRACTI32X4_WdqVqqIb_E256,
+    Vextracti32x4WdqVqqIbE256,
     // [EVEX.512.66.0F3A.W0 39 /r ib] VEXTRACTI32X4 xmm1/m128 {k1}{z}, zmm2, imm8
-    VEXTRACTI32X4_WdqWdqqIb_E512,
+    Vextracti32x4WdqWdqqIbE512,
     // [EVEX.256.66.0F3A.W1 39 /r ib] VEXTRACTI64X2 xmm1/m128 {k1}{z}, ymm2, imm8
-    VEXTRACTI64X2_WdqVqqIb_E256,
+    Vextracti64x2WdqVqqIbE256,
     // [EVEX.512.66.0F3A.W1 39 /r ib] VEXTRACTI64X2 xmm1/m128 {k1}{z}, zmm2, imm8
-    VEXTRACTI64X2_WdqVdqqIb_E512,
+    Vextracti64x2WdqVdqqIbE512,
     // [EVEX.512.66.0F3A.W0 3B /r ib] VEXTRACTI32X8 ymm1/m256 {k1}{z}, zmm2, imm8
-    VEXTRACTI32X8_WqqVdqqIb_E512,
+    Vextracti32x8WqqVdqqIbE512,
     // [EVEX.512.66.0F3A.W1 3B /r ib] VEXTRACTI64X4 ymm1/m256 {k1}{z}, zmm2, imm8
-    VEXTRACTI64X4_WqqVdqqIb_E512,
+    Vextracti64x4WqqVdqqIbE512,
 
     // [EVEX.128.66.0F3A.W1 54 /r ib] VFIXUPIMMPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VFIXUPIMMPD_VdqHdqWdqIb_E128,
+    VfixupimmpdVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 54 /r ib] VFIXUPIMMPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VFIXUPIMMPD_VqqHqqWqqIb_E256,
+    VfixupimmpdVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 54 /r ib] VFIXUPIMMPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{sae}, imm8
-    VFIXUPIMMPD_VdqqHdqqWdqqIb_E512,
+    VfixupimmpdVdqqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F3A.W0 54 /r ib] VFIXUPIMMPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst, imm8
-    VFIXUPIMMPS_VdqHdqWdqIb_E128,
+    VfixupimmpsVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 54 /r ib] VFIXUPIMMPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst, imm8
-    VFIXUPIMMPS_VqqHqqWqqIb_E256,
+    VfixupimmpsVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 54 /r ib] VFIXUPIMMPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{sae}, imm8
-    VFIXUPIMMPS_VdqqHdqqWdqqIb_E512,
+    VfixupimmpsVdqqHdqqWdqqIbE512,
 
     // [EVEX.LIG.66.0F3A.W1 55 /r ib] VFIXUPIMMSD xmm1 {k1}{z}, xmm2, xmm3/m64{sae}, imm8
-    VFIXUPIMMSD_VdqHdqWqIb_E,
+    VfixupimmsdVdqHdqWqIbE,
 
     // [EVEX.LIG.66.0F3A.W0 55 /r ib] VFIXUPIMMSS xmm1 {k1}{z}, xmm2, xmm3/m32{sae}, imm8
-    VFIXUPIMMSS_VdqHdqWdIb_E,
+    VfixupimmssVdqHdqWdIbE,
 
     // [VEX.128.66.0F38.W1 98 /r] VFMADD132PD xmm1, xmm2, xmm3/m128
-    VFMADD132PD_VdqHdqWdq_V128,
+    Vfmadd132pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 A8 /r] VFMADD213PD xmm1, xmm2, xmm3/m128
-    VFMADD213PD_VdqHdqWdq_V128,
+    Vfmadd213pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 B8 /r] VFMADD231PD xmm1, xmm2, xmm3/m128
-    VFMADD231PD_VdqHdqWdq_V128,
+    Vfmadd231pdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W1 98 /r] VFMADD132PD ymm1, ymm2, ymm3/m256
-    VFMADD132PD_VqqHqqWqq_V256,
+    Vfmadd132pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 A8 /r] VFMADD213PD ymm1, ymm2, ymm3/m256
-    VFMADD213PD_VqqHqqWqq_V256,
+    Vfmadd213pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 B8 /r] VFMADD231PD ymm1, ymm2, ymm3/m256
-    VFMADD231PD_VqqHqqWqq_V256,
+    Vfmadd231pdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 98 /r] VFMADD132PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMADD132PD_VdqHdqWdq_E128,
+    Vfmadd132pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 A8 /r] VFMADD213PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMADD213PD_VdqHdqWdq_E128,
+    Vfmadd213pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 B8 /r] VFMADD231PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMADD231PD_VdqHdqWdq_E128,
+    Vfmadd231pdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 98 /r] VFMADD132PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADD132PD_VqqHqqWqq_E256,
+    Vfmadd132pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 A8 /r] VFMADD213PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADD213PD_VqqHqqWqq_E256,
+    Vfmadd213pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 B8 /r] VFMADD231PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADD231PD_VqqHqqWqq_E256,
+    Vfmadd231pdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 98 /r] VFMADD132PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADD132PD_VdqqHdqqWdqq_E512,
+    Vfmadd132pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 A8 /r] VFMADD213PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADD213PD_VdqqHdqqWdqq_E512,
+    Vfmadd213pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 B8 /r] VFMADD231PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADD231PD_VdqqHdqqWdqq_E512,
+    Vfmadd231pdVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 98 /r] VFMADD132PS xmm1, xmm2, xmm3/m128
-    VFMADD132PS_VdqHdqWdq_V128,
+    Vfmadd132psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 A8 /r] VFMADD213PS xmm1, xmm2, xmm3/m128
-    VFMADD213PS_VdqHdqWdq_V128,
+    Vfmadd213psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 B8 /r] VFMADD231PS xmm1, xmm2, xmm3/m128
-    VFMADD231PS_VdqHdqWdq_V128,
+    Vfmadd231psVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 98 /r] VFMADD132PS ymm1, ymm2, ymm3/m256
-    VFMADD132PS_VqqHqqWqq_V256,
+    Vfmadd132psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 A8 /r] VFMADD213PS ymm1, ymm2, ymm3/m256
-    VFMADD213PS_VqqHqqWqq_V256,
+    Vfmadd213psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 B8 /r] VFMADD231PS ymm1, ymm2, ymm3/m256
-    VFMADD231PS_VqqHqqWqq_V256,
+    Vfmadd231psVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 98 /r] VFMADD132PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMADD132PS_VdqHdqWdq_E128,
+    Vfmadd132psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 A8 /r] VFMADD213PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMADD213PS_VdqHdqWdq_E128,
+    Vfmadd213psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 B8 /r] VFMADD231PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMADD231PS_VdqHdqWdq_E128,
+    Vfmadd231psVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 98 /r] VFMADD132PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADD132PS_VqqHqqWqq_E256,
+    Vfmadd132psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 A8 /r] VFMADD213PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADD213PS_VqqHqqWqq_E256,
+    Vfmadd213psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 B8 /r] VFMADD231PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADD231PS_VqqHqqWqq_E256,
+    Vfmadd231psVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 98 /r] VFMADD132PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADD132PS_VdqqHdqqWdqq_E512,
+    Vfmadd132psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 A8 /r] VFMADD213PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADD213PS_VdqqHdqqWdqq_E512,
+    Vfmadd213psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 B8 /r] VFMADD231PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADD231PS_VdqqHdqqWdqq_E512,
+    Vfmadd231psVdqqHdqqWdqqE512,
 
     // [VEX.LIG.66.0F38.W1 99 /r] VFMADD132SD xmm1, xmm2, xmm3/m64
-    VFMADD132SD_VdqHdqWq_V,
+    Vfmadd132sdVdqHdqWqV,
     // [VEX.LIG.66.0F38.W1 A9 /r] VFMADD213SD xmm1, xmm2, xmm3/m64
-    VFMADD213SD_VdqHdqWq_V,
+    Vfmadd213sdVdqHdqWqV,
     // [VEX.LIG.66.0F38.W1 B9 /r] VFMADD231SD xmm1, xmm2, xmm3/m64
-    VFMADD231SD_VdqHdqWq_V,
+    Vfmadd231sdVdqHdqWqV,
     // [EVEX.LIG.66.0F38.W1 99 /r] VFMADD132SD xmm1, xmm2, xmm3/m64{er}
-    VFMADD132SD_VdqHdqWq_E,
+    Vfmadd132sdVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W1 A9 /r] VFMADD213SD xmm1, xmm2, xmm3/m64{er}
-    VFMADD213SD_VdqHdqWq_E,
+    Vfmadd213sdVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W1 B9 /r] VFMADD231SD xmm1, xmm2, xmm3/m64{er}
-    VFMADD231SD_VdqHdqWq_E,
+    Vfmadd231sdVdqHdqWqE,
 
     // [VEX.LIG.66.0F38.W0 99 /r] VFMADD132SS xmm1, xmm2, xmm3/m64
-    VFMADD132SS_VdqHdqWq_V,
+    Vfmadd132ssVdqHdqWqV,
     // [VEX.LIG.66.0F38.W0 A9 /r] VFMADD213SS xmm1, xmm2, xmm3/m64
-    VFMADD213SS_VdqHdqWq_V,
+    Vfmadd213ssVdqHdqWqV,
     // [VEX.LIG.66.0F38.W0 B9 /r] VFMADD231SS xmm1, xmm2, xmm3/m64
-    VFMADD231SS_VdqHdqWq_V,
+    Vfmadd231ssVdqHdqWqV,
     // [EVEX.LIG.66.0F38.W0 99 /r] VFMADD132SS xmm1, xmm2, xmm3/m64{er}
-    VFMADD132SS_VdqHdqWq_E,
+    Vfmadd132ssVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W0 A9 /r] VFMADD213SS xmm1, xmm2, xmm3/m64{er}
-    VFMADD213SS_VdqHdqWq_E,
+    Vfmadd213ssVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W0 B9 /r] VFMADD231SS xmm1, xmm2, xmm3/m64{er}
-    VFMADD231SS_VdqHdqWq_E,
+    Vfmadd231ssVdqHdqWqE,
 
     // [VEX.128.66.0F38.W1 96 /r] VFMADDSUB132PD xmm1, xmm2, xmm3/m128
-    VFMADDSUB132PD_VdqHdqWdq_V128,
+    Vfmaddsub132pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 A6 /r] VFMADDSUB213PD xmm1, xmm2, xmm3/m128
-    VFMADDSUB213PD_VdqHdqWdq_V128,
+    Vfmaddsub213pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 B6 /r] VFMADDSUB231PD xmm1, xmm2, xmm3/m128
-    VFMADDSUB231PD_VdqHdqWdq_V128,
+    Vfmaddsub231pdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W1 96 /r] VFMADDSUB132PD ymm1, ymm2, ymm3/m256
-    VFMADDSUB132PD_VqqHqqWqq_V256,
+    Vfmaddsub132pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 A6 /r] VFMADDSUB213PD ymm1, ymm2, ymm3/m256
-    VFMADDSUB213PD_VqqHqqWqq_V256,
+    Vfmaddsub213pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 B6 /r] VFMADDSUB231PD ymm1, ymm2, ymm3/m256
-    VFMADDSUB231PD_VqqHqqWqq_V256,
+    Vfmaddsub231pdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 96 /r] VFMADDSUB132PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMADDSUB132PD_VdqHdqWdq_E128,
+    Vfmaddsub132pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 A6 /r] VFMADDSUB213PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMADDSUB213PD_VdqHdqWdq_E128,
+    Vfmaddsub213pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 B6 /r] VFMADDSUB231PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMADDSUB231PD_VdqHdqWdq_E128,
+    Vfmaddsub231pdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 96 /r] VFMADDSUB132PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADDSUB132PD_VqqHqqWqq_E256,
+    Vfmaddsub132pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 A6 /r] VFMADDSUB213PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADDSUB213PD_VqqHqqWqq_E256,
+    Vfmaddsub213pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 B6 /r] VFMADDSUB231PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMADDSUB231PD_VqqHqqWqq_E256,
+    Vfmaddsub231pdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 96 /r] VFMADDSUB132PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADDSUB132PD_VdqqHdqqWdqq_E512,
+    Vfmaddsub132pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 A6 /r] VFMADDSUB213PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADDSUB213PD_VdqqHdqqWdqq_E512,
+    Vfmaddsub213pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 B6 /r] VFMADDSUB231PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMADDSUB231PD_VdqqHdqqWdqq_E512,
+    Vfmaddsub231pdVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 96 /r] VFMADDSUB132PS xmm1, xmm2, xmm3/m128
-    VFMADDSUB132PS_VdqHdqWdq_V128,
+    Vfmaddsub132psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 A6 /r] VFMADDSUB213PS xmm1, xmm2, xmm3/m128
-    VFMADDSUB213PS_VdqHdqWdq_V128,
+    Vfmaddsub213psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 B6 /r] VFMADDSUB231PS xmm1, xmm2, xmm3/m128
-    VFMADDSUB231PS_VdqHdqWdq_V128,
+    Vfmaddsub231psVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 96 /r] VFMADDSUB132PS ymm1, ymm2, ymm3/m256
-    VFMADDSUB132PS_VqqHqqWqq_V256,
+    Vfmaddsub132psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 A6 /r] VFMADDSUB213PS ymm1, ymm2, ymm3/m256
-    VFMADDSUB213PS_VqqHqqWqq_V256,
+    Vfmaddsub213psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 B6 /r] VFMADDSUB231PS ymm1, ymm2, ymm3/m256
-    VFMADDSUB231PS_VqqHqqWqq_V256,
+    Vfmaddsub231psVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 96 /r] VFMADDSUB132PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMADDSUB132PS_VdqHdqWdq_E128,
+    Vfmaddsub132psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 A6 /r] VFMADDSUB213PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMADDSUB213PS_VdqHdqWdq_E128,
+    Vfmaddsub213psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 B6 /r] VFMADDSUB231PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMADDSUB231PS_VdqHdqWdq_E128,
+    Vfmaddsub231psVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 96 /r] VFMADDSUB132PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADDSUB132PS_VqqHqqWqq_E256,
+    Vfmaddsub132psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 A6 /r] VFMADDSUB213PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADDSUB213PS_VqqHqqWqq_E256,
+    Vfmaddsub213psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 B6 /r] VFMADDSUB231PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMADDSUB231PS_VqqHqqWqq_E256,
+    Vfmaddsub231psVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 96 /r] VFMADDSUB132PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADDSUB132PS_VdqqHdqqWdqq_E512,
+    Vfmaddsub132psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 A6 /r] VFMADDSUB213PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADDSUB213PS_VdqqHdqqWdqq_E512,
+    Vfmaddsub213psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 B6 /r] VFMADDSUB231PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMADDSUB231PS_VdqqHdqqWdqq_E512,
+    Vfmaddsub231psVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W1 97 /r] VFMSUBADD132PD xmm1, xmm2, xmm3/m128
-    VFMSUBADD132PD_VdqHdqWdq_V128,
+    Vfmsubadd132pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 A7 /r] VFMSUBADD213PD xmm1, xmm2, xmm3/m128
-    VFMSUBADD213PD_VdqHdqWdq_V128,
+    Vfmsubadd213pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 B7 /r] VFMSUBADD231PD xmm1, xmm2, xmm3/m128
-    VFMSUBADD231PD_VdqHdqWdq_V128,
+    Vfmsubadd231pdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W1 97 /r] VFMSUBADD132PD ymm1, ymm2, ymm3/m256
-    VFMSUBADD132PD_VqqHqqWqq_V256,
+    Vfmsubadd132pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 A7 /r] VFMSUBADD213PD ymm1, ymm2, ymm3/m256
-    VFMSUBADD213PD_VqqHqqWqq_V256,
+    Vfmsubadd213pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 B7 /r] VFMSUBADD231PD ymm1, ymm2, ymm3/m256
-    VFMSUBADD231PD_VqqHqqWqq_V256,
+    Vfmsubadd231pdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 97 /r] VFMSUBADD132PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMSUBADD132PD_VdqHdqWdq_E128,
+    Vfmsubadd132pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 A7 /r] VFMSUBADD213PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMSUBADD213PD_VdqHdqWdq_E128,
+    Vfmsubadd213pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 B7 /r] VFMSUBADD231PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMSUBADD231PD_VdqHdqWdq_E128,
+    Vfmsubadd231pdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 97 /r] VFMSUBADD132PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMSUBADD132PD_VqqHqqWqq_E256,
+    Vfmsubadd132pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 A7 /r] VFMSUBADD213PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMSUBADD213PD_VqqHqqWqq_E256,
+    Vfmsubadd213pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 B7 /r] VFMSUBADD231PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMSUBADD231PD_VqqHqqWqq_E256,
+    Vfmsubadd231pdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 97 /r] VFMSUBADD132PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMSUBADD132PD_VdqqHdqqWdqq_E512,
+    Vfmsubadd132pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 A7 /r] VFMSUBADD213PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMSUBADD213PD_VdqqHdqqWdqq_E512,
+    Vfmsubadd213pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 B7 /r] VFMSUBADD231PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMSUBADD231PD_VdqqHdqqWdqq_E512,
+    Vfmsubadd231pdVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 97 /r] VFMSUBADD132PS xmm1, xmm2, xmm3/m128
-    VFMSUBADD132PS_VdqHdqWdq_V128,
+    Vfmsubadd132psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 A7 /r] VFMSUBADD213PS xmm1, xmm2, xmm3/m128
-    VFMSUBADD213PS_VdqHdqWdq_V128,
+    Vfmsubadd213psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 B7 /r] VFMSUBADD231PS xmm1, xmm2, xmm3/m128
-    VFMSUBADD231PS_VdqHdqWdq_V128,
+    Vfmsubadd231psVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 97 /r] VFMSUBADD132PS ymm1, ymm2, ymm3/m256
-    VFMSUBADD132PS_VqqHqqWqq_V256,
+    Vfmsubadd132psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 A7 /r] VFMSUBADD213PS ymm1, ymm2, ymm3/m256
-    VFMSUBADD213PS_VqqHqqWqq_V256,
+    Vfmsubadd213psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 B7 /r] VFMSUBADD231PS ymm1, ymm2, ymm3/m256
-    VFMSUBADD231PS_VqqHqqWqq_V256,
+    Vfmsubadd231psVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 97 /r] VFMSUBADD132PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMSUBADD132PS_VdqHdqWdq_E128,
+    Vfmsubadd132psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 A7 /r] VFMSUBADD213PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMSUBADD213PS_VdqHdqWdq_E128,
+    Vfmsubadd213psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 B7 /r] VFMSUBADD231PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMSUBADD231PS_VdqHdqWdq_E128,
+    Vfmsubadd231psVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 97 /r] VFMSUBADD132PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMSUBADD132PS_VqqHqqWqq_E256,
+    Vfmsubadd132psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 A7 /r] VFMSUBADD213PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMSUBADD213PS_VqqHqqWqq_E256,
+    Vfmsubadd213psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 B7 /r] VFMSUBADD231PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMSUBADD231PS_VqqHqqWqq_E256,
+    Vfmsubadd231psVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 97 /r] VFMSUBADD132PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMSUBADD132PS_VdqqHdqqWdqq_E512,
+    Vfmsubadd132psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 A7 /r] VFMSUBADD213PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMSUBADD213PS_VdqqHdqqWdqq_E512,
+    Vfmsubadd213psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 B7 /r] VFMSUBADD231PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMSUBADD231PS_VdqqHdqqWdqq_E512,
+    Vfmsubadd231psVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W1 9A /r] VFMSUB132PD xmm1, xmm2, xmm3/m128
-    VFMSUB132PD_VdqHdqWdq_V128,
+    Vfmsub132pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 AA /r] VFMSUB213PD xmm1, xmm2, xmm3/m128
-    VFMSUB213PD_VdqHdqWdq_V128,
+    Vfmsub213pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 BA /r] VFMSUB231PD xmm1, xmm2, xmm3/m128
-    VFMSUB231PD_VdqHdqWdq_V128,
+    Vfmsub231pdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W1 9A /r] VFMSUB132PD ymm1, ymm2, ymm3/m256
-    VFMSUB132PD_VqqHqqWqq_V256,
+    Vfmsub132pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 AA /r] VFMSUB213PD ymm1, ymm2, ymm3/m256
-    VFMSUB213PD_VqqHqqWqq_V256,
+    Vfmsub213pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 BA /r] VFMSUB231PD ymm1, ymm2, ymm3/m256
-    VFMSUB231PD_VqqHqqWqq_V256,
+    Vfmsub231pdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 9A /r] VFMSUB132PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMSUB132PD_VdqHdqWdq_E128,
+    Vfmsub132pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 AA /r] VFMSUB213PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMSUB213PD_VdqHdqWdq_E128,
+    Vfmsub213pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 BA /r] VFMSUB231PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFMSUB231PD_VdqHdqWdq_E128,
+    Vfmsub231pdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 9A /r] VFMSUB132PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMSUB132PD_VqqHqqWqq_E256,
+    Vfmsub132pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 AA /r] VFMSUB213PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMSUB213PD_VqqHqqWqq_E256,
+    Vfmsub213pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 BA /r] VFMSUB231PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFMSUB231PD_VqqHqqWqq_E256,
+    Vfmsub231pdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 9A /r] VFMSUB132PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMSUB132PD_VdqqHdqqWdqq_E512,
+    Vfmsub132pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 AA /r] VFMSUB213PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMSUB213PD_VdqqHdqqWdqq_E512,
+    Vfmsub213pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 BA /r] VFMSUB231PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFMSUB231PD_VdqqHdqqWdqq_E512,
+    Vfmsub231pdVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 9A /r] VFMSUB132PS xmm1, xmm2, xmm3/m128
-    VFMSUB132PS_VdqHdqWdq_V128,
+    Vfmsub132psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 AA /r] VFMSUB213PS xmm1, xmm2, xmm3/m128
-    VFMSUB213PS_VdqHdqWdq_V128,
+    Vfmsub213psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 BA /r] VFMSUB231PS xmm1, xmm2, xmm3/m128
-    VFMSUB231PS_VdqHdqWdq_V128,
+    Vfmsub231psVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 9A /r] VFMSUB132PS ymm1, ymm2, ymm3/m256
-    VFMSUB132PS_VqqHqqWqq_V256,
+    Vfmsub132psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 AA /r] VFMSUB213PS ymm1, ymm2, ymm3/m256
-    VFMSUB213PS_VqqHqqWqq_V256,
+    Vfmsub213psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 BA /r] VFMSUB231PS ymm1, ymm2, ymm3/m256
-    VFMSUB231PS_VqqHqqWqq_V256,
+    Vfmsub231psVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 9A /r] VFMSUB132PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMSUB132PS_VdqHdqWdq_E128,
+    Vfmsub132psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 AA /r] VFMSUB213PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMSUB213PS_VdqHdqWdq_E128,
+    Vfmsub213psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 BA /r] VFMSUB231PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFMSUB231PS_VdqHdqWdq_E128,
+    Vfmsub231psVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 9A /r] VFMSUB132PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMSUB132PS_VqqHqqWqq_E256,
+    Vfmsub132psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 AA /r] VFMSUB213PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMSUB213PS_VqqHqqWqq_E256,
+    Vfmsub213psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 BA /r] VFMSUB231PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFMSUB231PS_VqqHqqWqq_E256,
+    Vfmsub231psVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 9A /r] VFMSUB132PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMSUB132PS_VdqqHdqqWdqq_E512,
+    Vfmsub132psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 AA /r] VFMSUB213PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMSUB213PS_VdqqHdqqWdqq_E512,
+    Vfmsub213psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 BA /r] VFMSUB231PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFMSUB231PS_VdqqHdqqWdqq_E512,
+    Vfmsub231psVdqqHdqqWdqqE512,
 
     // [VEX.LIG.66.0F38.W1 9B /r] VFMSUB132SD xmm1, xmm2, xmm3/m64
-    VFMSUB132SD_VdqHdqWq_V,
+    Vfmsub132sdVdqHdqWqV,
     // [VEX.LIG.66.0F38.W1 AB /r] VFMSUB213SD xmm1, xmm2, xmm3/m64
-    VFMSUB213SD_VdqHdqWq_V,
+    Vfmsub213sdVdqHdqWqV,
     // [VEX.LIG.66.0F38.W1 BB /r] VFMSUB231SD xmm1, xmm2, xmm3/m64
-    VFMSUB231SD_VdqHdqWq_V,
+    Vfmsub231sdVdqHdqWqV,
     // [EVEX.LIG.66.0F38.W1 9B /r] VFMSUB132SD xmm1, xmm2, xmm3/m64{er}
-    VFMSUB132SD_VdqHdqWq_E,
+    Vfmsub132sdVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W1 AB /r] VFMSUB213SD xmm1, xmm2, xmm3/m64{er}
-    VFMSUB213SD_VdqHdqWq_E,
+    Vfmsub213sdVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W1 BB /r] VFMSUB231SD xmm1, xmm2, xmm3/m64{er}
-    VFMSUB231SD_VdqHdqWq_E,
+    Vfmsub231sdVdqHdqWqE,
 
     // [VEX.LIG.66.0F38.W0 9B /r] VFMSUB132SS xmm1, xmm2, xmm3/m64
-    VFMSUB132SS_VdqHdqWq_V,
+    Vfmsub132ssVdqHdqWqV,
     // [VEX.LIG.66.0F38.W0 AB /r] VFMSUB213SS xmm1, xmm2, xmm3/m64
-    VFMSUB213SS_VdqHdqWq_V,
+    Vfmsub213ssVdqHdqWqV,
     // [VEX.LIG.66.0F38.W0 BB /r] VFMSUB231SS xmm1, xmm2, xmm3/m64
-    VFMSUB231SS_VdqHdqWq_V,
+    Vfmsub231ssVdqHdqWqV,
     // [EVEX.LIG.66.0F38.W0 9B /r] VFMSUB132SS xmm1, xmm2, xmm3/m64{er}
-    VFMSUB132SS_VdqHdqWq_E,
+    Vfmsub132ssVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W0 AB /r] VFMSUB213SS xmm1, xmm2, xmm3/m64{er}
-    VFMSUB213SS_VdqHdqWq_E,
+    Vfmsub213ssVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W0 BB /r] VFMSUB231SS xmm1, xmm2, xmm3/m64{er}
-    VFMSUB231SS_VdqHdqWq_E,
+    Vfmsub231ssVdqHdqWqE,
 
     // [VEX.128.66.0F38.W1 9C /r] VFNMADD132PD xmm1, xmm2, xmm3/m128
-    VFNMADD132PD_VdqHdqWdq_V128,
+    Vfnmadd132pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 AC /r] VFNMADD213PD xmm1, xmm2, xmm3/m128
-    VFNMADD213PD_VdqHdqWdq_V128,
+    Vfnmadd213pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 BC /r] VFNMADD231PD xmm1, xmm2, xmm3/m128
-    VFNMADD231PD_VdqHdqWdq_V128,
+    Vfnmadd231pdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W1 9C /r] VFNMADD132PD ymm1, ymm2, ymm3/m256
-    VFNMADD132PD_VqqHqqWqq_V256,
+    Vfnmadd132pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 AC /r] VFNMADD213PD ymm1, ymm2, ymm3/m256
-    VFNMADD213PD_VqqHqqWqq_V256,
+    Vfnmadd213pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 BC /r] VFNMADD231PD ymm1, ymm2, ymm3/m256
-    VFNMADD231PD_VqqHqqWqq_V256,
+    Vfnmadd231pdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 9C /r] VFNMADD132PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFNMADD132PD_VdqHdqWdq_E128,
+    Vfnmadd132pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 AC /r] VFNMADD213PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFNMADD213PD_VdqHdqWdq_E128,
+    Vfnmadd213pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 BC /r] VFNMADD231PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFNMADD231PD_VdqHdqWdq_E128,
+    Vfnmadd231pdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 9C /r] VFNMADD132PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFNMADD132PD_VqqHqqWqq_E256,
+    Vfnmadd132pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 AC /r] VFNMADD213PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFNMADD213PD_VqqHqqWqq_E256,
+    Vfnmadd213pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 BC /r] VFNMADD231PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFNMADD231PD_VqqHqqWqq_E256,
+    Vfnmadd231pdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 9C /r] VFNMADD132PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFNMADD132PD_VdqqHdqqWdqq_E512,
+    Vfnmadd132pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 AC /r] VFNMADD213PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFNMADD213PD_VdqqHdqqWdqq_E512,
+    Vfnmadd213pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 BC /r] VFNMADD231PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFNMADD231PD_VdqqHdqqWdqq_E512,
+    Vfnmadd231pdVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 9C /r] VFNMADD132PS xmm1, xmm2, xmm3/m128
-    VFNMADD132PS_VdqHdqWdq_V128,
+    Vfnmadd132psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 AC /r] VFNMADD213PS xmm1, xmm2, xmm3/m128
-    VFNMADD213PS_VdqHdqWdq_V128,
+    Vfnmadd213psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 BC /r] VFNMADD231PS xmm1, xmm2, xmm3/m128
-    VFNMADD231PS_VdqHdqWdq_V128,
+    Vfnmadd231psVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 9C /r] VFNMADD132PS ymm1, ymm2, ymm3/m256
-    VFNMADD132PS_VqqHqqWqq_V256,
+    Vfnmadd132psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 AC /r] VFNMADD213PS ymm1, ymm2, ymm3/m256
-    VFNMADD213PS_VqqHqqWqq_V256,
+    Vfnmadd213psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 BC /r] VFNMADD231PS ymm1, ymm2, ymm3/m256
-    VFNMADD231PS_VqqHqqWqq_V256,
+    Vfnmadd231psVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 9C /r] VFNMADD132PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFNMADD132PS_VdqHdqWdq_E128,
+    Vfnmadd132psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 AC /r] VFNMADD213PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFNMADD213PS_VdqHdqWdq_E128,
+    Vfnmadd213psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 BC /r] VFNMADD231PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFNMADD231PS_VdqHdqWdq_E128,
+    Vfnmadd231psVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 9C /r] VFNMADD132PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFNMADD132PS_VqqHqqWqq_E256,
+    Vfnmadd132psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 AC /r] VFNMADD213PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFNMADD213PS_VqqHqqWqq_E256,
+    Vfnmadd213psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 BC /r] VFNMADD231PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFNMADD231PS_VqqHqqWqq_E256,
+    Vfnmadd231psVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 9C /r] VFNMADD132PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFNMADD132PS_VdqqHdqqWdqq_E512,
+    Vfnmadd132psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 AC /r] VFNMADD213PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFNMADD213PS_VdqqHdqqWdqq_E512,
+    Vfnmadd213psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 BC /r] VFNMADD231PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFNMADD231PS_VdqqHdqqWdqq_E512,
+    Vfnmadd231psVdqqHdqqWdqqE512,
 
     // [VEX.LIG.66.0F38.W1 9D /r] VFNMADD132SD xmm1, xmm2, xmm3/m64
-    VFNMADD132SD_VdqHdqWq_V,
+    Vfnmadd132sdVdqHdqWqV,
     // [VEX.LIG.66.0F38.W1 AD /r] VFNMADD213SD xmm1, xmm2, xmm3/m64
-    VFNMADD213SD_VdqHdqWq_V,
+    Vfnmadd213sdVdqHdqWqV,
     // [VEX.LIG.66.0F38.W1 BD /r] VFNMADD231SD xmm1, xmm2, xmm3/m64
-    VFNMADD231SD_VdqHdqWq_V,
+    Vfnmadd231sdVdqHdqWqV,
     // [EVEX.LIG.66.0F38.W1 9D /r] VFNMADD132SD xmm1, xmm2, xmm3/m64{er}
-    VFNMADD132SD_VdqHdqWq_E,
+    Vfnmadd132sdVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W1 AD /r] VFNMADD213SD xmm1, xmm2, xmm3/m64{er}
-    VFNMADD213SD_VdqHdqWq_E,
+    Vfnmadd213sdVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W1 BD /r] VFNMADD231SD xmm1, xmm2, xmm3/m64{er}
-    VFNMADD231SD_VdqHdqWq_E,
+    Vfnmadd231sdVdqHdqWqE,
 
     // [VEX.LIG.66.0F38.W0 9D /r] VFNMADD132SS xmm1, xmm2, xmm3/m64
-    VFNMADD132SS_VdqHdqWq_V,
+    Vfnmadd132ssVdqHdqWqV,
     // [VEX.LIG.66.0F38.W0 AD /r] VFNMADD213SS xmm1, xmm2, xmm3/m64
-    VFNMADD213SS_VdqHdqWq_V,
+    Vfnmadd213ssVdqHdqWqV,
     // [VEX.LIG.66.0F38.W0 BD /r] VFNMADD231SS xmm1, xmm2, xmm3/m64
-    VFNMADD231SS_VdqHdqWq_V,
+    Vfnmadd231ssVdqHdqWqV,
     // [EVEX.LIG.66.0F38.W0 9D /r] VFNMADD132SS xmm1, xmm2, xmm3/m64{er}
-    VFNMADD132SS_VdqHdqWq_E,
+    Vfnmadd132ssVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W0 AD /r] VFNMADD213SS xmm1, xmm2, xmm3/m64{er}
-    VFNMADD213SS_VdqHdqWq_E,
+    Vfnmadd213ssVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W0 BD /r] VFNMADD231SS xmm1, xmm2, xmm3/m64{er}
-    VFNMADD231SS_VdqHdqWq_E,
+    Vfnmadd231ssVdqHdqWqE,
 
     // [VEX.128.66.0F38.W1 9E /r] VFNMSUB132PD xmm1, xmm2, xmm3/m128
-    VFNMSUB132PD_VdqHdqWdq_V128,
+    Vfnmsub132pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 AE /r] VFNMSUB213PD xmm1, xmm2, xmm3/m128
-    VFNMSUB213PD_VdqHdqWdq_V128,
+    Vfnmsub213pdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 BE /r] VFNMSUB231PD xmm1, xmm2, xmm3/m128
-    VFNMSUB231PD_VdqHdqWdq_V128,
+    Vfnmsub231pdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W1 9E /r] VFNMSUB132PD ymm1, ymm2, ymm3/m256
-    VFNMSUB132PD_VqqHqqWqq_V256,
+    Vfnmsub132pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 AE /r] VFNMSUB213PD ymm1, ymm2, ymm3/m256
-    VFNMSUB213PD_VqqHqqWqq_V256,
+    Vfnmsub213pdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 BE /r] VFNMSUB231PD ymm1, ymm2, ymm3/m256
-    VFNMSUB231PD_VqqHqqWqq_V256,
+    Vfnmsub231pdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 9E /r] VFNMSUB132PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFNMSUB132PD_VdqHdqWdq_E128,
+    Vfnmsub132pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 AE /r] VFNMSUB213PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFNMSUB213PD_VdqHdqWdq_E128,
+    Vfnmsub213pdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 BE /r] VFNMSUB231PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VFNMSUB231PD_VdqHdqWdq_E128,
+    Vfnmsub231pdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 9E /r] VFNMSUB132PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFNMSUB132PD_VqqHqqWqq_E256,
+    Vfnmsub132pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 AE /r] VFNMSUB213PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFNMSUB213PD_VqqHqqWqq_E256,
+    Vfnmsub213pdVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W1 BE /r] VFNMSUB231PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VFNMSUB231PD_VqqHqqWqq_E256,
+    Vfnmsub231pdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 9E /r] VFNMSUB132PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFNMSUB132PD_VdqqHdqqWdqq_E512,
+    Vfnmsub132pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 AE /r] VFNMSUB213PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFNMSUB213PD_VdqqHdqqWdqq_E512,
+    Vfnmsub213pdVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W1 BE /r] VFNMSUB231PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst{er}
-    VFNMSUB231PD_VdqqHdqqWdqq_E512,
+    Vfnmsub231pdVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 9E /r] VFNMSUB132PS xmm1, xmm2, xmm3/m128
-    VFNMSUB132PS_VdqHdqWdq_V128,
+    Vfnmsub132psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 AE /r] VFNMSUB213PS xmm1, xmm2, xmm3/m128
-    VFNMSUB213PS_VdqHdqWdq_V128,
+    Vfnmsub213psVdqHdqWdqV128,
     // [VEX.128.66.0F38.W0 BE /r] VFNMSUB231PS xmm1, xmm2, xmm3/m128
-    VFNMSUB231PS_VdqHdqWdq_V128,
+    Vfnmsub231psVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 9E /r] VFNMSUB132PS ymm1, ymm2, ymm3/m256
-    VFNMSUB132PS_VqqHqqWqq_V256,
+    Vfnmsub132psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 AE /r] VFNMSUB213PS ymm1, ymm2, ymm3/m256
-    VFNMSUB213PS_VqqHqqWqq_V256,
+    Vfnmsub213psVqqHqqWqqV256,
     // [VEX.256.66.0F38.W0 BE /r] VFNMSUB231PS ymm1, ymm2, ymm3/m256
-    VFNMSUB231PS_VqqHqqWqq_V256,
+    Vfnmsub231psVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W0 9E /r] VFNMSUB132PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFNMSUB132PS_VdqHdqWdq_E128,
+    Vfnmsub132psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 AE /r] VFNMSUB213PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFNMSUB213PS_VdqHdqWdq_E128,
+    Vfnmsub213psVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 BE /r] VFNMSUB231PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VFNMSUB231PS_VdqHdqWdq_E128,
+    Vfnmsub231psVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 9E /r] VFNMSUB132PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFNMSUB132PS_VqqHqqWqq_E256,
+    Vfnmsub132psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 AE /r] VFNMSUB213PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFNMSUB213PS_VqqHqqWqq_E256,
+    Vfnmsub213psVqqHqqWqqE256,
     // [EVEX.256.66.0F38.W0 BE /r] VFNMSUB231PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VFNMSUB231PS_VqqHqqWqq_E256,
+    Vfnmsub231psVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 9E /r] VFNMSUB132PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFNMSUB132PS_VdqqHdqqWdqq_E512,
+    Vfnmsub132psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 AE /r] VFNMSUB213PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFNMSUB213PS_VdqqHdqqWdqq_E512,
+    Vfnmsub213psVdqqHdqqWdqqE512,
     // [EVEX.512.66.0F38.W0 BE /r] VFNMSUB231PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VFNMSUB231PS_VdqqHdqqWdqq_E512,
+    Vfnmsub231psVdqqHdqqWdqqE512,
 
     // [VEX.LIG.66.0F38.W1 9F /r] VFNMSUB132SD xmm1, xmm2, xmm3/m64
-    VFNMSUB132SD_VdqHdqWq_V,
+    Vfnmsub132sdVdqHdqWqV,
     // [VEX.LIG.66.0F38.W1 AF /r] VFNMSUB213SD xmm1, xmm2, xmm3/m64
-    VFNMSUB213SD_VdqHdqWq_V,
+    Vfnmsub213sdVdqHdqWqV,
     // [VEX.LIG.66.0F38.W1 BF /r] VFNMSUB231SD xmm1, xmm2, xmm3/m64
-    VFNMSUB231SD_VdqHdqWq_V,
+    Vfnmsub231sdVdqHdqWqV,
     // [EVEX.LIG.66.0F38.W1 9F /r] VFNMSUB132SD xmm1, xmm2, xmm3/m64{er}
-    VFNMSUB132SD_VdqHdqWq_E,
+    Vfnmsub132sdVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W1 AF /r] VFNMSUB213SD xmm1, xmm2, xmm3/m64{er}
-    VFNMSUB213SD_VdqHdqWq_E,
+    Vfnmsub213sdVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W1 BF /r] VFNMSUB231SD xmm1, xmm2, xmm3/m64{er}
-    VFNMSUB231SD_VdqHdqWq_E,
+    Vfnmsub231sdVdqHdqWqE,
 
     // [VEX.LIG.66.0F38.W0 9F /r] VFNMSUB132SS xmm1, xmm2, xmm3/m64
-    VFNMSUB132SS_VdqHdqWq_V,
+    Vfnmsub132ssVdqHdqWqV,
     // [VEX.LIG.66.0F38.W0 AF /r] VFNMSUB213SS xmm1, xmm2, xmm3/m64
-    VFNMSUB213SS_VdqHdqWq_V,
+    Vfnmsub213ssVdqHdqWqV,
     // [VEX.LIG.66.0F38.W0 BF /r] VFNMSUB231SS xmm1, xmm2, xmm3/m64
-    VFNMSUB231SS_VdqHdqWq_V,
+    Vfnmsub231ssVdqHdqWqV,
     // [EVEX.LIG.66.0F38.W0 9F /r] VFNMSUB132SS xmm1, xmm2, xmm3/m64{er}
-    VFNMSUB132SS_VdqHdqWq_E,
+    Vfnmsub132ssVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W0 AF /r] VFNMSUB213SS xmm1, xmm2, xmm3/m64{er}
-    VFNMSUB213SS_VdqHdqWq_E,
+    Vfnmsub213ssVdqHdqWqE,
     // [EVEX.LIG.66.0F38.W0 BF /r] VFNMSUB231SS xmm1, xmm2, xmm3/m64{er}
-    VFNMSUB231SS_VdqHdqWq_E,
+    Vfnmsub231ssVdqHdqWqE,
 
     // [EVEX.128.66.0F3A.W1 66 /r ib] VFPCLASSPD k2 {k1}, xmm1/m128/m64bcst, imm8
-    VFPCLASSPD_KGbWdqIb_E128,
+    VfpclasspdKGbWdqIbE128,
     // [EVEX.256.66.0F3A.W1 66 /r ib] VFPCLASSPD k2 {k1}, ymm1/m256/m64bcst, imm8
-    VFPCLASSPD_KGbWqqIb_E256,
+    VfpclasspdKGbWqqIbE256,
     // [EVEX.512.66.0F3A.W1 66 /r ib] VFPCLASSPD k2 {k1}, zmm1/m512/m64bcst, imm8
-    VFPCLASSPD_KGbWdqqIb_E512,
+    VfpclasspdKGbWdqqIbE512,
 
     // [EVEX.128.66.0F3A.W0 66 /r ib] VFPCLASSPS k2 {k1}, xmm1/m128/m32bcst, imm8
-    VFPCLASSPS_KGbWdqIb_E128,
+    VfpclasspsKGbWdqIbE128,
     // [EVEX.256.66.0F3A.W0 66 /r ib] VFPCLASSPS k2 {k1}, ymm1/m256/m32bcst, imm8
-    VFPCLASSPS_KGbWqqIb_E256,
+    VfpclasspsKGbWqqIbE256,
     // [EVEX.512.66.0F3A.W0 66 /r ib] VFPCLASSPS k2 {k1}, zmm1/m512/m32bcst, imm8
-    VFPCLASSPS_KGbWdqqIb_E512,
+    VfpclasspsKGbWdqqIbE512,
 
     // [EVEX.LIG.66.0F3A.W1 67 /r ib] VFPCLASSSD k2 {k1}, xmm2/m64, imm8
-    VFPCLASSSD_KGbWqIb_E,
+    VfpclasssdKGbWqIbE,
 
     // [EVEX.LIG.66.0F3A.W0 67 /r ib] VFPCLASSSS k2 {k1}, xmm2/m32, imm8
-    VFPCLASSSS_KGbWdIb_E,
+    VfpclassssKGbWdIbE,
 
     // [VEX.128.66.0F38.W1 92 /r] VGATHERDPD xmm1, vm32x, xmm2
-    VGATHERDPD_VdqVMdHdq_V128,
+    VgatherdpdVdqVMdHdqV128,
     // [VEX.128.66.0F38.W1 93 /r] VGATHERQPD xmm1, vm64x, xmm2
-    VGATHERQPD_VdqVMqHdq_V128,
+    VgatherqpdVdqVMqHdqV128,
     // [VEX.256.66.0F38.W1 92 /r] VGATHERDPD ymm1, vm32y, ymm2
-    VGATHERDPD_VqqVMdHqq_V256,
+    VgatherdpdVqqVMdHqqV256,
     // [VEX.256.66.0F38.W1 93 /r] VGATHERQPD ymm1, vm64y, ymm2
-    VGATHERQPD_VqqVMqHqq_V256,
+    VgatherqpdVqqVMqHqqV256,
 
     // [VEX.128.66.0F38.W0 92 /r] VGATHERDPS xmm1, vm32x, xmm2
-    VGATHERDPS_VdqVMdHdq_V128,
+    VgatherdpsVdqVMdHdqV128,
     // [VEX.128.66.0F38.W0 93 /r] VGATHERQPS xmm1, vm64x, xmm2
-    VGATHERQPS_VdqVMqHdq_V128,
+    VgatherqpsVdqVMqHdqV128,
     // [VEX.256.66.0F38.W0 92 /r] VGATHERDPS ymm1, vm32y, ymm2
-    VGATHERDPS_VqqVMdHqq_V256,
+    VgatherdpsVqqVMdHqqV256,
     // [VEX.256.66.0F38.W0 93 /r] VGATHERQPS ymm1, vm64y, ymm2
-    VGATHERQPS_VqqVMqHqq_V256,
+    VgatherqpsVqqVMqHqqV256,
 
     // [EVEX.128.66.0F38.W0 92 /vsib] VGATHERDPS xmm1 {k1}{z}, vm32x
-    VGATHERDPS_VdqVMd_E128,
+    VgatherdpsVdqVMdE128,
     // [EVEX.256.66.0F38.W0 92 /vsib] VGATHERDPS ymm1 {k1}{z}, vm32y
-    VGATHERDPS_VqqVMd_E256,
+    VgatherdpsVqqVMdE256,
     // [EVEX.512.66.0F38.W0 92 /vsib] VGATHERDPS zmm1 {k1}{z}, vm32z
-    VGATHERDPS_VdqqVMd_E512,
+    VgatherdpsVdqqVMdE512,
     // [EVEX.128.66.0F38.W1 92 /vsib] VGATHERDPD xmm1 {k1}{z}, vm32x
-    VGATHERDPD_VdqVMd_E128,
+    VgatherdpdVdqVMdE128,
     // [EVEX.256.66.0F38.W1 92 /vsib] VGATHERDPD ymm1 {k1}{z}, vm32y
-    VGATHERDPD_VqqVMd_E256,
+    VgatherdpdVqqVMdE256,
     // [EVEX.512.66.0F38.W1 92 /vsib] VGATHERDPD zmm1 {k1}{z}, vm32z
-    VGATHERDPD_VdqqVMd_E512,
+    VgatherdpdVdqqVMdE512,
 
     // [EVEX.128.66.0F38.W0 93 /vsib] VGATHERQPS xmm1 {k1}{z}, vm64x
-    VGATHERQPS_VdqVMq_E128,
+    VgatherqpsVdqVMqE128,
     // [EVEX.256.66.0F38.W0 93 /vsib] VGATHERQPS ymm1 {k1}{z}, vm64y
-    VGATHERQPS_VqqVMq_E256,
+    VgatherqpsVqqVMqE256,
     // [EVEX.512.66.0F38.W0 93 /vsib] VGATHERQPS zmm1 {k1}{z}, vm64z
-    VGATHERQPS_VdqqVMq_E512,
+    VgatherqpsVdqqVMqE512,
     // [EVEX.128.66.0F38.W1 93 /vsib] VGATHERQPD xmm1 {k1}{z}, vm64x
-    VGATHERQPD_VdqVMq_E128,
+    VgatherqpdVdqVMqE128,
     // [EVEX.256.66.0F38.W1 93 /vsib] VGATHERQPD ymm1 {k1}{z}, vm64y
-    VGATHERQPD_VqqVMq_E256,
+    VgatherqpdVqqVMqE256,
     // [EVEX.512.66.0F38.W1 93 /vsib] VGATHERQPD zmm1 {k1}{z}, vm64z
-    VGATHERQPD_VdqqVMq_E512,
+    VgatherqpdVdqqVMqE512,
 
     // [EVEX.128.66.0F38.W1 42 /r] VGETEXPPD xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VGETEXPPD_VdqWdq_E128,
+    VgetexppdVdqWdqE128,
     // [EVEX.256.66.0F38.W1 42 /r] VGETEXPPD ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VGETEXPPD_VqqWqq_E256,
+    VgetexppdVqqWqqE256,
     // [EVEX.512.66.0F38.W1 42 /r] VGETEXPPD zmm1 {k1}{z}, zmm2/m512/m64bcst{er}
-    VGETEXPPD_VdqqWdqq_E512,
+    VgetexppdVdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 42 /r] VGETEXPPS xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VGETEXPPS_VdqWdq_E128,
+    VgetexppsVdqWdqE128,
     // [EVEX.256.66.0F38.W0 42 /r] VGETEXPPS ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VGETEXPPS_VqqWqq_E256,
+    VgetexppsVqqWqqE256,
     // [EVEX.512.66.0F38.W0 42 /r] VGETEXPPS zmm1 {k1}{z}, zmm2/m512/m32bcst{er}
-    VGETEXPPS_VdqqWdqq_E512,
+    VgetexppsVdqqWdqqE512,
 
     // [EVEX.LIG.66.0F38.W1 43 /r] VGETEXPSD xmm1 {k1}{z}, xmm2, xmm3/m64{sae}
-    VGETEXPSD_VdqHdqWq_E,
+    VgetexpsdVdqHdqWqE,
 
     // [EVEX.LIG.66.0F38.W0 43 /r] VGETEXPSS xmm1 {k1}{z}, xmm2, xmm3/m32{sae}
-    VGETEXPSS_VdqHdqWd_E,
+    VgetexpssVdqHdqWdE,
 
     // [EVEX.128.66.0F3A.W1 26 /r ib] VGETMANTPD xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VGETMANTPD_VdqWdqIb_E128,
+    VgetmantpdVdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 26 /r ib] VGETMANTPD ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VGETMANTPD_VqqWqqIb_E256,
+    VgetmantpdVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 26 /r ib] VGETMANTPD zmm1 {k1}{z}, zmm2/m512/m64bcst{er}, imm8
-    VGETMANTPD_VdqqWdqqIb_E512,
+    VgetmantpdVdqqWdqqIbE512,
 
     // [EVEX.128.66.0F3A.W0 26 /r ib] VGETMANTPS xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VGETMANTPS_VdqWdqIb_E128,
+    VgetmantpsVdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 26 /r ib] VGETMANTPS ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VGETMANTPS_VqqWqqIb_E256,
+    VgetmantpsVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 26 /r ib] VGETMANTPS zmm1 {k1}{z}, zmm2/m512/m64bcst{er}, imm8
-    VGETMANTPS_VdqqWdqqIb_E512,
+    VgetmantpsVdqqWdqqIbE512,
 
     // [EVEX.LIG.66.0F3A.W1 27 /r ib] VGETMANTSD xmm1 {k1}{z}, xmm2, xmm3/m64{sae}, imm8
-    VGETMANTSD_VdqHdqWqIb_E,
+    VgetmantsdVdqHdqWqIbE,
 
     // [EVEX.LIG.66.0F3A.W0 27 /r ib] VGETMANTSS xmm1 {k1}{z}, xmm2, xmm3/m32{sae}, imm8
-    VGETMANTSS_VdqHdqWdIb_E,
+    VgetmantssVdqHdqWdIbE,
 
     // [VEX.256.66.0F3A.W0 18 /r ib] VINSERTF128 ymm1, ymm2, xmm3/m128, imm8
-    VINSERTF128_VqqHqqWdqIb_V256,
+    Vinsertf128VqqHqqWdqIbV256,
     // [EVEX.256.66.0F3A.W0 18 /r ib] VINSERTF32X4 ymm1 {k1}{z}, ymm2, xmm3/m128, imm8
-    VINSERTF32X4_VqqHqqWdqIb_E256,
+    Vinsertf32x4VqqHqqWdqIbE256,
     // [EVEX.512.66.0F3A.W0 18 /r ib] VINSERTF32X4 zmm1 {k1}{z}, zmm2, xmm3/m128, imm8
-    VINSERTF32X4_VdqqHdqqWdqIb_E512,
+    Vinsertf32x4VdqqHdqqWdqIbE512,
     // [EVEX.256.66.0F3A.W1 18 /r ib] VINSERTF64X2 ymm1 {k1}{z}, ymm2, xmm3/m128, imm8
-    VINSERTF64X2_VqqHqqWdqIb_E256,
+    Vinsertf64x2VqqHqqWdqIbE256,
     // [EVEX.512.66.0F3A.W1 18 /r ib] VINSERTF64X2 zmm1 {k1}{z}, zmm2, xmm3/m128, imm8
-    VINSERTF64X2_VdqqHdqqWdqIb_E512,
+    Vinsertf64x2VdqqHdqqWdqIbE512,
     // [EVEX.512.66.0F3A.W0 1A /r ib] VINSERTF32X8 zmm1 {k1}{z}, zmm2, ymm3/m256, imm8
-    VINSERTF32X8_VdqqHdqqWqqIb_E512,
+    Vinsertf32x8VdqqHdqqWqqIbE512,
     // [EVEX.512.66.0F3A.W1 1A /r ib] VINSERTF64X4 zmm1 {k1}{z}, zmm2, ymm3/m256, imm8
-    VINSERTF64X4_VdqqHdqqWqqIb_E512,
+    Vinsertf64x4VdqqHdqqWqqIbE512,
 
     // [VEX.256.66.0F3A.W0 38 /r ib] VINSERTI128 ymm1, ymm2, xmm3/m128, imm8
-    VINSERTI128_VqqHqqWdqIb_V256,
+    Vinserti128VqqHqqWdqIbV256,
     // [EVEX.256.66.0F3A.W0 38 /r ib] VINSERTI32X4 ymm1 {k1}{z}, ymm2, xmm3/m128, imm8
-    VINSERTI32X4_VqqHqqWdqIb_E256,
+    Vinserti32x4VqqHqqWdqIbE256,
     // [EVEX.512.66.0F3A.W0 38 /r ib] VINSERTI32X4 zmm1 {k1}{z}, zmm2, xmm3/m128, imm8
-    VINSERTI32X4_VdqqHdqqWdqIb_E512,
+    Vinserti32x4VdqqHdqqWdqIbE512,
     // [EVEX.256.66.0F3A.W1 38 /r ib] VINSERTI64X2 ymm1 {k1}{z}, ymm2, xmm3/m128, imm8
-    VINSERTI64X2_VqqHqqWdqIb_E256,
+    Vinserti64x2VqqHqqWdqIbE256,
     // [EVEX.512.66.0F3A.W1 38 /r ib] VINSERTI64X2 zmm1 {k1}{z}, zmm2, xmm3/m128, imm8
-    VINSERTI64X2_VdqqHdqqWdqIb_E512,
+    Vinserti64x2VdqqHdqqWdqIbE512,
     // [EVEX.512.66.0F3A.W0 3A /r ib] VINSERTI32X8 zmm1 {k1}{z}, zmm2, ymm3/m256, imm8
-    VINSERTI32X8_VdqqHdqqWqqIb_E512,
+    Vinserti32x8VdqqHdqqWqqIbE512,
     // [EVEX.512.66.0F3A.W1 3A /r ib] VINSERTI64X4 zmm1 {k1}{z}, zmm2, ymm3/m256, imm8
-    VINSERTI64X4_VdqqHdqqWqqIb_E512,
+    Vinserti64x4VdqqHdqqWqqIbE512,
 
     // [VEX.128.66.0F38.W0 2C /r] VMASKMOVPS xmm1, xmm2, m128
-    VMASKMOVPS_VdqHdqWdq_V128,
+    VmaskmovpsVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 2C /r] VMASKMOVPS ymm1, ymm2, m256
-    VMASKMOVPS_VqqHqqWqq_V256,
+    VmaskmovpsVqqHqqWqqV256,
     // [VEX.128.66.0F38.W0 2D /r] VMASKMOVPD xmm1, xmm2, m128
-    VMASKMOVPD_VdqHdqWdq_V128,
+    VmaskmovpdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 2D /r] VMASKMOVPD ymm1, ymm2, m256
-    VMASKMOVPD_VqqHqqWqq_V256,
+    VmaskmovpdVqqHqqWqqV256,
     // [VEX.128.66.0F38.W0 2E /r] VMASKMOVPS m128, xmm1, xmm2
-    VMASKMOVPS_WdqHdqVdq_V128,
+    VmaskmovpsWdqHdqVdqV128,
     // [VEX.256.66.0F38.W0 2E /r] VMASKMOVPS m256, ymm1, ymm2
-    VMASKMOVPS_WqqHqqVqq_V256,
+    VmaskmovpsWqqHqqVqqV256,
     // [VEX.128.66.0F38.W0 2F /r] VMASKMOVPD m128, xmm1, xmm2
-    VMASKMOVPD_WdqHdqVdq_V128,
+    VmaskmovpdWdqHdqVdqV128,
     // [VEX.256.66.0F38.W0 2F /r] VMASKMOVPD m256, ymm1, ymm2
-    VMASKMOVPD_WqqHqqVqq_V256,
+    VmaskmovpdWqqHqqVqqV256,
 
     // [VEX.128.66.0F3A.W0 02 /r ib] VPBLENDD xmm1, xmm2, xmm3/m128, imm8
-    VPBLENDD_VdqHdqWdqIb_V128,
+    VpblenddVdqHdqWdqIbV128,
     // [VEX.256.66.0F3A.W0 02 /r ib] VPBLENDD ymm1, ymm2, ymm3/m256, imm8
-    VPBLENDD_VqqHqqWqqIb_V256,
+    VpblenddVqqHqqWqqIbV256,
 
     // [EVEX.128.66.0F38.W0 66 /r] VPBLENDMB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPBLENDMB_VdqHdqWdq_E128,
+    VpblendmbVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 66 /r] VPBLENDMB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPBLENDMB_VqqHqqWqq_E256,
+    VpblendmbVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 66 /r] VPBLENDMB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPBLENDMB_VdqqHdqqWdqq_E512,
+    VpblendmbVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 66 /r] VPBLENDMW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPBLENDMW_VdqHdqWdq_E128,
+    VpblendmwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 66 /r] VPBLENDMW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPBLENDMW_VqqHqqWqq_E256,
+    VpblendmwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 66 /r] VPBLENDMW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPBLENDMW_VdqqHdqqWdqq_E512,
+    VpblendmwVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 64 /r] VPBLENDMD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPBLENDMD_VdqHdqWdq_E128,
+    VpblendmdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 64 /r] VPBLENDMD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPBLENDMD_VqqHqqWqq_E256,
+    VpblendmdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 64 /r] VPBLENDMD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPBLENDMD_VdqqHdqqWdqq_E512,
+    VpblendmdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 64 /r] VPBLENDMQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPBLENDMQ_VdqHdqWdq_E128,
+    VpblendmqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 64 /r] VPBLENDMQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPBLENDMQ_VqqHqqWqq_E256,
+    VpblendmqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 64 /r] VPBLENDMQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPBLENDMQ_VdqqHdqqWdqq_E512,
+    VpblendmqVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 7A /r] VPBROADCASTB xmm1 {k1}{z}, r8
-    VPBROADCASTB_VdqEb_E128,
+    VpbroadcastbVdqEbE128,
     // [EVEX.256.66.0F38.W0 7A /r] VPBROADCASTB ymm1 {k1}{z}, r8
-    VPBROADCASTB_VqqEb_E256,
+    VpbroadcastbVqqEbE256,
     // [EVEX.512.66.0F38.W0 7A /r] VPBROADCASTB zmm1 {k1}{z}, r8
-    VPBROADCASTB_VdqqEb_E512,
+    VpbroadcastbVdqqEbE512,
     // [EVEX.128.66.0F38.W0 7B /r] VPBROADCASTW xmm1 {k1}{z}, r16
-    VPBROADCASTW_VdqEw_E128,
+    VpbroadcastwVdqEwE128,
     // [EVEX.256.66.0F38.W0 7B /r] VPBROADCASTW ymm1 {k1}{z}, r16
-    VPBROADCASTW_VqqEw_E256,
+    VpbroadcastwVqqEwE256,
     // [EVEX.512.66.0F38.W0 7B /r] VPBROADCASTW zmm1 {k1}{z}, r16
-    VPBROADCASTW_VdqqEw_E512,
+    VpbroadcastwVdqqEwE512,
     // [EVEX.128.66.0F38.W0 7C /r] VPBROADCASTD xmm1 {k1}{z}, r32
-    VPBROADCASTD_VdqEd_E128,
+    VpbroadcastdVdqEdE128,
     // [EVEX.256.66.0F38.W0 7C /r] VPBROADCASTD ymm1 {k1}{z}, r32
-    VPBROADCASTD_VqqEd_E256,
+    VpbroadcastdVqqEdE256,
     // [EVEX.512.66.0F38.W0 7C /r] VPBROADCASTD zmm1 {k1}{z}, r32
-    VPBROADCASTD_VdqqEd_E512,
+    VpbroadcastdVdqqEdE512,
     // [EVEX.128.66.0F38.W1 7C /r] VPBROADCASTQ xmm1 {k1}{z}, r64
-    VPBROADCASTQ_VdqEq_E128,
+    VpbroadcastqVdqEqE128,
     // [EVEX.256.66.0F38.W1 7C /r] VPBROADCASTQ ymm1 {k1}{z}, r64
-    VPBROADCASTQ_VqqEq_E256,
+    VpbroadcastqVqqEqE256,
     // [EVEX.512.66.0F38.W1 7C /r] VPBROADCASTQ zmm1 {k1}{z}, r64
-    VPBROADCASTQ_VdqqEq_E512,
+    VpbroadcastqVdqqEqE512,
 
     // [VEX.128.66.0F38.W0 78 /r] VPBROADCASTB xmm1, xmm2/m8
-    VPBROADCASTB_VdqWb_V128,
+    VpbroadcastbVdqWbV128,
     // [VEX.256.66.0F38.W0 78 /r] VPBROADCASTB ymm1, ymm2/m8
-    VPBROADCASTB_VqqWb_V256,
+    VpbroadcastbVqqWbV256,
     // [EVEX.128.66.0F38.W0 78 /r] VPBROADCASTB xmm1 {k1}{z}, xmm2/m8
-    VPBROADCASTB_VdqWb_E128,
+    VpbroadcastbVdqWbE128,
     // [EVEX.256.66.0F38.W0 78 /r] VPBROADCASTB ymm1 {k1}{z}, xmm2/m8
-    VPBROADCASTB_VqqWb_E256,
+    VpbroadcastbVqqWbE256,
     // [EVEX.512.66.0F38.W0 78 /r] VPBROADCASTB zmm1 {k1}{z}, xmm2/m8
-    VPBROADCASTB_VdqqWb_E512,
+    VpbroadcastbVdqqWbE512,
     // [VEX.128.66.0F38.W0 79 /r] VPBROADCASTW xmm1, xmm2/m16
-    VPBROADCASTW_VdqWw_V128,
+    VpbroadcastwVdqWwV128,
     // [VEX.256.66.0F38.W0 79 /r] VPBROADCASTW ymm1, ymm2/m16
-    VPBROADCASTW_VqqWw_V256,
+    VpbroadcastwVqqWwV256,
     // [EVEX.128.66.0F38.W0 79 /r] VPBROADCASTW xmm1 {k1}{z}, xmm2/m16
-    VPBROADCASTW_VdqWw_E128,
+    VpbroadcastwVdqWwE128,
     // [EVEX.256.66.0F38.W0 79 /r] VPBROADCASTW ymm1 {k1}{z}, xmm2/m16
-    VPBROADCASTW_VqqWw_E256,
+    VpbroadcastwVqqWwE256,
     // [EVEX.512.66.0F38.W0 79 /r] VPBROADCASTW zmm1 {k1}{z}, xmm2/m16
-    VPBROADCASTW_VdqqWw_E512,
+    VpbroadcastwVdqqWwE512,
     // [VEX.128.66.0F38.W0 58 /r] VPBROADCASTD xmm1, xmm2/m32
-    VPBROADCASTD_VdqWd_V128,
+    VpbroadcastdVdqWdV128,
     // [VEX.256.66.0F38.W0 58 /r] VPBROADCASTD ymm1, ymm2/m32
-    VPBROADCASTD_VqqWd_V256,
+    VpbroadcastdVqqWdV256,
     // [EVEX.128.66.0F38.W0 58 /r] VPBROADCASTD xmm1 {k1}{z}, xmm2/m32
-    VPBROADCASTD_VdqWd_E128,
+    VpbroadcastdVdqWdE128,
     // [EVEX.256.66.0F38.W0 58 /r] VPBROADCASTD ymm1 {k1}{z}, xmm2/m32
-    VPBROADCASTD_VqqWd_E256,
+    VpbroadcastdVqqWdE256,
     // [EVEX.512.66.0F38.W0 58 /r] VPBROADCASTD zmm1 {k1}{z}, xmm2/m32
-    VPBROADCASTD_VdqqWd_E512,
+    VpbroadcastdVdqqWdE512,
     // [VEX.128.66.0F38.W0 59 /r] VPBROADCASTQ xmm1, xmm2/m64
-    VPBROADCASTQ_VdqWq_V128,
+    VpbroadcastqVdqWqV128,
     // [VEX.256.66.0F38.W0 59 /r] VPBROADCASTQ ymm1, ymm2/m64
-    VPBROADCASTQ_VqqWq_V256,
+    VpbroadcastqVqqWqV256,
     // [EVEX.128.66.0F38.W1 59 /r] VPBROADCASTQ xmm1 {k1}{z}, xmm2/m64
-    VPBROADCASTQ_VdqWq_E128,
+    VpbroadcastqVdqWqE128,
     // [EVEX.256.66.0F38.W1 59 /r] VPBROADCASTQ ymm1 {k1}{z}, xmm2/m64
-    VPBROADCASTQ_VqqWq_E256,
+    VpbroadcastqVqqWqE256,
     // [EVEX.512.66.0F38.W1 59 /r] VPBROADCASTQ zmm1 {k1}{z}, xmm2/m64
-    VPBROADCASTQ_VdqqWq_E512,
+    VpbroadcastqVdqqWqE512,
     // [EVEX.128.66.0F38.W0 59 /r] VBROADCASTI32X2 xmm1 {k1}{z}, xmm2/m64
-    VBROADCASTI32X2_VdqWq_E128,
+    Vbroadcasti32x2VdqWqE128,
     // [EVEX.256.66.0F38.W0 59 /r] VBROADCASTI32X2 ymm1 {k1}{z}, xmm2/m64
-    VBROADCASTI32X2_VqqWq_E256,
+    Vbroadcasti32x2VqqWqE256,
     // [EVEX.512.66.0F38.W0 59 /r] VBROADCASTI32X2 zmm1 {k1}{z}, xmm2/m64
-    VBROADCASTI32X2_VdqqWq_E512,
+    Vbroadcasti32x2VdqqWqE512,
     // [VEX.256.66.0F38.W0 5A /r] VBROADCASTI128 ymm1, m128
-    VBROADCASTI128_VqqMdq_V256,
+    Vbroadcasti128VqqMdqV256,
     // [EVEX.256.66.0F38.W0 5A /r] VBROADCASTI32X4 ymm1 {k1}{z}, m128
-    VBROADCASTI32X4_VqqMdq_E256,
+    Vbroadcasti32x4VqqMdqE256,
     // [EVEX.512.66.0F38.W0 5A /r] VBROADCASTI32X4 zmm1 {k1}{z}, m128
-    VBROADCASTI32X4_VdqqMdq_E512,
+    Vbroadcasti32x4VdqqMdqE512,
     // [EVEX.256.66.0F38.W1 5A /r] VBROADCASTI64X2 ymm1 {k1}{z}, m128
-    VBROADCASTI64X2_VqqMdq_E256,
+    Vbroadcasti64x2VqqMdqE256,
     // [EVEX.512.66.0F38.W1 5A /r] VBROADCASTI64X2 zmm1 {k1}{z}, m128
-    VBROADCASTI64X2_VdqqMdq_E512,
+    Vbroadcasti64x2VdqqMdqE512,
     // [EVEX.512.66.0F38.W0 5B /r] VBROADCASTI32X8 zmm1 {k1}{z}, m256
-    VBROADCASTI32X8_VdqqMqq_E512,
+    Vbroadcasti32x8VdqqMqqE512,
     // [EVEX.512.66.0F38.W1 5B /r] VBROADCASTI64X4 zmm1 {k1}{z}, m256
-    VBROADCASTI64X4_VdqqMqq_E512,
+    Vbroadcasti64x4VdqqMqqE512,
 
     // [EVEX.128.66.0F38.W1 2A /r] VPBROADCASTMB2Q xmm1, k1
-    VPBROADCASTMB2Q_VdqKEb_E128,
+    Vpbroadcastmb2qVdqKEbE128,
     // [EVEX.256.66.0F38.W1 2A /r] VPBROADCASTMB2Q ymm1, k1
-    VPBROADCASTMB2Q_VqqKEb_E256,
+    Vpbroadcastmb2qVqqKEbE256,
     // [EVEX.512.66.0F38.W1 2A /r] VPBROADCASTMB2Q zmm1, k1
-    VPBROADCASTMB2Q_VdqqKEb_E512,
+    Vpbroadcastmb2qVdqqKEbE512,
     // [EVEX.128.66.0F38.W0 3A /r] VPBROADCASTMW2D xmm1, k1
-    VPBROADCASTMB2Q_VdqKEw_E128,
+    Vpbroadcastmb2qVdqKEwE128,
     // [EVEX.256.66.0F38.W0 3A /r] VPBROADCASTMW2D ymm1, k1
-    VPBROADCASTMB2Q_VqqKEw_E256,
+    Vpbroadcastmb2qVqqKEwE256,
     // [EVEX.512.66.0F38.W0 3A /r] VPBROADCASTMW2D zmm1, k1
-    VPBROADCASTMB2Q_VdqqKEw_E512,
+    Vpbroadcastmb2qVdqqKEwE512,
 
     // [EVEX.128.66.0F3A.W0 3F /r ib] VPCMPB k1 {k2}, xmm2, xmm3/m128, imm8
-    VPCMPB_KGqHdqWdqIb_E128,
+    VpcmpbKGqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 3F /r ib] VPCMPB k1 {k2}, ymm2, ymm3/m256, imm8
-    VPCMPB_KGqHqqWqqIb_E256,
+    VpcmpbKGqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 3F /r ib] VPCMPB k1 {k2}, zmm2, zmm3/m512, imm8
-    VPCMPB_KGqHdqqWdqqIb_E512,
+    VpcmpbKGqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W0 3E /r ib] VPCMPUB k1 {k2}, xmm2, xmm3/m128, imm8
-    VPCMPUB_KGqHdqWdqIb_E128,
+    VpcmpubKGqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 3E /r ib] VPCMPUB k1 {k2}, ymm2, ymm3/m256, imm8
-    VPCMPUB_KGqHqqWqqIb_E256,
+    VpcmpubKGqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 3E /r ib] VPCMPUB k1 {k2}, zmm2, zmm3/m512, imm8
-    VPCMPUB_KGqHdqqWdqqIb_E512,
+    VpcmpubKGqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F3A.W0 1F /r ib] VPCMPD k1 {k2}, xmm2, xmm3/m128/m32bcst, imm8
-    VPCMPD_KGqHdqWdqIb_E128,
+    VpcmpdKGqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 1F /r ib] VPCMPD k1 {k2}, ymm2, ymm3/m256/m32bcst, imm8
-    VPCMPD_KGqHqqWqqIb_E256,
+    VpcmpdKGqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 1F /r ib] VPCMPD k1 {k2}, zmm2, zmm3/m512/m32bcst, imm8
-    VPCMPD_KGqHdqqWdqqIb_E512,
+    VpcmpdKGqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W0 1E /r ib] VPCMPUD k1 {k2}, xmm2, xmm3/m128/m32bcst, imm8
-    VPCMPUD_KGqHdqWdqIb_E128,
+    VpcmpudKGqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 1E /r ib] VPCMPUD k1 {k2}, ymm2, ymm3/m256/m32bcst, imm8
-    VPCMPUD_KGqHqqWqqIb_E256,
+    VpcmpudKGqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 1E /r ib] VPCMPUD k1 {k2}, zmm2, zmm3/m512/m32bcst, imm8
-    VPCMPUD_KGqHdqqWdqqIb_E512,
+    VpcmpudKGqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F3A.W1 1F /r ib] VPCMPQ k1 {k2}, xmm2, xmm3/m128/m64bcst, imm8
-    VPCMPQ_KGqHdqWdqIb_E128,
+    VpcmpqKGqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 1F /r ib] VPCMPQ k1 {k2}, ymm2, ymm3/m256/m64bcst, imm8
-    VPCMPQ_KGqHqqWqqIb_E256,
+    VpcmpqKGqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 1F /r ib] VPCMPQ k1 {k2}, zmm2, zmm3/m512/m64bcst, imm8
-    VPCMPQ_KGqHdqqWdqqIb_E512,
+    VpcmpqKGqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W1 1E /r ib] VPCMPUQ k1 {k2}, xmm2, xmm3/m128/m64bcst, imm8
-    VPCMPUQ_KGqHdqWdqIb_E128,
+    VpcmpuqKGqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 1E /r ib] VPCMPUQ k1 {k2}, ymm2, ymm3/m256/m64bcst, imm8
-    VPCMPUQ_KGqHqqWqqIb_E256,
+    VpcmpuqKGqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 1E /r ib] VPCMPUQ k1 {k2}, zmm2, zmm3/m512/m64bcst, imm8
-    VPCMPUQ_KGqHdqqWdqqIb_E512,
+    VpcmpuqKGqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F3A.W1 3F /r ib] VPCMPW k1 {k2}, xmm2, xmm3/m128, imm8
-    VPCMPW_KGqHdqWdqIb_E128,
+    VpcmpwKGqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 3F /r ib] VPCMPW k1 {k2}, ymm2, ymm3/m256, imm8
-    VPCMPW_KGqHqqWqqIb_E256,
+    VpcmpwKGqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 3F /r ib] VPCMPW k1 {k2}, zmm2, zmm3/m512, imm8
-    VPCMPW_KGqHdqqWdqqIb_E512,
+    VpcmpwKGqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W1 3E /r ib] VPCMPUW k1 {k2}, xmm2, xmm3/m128, imm8
-    VPCMPUW_KGqHdqWdqIb_E128,
+    VpcmpuwKGqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 3E /r ib] VPCMPUW k1 {k2}, ymm2, ymm3/m256, imm8
-    VPCMPUW_KGqHqqWqqIb_E256,
+    VpcmpuwKGqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 3E /r ib] VPCMPUW k1 {k2}, zmm2, zmm3/m512, imm8
-    VPCMPUW_KGqHdqqWdqqIb_E512,
+    VpcmpuwKGqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F38.W0 63 /r] VPCOMPRESSB m128 {k1}, xmm1
     // [EVEX.128.66.0F38.W0 63 /r] VPCOMPRESSB xmm1 {k1}{z}, xmm2
-    VPCOMPRESSB_WdqVdq_E128,
+    VpcompressbWdqVdqE128,
     // [EVEX.256.66.0F38.W0 63 /r] VPCOMPRESSB m256 {k1}, ymm1
     // [EVEX.256.66.0F38.W0 63 /r] VPCOMPRESSB ymm1 {k1}{z}, ymm2
-    VPCOMPRESSB_WqqVqq_E256,
+    VpcompressbWqqVqqE256,
     // [EVEX.512.66.0F38.W0 63 /r] VPCOMPRESSB m512 {k1}, zmm1
     // [EVEX.512.66.0F38.W0 63 /r] VPCOMPRESSB zmm1 {k1}{z}, zmm2
-    VPCOMPRESSB_WdqqVdqq_E512,
+    VpcompressbWdqqVdqqE512,
     // [EVEX.128.66.0F38.W1 63 /r] VPCOMPRESSW m128 {k1}, xmm1
     // [EVEX.128.66.0F38.W1 63 /r] VPCOMPRESSW xmm1 {k1}{z}, xmm2
-    VPCOMPRESSW_WdqVdq_E128,
+    VpcompresswWdqVdqE128,
     // [EVEX.256.66.0F38.W1 63 /r] VPCOMPRESSW m256 {k1}, ymm1
     // [EVEX.256.66.0F38.W1 63 /r] VPCOMPRESSW ymm1 {k1}{z}, ymm2
-    VPCOMPRESSW_WqqVqq_E256,
+    VpcompresswWqqVqqE256,
     // [EVEX.512.66.0F38.W1 63 /r] VPCOMPRESSW m512 {k1}, zmm1
     // [EVEX.512.66.0F38.W1 63 /r] VPCOMPRESSW zmm1 {k1}{z}, zmm2
-    VPCOMPRESSW_WdqqVdqq_E512,
+    VpcompresswWdqqVdqqE512,
 
     // [EVEX.128.66.0F38.W0 8B /r] VPCOMPRESSD xmm1/m128 {k1}{z}, xmm2
-    VPCOMPRESSD_WdqVdq_E128,
+    VpcompressdWdqVdqE128,
     // [EVEX.256.66.0F38.W0 8B /r] VPCOMPRESSD ymm1/m256 {k1}{z}, ymm2
-    VPCOMPRESSD_WqqVqq_E256,
+    VpcompressdWqqVqqE256,
     // [EVEX.512.66.0F38.W0 8B /r] VPCOMPRESSD zmm1/m512 {k1}{z}, zmm2
-    VPCOMPRESSD_WdqqVdqq_E512,
+    VpcompressdWdqqVdqqE512,
 
     // [EVEX.128.66.0F38.W1 8B /r] VPCOMPRESSQ xmm1/m128 {k1}{z}, xmm2
-    VPCOMPRESSQ_WdqVdq_E128,
+    VpcompressqWdqVdqE128,
     // [EVEX.256.66.0F38.W1 8B /r] VPCOMPRESSQ ymm1/m256 {k1}{z}, ymm2
-    VPCOMPRESSQ_WqqVqq_E256,
+    VpcompressqWqqVqqE256,
     // [EVEX.512.66.0F38.W1 8B /r] VPCOMPRESSQ zmm1/m512 {k1}{z}, zmm2
-    VPCOMPRESSQ_WdqqVdqq_E512,
+    VpcompressqWdqqVdqqE512,
 
     // [EVEX.128.66.0F38.W0 C4 /r] VPCONFLICTD xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VPCONFLICTD_VdqWdq_E128,
+    VpconflictdVdqWdqE128,
     // [EVEX.256.66.0F38.W0 C4 /r] VPCONFLICTD ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VPCONFLICTD_VqqWqq_E256,
+    VpconflictdVqqWqqE256,
     // [EVEX.512.66.0F38.W0 C4 /r] VPCONFLICTD zmm1 {k1}{z}, zmm2/m512/m32bcst
-    VPCONFLICTD_VdqqWdqq_E512,
+    VpconflictdVdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 C4 /r] VPCONFLICTQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VPCONFLICTQ_VdqWdq_E128,
+    VpconflictqVdqWdqE128,
     // [EVEX.256.66.0F38.W1 C4 /r] VPCONFLICTQ ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VPCONFLICTQ_VqqWqq_E256,
+    VpconflictqVqqWqqE256,
     // [EVEX.512.66.0F38.W1 C4 /r] VPCONFLICTQ zmm1 {k1}{z}, zmm2/m512/m64bcst
-    VPCONFLICTQ_VdqqWdqq_E512,
+    VpconflictqVdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 50 /r] VPDPBUSD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPDPBUSD_VdqHdqWdq_E128,
+    VpdpbusdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 50 /r] VPDPBUSD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPDPBUSD_VqqHqqWqq_E256,
+    VpdpbusdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 50 /r] VPDPBUSD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPDPBUSD_VdqqHdqqWdqq_E512,
+    VpdpbusdVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 51 /r] VPDPBUSDS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPDPBUSDS_VdqHdqWdq_E128,
+    VpdpbusdsVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 51 /r] VPDPBUSDS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPDPBUSDS_VqqHqqWqq_E256,
+    VpdpbusdsVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 51 /r] VPDPBUSDS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPDPBUSDS_VdqqHdqqWdqq_E512,
+    VpdpbusdsVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 52 /r] VPDPWSSD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPDPWSSD_VdqHdqWdq_E128,
+    VpdpwssdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 52 /r] VPDPWSSD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPDPWSSD_VqqHqqWqq_E256,
+    VpdpwssdVqqHqqWqqE256,
     // [EVEX.128.66.0F38.W0 52 /r] VPDPWSSD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPDPWSSD_VdqqHdqqWdqq_E512,
+    VpdpwssdVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 53 /r] VPDPWSSDS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPDPWSSDS_VdqHdqWdq_E128,
+    VpdpwssdsVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 53 /r] VPDPWSSDS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPDPWSSDS_VqqHqqWqq_E256,
+    VpdpwssdsVqqHqqWqqE256,
     // [EVEX.128.66.0F38.W0 53 /r] VPDPWSSDS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPDPWSSDS_VdqqHdqqWdqq_E512,
+    VpdpwssdsVdqqHdqqWdqqE512,
 
     // [VEX.256.66.0F3A.W0 06 /r ib] VPERM2F128 ymm1, ymm2, ymm3/m256, imm8
-    VPERM2F128_VqqHqqWqqIb_V256,
+    Vperm2f128VqqHqqWqqIbV256,
 
     // [VEX.256.66.0F3A.W0 46 /r ib] VPERM2I128 ymm1, ymm2, ymm3/m256, imm8
-    VPERM2I128_VqqHqqWqqIb_V256,
+    Vperm2i128VqqHqqWqqIbV256,
 
     // [EVEX.128.66.0F38.W0 8D /r] VPERMB xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPERMB_VdqHdqWdq_E128,
+    VpermbVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 8D /r] VPERMB ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPERMB_VqqHqqWqq_E256,
+    VpermbVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 8D /r] VPERMB zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPERMB_VdqqHdqqWdqq_E512,
+    VpermbVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 36 /r] VPERMD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPERMD_VdqHdqWdq_E128,
+    VpermdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 36 /r] VPERMD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPERMD_VqqHqqWqq_E256,
+    VpermdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 36 /r] VPERMD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPERMD_VdqqHdqqWdqq_E512,
+    VpermdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 8D /r] VPERMW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPERMW_VdqHdqWdq_E128,
+    VpermwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 8D /r] VPERMW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPERMW_VqqHqqWqq_E256,
+    VpermwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 8D /r] VPERMW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPERMW_VdqqHdqqWdqq_E512,
+    VpermwVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 75 /r] VPERMI2B xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPERMI2B_VdqHdqWdq_E128,
+    Vpermi2bVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 75 /r] VPERMI2B ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPERMI2B_VqqHqqWqq_E256,
+    Vpermi2bVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 75 /r] VPERMI2B zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPERMI2B_VdqqHdqqWdqq_E512,
+    Vpermi2bVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W1 75 /r] VPERMI2W xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPERMI2W_VdqHdqWdq_E128,
+    Vpermi2wVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 75 /r] VPERMI2W ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPERMI2W_VqqHqqWqq_E256,
+    Vpermi2wVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 75 /r] VPERMI2W zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPERMI2W_VdqqHdqqWdqq_E512,
+    Vpermi2wVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 76 /r] VPERMI2D xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPERMI2D_VdqHdqWdq_E128,
+    Vpermi2dVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 76 /r] VPERMI2D ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPERMI2D_VqqHqqWqq_E256,
+    Vpermi2dVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 76 /r] VPERMI2D zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPERMI2D_VdqqHdqqWdqq_E512,
+    Vpermi2dVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 76 /r] VPERMI2Q xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPERMI2Q_VdqHdqWdq_E128,
+    Vpermi2qVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 76 /r] VPERMI2Q ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPERMI2Q_VqqHqqWqq_E256,
+    Vpermi2qVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 76 /r] VPERMI2Q zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPERMI2Q_VdqqHdqqWdqq_E512,
+    Vpermi2qVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 77 /r] VPERMI2PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPERMI2PS_VdqHdqWdq_E128,
+    Vpermi2psVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 77 /r] VPERMI2PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPERMI2PS_VqqHqqWqq_E256,
+    Vpermi2psVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 77 /r] VPERMI2PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPERMI2PS_VdqqHdqqWdqq_E512,
+    Vpermi2psVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 77 /r] VPERMI2PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPERMI2PD_VdqHdqWdq_E128,
+    Vpermi2pdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 77 /r] VPERMI2PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPERMI2PD_VqqHqqWqq_E256,
+    Vpermi2pdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 77 /r] VPERMI2PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPERMI2PD_VdqqHdqqWdqq_E512,
+    Vpermi2pdVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 0D /r] VPERMILPD xmm1, xmm2, xmm3/m128
-    VPERMILPD_VdqHdqWdq_V128,
+    VpermilpdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 0D /r] VPERMILPD ymm1, ymm2, ymm3/m256
-    VPERMILPD_VqqHqqWqq_V256,
+    VpermilpdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 0D /r] VPERMILPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPERMILPD_VdqHdqWdq_E128,
+    VpermilpdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 0D /r] VPERMILPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPERMILPD_VqqHqqWqq_E256,
+    VpermilpdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 0D /r] VPERMILPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPERMILPD_VdqqHdqqWdqq_E512,
+    VpermilpdVdqqHdqqWdqqE512,
     // [VEX.128.66.0F3A.W0 05 /r ib] VPERMILPD xmm1, xmm2/m128, imm8
-    VPERMILPD_VdqWdqIb_V128,
+    VpermilpdVdqWdqIbV128,
     // [VEX.256.66.0F3A.W0 05 /r ib] VPERMILPD ymm1, ymm2/m256, imm8
-    VPERMILPD_VqqWqqIb_V128,
+    VpermilpdVqqWqqIbV128,
     // [EVEX.128.66.0F3A.W1 05 /r ib] VPERMILPD xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VPERMILPD_VdqWdqIb_E128,
+    VpermilpdVdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 05 /r ib] VPERMILPD ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VPERMILPD_VqqWqqIb_E256,
+    VpermilpdVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 05 /r ib] VPERMILPD zmm1 {k1}{z}, zmm2/m512/m64bcst, imm8
-    VPERMILPD_VdqqWdqqIb_E512,
+    VpermilpdVdqqWdqqIbE512,
 
     // [VEX.128.66.0F38.W0 0C /r] VPERMILPS xmm1, xmm2, xmm3/m128
-    VPERMILPS_VdqHdqWdq_V128,
+    VpermilpsVdqHdqWdqV128,
     // [VEX.128.66.0F3A.W0 04 /r ib] VPERMILPS xmm1, xmm2/m128, imm8
-    VPERMILPS_VdqWdqIb_V128,
+    VpermilpsVdqWdqIbV128,
     // [VEX.256.66.0F38.W0 0C /r] VPERMILPS ymm1, ymm2, ymm3/m256
-    VPERMILPS_VqqHqqWqq_V256,
+    VpermilpsVqqHqqWqqV256,
     // [VEX.256.66.0F3A.W0 04 /r ib] VPERMILPS ymm1, ymm2/m256, imm8
-    VPERMILPS_VqqWqqIb_V128,
+    VpermilpsVqqWqqIbV128,
     // [EVEX.128.66.0F38.W0 0C /r] VPERMILPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPERMILPS_VdqHdqWdq_E128,
+    VpermilpsVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 0C /r] VPERMILPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPERMILPS_VqqHqqWqq_E256,
+    VpermilpsVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 0C /r] VPERMILPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPERMILPS_VdqqHdqqWdqq_E512,
+    VpermilpsVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F3A.W0 04 /r ib] VPERMILPS xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VPERMILPS_VdqWdqIb_E128,
+    VpermilpsVdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 04 /r ib] VPERMILPS ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VPERMILPS_VqqWqqIb_E256,
+    VpermilpsVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 04 /r ib] VPERMILPS zmm1 {k1}{z}, zmm2/m512/m32bcst, imm8
-    VPERMILPS_VdqqWdqqIb_E512,
+    VpermilpsVdqqWdqqIbE512,
 
     // [VEX.256.66.0F3A.W1 01 /r ib] VPERMPD ymm1, ymm2/m256, imm8
-    VPERMPD_VqqWqqIb_V256,
+    VpermpdVqqWqqIbV256,
     // [EVEX.256.66.0F3A.W1 01 /r ib] VPERMPD ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VPERMPD_VqqWqqIb_E256,
+    VpermpdVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 01 /r ib] VPERMPD zmm1 {k1}{z}, zmm2/m512/m64bcst, imm8
-    VPERMPD_VdqqWdqqIb_E512,
+    VpermpdVdqqWdqqIbE512,
     // [EVEX.256.66.0F3A.W1 16 /r ib] VPERMPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPERMPD_VqqHqqWqq_E256,
+    VpermpdVqqHqqWqqE256,
     // [EVEX.512.66.0F3A.W1 16 /r ib] VPERMPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPERMPD_VdqqHdqqWdqq_E512,
+    VpermpdVdqqHdqqWdqqE512,
 
     // [VEX.256.66.0F38.W0 16 /r] VPERMPS ymm1, ymm2, ymm3/m256
-    VPERMPS_VqqHqqWqq_V256,
+    VpermpsVqqHqqWqqV256,
     // [EVEX.256.66.0F38.W0 16 /r] VPERMPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPERMPS_VqqHqqWqq_E256,
+    VpermpsVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 16 /r] VPERMPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPERMPS_VdqqHdqqWdqq_E512,
+    VpermpsVdqqHdqqWdqqE512,
 
     // [VEX.256.66.0F3A.W1 00 /r ib] VPERMQ ymm1, ymm2/m256, imm8
-    VPERMQ_VqqWqqIb_V256,
+    VpermqVqqWqqIbV256,
     // [EVEX.256.66.0F3A.W1 00 /r ib] VPERMQ ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VPERMQ_VqqWqqIb_E256,
+    VpermqVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 00 /r ib] VPERMQ zmm1 {k1}{z}, xmm2/m512/m64bcst, imm8
-    VPERMQ_VdqqWdqqIb_E512,
+    VpermqVdqqWdqqIbE512,
     // [EVEX.256.66.0F38.W1 36 /r] VPERMQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPERMQ_VqqHqqWqq_E256,
+    VpermqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 36 /r] VPERMQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPERMQ_VdqqHdqqWdqq_E512,
+    VpermqVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 7D /r] VPERMT2B xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPERMT2B_VdqHdqWdq_E128,
+    Vpermt2bVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 7D /r] VPERMT2B ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPERMT2B_VqqHqqWqq_E256,
+    Vpermt2bVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 7D /r] VPERMT2B zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPERMT2B_VdqqHdqqWdqq_E512,
+    Vpermt2bVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W1 7D /r] VPERMT2W xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPERMT2W_VdqHdqWdq_E128,
+    Vpermt2wVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 7D /r] VPERMT2W ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPERMT2W_VqqHqqWqq_E256,
+    Vpermt2wVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 7D /r] VPERMT2W zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPERMT2W_VdqqHdqqWdqq_E512,
+    Vpermt2wVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 7E /r] VPERMT2D xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPERMT2D_VdqHdqWdq_E128,
+    Vpermt2dVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 7E /r] VPERMT2D ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPERMT2D_VqqHqqWqq_E256,
+    Vpermt2dVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 7E /r] VPERMT2D zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPERMT2D_VdqqHdqqWdqq_E512,
+    Vpermt2dVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 7E /r] VPERMT2Q xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPERMT2Q_VdqHdqWdq_E128,
+    Vpermt2qVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 7E /r] VPERMT2Q ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPERMT2Q_VqqHqqWqq_E256,
+    Vpermt2qVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 7E /r] VPERMT2Q zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPERMT2Q_VdqqHdqqWdqq_E512,
+    Vpermt2qVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 7F /r] VPERMT2PS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPERMT2PS_VdqHdqWdq_E128,
+    Vpermt2psVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 7F /r] VPERMT2PS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPERMT2PS_VqqHqqWqq_E256,
+    Vpermt2psVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 7F /r] VPERMT2PS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPERMT2PS_VdqqHdqqWdqq_E512,
+    Vpermt2psVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 7F /r] VPERMT2PD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPERMT2PD_VdqHdqWdq_E128,
+    Vpermt2pdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 7F /r] VPERMT2PD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPERMT2PD_VqqHqqWqq_E256,
+    Vpermt2pdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 7F /r] VPERMT2PD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPERMT2PD_VdqqHdqqWdqq_E512,
+    Vpermt2pdVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 62 /r] VPEXPANDB xmm1 {k1}{z}, m128
     // [EVEX.128.66.0F38.W0 62 /r] VPEXPANDB xmm1 {k1}{z}, xmm2
-    VPEXPANDB_VdqWdq_E128,
+    VpexpandbVdqWdqE128,
     // [EVEX.256.66.0F38.W0 62 /r] VPEXPANDB ymm1 {k1}{z}, m256
     // [EVEX.256.66.0F38.W0 62 /r] VPEXPANDB ymm1 {k1}{z}, ymm2
-    VPEXPANDB_VqqWqq_E256,
+    VpexpandbVqqWqqE256,
     // [EVEX.512.66.0F38.W0 62 /r] VPEXPANDB zmm1 {k1}{z}, m512
     // [EVEX.512.66.0F38.W0 62 /r] VPEXPANDB zmm1 {k1}{z}, zmm2
-    VPEXPANDB_VdqqWdqq_E512,
+    VpexpandbVdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 62 /r] VPEXPANDW xmm1 {k1}{z}, m128
     // [EVEX.128.66.0F38.W1 62 /r] VPEXPANDW xmm1 {k1}{z}, xmm2
-    VPEXPANDW_VdqWdq_E128,
+    VpexpandwVdqWdqE128,
     // [EVEX.256.66.0F38.W1 62 /r] VPEXPANDW ymm1 {k1}{z}, m256
     // [EVEX.256.66.0F38.W1 62 /r] VPEXPANDW ymm1 {k1}{z}, ymm2
-    VPEXPANDW_VqqWqq_E256,
+    VpexpandwVqqWqqE256,
     // [EVEX.512.66.0F38.W1 62 /r] VPEXPANDW zmm1 {k1}{z}, m512
     // [EVEX.512.66.0F38.W1 62 /r] VPEXPANDW zmm1 {k1}{z}, zmm2
-    VPEXPANDW_VdqqWdqq_E512,
+    VpexpandwVdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 89 /r] VPEXPANDD xmm1 {k1}{z}, xmm2/m128
-    VPEXPANDD_VdqWdq_E128,
+    VpexpanddVdqWdqE128,
     // [EVEX.256.66.0F38.W0 89 /r] VPEXPANDD ymm1 {k1}{z}, ymm2/m256
-    VPEXPANDD_VqqWqq_E256,
+    VpexpanddVqqWqqE256,
     // [EVEX.512.66.0F38.W0 89 /r] VPEXPANDD zmm1 {k1}{z}, zmm2/m512
-    VPEXPANDD_VdqqWdqq_E512,
+    VpexpanddVdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W1 89 /r] VPEXPANDQ xmm1 {k1}{z}, xmm2/m128
-    VPEXPANDQ_VdqWdq_E128,
+    VpexpandqVdqWdqE128,
     // [EVEX.256.66.0F38.W1 89 /r] VPEXPANDQ ymm1 {k1}{z}, ymm2/m256
-    VPEXPANDQ_VqqWqq_E256,
+    VpexpandqVqqWqqE256,
     // [EVEX.512.66.0F38.W1 89 /r] VPEXPANDQ zmm1 {k1}{z}, zmm2/m512
-    VPEXPANDQ_VdqqWdqq_E512,
+    VpexpandqVdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 90 /r] VPGATHERDD xmm1, vm32x, xmm2
-    VPGATHERDD_VdqVMdHdq_V128,
+    VpgatherddVdqVMdHdqV128,
     // [VEX.128.66.0F38.W0 91 /r] VPGATHERQD xmm1, vm64x, xmm2
-    VPGATHERQD_VdqVMqHdq_V128,
+    VpgatherqdVdqVMqHdqV128,
     // [VEX.256.66.0F38.W0 90 /r] VPGATHERDD ymm1, vm32y, ymm2
-    VPGATHERDD_VqqVMdHqq_V256,
+    VpgatherddVqqVMdHqqV256,
     // [VEX.256.66.0F38.W0 91 /r] VPGATHERQD ymm1, vm64y, ymm2
-    VPGATHERQD_VqqVMqHqq_V256,
+    VpgatherqdVqqVMqHqqV256,
 
     // [EVEX.128.66.0F38.W0 90 /vsib] VPGATHERDD xmm1 {k1}, vm32x
-    VPGATHERDD_VdqVMd_E128,
+    VpgatherddVdqVMdE128,
     // [EVEX.256.66.0F38.W0 90 /vsib] VPGATHERDD ymm1 {k1}, vm32y
-    VPGATHERDD_VqqVMd_E256,
+    VpgatherddVqqVMdE256,
     // [EVEX.512.66.0F38.W0 90 /vsib] VPGATHERDD zmm1 {k1}, vm32z
-    VPGATHERDD_VdqqVMd_E512,
+    VpgatherddVdqqVMdE512,
     // [EVEX.128.66.0F38.W1 90 /vsib] VPGATHERDQ xmm1 {k1}, vm32x
-    VPGATHERDQ_VdqVMd_E128,
+    VpgatherdqVdqVMdE128,
     // [EVEX.256.66.0F38.W1 90 /vsib] VPGATHERDQ ymm1 {k1}, vm32y
-    VPGATHERDQ_VqqVMd_E256,
+    VpgatherdqVqqVMdE256,
     // [EVEX.512.66.0F38.W1 90 /vsib] VPGATHERDQ zmm1 {k1}, vm32z
-    VPGATHERDQ_VdqqVMd_E512,
+    VpgatherdqVdqqVMdE512,
 
     // [VEX.128.66.0F38.W1 90 /r] VPGATHERDQ xmm1, vm32x, xmm2
-    VPGATHERDQ_VdqVMdHdq_V128,
+    VpgatherdqVdqVMdHdqV128,
     // [VEX.128.66.0F38.W1 91 /r] VPGATHERQQ xmm1, vm64x, xmm2
-    VPGATHERQQ_VdqVMqHdq_V128,
+    VpgatherqqVdqVMqHdqV128,
     // [VEX.256.66.0F38.W1 90 /r] VPGATHERDQ ymm1, vm32x, ymm2
-    VPGATHERDQ_VqqVMdHqq_V256,
+    VpgatherdqVqqVMdHqqV256,
     // [VEX.256.66.0F38.W1 91 /r] VPGATHERQQ ymm1, vm64x, ymm2
-    VPGATHERQQ_VqqVMqHqq_V256,
+    VpgatherqqVqqVMqHqqV256,
 
     // [EVEX.128.66.0F38.W0 91 /vsib] VPGATHERQD xmm1 {k1}, vm64x
-    VPGATHERQD_VdqVMq_E128,
+    VpgatherqdVdqVMqE128,
     // [EVEX.256.66.0F38.W0 91 /vsib] VPGATHERQD ymm1 {k1}, vm64y
-    VPGATHERQD_VqqVMq_E256,
+    VpgatherqdVqqVMqE256,
     // [EVEX.512.66.0F38.W0 91 /vsib] VPGATHERQD zmm1 {k1}, vm64z
-    VPGATHERQD_VdqqVMq_E512,
+    VpgatherqdVdqqVMqE512,
     // [EVEX.128.66.0F38.W1 91 /vsib] VPGATHERQQ xmm1 {k1}, vm64x
-    VPGATHERQQ_VdqVMq_E128,
+    VpgatherqqVdqVMqE128,
     // [EVEX.256.66.0F38.W1 91 /vsib] VPGATHERQQ ymm1 {k1}, vm64y
-    VPGATHERQQ_VqqVMq_E256,
+    VpgatherqqVqqVMqE256,
     // [EVEX.512.66.0F38.W1 91 /vsib] VPGATHERQQ zmm1 {k1}, vm64z
-    VPGATHERQQ_VdqqVMq_E512,
+    VpgatherqqVdqqVMqE512,
 
     // [EVEX.128.66.0F38.W0 44 /r] VPLZCNTD xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VPLZCNTD_VdqWdq_E128,
+    VplzcntdVdqWdqE128,
     // [EVEX.256.66.0F38.W0 44 /r] VPLZCNTD ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VPLZCNTD_VqqWqq_E256,
+    VplzcntdVqqWqqE256,
     // [EVEX.512.66.0F38.W0 44 /r] VPLZCNTD zmm1 {k1}{z}, zmm2/m512/m32bcst
-    VPLZCNTD_VdqqWdqq_E512,
+    VplzcntdVdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 44 /r] VPLZCNTQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VPLZCNTQ_VdqWdq_E128,
+    VplzcntqVdqWdqE128,
     // [EVEX.256.66.0F38.W1 44 /r] VPLZCNTQ ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VPLZCNTQ_VqqWqq_E256,
+    VplzcntqVqqWqqE256,
     // [EVEX.512.66.0F38.W1 44 /r] VPLZCNTQ zmm1 {k1}{z}, zmm2/m512/m64bcst
-    VPLZCNTQ_VdqqWdqq_E512,
+    VplzcntqVdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W1 B5 /r] VPMADD52HUQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPMADD52HUQ_VdqHdqWdq_E128,
+    Vpmadd52huqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 B5 /r] VPMADD52HUQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPMADD52HUQ_VqqHqqWqq_E256,
+    Vpmadd52huqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 B5 /r] VPMADD52HUQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPMADD52HUQ_VdqqHdqqWdqq_E512,
+    Vpmadd52huqVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W1 B4 /r] VPMADD52LUQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPMADD52LUQ_VdqHdqWdq_E128,
+    Vpmadd52luqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 B4 /r] VPMADD52LUQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPMADD52LUQ_VqqHqqWqq_E256,
+    Vpmadd52luqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 B4 /r] VPMADD52LUQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPMADD52LUQ_VdqqHdqqWdqq_E512,
+    Vpmadd52luqVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 8C /r] VPMASKMOVD xmm1, xmm2, m128
-    VPMASKMOVD_VdqHdqMdq_V128,
+    VpmaskmovdVdqHdqMdqV128,
     // [VEX.256.66.0F38.W0 8C /r] VPMASKMOVD ymm1, ymm2, m256
-    VPMASKMOVD_VqqHqqMqq_V256,
+    VpmaskmovdVqqHqqMqqV256,
     // [VEX.128.66.0F38.W1 8C /r] VPMASKMOVQ xmm1, xmm2, m128
-    VPMASKMOVQ_VdqHdqMdq_V128,
+    VpmaskmovqVdqHdqMdqV128,
     // [VEX.256.66.0F38.W1 8C /r] VPMASKMOVQ ymm1, ymm2, m256
-    VPMASKMOVQ_VqqHqqMqq_V256,
+    VpmaskmovqVqqHqqMqqV256,
     // [VEX.128.66.0F38.W0 8E /r] VPMASKMOVD m128, xmm1, xmm2
-    VPMASKMOVD_MdqHdqVdq_V128,
+    VpmaskmovdMdqHdqVdqV128,
     // [VEX.256.66.0F38.W0 8E /r] VPMASKMOVD m256, ymm1, ymm2
-    VPMASKMOVD_MqqHqqVqq_V256,
+    VpmaskmovdMqqHqqVqqV256,
     // [VEX.128.66.0F38.W1 8E /r] VPMASKMOVQ m128, xmm1, xmm2
-    VPMASKMOVQ_MdqHdqVdq_V128,
+    VpmaskmovqMdqHdqVdqV128,
     // [VEX.256.66.0F38.W1 8E /r] VPMASKMOVQ m256, ymm1, ymm2
-    VPMASKMOVQ_MqqHqqVqq_V256,
+    VpmaskmovqMqqHqqVqqV256,
 
     // [EVEX.128.F3.0F38.W0 29 /r] VPMOVB2M k1, xmm1
-    VPMOVB2M_KGqVdq_E128,
+    Vpmovb2mKGqVdqE128,
     // [EVEX.256.F3.0F38.W0 29 /r] VPMOVB2M k1, ymm1
-    VPMOVB2M_KGqVqq_E256,
+    Vpmovb2mKGqVqqE256,
     // [EVEX.512.F3.0F38.W0 29 /r] VPMOVB2M k1, zmm1
-    VPMOVB2M_KGqVdqq_E512,
+    Vpmovb2mKGqVdqqE512,
     // [EVEX.128.F3.0F38.W1 29 /r] VPMOVW2M k1, xmm1
-    VPMOVW2M_KGqVdq_E128,
+    Vpmovw2mKGqVdqE128,
     // [EVEX.256.F3.0F38.W1 29 /r] VPMOVW2M k1, ymm1
-    VPMOVW2M_KGqVqq_E256,
+    Vpmovw2mKGqVqqE256,
     // [EVEX.512.F3.0F38.W1 29 /r] VPMOVW2M k1, zmm1
-    VPMOVW2M_KGqVdqq_E512,
+    Vpmovw2mKGqVdqqE512,
     // [EVEX.128.F3.0F38.W0 39 /r] VPMOVD2M k1, xmm1
-    VPMOVD2M_KGqVdq_E128,
+    Vpmovd2mKGqVdqE128,
     // [EVEX.256.F3.0F38.W0 39 /r] VPMOVD2M k1, ymm1
-    VPMOVD2M_KGqVqq_E256,
+    Vpmovd2mKGqVqqE256,
     // [EVEX.512.F3.0F38.W0 39 /r] VPMOVD2M k1, zmm1
-    VPMOVD2M_KGqVdqq_E512,
+    Vpmovd2mKGqVdqqE512,
     // [EVEX.128.F3.0F38.W1 39 /r] VPMOVQ2M k1, xmm1
-    VPMOVQ2M_KGqVdq_E128,
+    Vpmovq2mKGqVdqE128,
     // [EVEX.256.F3.0F38.W1 39 /r] VPMOVQ2M k1, ymm1
-    VPMOVQ2M_KGqVqq_E256,
+    Vpmovq2mKGqVqqE256,
     // [EVEX.512.F3.0F38.W1 39 /r] VPMOVQ2M k1, zmm1
-    VPMOVQ2M_KGqVdqq_E512,
+    Vpmovq2mKGqVdqqE512,
 
     // [EVEX.128.F3.0F38.W0 31 /r] VPMOVDB xmm1/m32 {k1}{z}, xmm2
-    VPMOVDB_WdVdq_E128,
+    VpmovdbWdVdqE128,
     // [EVEX.128.F3.0F38.W0 21 /r] VPMOVSDB xmm1/m32 {k1}{z}, xmm2
-    VPMOVSDB_WdVdq_E128,
+    VpmovsdbWdVdqE128,
     // [EVEX.128.F3.0F38.W0 11 /r] VPMOVUSDB xmm1/m32 {k1}{z}, xmm2
-    VPMOVUSDB_WdVdq_E128,
+    VpmovusdbWdVdqE128,
     // [EVEX.256.F3.0F38.W0 31 /r] VPMOVDB xmm1/m64 {k1}{z}, ymm2
-    VPMOVDB_WqVqq_E256,
+    VpmovdbWqVqqE256,
     // [EVEX.256.F3.0F38.W0 21 /r] VPMOVSDB xmm1/m64 {k1}{z}, ymm2
-    VPMOVSDB_WqVqq_E256,
+    VpmovsdbWqVqqE256,
     // [EVEX.256.F3.0F38.W0 11 /r] VPMOVUSDB xmm1/m64 {k1}{z}, ymm2
-    VPMOVUSDB_WqVqq_E256,
+    VpmovusdbWqVqqE256,
     // [EVEX.512.F3.0F38.W0 31 /r] VPMOVDB xmm1/m128 {k1}{z}, zmm2
-    VPMOVDB_WdqVdqq_E512,
+    VpmovdbWdqVdqqE512,
     // [EVEX.512.F3.0F38.W0 21 /r] VPMOVSDB xmm1/m128 {k1}{z}, zmm2
-    VPMOVSDB_WdqVdqq_E512,
+    VpmovsdbWdqVdqqE512,
     // [EVEX.512.F3.0F38.W0 11 /r] VPMOVUSDB xmm1/m128 {k1}{z}, zmm2
-    VPMOVUSDB_WdqVdqq_E512,
+    VpmovusdbWdqVdqqE512,
 
     // [EVEX.128.F3.0F38.W0 33 /r] VPMOVDW xmm1/m64 {k1}{z}, xmm2
-    VPMOVDW_WqVdq_E128,
+    VpmovdwWqVdqE128,
     // [EVEX.128.F3.0F38.W0 23 /r] VPMOVSDW xmm1/m64 {k1}{z}, xmm2
-    VPMOVSDW_WqVdq_E128,
+    VpmovsdwWqVdqE128,
     // [EVEX.128.F3.0F38.W0 13 /r] VPMOVUSDW xmm1/m64 {k1}{z}, xmm2
-    VPMOVUSDW_WqVdq_E128,
+    VpmovusdwWqVdqE128,
     // [EVEX.256.F3.0F38.W0 33 /r] VPMOVDW xmm1/m128 {k1}{z}, ymm2
-    VPMOVDW_WdqVqq_E256,
+    VpmovdwWdqVqqE256,
     // [EVEX.256.F3.0F38.W0 23 /r] VPMOVSDW xmm1/m128 {k1}{z}, ymm2
-    VPMOVSDW_WdqVqq_E256,
+    VpmovsdwWdqVqqE256,
     // [EVEX.256.F3.0F38.W0 13 /r] VPMOVUSDW xmm1/m128 {k1}{z}, ymm2
-    VPMOVUSDW_WdqVqq_E256,
+    VpmovusdwWdqVqqE256,
     // [EVEX.512.F3.0F38.W0 33 /r] VPMOVDW ymm1/m256 {k1}{z}, zmm2
-    VPMOVDW_WqqVdqq_E512,
+    VpmovdwWqqVdqqE512,
     // [EVEX.512.F3.0F38.W0 23 /r] VPMOVSDW ymm1/m256 {k1}{z}, zmm2
-    VPMOVSDW_WqqVdqq_E512,
+    VpmovsdwWqqVdqqE512,
     // [EVEX.512.F3.0F38.W0 13 /r] VPMOVUSDW ymm1/m256 {k1}{z}, zmm2
-    VPMOVUSDW_WqqVdqq_E512,
+    VpmovusdwWqqVdqqE512,
 
     // [EVEX.128.F3.0F38.W0 28 /r] VPMOVM2B xmm1, k1
-    VPMOVM2B_VdqKRq_E128,
+    Vpmovm2bVdqKRqE128,
     // [EVEX.256.F3.0F38.W0 28 /r] VPMOVM2B ymm1, k1
-    VPMOVM2B_VqqKRq_E256,
+    Vpmovm2bVqqKRqE256,
     // [EVEX.512.F3.0F38.W0 28 /r] VPMOVM2B zmm1, k1
-    VPMOVM2B_VdqqKRq_E512,
+    Vpmovm2bVdqqKRqE512,
     // [EVEX.128.F3.0F38.W1 28 /r] VPMOVM2W xmm1, k1
-    VPMOVM2W_VdqKRq_E128,
+    Vpmovm2wVdqKRqE128,
     // [EVEX.256.F3.0F38.W1 28 /r] VPMOVM2W ymm1, k1
-    VPMOVM2W_VqqKRq_E256,
+    Vpmovm2wVqqKRqE256,
     // [EVEX.512.F3.0F38.W1 28 /r] VPMOVM2W zmm1, k1
-    VPMOVM2W_VdqqKRq_E512,
+    Vpmovm2wVdqqKRqE512,
     // [EVEX.128.F3.0F38.W0 38 /r] VPMOVM2D xmm1, k1
-    VPMOVM2D_VdqKRq_E128,
+    Vpmovm2dVdqKRqE128,
     // [EVEX.256.F3.0F38.W0 38 /r] VPMOVM2D ymm1, k1
-    VPMOVM2D_VqqKRq_E256,
+    Vpmovm2dVqqKRqE256,
     // [EVEX.512.F3.0F38.W0 38 /r] VPMOVM2D zmm1, k1
-    VPMOVM2D_VdqqKRq_E512,
+    Vpmovm2dVdqqKRqE512,
     // [EVEX.128.F3.0F38.W1 38 /r] VPMOVM2Q xmm1, k1
-    VPMOVM2Q_VdqKRq_E128,
+    Vpmovm2qVdqKRqE128,
     // [EVEX.256.F3.0F38.W1 38 /r] VPMOVM2Q ymm1, k1
-    VPMOVM2Q_VqqKRq_E256,
+    Vpmovm2qVqqKRqE256,
     // [EVEX.512.F3.0F38.W1 38 /r] VPMOVM2Q zmm1, k1
-    VPMOVM2Q_VdqqKRq_E512,
+    Vpmovm2qVdqqKRqE512,
 
     // [EVEX.128.F3.0F38.W0 32 /r] VPMOVQB xmm1/m16 {k1}{z}, xmm2
-    VPMOVQB_WwVdq_E128,
+    VpmovqbWwVdqE128,
     // [EVEX.128.F3.0F38.W0 22 /r] VPMOVSQB xmm1/m16 {k1}{z}, xmm2
-    VPMOVSQB_WwVdq_E128,
+    VpmovsqbWwVdqE128,
     // [EVEX.128.F3.0F38.W0 12 /r] VPMOVUSQB xmm1/m16 {k1}{z}, xmm2
-    VPMOVUSQB_WwVdq_E128,
+    VpmovusqbWwVdqE128,
     // [EVEX.256.F3.0F38.W0 32 /r] VPMOVQB xmm1/m32 {k1}{z}, ymm2
-    VPMOVQB_WdVqq_E256,
+    VpmovqbWdVqqE256,
     // [EVEX.256.F3.0F38.W0 22 /r] VPMOVSQB xmm1/m32 {k1}{z}, ymm2
-    VPMOVSQB_WdVqq_E256,
+    VpmovsqbWdVqqE256,
     // [EVEX.256.F3.0F38.W0 12 /r] VPMOVUSQB xmm1/m32 {k1}{z}, ymm2
-    VPMOVUSQB_WdVqq_E256,
+    VpmovusqbWdVqqE256,
     // [EVEX.128.F3.0F38.W0 32 /r] VPMOVQB xmm1/m64 {k1}{z}, zmm2
-    VPMOVQB_WqVdqq_E5122,
+    VpmovqbWqVdqqE5122,
     // [EVEX.128.F3.0F38.W0 22 /r] VPMOVSQB xmm1/m64 {k1}{z}, zmm2
-    VPMOVSQB_WqVdqq_E512,
+    VpmovsqbWqVdqqE512,
     // [EVEX.128.F3.0F38.W0 12 /r] VPMOVUSQB xmm1/m64 {k1}{z}, zmm2
-    VPMOVUSQB_WqVdqq_E512,
+    VpmovusqbWqVdqqE512,
 
     // [EVEX.128.F3.0F38.W0 35 /r] VPMOVQD xmm1/m64 {k1}{z}, xmm2
     // NOTE: Intel manual says m128 and "2 packed double-word integer in xmm1/m128"
-    VPMOVQD_WqVdq_E128,
+    VpmovqdWqVdqE128,
     // [EVEX.128.F3.0F38.W0 5 /r] VPMOVSQD xmm1/m64 {k1}{z}, xmm2
-    VPMOVSQD_WqVdq_E128,
+    VpmovsqdWqVdqE128,
     // [EVEX.128.F3.0F38.W0 15 /r] VPMOVUSQD xmm1/m64 {k1}{z}, xmm2
-    VPMOVUSQD_WqVdq_E128,
+    VpmovusqdWqVdqE128,
     // [EVEX.256.F3.0F38.W0 35 /r] VPMOVQD xmm1/m128 {k1}{z}, ymm2
-    VPMOVQD_WdqVqq_E256,
+    VpmovqdWdqVqqE256,
     // [EVEX.256.F3.0F38.W0 25 /r] VPMOVSQD xmm1/m128 {k1}{z}, ymm2
-    VPMOVSQD_WdqVqq_E256,
+    VpmovsqdWdqVqqE256,
     // [EVEX.256.F3.0F38.W0 15 /r] VPMOVUSQD xmm1/m128 {k1}{z}, ymm2
-    VPMOVUSQD_WdqVqq_E256,
+    VpmovusqdWdqVqqE256,
     // [EVEX.512.F3.0F38.W0 35 /r] VPMOVQD xmm1/m256 {k1}{z}, zmm2
-    VPMOVQD_WqqVdqq_E512,
+    VpmovqdWqqVdqqE512,
     // [EVEX.512.F3.0F38.W0 25 /r] VPMOVSQD xmm1/m256 {k1}{z}, zmm2
-    VPMOVSQD_WqqVdqq_E512,
+    VpmovsqdWqqVdqqE512,
     // [EVEX.512.F3.0F38.W0 15 /r] VPMOVUSQD xmm1/m256 {k1}{z}, zmm2
-    VPMOVUSQD_WqqVdqq_E512,
+    VpmovusqdWqqVdqqE512,
 
     // [EVEX.128.F3.0F38.W0 34 /r] VPMOVQW xmm1/m32 {k1}{z}, xmm2
-    VPMOVQW_WdVdq_E128,
+    VpmovqwWdVdqE128,
     // [EVEX.128.F3.0F38.W0 24 /r] VPMOVSQW xmm1/m32 {k1}{z}, xmm2
-    VPMOVSQW_WdVdq_E128,
+    VpmovsqwWdVdqE128,
     // [EVEX.128.F3.0F38.W0 14 /r] VPMOVUSQW xmm1/m32 {k1}{z}, xmm2
-    VPMOVUSQW_WdVdq_E128,
+    VpmovusqwWdVdqE128,
     // [EVEX.256.F3.0F38.W0 34 /r] VPMOVQW xmm1/m64 {k1}{z}, ymm2
-    VPMOVQW_WqVqq_E256,
+    VpmovqwWqVqqE256,
     // [EVEX.256.F3.0F38.W0 24 /r] VPMOVSQW xmm1/m64 {k1}{z}, ymm2
-    VPMOVSQW_WqVqq_E256,
+    VpmovsqwWqVqqE256,
     // [EVEX.256.F3.0F38.W0 14 /r] VPMOVUSQW xmm1/m64 {k1}{z}, ymm2
-    VPMOVUSQW_WqVqq_E256,
+    VpmovusqwWqVqqE256,
     // [EVEX.512.F3.0F38.W0 34 /r] VPMOVQW xmm1/m128 {k1}{z}, zmm2
-    VPMOVQW_WdqVdqq_E512,
+    VpmovqwWdqVdqqE512,
     // [EVEX.512.F3.0F38.W0 24 /r] VPMOVSQW xmm1/m128 {k1}{z}, zmm2
-    VPMOVSQW_WdqVdqq_E512,
+    VpmovsqwWdqVdqqE512,
     // [EVEX.521.F3.0F38.W0 14 /r] VPMOVUSQW xmm1/m128 {k1}{z}, zmm2
-    VPMOVUSQW_WdqVdqq_E512,
+    VpmovusqwWdqVdqqE512,
 
     // [EVEX.128.F3.0F38.W0 30 /r] VPMOVWB xmm1/m64 {k1}{z}, xmm2
-    VPMOVWB_WqVdq_E128,
+    VpmovwbWqVdqE128,
     // [EVEX.128.F3.0F38.W0 20 /r] VPMOVSWB xmm1/m64 {k1}{z}, xmm2
-    VPMOVSWB_WqVdq_E128,
+    VpmovswbWqVdqE128,
     // [EVEX.128.F3.0F38.W0 10 /r] VPMOVUSWB xmm1/m64 {k1}{z}, xmm2
-    VPMOVUSWB_WqVdq_E128,
+    VpmovuswbWqVdqE128,
     // [EVEX.256.F3.0F38.W0 30 /r] VPMOVWB xmm1/m128 {k1}{z}, ymm2
-    VPMOVWB_WdqVqq_E256,
+    VpmovwbWdqVqqE256,
     // [EVEX.256.F3.0F38.W0 20 /r] VPMOVSWB xmm1/m128 {k1}{z}, ymm2
-    VPMOVSWB_WdqVqq_E256,
+    VpmovswbWdqVqqE256,
     // [EVEX.256.F3.0F38.W0 10 /r] VPMOVUSWB xmm1/m128 {k1}{z}, ymm2
-    VPMOVUSWB_WdqVqq_E256,
+    VpmovuswbWdqVqqE256,
     // [EVEX.512.F3.0F38.W0 30 /r] VPMOVWB xmm1/m256 {k1}{z}, zmm2
-    VPMOVWB_WqqVdqq_E512,
+    VpmovwbWqqVdqqE512,
     // [EVEX.512.F3.0F38.W0 20 /r] VPMOVSWB xmm1/m256 {k1}{z}, zmm2
-    VPMOVSWB_WqqVdqq_E512,
+    VpmovswbWqqVdqqE512,
     // [EVEX.512.F3.0F38.W0 10 /r] VPMOVUSWB xmm1/m256 {k1}{z}, zmm2
-    VPMOVUSWB_WqqVdqq_E512,
+    VpmovuswbWqqVdqqE512,
 
     // [EVEX.128.66.0F38.W1 83 /r] VPMULTISHIFTQB xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPMULTISHIFTQB_VdqHdqWdq_E128,
+    VpmultishiftqbVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 83 /r] VPMULTISHIFTQB ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPMULTISHIFTQB_VqqHqqWqq_E256,
+    VpmultishiftqbVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 83 /r] VPMULTISHIFTQB zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPMULTISHIFTQB_VdqqHdqqWdqq_E512,
+    VpmultishiftqbVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 54 /r] VPOPCNTB xmm1 {k1}{z}, xmm2/m128
-    VPOPCNTB_VdqWdq_E128,
+    VpopcntbVdqWdqE128,
     // [EVEX.256.66.0F38.W0 54 /r] VPOPCNTB ymm1 {k1}{z}, ymm2/m256
-    VPOPCNTB_VqqWqq_E256,
+    VpopcntbVqqWqqE256,
     // [EVEX.512.66.0F38.W0 54 /r] VPOPCNTB zmm1 {k1}{z}, zmm2/m512
-    VPOPCNTB_VdqqWdqq_E512,
+    VpopcntbVdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 54 /r] VPOPCNTW xmm1 {k1}{z}, xmm2/m128
-    VPOPCNTW_VdqWdq_E128,
+    VpopcntwVdqWdqE128,
     // [EVEX.256.66.0F38.W1 54 /r] VPOPCNTW ymm1 {k1}{z}, ymm2/m256
-    VPOPCNTW_VqqWqq_E256,
+    VpopcntwVqqWqqE256,
     // [EVEX.512.66.0F38.W1 54 /r] VPOPCNTW zmm1 {k1}{z}, zmm2/m512
-    VPOPCNTW_VdqqWdqq_E512,
+    VpopcntwVdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 55 /r] VPOPCNTD xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VPOPCNTD_VdqWdq_E128,
+    VpopcntdVdqWdqE128,
     // [EVEX.256.66.0F38.W0 55 /r] VPOPCNTD ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VPOPCNTD_VqqWqq_E256,
+    VpopcntdVqqWqqE256,
     // [EVEX.512.66.0F38.W0 55 /r] VPOPCNTD zmm1 {k1}{z}, zmm2/m512/m32bcst
-    VPOPCNTD_VdqqWdqq_E512,
+    VpopcntdVdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 55 /r] VPOPCNTQ xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VPOPCNTQ_VdqWdq_E128,
+    VpopcntqVdqWdqE128,
     // [EVEX.256.66.0F38.W1 55 /r] VPOPCNTQ ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VPOPCNTQ_VqqWqq_E256,
+    VpopcntqVqqWqqE256,
     // [EVEX.512.66.0F38.W1 55 /r] VPOPCNTQ zmm1 {k1}{z}, zmm2/m512/m64bcst
-    VPOPCNTQ_VdqqWdqq_E512,
+    VpopcntqVdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 15 /r] VPROLVD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPROLVD_VdqHdqWdq_E128,
+    VprolvdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 72 /1 ib] VPROLD xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VPROLD_HdqWdqIb_E128,
+    VproldHdqWdqIbE128,
     // [EVEX.128.66.0F38.W1 15 /r] VPROLVQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPROLVQ_VdqHdqWdq_E128,
+    VprolvqVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 72 /1 ib] VPROLQ xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VPROLQ_HdqWdqIb_E128,
+    VprolqHdqWdqIbE128,
     // [EVEX.256.66.0F38.W0 15 /r] VPROLVD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPROLVD_VqqHqqWqq_E128,
+    VprolvdVqqHqqWqqE128,
     // [EVEX.256.66.0F38.W0 72 /1 ib] VPROLD ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VPROLD_HqqWqqIb_E128,
+    VproldHqqWqqIbE128,
     // [EVEX.256.66.0F38.W1 15 /r] VPROLVQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPROLVQ_VqqHqqWqq_E128,
+    VprolvqVqqHqqWqqE128,
     // [EVEX.256.66.0F38.W1 72 /1 ib] VPROLQ ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VPROLQ_HqqWqqIb_E128,
+    VprolqHqqWqqIbE128,
     // [EVEX.512.66.0F38.W0 15 /r] VPROLVD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPROLVD_VdqqHdqqWdqq_E128,
+    VprolvdVdqqHdqqWdqqE128,
     // [EVEX.512.66.0F38.W0 72 /1 ib] VPROLD zmm1 {k1}{z}, zmm2/m512/m32bcst, imm8
-    VPROLD_HdqqWdqqIb_E128,
+    VproldHdqqWdqqIbE128,
     // [EVEX.512.66.0F38.W1 15 /r] VPROLVQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPROLVQ_VdqqHdqqWdqq_E128,
+    VprolvqVdqqHdqqWdqqE128,
     // [EVEX.512.66.0F38.W1 72 /1 ib] VPROLQ zmm1 {k1}{z}, zmm2/m512/m64bcst, imm8
-    VPROLQ_HdqqWdqqIb_E128,
+    VprolqHdqqWdqqIbE128,
 
     // [EVEX.128.66.0F38.W0 14 /r] VPRORVD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPRORVD_VdqHdqWdq_E128,
+    VprorvdVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W0 72 /0 ib] VPRORD xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VPRORD_HdqWdqIb_E128,
+    VprordHdqWdqIbE128,
     // [EVEX.128.66.0F38.W1 14 /r] VPRORVQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPRORVQ_VdqHdqWdq_E128,
+    VprorvqVdqHdqWdqE128,
     // [EVEX.128.66.0F38.W1 72 /0 ib] VPRORQ xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VPRORQ_HdqWdqIb_E128,
+    VprorqHdqWdqIbE128,
     // [EVEX.256.66.0F38.W0 14 /r] VPRORVD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPRORVD_VqqHqqWqq_E128,
+    VprorvdVqqHqqWqqE128,
     // [EVEX.256.66.0F38.W0 72 /0 ib] VPRORD ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VPRORD_HqqWqqIb_E128,
+    VprordHqqWqqIbE128,
     // [EVEX.256.66.0F38.W1 14 /r] VPRORVQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPRORVQ_VqqHqqWqq_E128,
+    VprorvqVqqHqqWqqE128,
     // [EVEX.256.66.0F38.W1 72 /0 ib] VPRORQ ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VPRORQ_HqqWqqIb_E128,
+    VprorqHqqWqqIbE128,
     // [EVEX.512.66.0F38.W0 14 /r] VPRORVD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPRORVD_VdqqHdqqWdqq_E128,
+    VprorvdVdqqHdqqWdqqE128,
     // [EVEX.512.66.0F38.W0 72 /0 ib] VPRORD zmm1 {k1}{z}, zmm2/m512/m32bcst, imm8
-    VPRORD_HdqqWdqqIb_E128,
+    VprordHdqqWdqqIbE128,
     // [EVEX.512.66.0F38.W1 14 /r] VPRORVQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPRORVQ_VdqqHdqqWdqq_E128,
+    VprorvqVdqqHdqqWdqqE128,
     // [EVEX.512.66.0F38.W1 72 /0 ib] VPRORQ zmm1 {k1}{z}, zmm2/m512/m64bcst, imm8
-    VPRORQ_HdqqWdqqIb_E128,
+    VprorqHdqqWdqqIbE128,
 
     // [EVEX.128.66.0F38.W0 A0 /vsib] VPSCATTERDD vm32x {k1}, xmm1
-    VPSCATTERDD_VMdVdq_E128,
+    VpscatterddVMdVdqE128,
     // [EVEX.256.66.0F38.W0 A0 /vsib] VPSCATTERDD vm32y {k1}, ymm1
-    VPSCATTERDD_VMdVqq_E256,
+    VpscatterddVMdVqqE256,
     // [EVEX.512.66.0F38.W0 A0 /vsib] VPSCATTERDD vm32z {k1}, zmm1
-    VPSCATTERDD_VMdVdqq_E512,
+    VpscatterddVMdVdqqE512,
     // [EVEX.128.66.0F38.W1 A0 /vsib] VPSCATTERDQ vm32x {k1}, xmm1
-    VPSCATTERDQ_VMdVdq_E128,
+    VpscatterdqVMdVdqE128,
     // [EVEX.256.66.0F38.W1 A0 /vsib] VPSCATTERDQ vm32y {k1}, ymm1
-    VPSCATTERDQ_VMdVqq_E256,
+    VpscatterdqVMdVqqE256,
     // [EVEX.512.66.0F38.W1 A0 /vsib] VPSCATTERDQ vm32z {k1}, zmm1
-    VPSCATTERDQ_VMdVdqq_E512,
+    VpscatterdqVMdVdqqE512,
     // [EVEX.128.66.0F38.W0 A1 /vsib] VPSCATTERQD vm64x {k1}, xmm1
-    VPSCATTERQD_VMqVdq_E128,
+    VpscatterqdVMqVdqE128,
     // [EVEX.256.66.0F38.W0 A1 /vsib] VPSCATTERQD vm64y {k1}, ymm1
-    VPSCATTERQD_VMqVqq_E256,
+    VpscatterqdVMqVqqE256,
     // [EVEX.512.66.0F38.W0 A1 /vsib] VPSCATTERQD vm64z {k1}, zmm1
-    VPSCATTERQD_VMqVdqq_E512,
+    VpscatterqdVMqVdqqE512,
     // [EVEX.128.66.0F38.W1 A1 /vsib] VPSCATTERQQ vm64x {k1}, xmm1
-    VPSCATTERQQ_VMqVdq_E128,
+    VpscatterqqVMqVdqE128,
     // [EVEX.256.66.0F38.W1 A1 /vsib] VPSCATTERQQ vm64y {k1}, ymm1
-    VPSCATTERQQ_VMqVqq_E256,
+    VpscatterqqVMqVqqE256,
     // [EVEX.512.66.0F38.W1 A1 /vsib] VPSCATTERQQ vm64z {k1}, zmm1
-    VPSCATTERQQ_VMqVdqq_E512,
+    VpscatterqqVMqVdqqE512,
 
     // [EVEX.128.66.0F3A.W1 70 /r ib] VPSHLDW xmm1 {k1}{z}, xmm2, xmm3/m128, imm8
-    VPSHLDW_VdqHdqWdqIb_E128,
+    VpshldwVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 70 /r ib] VPSHLDW ymm1 {k1}{z}, ymm2, ymm3/m128, imm8
-    VPSHLDW_VqqHqqWqqIb_E256,
+    VpshldwVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 70 /r ib] VPSHLDW zmm1 {k1}{z}, zmm2, zmm3/m128, imm8
-    VPSHLDW_VdqqHdqqWdqqIb_E512,
+    VpshldwVdqqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W0 71 /r ib] VPSHLDD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst, imm8
-    VPSHLDD_VdqHdqWdqIb_E128,
+    VpshlddVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 71 /r ib] VPSHLDD ymm1 {k1}{z}, ymm2, ymm3/m128/m32bcst, imm8
-    VPSHLDD_VqqHqqWqqIb_E256,
+    VpshlddVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 71 /r ib] VPSHLDD zmm1 {k1}{z}, zmm2, zmm3/m128/m32bcst, imm8
-    VPSHLDD_VdqqHdqqWdqqIb_E512,
+    VpshlddVdqqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W1 71 /r ib] VPSHLDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VPSHLDQ_VdqHdqWdqIb_E128,
+    VpshldqVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 71 /r ib] VPSHLDQ ymm1 {k1}{z}, ymm2, ymm3/m128/m64bcst, imm8
-    VPSHLDQ_VqqHqqWqqIb_E256,
+    VpshldqVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 71 /r ib] VPSHLDQ zmm1 {k1}{z}, zmm2, zmm3/m128/m64bcst, imm8
-    VPSHLDQ_VdqqHdqqWdqqIb_E512,
+    VpshldqVdqqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F38.W1 70 /r] VPSHLDVW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSHLDVW_VdqHdqWdq_E128,
+    VpshldvwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 70 /r] VPSHLDVW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSHLDVW_VqqHqqWqq_E256,
+    VpshldvwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 70 /r] VPSHLDVW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPSHLDVW_VdqqHdqqWdqq_E512,
+    VpshldvwVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 71 /r] VPSHLDVW xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPSHLDVD_VdqHdqWdq_E128,
+    VpshldvdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 71 /r] VPSHLDVW ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPSHLDVD_VqqHqqWqq_E256,
+    VpshldvdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 71 /r] VPSHLDVW zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPSHLDVD_VdqqHdqqWdqq_E512,
+    VpshldvdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 71 /r] VPSHLDVW xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPSHLDVQ_VdqHdqWdq_E128,
+    VpshldvqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 71 /r] VPSHLDVW ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPSHLDVQ_VqqHqqWqq_E256,
+    VpshldvqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 71 /r] VPSHLDVW zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPSHLDVQ_VdqqHdqqWdqq_E512,
+    VpshldvqVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F3A.W1 72 /r ib] VPSHRDW xmm1 {k1}{z}, xmm2, xmm3/m128, imm8
-    VPSHRDW_VdqHdqWdqIb_E128,
+    VpshrdwVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 72 /r ib] VPSHRDW ymm1 {k1}{z}, ymm2, ymm3/m128, imm8
-    VPSHRDW_VqqHqqWqqIb_E256,
+    VpshrdwVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 72 /r ib] VPSHRDW zmm1 {k1}{z}, zmm2, zmm3/m128, imm8
-    VPSHRDW_VdqqHdqqWdqqIb_E512,
+    VpshrdwVdqqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W0 73 /r ib] VPSHRDD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst, imm8
-    VPSHRDD_VdqHdqWdqIb_E128,
+    VpshrddVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 73 /r ib] VPSHRDD ymm1 {k1}{z}, ymm2, ymm3/m128/m32bcst, imm8
-    VPSHRDD_VqqHqqWqqIb_E256,
+    VpshrddVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 73 /r ib] VPSHRDD zmm1 {k1}{z}, zmm2, zmm3/m128/m32bcst, imm8
-    VPSHRDD_VdqqHdqqWdqqIb_E512,
+    VpshrddVdqqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W1 73 /r ib] VPSHRDQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VPSHRDQ_VdqHdqWdqIb_E128,
+    VpshrdqVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 73 /r ib] VPSHRDQ ymm1 {k1}{z}, ymm2, ymm3/m128/m64bcst, imm8
-    VPSHRDQ_VqqHqqWqqIb_E256,
+    VpshrdqVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 73 /r ib] VPSHRDQ zmm1 {k1}{z}, zmm2, zmm3/m128/m64bcst, imm8
-    VPSHRDQ_VdqqHdqqWdqqIb_E512,
+    VpshrdqVdqqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F38.W1 72 /r] VPSHRDVW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSHRDVW_VdqHdqWdq_E128,
+    VpshrdvwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 72 /r] VPSHRDVW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSHRDVW_VqqHqqWqq_E256,
+    VpshrdvwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 72 /r] VPSHRDVW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPSHRDVW_VdqqHdqqWdqq_E512,
+    VpshrdvwVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 73 /r] VPSHRDVW xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPSHRDVD_VdqHdqWdq_E128,
+    VpshrdvdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 73 /r] VPSHRDVW ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPSHRDVD_VqqHqqWqq_E256,
+    VpshrdvdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 73 /r] VPSHRDVW zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPSHRDVD_VdqqHdqqWdqq_E512,
+    VpshrdvdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 73 /r] VPSHRDVW xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPSHRDVQ_VdqHdqWdq_E128,
+    VpshrdvqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 73 /r] VPSHRDVW ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPSHRDVQ_VqqHqqWqq_E256,
+    VpshrdvqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 73 /r] VPSHRDVW zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPSHRDVQ_VdqqHdqqWdqq_E512,
+    VpshrdvqVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F38.W0 8F /r] VPSHUFBITQMB k1 {k2}, xmm2, xmm3/m128
-    VPSHUFBITQMB_KGqHdqWdq_E128,
+    VpshufbitqmbKGqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 8F /r] VPSHUFBITQMB k1 {k2}, ymm2, ymm3/m256
-    VPSHUFBITQMB_KGqHqqWqq_E256,
+    VpshufbitqmbKGqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 8F /r] VPSHUFBITQMB k1 {k2}, zmm2, zmm3/m512
-    VPSHUFBITQMB_KGqHdqqWdqq_E512,
+    VpshufbitqmbKGqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 47 /r] VPSLLVD xmm1, xmm2, xmm3/m128
-    VPSLLVD_VdqHdqWdq_V128,
+    VpsllvdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 47 /r] VPSLLVQ xmm1, xmm2, xmm3/m128
-    VPSLLVQ_VdqHdqWdq_V128,
+    VpsllvqVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 47 /r] VPSLLVD ymm1, ymm2, ymm3/m256
-    VPSLLVD_VqqHqqWqq_V256,
+    VpsllvdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 47 /r] VPSLLVQ ymm1, ymm2, ymm3/m256
-    VPSLLVQ_VqqHqqWqq_V256,
+    VpsllvqVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 12 /r] VPSLLVW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSLLVW_VdqHdqWdq_E128,
+    VpsllvwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 12 /r] VPSLLVW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSLLVW_VqqHqqWqq_E256,
+    VpsllvwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 12 /r] VPSLLVW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPSLLVW_VdqqHdqqWdqq_E512,
+    VpsllvwVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 47 /r] VPSLLVD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPSLLVD_VdqHdqWdq_E128,
+    VpsllvdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 47 /r] VPSLLVD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPSLLVD_VqqHqqWqq_E256,
+    VpsllvdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 47 /r] VPSLLVD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPSLLVD_VdqqHdqqWdqq_E512,
+    VpsllvdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 47 /r] VPSLLVQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPSLLVQ_VdqHdqWdq_E128,
+    VpsllvqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 47 /r] VPSLLVQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPSLLVQ_VqqHqqWqq_E256,
+    VpsllvqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 47 /r] VPSLLVQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPSLLVQ_VdqqHdqqWdqq_E512,
+    VpsllvqVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 46 /r] VPSRAVD xmm1, xmm2, xmm3/m128
-    VPSRAVD_VdqHdqWdq_V128,
+    VpsravdVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 46 /r] VPSRAVD ymm1, ymm2, ymm3/m256
-    VPSRAVD_VqqHqqWqq_V256,
+    VpsravdVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 11 /r] VPSRAVW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSRAVW_VdqHdqWdq_E128,
+    VpsravwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 11 /r] VPSRAVW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSRAVW_VqqHqqWqq_E256,
+    VpsravwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 11 /r] VPSRAVW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPSRAVW_VdqqHdqqWdqq_E512,
+    VpsravwVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 46 /r] VPSRAVD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPSRAVD_VdqHdqWdq_E128,
+    VpsravdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 46 /r] VPSRAVD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPSRAVD_VqqHqqWqq_E256,
+    VpsravdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 46 /r] VPSRAVD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPSRAVD_VdqqHdqqWdqq_E512,
+    VpsravdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 46 /r] VPSRAVQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPSRAVQ_VdqHdqWdq_E128,
+    VpsravqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 46 /r] VPSRAVQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPSRAVQ_VqqHqqWqq_E256,
+    VpsravqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 46 /r] VPSRAVQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPSRAVQ_VdqqHdqqWdqq_E512,
+    VpsravqVdqqHdqqWdqqE512,
 
     // [VEX.128.66.0F38.W0 45 /r] VPSRLVD xmm1, xmm2, xmm3/m128
-    VPSRLVD_VdqHdqWdq_V128,
+    VpsrlvdVdqHdqWdqV128,
     // [VEX.128.66.0F38.W1 45 /r] VPSRLVQ xmm1, xmm2, xmm3/m128
-    VPSRLVQ_VdqHdqWdq_V128,
+    VpsrlvqVdqHdqWdqV128,
     // [VEX.256.66.0F38.W0 45 /r] VPSRLVD ymm1, ymm2, ymm3/m256
-    VPSRLVD_VqqHqqWqq_V256,
+    VpsrlvdVqqHqqWqqV256,
     // [VEX.256.66.0F38.W1 45 /r] VPSRLV! ymm1, ymm2, ymm3/m256
-    VPSRLVQ_VqqHqqWqq_V256,
+    VpsrlvqVqqHqqWqqV256,
     // [EVEX.128.66.0F38.W1 10 /r] VPSRLVW xmm1 {k1}{z}, xmm2, xmm3/m128
-    VPSRLVW_VdqHdqWdq_E128,
+    VpsrlvwVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 10 /r] VPSRLVW ymm1 {k1}{z}, ymm2, ymm3/m256
-    VPSRLVW_VqqHqqWqq_E256,
+    VpsrlvwVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 10 /r] VPSRLVW zmm1 {k1}{z}, zmm2, zmm3/m512
-    VPSRLVW_VdqqHdqqWdqq_E512,
+    VpsrlvwVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 45 /r] VPSRLVD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VPSRLVD_VdqHdqWdq_E128,
+    VpsrlvdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 45 /r] VPSRLVD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VPSRLVD_VqqHqqWqq_E256,
+    VpsrlvdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 45 /r] VPSRLVD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VPSRLVD_VdqqHdqqWdqq_E512,
+    VpsrlvdVdqqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 45 /r] VPSRLVQ xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VPSRLVQ_VdqHdqWdq_E128,
+    VpsrlvqVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 45 /r] VPSRLVQ ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VPSRLVQ_VqqHqqWqq_E256,
+    VpsrlvqVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 45 /r] VPSRLVQ zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VPSRLVQ_VdqqHdqqWdqq_E512,
+    VpsrlvqVdqqHdqqWdqqE512,
 
     // [EVEX.128.66.0F3A.W0 25 /r ib] VPTERNLOGD xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst, imm8
-    VPTERNLOGD_VdqHdqWdqIb_E128,
+    VpternlogdVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 25 /r ib] VPTERNLOGD ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst, imm8
-    VPTERNLOGD_VqqHqqWqqIb_E256,
+    VpternlogdVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 25 /r ib] VPTERNLOGD zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst, imm8
-    VPTERNLOGD_VdqqHdqqWdqqIb_E512,
+    VpternlogdVdqqHdqqWdqqIbE512,
     // [EVEX.128.66.0F3A.W1 25 /r ib] VPTERNLOGQ xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst, imm8
-    VPTERNLOGQ_VdqHdqWdqIb_E128,
+    VpternlogqVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 25 /r ib] VPTERNLOGQ ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst, imm8
-    VPTERNLOGQ_VqqHqqWqqIb_E256,
+    VpternlogqVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 25 /r ib] VPTERNLOGQ zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst, imm8
-    VPTERNLOGQ_VdqqHdqqWdqqIb_E512,
+    VpternlogqVdqqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F38.W0 26 /r] VPTESTMB k2 {k1}, xmm2, xmm3/m128
-    VPTESTMB_KGqHdqWdq_E128,
+    VptestmbKGqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 26 /r] VPTESTMB k2 {k1}, ymm2, ymm3/m256
-    VPTESTMB_KGqHqqWqq_E256,
+    VptestmbKGqHqqWqqE256,
     // [EVEX.521.66.0F38.W0 26 /r] VPTESTMB k2 {k1}, zmm2, zmm3/m512
-    VPTESTMB_KGqHdqqWdqq_E512,
+    VptestmbKGqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 26 /r] VPTESTMW k2 {k1}, xmm2, xmm3/m128
-    VPTESTMW_KGqHdqWdq_E128,
+    VptestmwKGqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 26 /r] VPTESTMW k2 {k1}, ymm2, ymm3/m256
-    VPTESTMW_KGqHqqWqq_E256,
+    VptestmwKGqHqqWqqE256,
     // [EVEX.521.66.0F38.W1 26 /r] VPTESTMW k2 {k1}, zmm2, zmm3/m512
-    VPTESTMW_KGqHdqqWdqq_E512,
+    VptestmwKGqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W0 27 /r] VPTESTMD k2 {k1}, xmm2, xmm3/m128/m32bcst
-    VPTESTMD_KGqHdqWdq_E128,
+    VptestmdKGqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 27 /r] VPTESTMD k2 {k1}, ymm2, ymm3/m256/m32bcst
-    VPTESTMD_KGqHqqWqq_E256,
+    VptestmdKGqHqqWqqE256,
     // [EVEX.521.66.0F38.W0 27 /r] VPTESTMD k2 {k1}, zmm2, zmm3/m512/m32bcst
-    VPTESTMD_KGqHdqqWdqq_E512,
+    VptestmdKGqHdqqWdqqE512,
     // [EVEX.128.66.0F38.W1 27 /r] VPTESTMQ k2 {k1}, xmm2, xmm3/m128/m64bcst
-    VPTESTMQ_KGqHdqWdq_E128,
+    VptestmqKGqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 27 /r] VPTESTMQ k2 {k1}, ymm2, ymm3/m256/m64bcst
-    VPTESTMQ_KGqHqqWqq_E256,
+    VptestmqKGqHqqWqqE256,
     // [EVEX.521.66.0F38.W1 27 /r] VPTESTMQ k2 {k1}, zmm2, zmm3/m512/m64bcst
-    VPTESTMQ_KGqHdqqWdqq_E512,
+    VptestmqKGqHdqqWdqqE512,
 
     // [EVEX.128.F3.0F38.W0 26 /r] VPTESTNMB k2 {k1}, xmm2, xmm3/m128
-    VPTESTNMB_KGqHdqWdq_E128,
+    VptestnmbKGqHdqWdqE128,
     // [EVEX.256.F3.0F38.W0 26 /r] VPTESTNMB k2 {k1}, ymm2, ymm3/m256
-    VPTESTNMB_KGqHqqWqq_E256,
+    VptestnmbKGqHqqWqqE256,
     // [EVEX.521.F3.0F38.W0 26 /r] VPTESTNMB k2 {k1}, zmm2, zmm3/m512
-    VPTESTNMB_KGqHdqqWdqq_E512,
+    VptestnmbKGqHdqqWdqqE512,
     // [EVEX.128.F3.0F38.W1 26 /r] VPTESTNMW k2 {k1}, xmm2, xmm3/m128
-    VPTESTNMW_KGqHdqWdq_E128,
+    VptestnmwKGqHdqWdqE128,
     // [EVEX.256.F3.0F38.W1 26 /r] VPTESTNMW k2 {k1}, ymm2, ymm3/m256
-    VPTESTNMW_KGqHqqWqq_E256,
+    VptestnmwKGqHqqWqqE256,
     // [EVEX.521.F3.0F38.W1 26 /r] VPTESTNMW k2 {k1}, zmm2, zmm3/m512
-    VPTESTNMW_KGqHdqqWdqq_E512,
+    VptestnmwKGqHdqqWdqqE512,
     // [EVEX.128.F3.0F38.W0 27 /r] VPTESTNMD k2 {k1}, xmm2, xmm3/m128/m32bcst
-    VPTESTNMD_KGqHdqWdq_E128,
+    VptestnmdKGqHdqWdqE128,
     // [EVEX.256.F3.0F38.W0 27 /r] VPTESTNMD k2 {k1}, ymm2, ymm3/m256/m32bcst
-    VPTESTNMD_KGqHqqWqq_E256,
+    VptestnmdKGqHqqWqqE256,
     // [EVEX.521.F3.0F38.W0 27 /r] VPTESTNMD k2 {k1}, zmm2, zmm3/m512/m32bcst
-    VPTESTNMD_KGqHdqqWdqq_E512,
+    VptestnmdKGqHdqqWdqqE512,
     // [EVEX.128.F3.0F38.W1 27 /r] VPTESTNMQ k2 {k1}, xmm2, xmm3/m128/m64bcst
-    VPTESTNMQ_KGqHdqWdq_E128,
+    VptestnmqKGqHdqWdqE128,
     // [EVEX.256.F3.0F38.W1 27 /r] VPTESTNMQ k2 {k1}, ymm2, ymm3/m256/m64bcst
-    VPTESTNMQ_KGqHqqWqq_E256,
+    VptestnmqKGqHqqWqqE256,
     // [EVEX.521.F3.0F38.W1 27 /r] VPTESTNMQ k2 {k1}, zmm2, zmm3/m512/m64bcst
-    VPTESTNMQ_KGqHdqqWdqq_E512,
+    VptestnmqKGqHdqqWdqqE512,
 
     // [EVEX.128.66.0F3A.W1 50 /r ib] VRANGEPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst, imm8
-    VRANGEPD_VdqHdqWdqIb_E128,
+    VrangepdVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 50 /r ib] VRANGEPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VRANGEPD_VqqHqqWqqIb_E256,
+    VrangepdVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 50 /r ib] VRANGEPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst, imm8
-    VRANGEPD_VdqqHdqqWdqqIb_E512,
+    VrangepdVdqqHdqqWdqqIbE512,
 
     // [EVEX.128.66.0F3A.W0 50 /r ib] VRANGEPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst, imm8
-    VRANGEPS_VdqHdqWdqIb_E128,
+    VrangepsVdqHdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 50 /r ib] VRANGEPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst, imm8
-    VRANGEPS_VqqHqqWqqIb_E256,
+    VrangepsVqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 50 /r ib] VRANGEPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst, imm8
-    VRANGEPS_VdqqHdqqWdqqIb_E512,
+    VrangepsVdqqHdqqWdqqIbE512,
 
     // [EVEX.LIG.66.0F3A.W1 51 /r ib] VRANGESD xmm1 {k1}{z}, xmm2, xmm3/m64{sae}, imm8
-    VRANGESD_VdqHdqWdqIb_E,
+    VrangesdVdqHdqWdqIbE,
 
     // [EVEX.LIG.66.0F3A.W0 51 /r ib] VRANGESS xmm1 {k1}{z}, xmm2, xmm3/m32{sae}, imm8
-    VRANGESS_VdqHdqWdqIb_E,
+    VrangessVdqHdqWdqIbE,
 
     // [EVEX.128.66.0F38.W1 4C /r] VRCP14PD xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VRCP14PD_VdqWdq_E128,
+    Vrcp14pdVdqWdqE128,
     // [EVEX.256.66.0F38.W1 4C /r] VRCP14PD ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VRCP14PD_VqqWqq_E256,
+    Vrcp14pdVqqWqqE256,
     // [EVEX.512.66.0F38.W1 4C /r] VRCP14PD zmm1 {k1}{z}, zmm2/m512/m64bcst
-    VRCP14PD_VdqqWdqq_E512,
+    Vrcp14pdVdqqWdqqE512,
 
     // [EVEX.LIG.66.0F38.W1 4D /r] VRCP14SD xmm1 {k1}{z}, xmm2, xmm3/m64
-    VRCP14SD_VdqHdqWq_E,
+    Vrcp14sdVdqHdqWqE,
 
     // [EVEX.128.66.0F38.W0 4C /r] VRCP14PS xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VRCP14PS_VdqWdq_E128,
+    Vrcp14psVdqWdqE128,
     // [EVEX.256.66.0F38.W0 4C /r] VRCP14PS ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VRCP14PS_VqqWqq_E256,
+    Vrcp14psVqqWqqE256,
     // [EVEX.512.66.0F38.W0 4C /r] VRCP14PS zmm1 {k1}{z}, zmm2/m512/m32bcst
-    VRCP14PS_VdqqWdqq_E512,
+    Vrcp14psVdqqWdqqE512,
 
     // [EVEX.LIG.66.0F38.W0 4D /r] VRCP14SS xmm1 {k1}{z}, xmm2, xmm3/m32
-    VRCP14SS_VdqHdqWd_E,
+    Vrcp14ssVdqHdqWdE,
 
     // [EVEX.128.66.0F3A.W1 56 /r ib] VREDUCEPD xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VREDUCEPD_VdqWdqIb_E128,
+    VreducepdVdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 56 /r ib] VREDUCEPD ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VREDUCEPD_VqqWqqIb_E256,
+    VreducepdVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 56 /r ib] VREDUCEPD zmm1 {k1}{z}, zmm2/m512/m64bcst, imm8
-    VREDUCEPD_VdqqWdqqIb_E512,
+    VreducepdVdqqWdqqIbE512,
 
     // [EVEX.LIG.66.0F3A.W1 57 /r ib] VREDUCESD xmm1 {k1}{z}, xmm2, xmm3/m64{sae}, imm8
-    VREDUCESD_VdqHdqWq_E,
+    VreducesdVdqHdqWqE,
 
     // [EVEX.128.66.0F3A.W0 56 /r ib] VREDUCEPS xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VREDUCEPS_VdqWdqIb_E128,
+    VreducepsVdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 56 /r ib] VREDUCEPS ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VREDUCEPS_VqqWqqIb_E256,
+    VreducepsVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 56 /r ib] VREDUCEPS zmm1 {k1}{z}, zmm2/m512/m32bcst, imm8
-    VREDUCEPS_VdqqWdqqIb_E512,
+    VreducepsVdqqWdqqIbE512,
 
     // [EVEX.LIG.66.0F3A.W0 57 /r ib] VREDUCESS xmm1 {k1}{z}, xmm2, xmm3/m32{sae}, imm8
-    VREDUCESS_VdqHdqWd_E,
+    VreducessVdqHdqWdE,
 
     // [EVEX.128.66.0F3A.W1 09 /r ib] VRNDSCALEPD xmm1 {k1}{z}, xmm2/m128/m64bcst, imm8
-    VRNDSCALEPD_VdqWdqIb_E128,
+    VrndscalepdVdqWdqIbE128,
     // [EVEX.256.66.0F3A.W1 09 /r ib] VRNDSCALEPD ymm1 {k1}{z}, ymm2/m256/m64bcst, imm8
-    VRNDSCALEPD_VqqWqqIb_E256,
+    VrndscalepdVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 09 /r ib] VRNDSCALEPD zmm1 {k1}{z}, zmm2/m512/m64bcst{sae}, imm8
-    VRNDSCALEPD_VdqqWdqqIb_E512,
+    VrndscalepdVdqqWdqqIbE512,
 
     // [EVEX.LIG.66.0F3A.W1 0B /r ib] VRNDSCALESD xmm1 {k1}{z}, xmm2, xmm3/m64{sae}, imm8
-    VRNDSCALESD_VdqHdqWqIb_E,
+    VrndscalesdVdqHdqWqIbE,
 
     // [EVEX.128.66.0F3A.W0 08 /r ib] VRNDSCALEPS xmm1 {k1}{z}, xmm2/m128/m32bcst, imm8
-    VRNDSCALEPS_VdqWdqIb_E128,
+    VrndscalepsVdqWdqIbE128,
     // [EVEX.256.66.0F3A.W0 08 /r ib] VRNDSCALEPS ymm1 {k1}{z}, ymm2/m256/m32bcst, imm8
-    VRNDSCALEPS_VqqWqqIb_E256,
+    VrndscalepsVqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 08 /r ib] VRNDSCALEPS zmm1 {k1}{z}, zmm2/m512/m32bcst{sae}, imm8
-    VRNDSCALEPS_VdqqWdqqIb_E512,
+    VrndscalepsVdqqWdqqIbE512,
 
     // [EVEX.LIG.66.0F3A.W0 0A /r ib] VRNDSCALESS xmm1 {k1}{z}, xmm2, xmm3/m32{sae}, imm8
-    VRNDSCALESS_VdqHdqWdIb_E,
+    VrndscalessVdqHdqWdIbE,
 
     // [EVEX.128.66.0F38.W1 4E /r] VRSQRT14PD xmm1 {k1}{z}, xmm2/m128/m64bcst
-    VRSQRT14PD_VdqWdq_E128,
+    Vrsqrt14pdVdqWdqE128,
     // [EVEX.256.66.0F38.W1 4E /r] VRSQRT14PD ymm1 {k1}{z}, ymm2/m256/m64bcst
-    VRSQRT14PD_VqqWqq_E256,
+    Vrsqrt14pdVqqWqqE256,
     // [EVEX.512.66.0F38.W1 4E /r] VRSQRT14PD zmm1 {k1}{z}, zmm2/m512/m64bcst
-    VRSQRT14PD_VdqqWdqq_E512,
+    Vrsqrt14pdVdqqWdqqE512,
 
     // [EVEX.LIG.66.0F38.W1 4F /r] VRSQRT14SD xmm1 {k1}{z}, xmm2, xmm3/m64
-    VRSQRT14SD_VdqHdqWq_E,
+    Vrsqrt14sdVdqHdqWqE,
 
     // [EVEX.128.66.0F38.W0 4E /r] VRSQRT14PS xmm1 {k1}{z}, xmm2/m128/m32bcst
-    VRSQRT14PS_VdqWdq_E128,
+    Vrsqrt14psVdqWdqE128,
     // [EVEX.256.66.0F38.W0 4E /r] VRSQRT14PS ymm1 {k1}{z}, ymm2/m256/m32bcst
-    VRSQRT14PS_VqqWqq_E256,
+    Vrsqrt14psVqqWqqE256,
     // [EVEX.512.66.0F38.W0 4E /r] VRSQRT14PS zmm1 {k1}{z}, zmm2/m512/m32bcst
-    VRSQRT14PS_VdqqWdqq_E512,
+    Vrsqrt14psVdqqWdqqE512,
 
     // [EVEX.LIG.66.0F38.W0 4F /r] VRSQRT14SS xmm1 {k1}{z}, xmm2, xmm3/m32
-    VRSQRT14SS_VdqHdqWd_E,
+    Vrsqrt14ssVdqHdqWdE,
 
     // [EVEX.128.66.0F38.W1 2C /r] VSCALEFPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VSCALEFPD_VdqHdqWdq_E128,
+    VscalefpdVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W1 2C /r] VSCALEFPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VSCALEFPD_VqqHqqWqq_E256,
+    VscalefpdVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W1 2C /r] VSCALEFPD zmm1 {k1}{z}, zmm2, xmm3/m512/m64bcst
-    VSCALEFPD_VdqqHdqqWdqq_E512,
+    VscalefpdVdqqHdqqWdqqE512,
 
     // [EVEX.LIG.66.0F38.W1 2D /r] VSCALEFSD xmm1 {k1}{z}, xmm2, xmm3/m64{er}
-    VSCALEFSD_VdqHdqWq_E,
+    VscalefsdVdqHdqWqE,
 
     // [EVEX.128.66.0F38.W0 2C /r] VSCALEFPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VSCALEFPS_VdqHdqWdq_E128,
+    VscalefpsVdqHdqWdqE128,
     // [EVEX.256.66.0F38.W0 2C /r] VSCALEFPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VSCALEFPS_VqqHqqWqq_E256,
+    VscalefpsVqqHqqWqqE256,
     // [EVEX.512.66.0F38.W0 2C /r] VSCALEFPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst{er}
-    VSCALEFPS_VdqqHdqqWdqq_E512,
+    VscalefpsVdqqHdqqWdqqE512,
 
     // [EVEX.LIG.66.0F38.W0 2D /r] VSCALEFSS xmm1 {k1}{z}, xmm2, xmm3/m32{er}
-    VSCALEFSS_VdqHdqWd_E,
+    VscalefssVdqHdqWdE,
 
     // [EVEX.128.66.0F38.W0 A2 /vsib] VSCATTERDPS vm32x {k1}, xmm1
-    VSCATTERDPS_VMdVdq_E128,
+    VscatterdpsVMdVdqE128,
     // [EVEX.256.66.0F38.W0 A2 /vsib] VSCATTERDPS vm32y {k1}, ymm1
-    VSCATTERDPS_VMdVqq_E256,
+    VscatterdpsVMdVqqE256,
     // [EVEX.512.66.0F38.W0 A2 /vsib] VSCATTERDPS vm32z {k1}, zmm1
-    VSCATTERDPS_VMdVdqq_E512,
+    VscatterdpsVMdVdqqE512,
     // [EVEX.128.66.0F38.W1 A2 /vsib] VSCATTERDPD vm32x {k1}, xmm1
-    VSCATTERDPD_VMdVdq_E128,
+    VscatterdpdVMdVdqE128,
     // [EVEX.256.66.0F38.W1 A2 /vsib] VSCATTERDPD vm32y {k1}, ymm1
-    VSCATTERDPD_VMdVqq_E256,
+    VscatterdpdVMdVqqE256,
     // [EVEX.512.66.0F38.W1 A2 /vsib] VSCATTERDPD vm32z {k1}, zmm1
-    VSCATTERDPD_VMdVdqq_E512,
+    VscatterdpdVMdVdqqE512,
     // [EVEX.128.66.0F38.W0 A3 /vsib] VSCATTERQPS vm64x {k1}, xmm1
-    VSCATTERQPS_VMqVdq_E128,
+    VscatterqpsVMqVdqE128,
     // [EVEX.256.66.0F38.W0 A3 /vsib] VSCATTERQPS vm64y {k1}, ymm1
-    VSCATTERQPS_VMqVqq_E256,
+    VscatterqpsVMqVqqE256,
     // [EVEX.512.66.0F38.W0 A3 /vsib] VSCATTERQPS vm64z {k1}, zmm1
-    VSCATTERQPS_VMqVdqq_E512,
+    VscatterqpsVMqVdqqE512,
     // [EVEX.128.66.0F38.W1 A3 /vsib] VSCATTERQPD vm64x {k1}, xmm1
-    VSCATTERQPD_VMqVdq_E128,
+    VscatterqpdVMqVdqE128,
     // [EVEX.256.66.0F38.W1 A3 /vsib] VSCATTERQPD vm64y {k1}, ymm1
-    VSCATTERQPD_VMqVqq_E256,
+    VscatterqpdVMqVqqE256,
     // [EVEX.512.66.0F38.W1 A3 /vsib] VSCATTERQPD vm64z {k1}, zmm1
-    VSCATTERQPD_VMqVdqq_E512,
+    VscatterqpdVMqVdqqE512,
 
     // [EVEX.256.66.0F3A.W0 23 /r ib] VSHUFF32X4 ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst, imm8
-    VSHUFF32X4_VqqHqqWqqIb_E256,
+    Vshuff32x4VqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 23 /r ib] VSHUFF32X4 zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst, imm8
-    VSHUFF32X4_VdqqHdqqWdqqIb_E512,
+    Vshuff32x4VdqqHdqqWdqqIbE512,
     // [EVEX.256.66.0F3A.W1 23 /r ib] VSHUFF64X2 ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VSHUFF64X2_VqqHqqWqqIb_E256,
+    Vshuff64x2VqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 23 /r ib] VSHUFF64X2 zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst, imm8
-    VSHUFF64X2_VdqqHdqqWdqqIb_E512,
+    Vshuff64x2VdqqHdqqWdqqIbE512,
     // [EVEX.256.66.0F3A.W0 43 /r ib] VSHUFI32X4 ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst, imm8
-    VSHUFI32X4_VqqHqqWqqIb_E256,
+    Vshufi32x4VqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W0 43 /r ib] VSHUFI32X4 zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst, imm8
-    VSHUFI32X4_VdqqHdqqWdqqIb_E512,
+    Vshufi32x4VdqqHdqqWdqqIbE512,
     // [EVEX.256.66.0F3A.W1 43 /r ib] VSHUFI64X2 ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst, imm8
-    VSHUFI64X2_VqqHqqWqqIb_E256,
+    Vshufi64x2VqqHqqWqqIbE256,
     // [EVEX.512.66.0F3A.W1 43 /r ib] VSHUFI64X2 zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst, imm8
-    VSHUFI64X2_VdqqHdqqWdqqIb_E512,
+    Vshufi64x2VdqqHdqqWdqqIbE512,
 
     // [VEX.128.66.0F38.W0 0E /r] VTESTPS xmm1, xmm2/m128
-    VTESTPS_VdqWdq_V128,
+    VtestpsVdqWdqV128,
     // [VEX.256.66.0F38.W0 0E /r] VTESTPS ymm1, ymm2/m256
-    VTESTPS_VqqWqq_V256,
+    VtestpsVqqWqqV256,
     // [VEX.128.66.0F38.W0 0F /r] VTESTPD xmm1, xmm2/m128
-    VTESTPD_VdqWdq_V128,
+    VtestpdVdqWdqV128,
     // [VEX.256.66.0F38.W0 0F /r] VTESTPD ymm1, ymm2/m256
-    VTESTPD_VqqWqq_V256,
+    VtestpdVqqWqqV256,
 
     // [VEX.256.0F.WIG 77] VZEROALL
-    VZEROALL,
+    Vzeroall,
 
     // [VEX.128.0F.WIG 77] VZEROUPPER
-    VZEROUPPER,
+    Vzeroupper,
 
     // [9B] WAIT
-    WAIT,
+    Wait,
 
     // [0F 09] WBINVD
-    WBINVD,
+    Wbinvd,
 
     // [F3 0F 09] WBNOINVD
-    WBNOINVD,
+    Wbnoinvd,
 
     // [F3 0F AE /2] WRFSBASE r32
-    WRFSBASE_Gd,
+    WrfsbaseGd,
     // [F3 REX.W 0F AE /2] WRFSBASE r64
-    WRFSBASE_Gq,
+    WrfsbaseGq,
     // [F3 0F AE /3] WRGSBASE r32
-    WRGSBASE_Gd,
+    WrgsbaseGd,
     // [F3 REX.W 0F AE /3] WRGSBASE r64
-    WRGSBASE_Gq,
+    WrgsbaseGq,
 
     // [0F 30] WRMSR
-    WRMSR,
+    Wrmsr,
 
     // [NP 0F 01 EF] WRPKRU
-    WRPKRU,
+    Wrpkru,
 
     // [0F 38 F6] WRSSD r/m32, r32
-    WRSSD_EdGd,
+    WrssdEdGd,
     // [REX.W 0F 38 F6] WRSSQ r/m64, r64
-    WRSSQ_EqGq,
+    WrssqEqGq,
 
     // [66 0F 38 F5] WRUSSD r/m32, r32
-    WRUSSD_EdGd,
+    WrussdEdGd,
     // [66 REX.W 0F 38 F5] WRUSSQ r/m64, r64
-    WRUSSQ_EqGq,
+    WrussqEqGq,
 
     // [F2] XACQUIRE
-    XACQUIRE,
+    Xacquire,
     // [F3] XRELEASE
-    XRELEASE,
+    Xrelease,
 
     // [C6 F8 ib] XABORT imm8
-    XABORT_Ib,
+    XabortIb,
 
     // [0F C0 /r] XADD r/m8, r8
     // [REX 0F C0 /r] XADD r/m8, r8
-    XADD_EbGb,
+    XaddEbGb,
     // [0F C1 /r] XADD r/m16, r16
-    XADD_EwGw,
+    XaddEwGw,
     // [0F C1 /r] XADD r/m32, r32
-    XADD_EdGd,
+    XaddEdGd,
     // [REX.W 0F C1 /r] XADD r/m64, r64
-    XADD_EqGq,
+    XaddEqGq,
 
     // [C7 F8] XBEGIN rel16
-    XBEGIN_Iw,
+    XbeginIw,
     // [C7 F8] XBEGIN rel32
-    XBEGIN_Id,
+    XbeginId,
 
     // [90+rw] XCHG AX, r16
     // [90+rw] XCHG r16, AX
-    XCHG_AXGw,
+    XchgAXGw,
     // [90+rd] XCHG EAX, r32
     // [90+rd] XCHG r32, EAX
-    XCHG_EAXGd,
+    XchgEAXGd,
     // [REX.W 90+rd] XCHG RAX, r64
     // [REX.W 90+rd] XCHG r64, RAX
-    XCHG_RAXGd,
+    XchgRAXGd,
     // [86 /r] XCHG r/m8, r8
     // [REX 86 /r] XCHG r/m8, r8
     // [86 /r] XCHG r8, r/m8
     // [REX 86 /r] XCHG r8, r/m8
-    XCHG_EbGb,
+    XchgEbGb,
     // [87 /r] XCHG r/m16, r16
     // [87 /r] XCHG r16, r/m16
-    XCHG_EwGw,
+    XchgEwGw,
     // [87 /r] XCHG r/m32, r32
     // [87 /r] XCHG r32, r/m32
-    XCHG_EdGd,
+    XchgEdGd,
     // [REX.W 87 /r] XCHG r/m64, r64
     // [REX.W 87 /r] XCHG r64, r/m64
-    XCHG_EqGq,
+    XchgEqGq,
 
     // [NP 0F 01 D5] XEND
-    XEND,
+    Xend,
 
     // [NP 0F 01 D0] XGETBV
-    XGETBV,
+    Xgetbv,
 
     // [D7] XLAT m8
     // [D7] XLATB
     // [REX.W D7] XLATB
-    XLAT,
+    Xlat,
 
     // [34 ib] XOR AL, imm8
-    XOR_ALIb,
+    XorALIb,
     // [35 iw] XOR AX, imm16
-    XOR_AXIw,
+    XorAXIw,
     // [35 id] XOR EAX, imm32
-    XOR_EAXId,
+    XorEAXId,
     // [REX.W 35 id] XOR RAX, imm32
-    XOR_RAXId,
+    XorRAXId,
     // [80 /6 ib] XOR r/m8, imm8
     // [REX 80 /6 ib] XOR r/m8, imm8
-    XOR_EbIb,
+    XorEbIb,
     // [81 /6 iw] XOR r/m16, imm16
-    XOR_EwIw,
+    XorEwIw,
     // [81 /6 id] XOR r/m32, imm32
-    XOR_EdId,
+    XorEdId,
     // [REX.W 81 /6 id] XOR r/m64, imm32
-    XOR_EqId,
+    XorEqId,
     // [83 /6 ib] XOR r/m16, imm8
-    XOR_EwIb,
+    XorEwIb,
     // [83 /6 ib] XOR r/m32, imm8
-    XOR_EdIb,
+    XorEdIb,
     // [REX.W 83 /6 ib] XOR r/m64, imm8
-    XOR_EqIb,
+    XorEqIb,
     // [30 /r] XOR r/m8, r8
     // [REX 30 /r] XOR r/m8, r8
-    XOR_EbGb,
+    XorEbGb,
     // [31 /r] XOR r/m16, r16
-    XOR_EwGw,
+    XorEwGw,
     // [31 /r] XOR r/m32, r32
-    XOR_EdGd,
+    XorEdGd,
     // [REX.W 31 /r] XOR r/m64, r64
-    XOR_EqGq,
+    XorEqGq,
     // [32 /r] XOR r8, r/m8
     // [REX 32 /r] XOR r8, r/m8
-    XOR_GbEb,
+    XorGbEb,
     // [33 /r] XOR r16, r/m16
-    XOR_GwEw,
+    XorGwEw,
     // [33 /r] XOR r32, r/m32
-    XOR_GdEd,
+    XorGdEd,
     // [REX.W 33 /r] XOR r64, r/m64
-    XOR_GqEq,
+    XorGqEq,
 
     // [66 0F 57 /r] XORPD xmm1, xmm2/m128
-    XORPD_VdqWdq,
+    XorpdVdqWdq,
     // [VEX.128.66.0F.WIG 57 /r] VXORPD xmm1, xmm2, xmm3/m128
-    VXORPD_VdqHdqWdq_V128,
+    VxorpdVdqHdqWdqV128,
     // [VEX.256.66.0F.WIG 57 /r] VXORPD ymm1, ymm2, ymm3/m256
-    VXORPD_VqqHqqWqq_V256,
+    VxorpdVqqHqqWqqV256,
     // [EVEX.128.66.0F.W1 57 /r] VXORPD xmm1 {k1}{z}, xmm2, xmm3/m128/m64bcst
-    VXORPD_VdqHdqWdq_E128,
+    VxorpdVdqHdqWdqE128,
     // [EVEX.256.66.0F.W1 57 /r] VXORPD ymm1 {k1}{z}, ymm2, ymm3/m256/m64bcst
-    VXORPD_VqqHqqWqq_E256,
+    VxorpdVqqHqqWqqE256,
     // [EVEX.512.66.0F.W1 57 /r] VXORPD zmm1 {k1}{z}, zmm2, zmm3/m512/m64bcst
-    VXORPD_VdqqHdqqWdqq_E512,
+    VxorpdVdqqHdqqWdqqE512,
 
     // [NP 0F 57 /r] XORPS xmm1, xmm2/m128
-    XORPS_VdqWdq,
+    XorpsVdqWdq,
     // [VEX.128.0F.WIG 57 /r] VXORPS xmm1, xmm2, xmm3/m128
-    VXORPS_VdqHdqWdq_V128,
+    VxorpsVdqHdqWdqV128,
     // [VEX.256.0F.WIG 57 /r] VXORPS ymm1, ymm2, ymm3/m256
-    VXORPS_VqqHqqWqq_V256,
+    VxorpsVqqHqqWqqV256,
     // [EVEX.128.0F.W1 57 /r] VXORPS xmm1 {k1}{z}, xmm2, xmm3/m128/m32bcst
-    VXORPS_VdqHdqWdq_E128,
+    VxorpsVdqHdqWdqE128,
     // [EVEX.256.0F.W1 57 /r] VXORPS ymm1 {k1}{z}, ymm2, ymm3/m256/m32bcst
-    VXORPS_VqqHqqWqq_E256,
+    VxorpsVqqHqqWqqE256,
     // [EVEX.512.0F.W1 57 /r] VXORPS zmm1 {k1}{z}, zmm2, zmm3/m512/m32bcst
-    VXORPS_VdqqHdqqWdqq_E512,
+    VxorpsVdqqHdqqWdqqE512,
 
     // [NP 0F AE /5] XRSTOR mem
-    XRSTOR,
+    Xrstor,
     // [NP REX.W 0F AE /5] XRSTOR64 mem
-    XRSTOR64,
+    Xrstor64,
 
     // [NP 0F C7 /3] XRSTORS mem
-    XRSTORS,
+    Xrstors,
     // [NP REX.W 0F C7 /3] XRSTORS64 mem
-    XRSTORS64,
+    Xrstors64,
 
     // [NP 0F AE /4] XSAVE mem
-    XSAVE,
+    Xsave,
     // [NP REX.W 0F AE /4] XSAVE64 mem
-    XSAVE64,
+    Xsave64,
 
     // [NP 0F C7 /4] XSAVEC mem
-    XSAVEC,
+    Xsavec,
     // [NP REX.W 0F C7 /4] XSAVEC64 mem
-    XSAVEC64,
+    Xsavec64,
 
     // [NP 0F AE /6] XSAVEOPT mem
-    XSAVEOPT,
+    Xsaveopt,
     // [NP REX.W 0F AE /6] XSAVEOPT64 mem
-    XSAVEOPT64,
+    Xsaveopt64,
 
     // [NP 0F C7 /5] XSAVES mem
-    XSAVES,
+    Xsaves,
     // [NP REX.W 0F C7 /5] XSAVES64 mem
-    XSAVES64,
+    Xsaves64,
 
     // [NP 0F 01 D1] XSETBV
-    XSETBV,
+    Xsetbv,
 
     // [NP 0F 01 D6] XTEST
-    XTEST,
+    Xtest,
 }
