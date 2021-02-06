@@ -83,15 +83,17 @@
  *     a memory address, the address is computed from a segment
  *     register and any of the following values: a base register, an
  *     index register, a scaling factor, and a displacement.
- * X - Memory addressed by the DS:rSI register pair (eg. MOVS [??], CMPS [??], OUTS [??], or LODS [??]).
- * Y - Memory addressed by the ES:rDI register pair (eg. MOVS [??], CMPS [??], INS [??], STOS [??], or SCAS [??]).
+ * X - Memory addressed by the DS:rSI register pair (eg. MOVSB [A4],
+ *     CMPSB [A6], OUTSB [6E], or LODSB [AC]).
+ * Y - Memory addressed by the ES:rDI register pair (eg. MOVSB [A4],
+ *     CMPSB [A6], INSB [6C], STOS [AA], or SCAS [AE]).
  * Z - UNUSED
  *
  * A.2.2: Codes for operand type:
  * ------------------------------
  * a  - Two one-word operands in memory or two doubleword operands in
  *      memory, depending on operand-size attribute (used only by the
- *      BOUND [??] instruction).
+ *      BOUND [62] instruction).
  * b  - Byte, regardless of operand-size attribute.
  * c  - Byte or word, depending on operand-size attribute.
  * d  - Doubleword, regardless of operand-size attribute.
