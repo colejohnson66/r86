@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Fld1;
 pub struct Fldl2t;
@@ -32,43 +33,29 @@ pub struct Fldln2;
 pub struct Fldz;
 
 impl Fld1 {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Fldl2t {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Fldl2e {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Fldpi {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Fldlg2 {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Fldln2 {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Fldz {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }

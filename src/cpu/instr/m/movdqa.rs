@@ -22,85 +22,50 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Movdqa;
 pub struct Movdqa32;
 pub struct Movdqa64;
 
 impl Movdqa {
-    fn vdq_wdq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(vdq_wdq);
 
-    fn wdq_vdq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(wdq_vdq);
 
-    fn v_vdq_wdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_wdq_v128);
 
-    fn v_wdq_vdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdq_v128);
 
-    fn v_vqq_wqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wqq_v256);
 
-    fn v_wqq_vqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vqq_v256);
 }
 
 impl Movdqa32 {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_wdq_e128);
 
-    fn v_wdq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdq_e128);
 
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wqq_e256);
 
-    fn v_wqq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vqq_e256);
 
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wdqq_e512);
 
-    fn v_wdqq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdqq_vdqq_e512);
 }
 
 impl Movdqa64 {
-    fn v_vdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_wdq_e128);
 
-    fn v_wdq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdq_e128);
 
-    fn v_vqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wqq_e256);
 
-    fn v_wqq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vqq_e256);
 
-    fn v_vdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wdqq_e512);
 
-    fn v_wdqq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdqq_vdqq_e512);
 }

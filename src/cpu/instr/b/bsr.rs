@@ -22,19 +22,14 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Bsr;
 
 impl Bsr {
-    pub fn gw_ew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gw_ew);
 
-    pub fn gd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gd_ed);
 
-    pub fn gq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gq_eq);
 }

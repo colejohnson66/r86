@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Kortestb;
 pub struct Kortestw;
@@ -29,25 +30,17 @@ pub struct Kortestd;
 pub struct Kortestq;
 
 impl Kortestb {
-    fn kgb_khb_keb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgb_khb_keb);
 }
 
 impl Kortestw {
-    fn kgw_khw_kew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgw_khw_kew);
 }
 
 impl Kortestd {
-    fn kgd_khd_ked(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgd_khd_ked);
 }
 
 impl Kortestq {
-    fn kgq_khq_keq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgq_khq_keq);
 }

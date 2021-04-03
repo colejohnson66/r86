@@ -22,15 +22,12 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Blsmsk;
 
 impl Blsmsk {
-    pub fn bd_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(bd_ed);
 
-    pub fn bq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(bq_eq);
 }

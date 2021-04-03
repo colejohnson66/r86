@@ -22,31 +22,20 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Shrd;
 
 impl Shrd {
-    pub fn ew_gw_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ew_gw_ib);
 
-    pub fn ew_gw_cl(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ew_gw_cl);
 
-    pub fn ed_gd_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ed_gd_ib);
 
-    pub fn ed_gd_cl(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ed_gd_cl);
 
-    pub fn eq_gq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(eq_gq_ib);
 
-    pub fn eq_gq_cl(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(eq_gq_cl);
 }

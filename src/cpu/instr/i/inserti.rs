@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Inserti128;
 pub struct Inserti32x4;
@@ -30,39 +31,25 @@ pub struct Inserti32x8;
 pub struct Inserti64x4;
 
 impl Inserti128 {
-    fn v_vqq_hqq_wdq_ib_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wdq_ib_v256);
 }
 
 impl Inserti32x4 {
-    fn v_vqq_hqq_wdq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wdq_ib_e256);
 
-    fn v_vdqq_hdqq_wdq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdq_ib_e512);
 }
 
 impl Inserti64x2 {
-    fn v_vqq_hqq_wdq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wdq_ib_e256);
 
-    fn v_vdqq_hdqq_wdq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdq_ib_e512);
 }
 
 impl Inserti32x8 {
-    fn v_vdqq_hdqq_wdq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdq_ib_e512);
 }
 
 impl Inserti64x4 {
-    fn v_vdqq_hdqq_wdq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdq_ib_e512);
 }

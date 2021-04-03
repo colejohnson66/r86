@@ -22,19 +22,14 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Cvtne2ps2bf16;
 
 impl Cvtne2ps2bf16 {
-    pub fn v_vdq_hdq_wdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_wdq_e128);
 
-    pub fn v_vqq_hqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wqq_e256);
 
-    pub fn v_vdqq_hdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdqq_e512);
 }

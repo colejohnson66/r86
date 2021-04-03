@@ -22,15 +22,12 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Maskmovdqu;
 
 impl Maskmovdqu {
-    fn vdq_udq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(vdq_udq);
 
-    fn v_vdq_udq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_udq_v128);
 }

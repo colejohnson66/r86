@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Kshiftrb;
 pub struct Kshiftrw;
@@ -29,25 +30,17 @@ pub struct Kshiftrd;
 pub struct Kshiftrq;
 
 impl Kshiftrb {
-    fn kgb_khb_keb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgb_khb_keb);
 }
 
 impl Kshiftrw {
-    fn kgw_khw_kew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgw_khw_kew);
 }
 
 impl Kshiftrd {
-    fn kgd_khd_ked(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgd_khd_ked);
 }
 
 impl Kshiftrq {
-    fn kgq_khq_keq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgq_khq_keq);
 }

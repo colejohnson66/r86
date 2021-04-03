@@ -22,37 +22,26 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Fnmadd132sd;
 pub struct Fnmadd213sd;
 pub struct Fnmadd231sd;
 
 impl Fnmadd132sd {
-    fn v_vdq_hdq_wq_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_wq_v);
 
-    fn v_vdq_hdq_wq_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_wq_e);
 }
 
 impl Fnmadd213sd {
-    fn v_vdq_hdq_wq_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_wq_v);
 
-    fn v_vdq_hdq_wq_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_wq_e);
 }
 
 impl Fnmadd231sd {
-    fn v_vdq_hdq_wq_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_wq_v);
 
-    fn v_vdq_hdq_wq_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_wq_e);
 }

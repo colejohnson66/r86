@@ -22,27 +22,18 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Permq;
 
 impl Permq {
-    fn v_vqq_wqq_ib_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wqq_ib_v256);
 
-    fn v_vqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wqq_ib_e256);
 
-    fn v_vdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wdqq_ib_e512);
 
-    fn v_vqq_hqq_wqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wqq_e256);
 
-    fn v_vdqq_hdqq_wdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdqq_e512);
 }

@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Prefetch0;
 pub struct Prefetch1;
@@ -31,31 +32,21 @@ pub struct Prefetchw;
 pub struct Popad;
 
 impl Prefetch0 {
-    fn mb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(mb);
 }
 
 impl Prefetch1 {
-    fn mb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(mb);
 }
 
 impl Prefetch2 {
-    fn mb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(mb);
 }
 
 impl Prefetchnta {
-    fn mb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(mb);
 }
 
 impl Prefetchw {
-    fn mb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(mb);
 }

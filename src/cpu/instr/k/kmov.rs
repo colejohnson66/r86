@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Kmovb;
 pub struct Kmovw;
@@ -29,73 +30,41 @@ pub struct Kmovd;
 pub struct Kmovq;
 
 impl Kmovb {
-    fn kgb_keb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgb_keb);
 
-    fn keb_kgb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(keb_kgb);
 
-    fn keb_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(keb_gd);
 
-    fn gd_keb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gd_keb);
 }
 
 impl Kmovw {
-    fn kgw_kew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgw_kew);
 
-    fn kew_kgw(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kew_kgw);
 
-    fn kew_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kew_gd);
 
-    fn gd_kew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gd_kew);
 }
 
 impl Kmovd {
-    fn kgd_ked(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgd_ked);
 
-    fn ked_kgd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ked_kgd);
 
-    fn ked_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ked_gd);
 
-    fn gd_ked(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gd_ked);
 }
 
 impl Kmovq {
-    fn kgq_keq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgq_keq);
 
-    fn keq_kgq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(keq_kgq);
 
-    fn keq_gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(keq_gq);
 
-    fn gq_keq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gq_keq);
 }

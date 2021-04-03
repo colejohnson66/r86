@@ -22,31 +22,20 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Cvtsd2si;
 
 impl Cvtsd2si {
-    pub fn gd_wq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gd_wq);
 
-    pub fn gq_wq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gq_wq);
 
-    pub fn v_gd_wq_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_gd_wq_v);
 
-    pub fn v_gd_wq_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_gd_wq_e);
 
-    pub fn v_gq_wq_v(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_gq_wq_v);
 
-    pub fn v_gq_wq_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_gq_wq_e);
 }

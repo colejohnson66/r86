@@ -22,18 +22,15 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Xsavec;
 pub struct Xsavec64;
 
 impl Xsavec {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Xsavec64 {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }

@@ -22,25 +22,20 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Loop;
 pub struct Loope;
 pub struct Loopne;
 
 impl Loop {
-    fn jb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(jb);
 }
 
 impl Loope {
-    fn jb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(jb);
 }
 
 impl Loopne {
-    fn jb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(jb);
 }

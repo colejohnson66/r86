@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Broadcastss;
 pub struct Broadcastsd;
@@ -33,85 +34,51 @@ pub struct Broadcastf32x8;
 pub struct Broadcastf64x4;
 
 impl Broadcastss {
-    fn v_vdq_wd_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_wd_v128);
 
-    fn v_vqq_wd_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wd_v256);
 
-    fn v_vdq_wd_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_wd_e128);
 
-    fn v_vqq_wd_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wd_e256);
 
-    fn v_vdqq_wd_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wd_e512);
 }
 
 impl Broadcastsd {
-    fn v_vqq_wq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wq_v256);
 
-    fn v_vqq_wd_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wd_e256);
 
-    fn v_vdqq_wd_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wd_e512);
 }
 
 impl Broadcastf128 {
-    fn v_vqq_mdq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_mdq_v256);
 }
 
 impl Broadcastf32x2 {
-    fn v_vqq_wq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wq_e256);
 
-    fn v_vdqq_wq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wq_e512);
 }
 
 impl Broadcastf32x4 {
-    fn v_vqq_wq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wq_e256);
 
-    fn v_vdqq_wq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wq_e512);
 }
 
 impl Broadcastf64x2 {
-    fn v_vqq_wq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_wq_e256);
 
-    fn v_vdqq_wq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wq_e512);
 }
 
 impl Broadcastf32x8 {
-    fn v_vdqq_wq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wq_e512);
 }
 
 impl Broadcastf64x4 {
-    fn v_vdqq_wq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_wq_e512);
 }

@@ -22,11 +22,10 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Sha1rnds4;
 
 impl Sha1rnds4 {
-    pub fn vdq_wdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(vdq_wdq_ib);
 }

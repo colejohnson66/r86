@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pcompressb;
 pub struct Pcompressw;
@@ -29,57 +30,33 @@ pub struct Pcompressd;
 pub struct Pcompressq;
 
 impl Pcompressb {
-    fn v_wdq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdq_e128);
 
-    fn v_wqq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vqq_e256);
 
-    fn v_wdqq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdqq_vdqq_e512);
 }
 
 impl Pcompressw {
-    fn v_wdq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdq_e128);
 
-    fn v_wqq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vqq_e256);
 
-    fn v_wdqq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdqq_vdqq_e512);
 }
 
 impl Pcompressd {
-    fn v_wdq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdq_e128);
 
-    fn v_wqq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vqq_e256);
 
-    fn v_wdqq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdqq_vdqq_e512);
 }
 
 impl Pcompressq {
-    fn v_wdq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdq_e128);
 
-    fn v_wqq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vqq_e256);
 
-    fn v_wdqq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdqq_vdqq_e512);
 }

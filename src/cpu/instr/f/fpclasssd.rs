@@ -22,11 +22,10 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Fpclasssd;
 
 impl Fpclasssd {
-    fn v_kgb_wq_ib_e(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgb_wq_ib_e);
 }

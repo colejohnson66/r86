@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pscatterdd;
 pub struct Pscatterdq;
@@ -29,57 +30,33 @@ pub struct Pscatterqd;
 pub struct Pscatterqq;
 
 impl Pscatterdd {
-    fn v_vmd_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmd_vdq_e128);
 
-    fn v_vmd_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmd_vqq_e256);
 
-    fn v_vmd_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmd_vdqq_e512);
 }
 
 impl Pscatterdq {
-    fn v_vmd_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmd_vdq_e128);
 
-    fn v_vmd_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmd_vqq_e256);
 
-    fn v_vmd_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmd_vdqq_e512);
 }
 
 impl Pscatterqd {
-    fn v_vmq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmq_vdq_e128);
 
-    fn v_vmq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmq_vqq_e256);
 
-    fn v_vmq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmq_vdqq_e512);
 }
 
 impl Pscatterqq {
-    fn v_vmq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmq_vdq_e128);
 
-    fn v_vmq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmq_vqq_e256);
 
-    fn v_vmq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vmq_vdqq_e512);
 }

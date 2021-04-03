@@ -22,25 +22,20 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Cbw;
 pub struct Cwde;
 pub struct Cdqe;
 
 impl Cbw {
-    pub fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Cwde {
-    pub fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Cdqe {
-    pub fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }

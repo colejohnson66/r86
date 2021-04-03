@@ -22,11 +22,10 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Movdq2q;
 
 impl Movdq2q {
-    fn pq_udq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(pq_udq);
 }

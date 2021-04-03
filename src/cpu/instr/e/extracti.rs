@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Extracti128;
 pub struct Extracti32x4;
@@ -30,39 +31,25 @@ pub struct Extracti32x8;
 pub struct Extracti64x4;
 
 impl Extracti128 {
-    fn v_wdq_vqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vqq_ib_e256);
 }
 
 impl Extracti32x4 {
-    fn v_wdq_vqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vqq_ib_e256);
 
-    fn v_wdq_vdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdqq_ib_e512);
 }
 
 impl Extracti64x2 {
-    fn v_wdq_vqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vqq_ib_e256);
 
-    fn v_wdq_vdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wdq_vdqq_ib_e512);
 }
 
 impl Extracti32x8 {
-    fn v_wqq_vdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vdqq_ib_e512);
 }
 
 impl Extracti64x4 {
-    fn v_wqq_vdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wqq_vdqq_ib_e512);
 }

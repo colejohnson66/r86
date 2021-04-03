@@ -22,18 +22,15 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Fsave;
 pub struct Fnsave;
 
 impl Fsave {
-    fn m(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(m);
 }
 
 impl Fnsave {
-    fn m(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(m);
 }

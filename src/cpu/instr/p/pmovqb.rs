@@ -22,49 +22,32 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pmovqb;
 pub struct Pmovsqb;
 pub struct Pmovusqb;
 
 impl Pmovqb {
-    fn v_ww_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_ww_vdq_e128);
 
-    fn v_wd_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wd_vqq_e256);
 
-    fn v_vq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vq_vdqq_e512);
 }
 
 impl Pmovsqb {
-    fn v_ww_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_ww_vdq_e128);
 
-    fn v_wd_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wd_vqq_e256);
 
-    fn v_vq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vq_vdqq_e512);
 }
 
 impl Pmovusqb {
-    fn v_ww_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_ww_vdq_e128);
 
-    fn v_wd_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_wd_vqq_e256);
 
-    fn v_vq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vq_vdqq_e512);
 }

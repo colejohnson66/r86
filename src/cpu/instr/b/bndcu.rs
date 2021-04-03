@@ -22,15 +22,12 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Bndcu;
 
 impl Bndcu {
-    pub fn bgdq_ed(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(bgdq_ed);
 
-    pub fn bgdq_eq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(bgdq_eq);
 }

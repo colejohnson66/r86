@@ -22,18 +22,15 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Wrssd;
 pub struct Wrssq;
 
 impl Wrssd {
-    fn ed_gd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ed_gd);
 }
 
 impl Wrssq {
-    fn eq_gq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(eq_gq);
 }

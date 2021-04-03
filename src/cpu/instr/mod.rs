@@ -71,3 +71,12 @@ pub use v::*;
 pub use w::*;
 pub use x::*;
 pub use z::*;
+
+#[macro_export]
+macro_rules! stub_handler {
+    ($func:ident) => {
+        pub fn $func(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
+            unimplemented!();
+        }
+    };
+}

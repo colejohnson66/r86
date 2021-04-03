@@ -22,25 +22,20 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Popf;
 pub struct Popfd;
 pub struct Popfq;
 
 impl Popf {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Popfd {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }
 
 impl Popfq {
-    fn noarg(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(noarg);
 }

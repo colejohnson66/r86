@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Fcmovb;
 pub struct Fcmove;
@@ -33,49 +34,33 @@ pub struct Fcmovnbe;
 pub struct Fcmovnu;
 
 impl Fcmovb {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fcmove {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fcmovbe {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fcmovu {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fcmovnb {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fcmovne {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fcmovnbe {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fcmovnu {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }

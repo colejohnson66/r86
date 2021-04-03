@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Shuff32x4;
 pub struct Shuff64x2;
@@ -29,41 +30,25 @@ pub struct Shufi32x4;
 pub struct Shufi64x2;
 
 impl Shuff32x4 {
-    fn v_vqq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wqq_ib_e256);
 
-    fn v_vdqq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdqq_ib_e512);
 }
 
 impl Shuff64x2 {
-    fn v_vqq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wqq_ib_e256);
 
-    fn v_vdqq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdqq_ib_e512);
 }
 
 impl Shufi32x4 {
-    fn v_vqq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wqq_ib_e256);
 
-    fn v_vdqq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdqq_ib_e512);
 }
 
 impl Shufi64x2 {
-    fn v_vqq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_wqq_ib_e256);
 
-    fn v_vdqq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_hdqq_wdqq_ib_e512);
 }

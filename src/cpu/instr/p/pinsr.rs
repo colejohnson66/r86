@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pinsrb;
 pub struct Pinsrw;
@@ -29,61 +30,35 @@ pub struct Pinsrd;
 pub struct Pinsrq;
 
 impl Pinsrb {
-    fn vdq_eb_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(vdq_eb_ib);
 
-    fn v_vdq_hdq_eb_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_eb_ib_v128);
 
-    fn v_vdq_hdq_eb_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_eb_ib_e128);
 }
 
 impl Pinsrw {
-    fn pq_ew_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(pq_ew_ib);
 
-    fn vdq_ew_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(vdq_ew_ib);
 
-    fn v_vdq_hdq_ew_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_ew_ib_v128);
 
-    fn v_vdq_hdq_ew_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_ew_ib_e128);
 }
 
 impl Pinsrd {
-    fn vdq_ed_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(vdq_ed_ib);
 
-    fn v_vdq_hdq_ed_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_ed_ib_v128);
 
-    fn v_vdq_hdq_ed_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_ed_ib_e128);
 }
 
 impl Pinsrq {
-    fn vdq_eq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(vdq_eq_ib);
 
-    fn v_vdq_hdq_eq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_eq_ib_v128);
 
-    fn v_vdq_hdq_eq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_eq_ib_e128);
 }

@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Kxnorb;
 pub struct Kxnorw;
@@ -29,25 +30,17 @@ pub struct Kxnord;
 pub struct Kxnorq;
 
 impl Kxnorb {
-    fn kgb_khb_keb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgb_khb_keb);
 }
 
 impl Kxnorw {
-    fn kgw_khw_kew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgw_khw_kew);
 }
 
 impl Kxnord {
-    fn kgd_khd_ked(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgd_khd_ked);
 }
 
 impl Kxnorq {
-    fn kgq_khq_keq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgq_khq_keq);
 }

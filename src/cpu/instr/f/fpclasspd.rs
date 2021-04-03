@@ -22,19 +22,14 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Fpclasspd;
 
 impl Fpclasspd {
-    fn v_kgb_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgb_wdq_ib_e128);
 
-    fn v_kgb_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgb_wqq_ib_e256);
 
-    fn v_kgb_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgb_wdqq_ib_e512);
 }

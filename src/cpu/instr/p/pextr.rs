@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pextrb;
 pub struct Pextrw;
@@ -29,73 +30,41 @@ pub struct Pextrd;
 pub struct Pextrq;
 
 impl Pextrb {
-    fn ed_vdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ed_vdq_ib);
 
-    fn v_eb_vdq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_eb_vdq_ib_v128);
 
-    fn v_eb_vdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_eb_vdq_ib_e128);
 }
 
 impl Pextrw {
-    fn gw_nq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gw_nq_ib);
 
-    fn gw_udq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gw_udq_ib);
 
-    fn ew_vdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ew_vdq_ib);
 
-    fn v_gw_udq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_gw_udq_ib_v128);
 
-    fn v_ew_vdq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_ew_vdq_ib_v128);
 
-    fn v_gw_udq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_gw_udq_ib_e128);
 
-    fn v_ew_vdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_ew_vdq_ib_e128);
 }
 
 impl Pextrd {
-    fn ed_vdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ed_vdq_ib);
 
-    fn v_eb_vdq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_eb_vdq_ib_v128);
 
-    fn v_eb_vdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_eb_vdq_ib_e128);
 }
 
 impl Pextrq {
-    fn ed_vdq_ib(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ed_vdq_ib);
 
-    fn v_eb_vdq_ib_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_eb_vdq_ib_v128);
 
-    fn v_eb_vdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_eb_vdq_ib_e128);
 }

@@ -22,18 +22,15 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Cmpxchg8b;
 pub struct Cmpxchg16b;
 
 impl Cmpxchg8b {
-    pub fn mq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(mq);
 }
 
 impl Cmpxchg16b {
-    pub fn mdq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(mdq);
 }

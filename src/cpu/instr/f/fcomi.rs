@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Fcomi;
 pub struct Fcomip;
@@ -29,25 +30,17 @@ pub struct Fucomi;
 pub struct Fucomip;
 
 impl Fcomi {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fcomip {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fucomi {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }
 
 impl Fucomip {
-    fn st0_sti(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(st0_sti);
 }

@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pgatherdd;
 pub struct Pgatherdq;
@@ -29,89 +30,49 @@ pub struct Pgatherqd;
 pub struct Pgatherqq;
 
 impl Pgatherdd {
-    fn v_vdq_vmd_hdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_vmd_hdq_v128);
 
-    fn v_vqq_vmd_hdq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_vmd_hdq_v256);
 
-    fn v_vdq_vmd_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_vmd_e128);
 
-    fn v_vqq_vmd_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_vmd_e256);
 
-    fn v_vdqq_vmd_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_vmd_e512);
 }
 
 impl Pgatherdq {
-    fn v_vdq_vmd_hdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_vmd_hdq_v128);
 
-    fn v_vqq_vmd_hdq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_vmd_hdq_v256);
 
-    fn v_vdq_vmd_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_vmd_e128);
 
-    fn v_vqq_vmd_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_vmd_e256);
 
-    fn v_vdqq_vmd_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_vmd_e512);
 }
 
 impl Pgatherqd {
-    fn v_vdq_vmq_hdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_vmq_hdq_v128);
 
-    fn v_vqq_vmq_hdq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_vmq_hdq_v256);
 
-    fn v_vdq_vmq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_vmq_e128);
 
-    fn v_vqq_vmq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_vmq_e256);
 
-    fn v_vdqq_vmq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_vmq_e512);
 }
 
 impl Pgatherqq {
-    fn v_vdq_vmq_hdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_vmq_hdq_v128);
 
-    fn v_vqq_vmq_hdq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_vmq_hdq_v256);
 
-    fn v_vdq_vmq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_vmq_e128);
 
-    fn v_vqq_vmq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_vmq_e256);
 
-    fn v_vdqq_vmq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdqq_vmq_e512);
 }

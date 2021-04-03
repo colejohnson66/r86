@@ -22,37 +22,26 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Sarx;
 pub struct Shlx;
 pub struct Shrx;
 
 impl Sarx {
-    fn gd_ed_bd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gd_ed_bd);
 
-    fn gq_eq_bq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gq_eq_bq);
 }
 
 impl Shlx {
-    fn gd_ed_bd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gd_ed_bd);
 
-    fn gq_eq_bq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gq_eq_bq);
 }
 
 impl Shrx {
-    fn gd_ed_bd(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gd_ed_bd);
 
-    fn gq_eq_bq(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(gq_eq_bq);
 }

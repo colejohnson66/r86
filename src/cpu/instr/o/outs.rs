@@ -22,25 +22,20 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Outsb;
 pub struct Outsw;
 pub struct Outsd;
 
 impl Outsb {
-    fn ib_al(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ib_al);
 }
 
 impl Outsw {
-    fn ib_al(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ib_al);
 }
 
 impl Outsd {
-    fn ib_al(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ib_al);
 }

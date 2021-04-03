@@ -22,26 +22,19 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Lgdt;
 pub struct Lidt;
 
 impl Lgdt {
-    fn ms_op32(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ms_op32);
 
-    fn ms_op64(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ms_op64);
 }
 
 impl Lidt {
-    fn ms_op32(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ms_op32);
 
-    fn ms_op64(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(ms_op64);
 }

@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pmovb2m;
 pub struct Pmovw2m;
@@ -29,57 +30,33 @@ pub struct Pmovd2m;
 pub struct Pmovq2m;
 
 impl Pmovb2m {
-    fn v_kgq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vdq_e128);
 
-    fn v_kgq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vqq_e256);
 
-    fn v_kgq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vdqq_e512);
 }
 
 impl Pmovw2m {
-    fn v_kgq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vdq_e128);
 
-    fn v_kgq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vqq_e256);
 
-    fn v_kgq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vdqq_e512);
 }
 
 impl Pmovd2m {
-    fn v_kgq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vdq_e128);
 
-    fn v_kgq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vqq_e256);
 
-    fn v_kgq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vdqq_e512);
 }
 
 impl Pmovq2m {
-    fn v_kgq_vdq_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vdq_e128);
 
-    fn v_kgq_vqq_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vqq_e256);
 
-    fn v_kgq_vdqq_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_vdqq_e512);
 }

@@ -22,42 +22,27 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pmaskmovd;
 pub struct Pmaskmovq;
 
 impl Pmaskmovd {
-    fn v_vdq_hdq_mdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_mdq_v128);
 
-    fn v_vqq_hqq_mqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_mqq_v256);
 
-    fn v_mdq_hdq_vdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_mdq_hdq_vdq_v128);
 
-    fn v_mqq_hqq_vqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_mqq_hqq_vqq_v256);
 }
 
 impl Pmaskmovq {
-    fn v_vdq_hdq_mdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vdq_hdq_mdq_v128);
 
-    fn v_vqq_hqq_mqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_vqq_hqq_mqq_v256);
 
-    fn v_mdq_hdq_vdq_v128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_mdq_hdq_vdq_v128);
 
-    fn v_mqq_hqq_vqq_v256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_mqq_hqq_vqq_v256);
 }

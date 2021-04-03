@@ -22,25 +22,20 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Kunpckbw;
 pub struct Kunpckbd;
 pub struct Kunpckbq;
 
 impl Kunpckbw {
-    fn kgw_khb_keb(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgw_khb_keb);
 }
 
 impl Kunpckbd {
-    fn kgd_khw_kew(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgd_khw_kew);
 }
 
 impl Kunpckbq {
-    fn kgq_khd_ked(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(kgq_khd_ked);
 }

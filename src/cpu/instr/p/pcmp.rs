@@ -22,6 +22,7 @@
  */
 use crate::cpu::decoder::Instr;
 use crate::cpu::Cpu;
+use crate::stub_handler;
 
 pub struct Pcmpb;
 pub struct Pcmpub;
@@ -33,113 +34,65 @@ pub struct Pcmpq;
 pub struct Pcmpuq;
 
 impl Pcmpb {
-    fn v_kgq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdq_wdq_ib_e128);
 
-    fn v_kgq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hqq_wqq_ib_e256);
 
-    fn v_kgq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdqq_wdqq_ib_e512);
 }
 
 impl Pcmpub {
-    fn v_kgq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdq_wdq_ib_e128);
 
-    fn v_kgq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hqq_wqq_ib_e256);
 
-    fn v_kgq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdqq_wdqq_ib_e512);
 }
 
 impl Pcmpw {
-    fn v_kgq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdq_wdq_ib_e128);
 
-    fn v_kgq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hqq_wqq_ib_e256);
 
-    fn v_kgq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdqq_wdqq_ib_e512);
 }
 
 impl Pcmpuw {
-    fn v_kgq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdq_wdq_ib_e128);
 
-    fn v_kgq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hqq_wqq_ib_e256);
 
-    fn v_kgq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdqq_wdqq_ib_e512);
 }
 
 impl Pcmpd {
-    fn v_kgq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdq_wdq_ib_e128);
 
-    fn v_kgq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hqq_wqq_ib_e256);
 
-    fn v_kgq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdqq_wdqq_ib_e512);
 }
 
 impl Pcmpud {
-    fn v_kgq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdq_wdq_ib_e128);
 
-    fn v_kgq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hqq_wqq_ib_e256);
 
-    fn v_kgq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdqq_wdqq_ib_e512);
 }
 
 impl Pcmpq {
-    fn v_kgq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdq_wdq_ib_e128);
 
-    fn v_kgq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hqq_wqq_ib_e256);
 
-    fn v_kgq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdqq_wdqq_ib_e512);
 }
 
 impl Pcmpuq {
-    fn v_kgq_hdq_wdq_ib_e128(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdq_wdq_ib_e128);
 
-    fn v_kgq_hqq_wqq_ib_e256(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hqq_wqq_ib_e256);
 
-    fn v_kgq_hdqq_wdqq_ib_e512(_cpu: &mut Cpu, _instr: &Instr) -> u32 {
-        unimplemented!();
-    }
+    stub_handler!(v_kgq_hdqq_wdqq_ib_e512);
 }
