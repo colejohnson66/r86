@@ -68,27 +68,21 @@ pub struct Avx {
 
 impl Avx {
     avx_accessors!(i16, set_i16, i16, 2);
-
     avx_arr_accessor!(i16_arr, set_i16_arr, i16, 2);
 
     avx_accessors!(u16, set_u16, u16, 2);
-
     avx_arr_accessor!(u16_arr, set_u16_arr, u16, 2);
 
     avx_accessors!(i32, set_i32, i32, 4);
-
     avx_arr_accessor!(i32_arr, set_i32_arr, i32, 4);
 
     avx_accessors!(u32, set_u32, u32, 4);
-
     avx_arr_accessor!(u32_arr, set_u32_arr, u32, 4);
 
     avx_accessors!(i64, set_i64, i64, 8);
-
     avx_arr_accessor!(i64_arr, set_i64_arr, i64, 8);
 
     avx_accessors!(u64, set_u64, u64, 8);
-
     avx_arr_accessor!(u64_arr, set_u64_arr, u64, 8);
 
     pub fn new() -> Avx {
@@ -147,7 +141,6 @@ impl Avx {
         assert!(idx < self.value.len());
         mem::transmute::<u8, i8>(self.value[idx])
     }
-
     pub unsafe fn set_i8(&mut self, idx: usize, val: i8) {
         assert!(idx < self.value.len());
         let val = mem::transmute::<i8, u8>(val);
@@ -157,7 +150,6 @@ impl Avx {
     pub unsafe fn i8_arr(&self) -> [i8; 64] {
         mem::transmute::<[u8; 64], [i8; 64]>(self.value)
     }
-
     pub unsafe fn set_i8_arr(&mut self, arr: [i8; 64]) {
         self.value = mem::transmute::<[i8; 64], [u8; 64]>(arr);
     }
@@ -166,7 +158,6 @@ impl Avx {
         assert!(idx < self.value.len());
         self.value[idx]
     }
-
     pub fn set_u8(&mut self, idx: usize, val: u8) {
         assert!(idx < self.value.len());
         self.value[idx] = val;
@@ -175,7 +166,6 @@ impl Avx {
     pub fn u8_arr(&self) -> [u8; 64] {
         self.value
     }
-
     pub fn set_u8_arr(&mut self, arr: [u8; 64]) {
         self.value = arr;
     }

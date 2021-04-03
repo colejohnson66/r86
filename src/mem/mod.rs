@@ -24,8 +24,14 @@ use crate::Address;
 
 pub const CHUNK_SIZE: usize = 1 * 1024 * 1024;
 
-pub struct Ram {
-    chunks: Vec<&'static dyn ChunkBase>,
+pub struct Ram<'a> {
+    chunks: Vec<&'a dyn ChunkBase>,
+}
+
+impl<'a> Ram<'a> {
+    pub fn new() -> Self {
+        Self { chunks: vec![] }
+    }
 }
 
 pub trait ChunkBase {

@@ -33,7 +33,6 @@ impl Gpr {
     pub fn byte_low(&self) -> u8 {
         (self.value & 0xFF) as u8
     }
-
     pub fn set_byte_low(&mut self, val: u8) {
         let temp = self.value & 0xFFFF_FFFF_FFFF_FF00;
         self.value = temp | (val as u64);
@@ -42,7 +41,6 @@ impl Gpr {
     pub fn byte_high(&self) -> u8 {
         ((self.value >> 8) & 0xFF) as u8
     }
-
     pub fn set_byte_high(&mut self, val: u8) {
         let temp = self.value & 0xFFFF_FFFF_FFFF_00FF;
         self.value = temp | ((val as u64) << 8);
@@ -51,7 +49,6 @@ impl Gpr {
     pub fn word(&self) -> u16 {
         (self.value & 0xFFFF) as u16
     }
-
     pub fn set_word(&mut self, val: u16) {
         let temp = self.value & 0xFFFF_FFFF_FFFF_0000;
         self.value = temp | (val as u64);
@@ -60,7 +57,6 @@ impl Gpr {
     pub fn dword(&self) -> u32 {
         (self.value & 0xFFFF_FFFF) as u32
     }
-
     pub fn set_dword(&mut self, val: u32) {
         // zero extend when setting ErX
         self.value = val.into();
@@ -69,7 +65,6 @@ impl Gpr {
     pub fn qword(&self) -> u64 {
         self.value
     }
-
     pub fn set_qword(&mut self, val: u64) {
         self.value = val;
     }
