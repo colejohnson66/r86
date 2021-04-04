@@ -1,8 +1,8 @@
 /* ============================================================================
- * File:   mod.rs
+ * File:   aesdec256kl.rs
  * Author: Cole Johnson
  * ============================================================================
- * Copyright (c) 2020-2021 Cole Johnson
+ * Copyright (c) 2021 Cole Johnson
  *
  * This file is part of r86.
  *
@@ -20,26 +20,12 @@
  *   r86. If not, see <http://www.gnu.org/licenses/>.
  * ============================================================================
  */
-mod emms;
-mod encodekey128;
-mod encodekey256;
-mod endbr32;
-mod endbr64;
-mod enter;
-mod expandpd;
-mod expandps;
-mod extractf;
-mod extracti;
-mod extractps;
+use crate::cpu::decoder::Instr;
+use crate::cpu::Cpu;
+use crate::stub_handler;
 
-pub use emms::*;
-pub use encodekey128::*;
-pub use encodekey256::*;
-pub use endbr32::*;
-pub use endbr64::*;
-pub use enter::*;
-pub use expandpd::*;
-pub use expandps::*;
-pub use extractf::*;
-pub use extracti::*;
-pub use extractps::*;
+pub struct Aesdec256kl;
+
+impl Aesdec256kl {
+    stub_handler!(vdq_mdqq);
+}

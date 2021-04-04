@@ -324,6 +324,12 @@ pub enum OpcodeName {
     // [EVEX.512.66.0F38.WIG DE /r] VAESDEC zmm1, zmm2, zmm3/m512
     VaesdecVdqqHdqqWdqqE512,
 
+    // [F3 0F 38 DD !(11):rrr:bbb] AESDEC128KL xmm, m384
+    Aesdec128klVdqM,
+
+    // [F3 0F 38 DF !(11):rrr:bbb] AESDEC256KL xmm, m512
+    Aesdec256klVdqMdqq,
+
     // [66 0F 38 DF /r] AESDECLAST xmm1, xmm2/m128
     AesdeclastVdqWdq,
     // [VEX.128.66.0F38.WIG DF /r] VAESDECLAST xmm1, xmm2, xmm3/m128
@@ -336,6 +342,12 @@ pub enum OpcodeName {
     VaesdeclastVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG DF /r] VAESDECLAST zmm1, zmm2, zmm3/m512
     VaesdeclastVdqqHdqqWdqqE512,
+
+    // [F3 0F 38 D8 !(11):rrr:bbb] AESDECWIDE128KL m384, <XMM0-7>
+    Aesdecwide128klM,
+
+    // [F3 0F 38 D8 !(11):rrr:bbb] AESDECWIDE256KL m512, <XMM0-7>
+    Aesdecwide256klMdqq,
 
     // [66 0F 38 DC /r] AESENC xmm1, xmm2/m128
     AesencVdqWdq,
@@ -350,6 +362,12 @@ pub enum OpcodeName {
     // [EVEX.512.66.0F38.WIG DC /r] VAESENC zmm1, zmm2, zmm3/m512
     VaesencVdqqHdqqWdqqE512,
 
+    // [F3 0F 38 DC !(11):rrr:bbb] AESENC128KL xmm, m384
+    Aesenc128klVdqM,
+
+    // [F3 0F 38 DE !(11):rrr:bbb] AESENC256KL xmm, m512
+    Aesenc256klVdqMdqq,
+
     // [66 0F 38 DD /r] AESENCLAST xmm1, xmm2/m128
     AesenclastVdqWdq,
     // [VEX.128.66.0F38.WIG DD /r] VAESENCLAST xmm1, xmm2, xmm3/m128
@@ -362,6 +380,12 @@ pub enum OpcodeName {
     VaesenclastVqqHqqWqqE256,
     // [EVEX.512.66.0F38.WIG DD /r] VAESENCLAST zmm1, zmm2, zmm3/m512
     VaesenclastVdqqHdqqWdqqE512,
+
+    // [F3 0F 38 D8 !(11):000:bbb] AESENCWIDE128KL m384, <XMM0-7>
+    Aesencwide128klM,
+
+    // [F3 0F 38 D8 !(11):010:bbb] AESENCWIDE256KL m512, <XMM0-7>
+    Aesencwide256klMdqq,
 
     // [66 0F 38 DB /r] AESIMC xmm1, xmm2/m128
     AesimcVdqWdq,
@@ -1304,6 +1328,12 @@ pub enum OpcodeName {
     // [NP 0F 77] EMMS
     Emms,
 
+    // [F3 0F 38 FA 11:rrr:bbb] ENCODEKEY128 r32a, r32b, <XMM0>, <XMM1-2>, <XMM4-6>
+    Encodekey128GdEd,
+
+    // [F3 0F 38 FB 11:rrr:bbb] ENCODEKEY256 r32a, r32b, <XMM0-1>, <XMM2-6>
+    Encodekey256GdEd,
+
     // [F3 0F 1E FB] ENDBR32
     Endbr32,
 
@@ -2234,6 +2264,9 @@ pub enum OpcodeName {
 
     // [0F 01 /6] LMSW r/m16
     LmswEw,
+
+    // [F3 0F 38 DC 11:rrr:bbb] LOADIWKEY xmm1, xmm2, <EAX>, <XMM0>
+    LoadiwkeyVdqUdq,
 
     // [F0] LOCK
     Lock,
@@ -3649,6 +3682,9 @@ pub enum OpcodeName {
     PcmpistrmVdqWdqIb,
     // [VEX.128.66.0F3A.WIG 62 /r ib] VPCMPISTRM xmm1, xmm2/m128, imm8
     VpcmpistrmVdqHdqWdqIb,
+
+    // [NP 0F 01 C5] PCONFIG
+    Pconfig,
 
     // [VEX.LZ.F2.0F38.W0 F5 /r] PDEP r32a, r32b, r/m32
     PdepGdBdEd,
