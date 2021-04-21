@@ -48,7 +48,7 @@ impl Cr0 {
 
     bitfield!(am, set_am, u32, 18);
 
-    bitfield!(wp, set_wp, u32, 18);
+    bitfield!(wp, set_wp, u32, 16);
 
     bitfield!(ne, set_ne, u32, 5);
 
