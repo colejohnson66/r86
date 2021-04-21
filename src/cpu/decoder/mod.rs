@@ -101,6 +101,7 @@ pub enum OpSource {
     L, // high nibble of 8-bit immediate is XMM/YMM/ZMM
     M, // ModR/M for memory
     N, // r/m is MMX
+    O, // offset (eg. Ob: moffs8)
     P, // reg is MMX
     Q, // ModR/M with possible SIB for MMX
     R, // r/m is GPR
@@ -117,7 +118,6 @@ pub enum OpSource {
     Ke, // `E` but for mask registers
     Kg, // `G` but for mask registers
     Kr, // `R` but for mask registers
-    O,  // offset (eg. Ob: moffs8)
     Vm, // vm##x
 
     // extra addressing modes
