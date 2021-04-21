@@ -95,8 +95,8 @@ pub struct Cpu {
 
 macro_rules! gpr {
     ($name:ident,$idx:expr) => {
-        pub fn $name(&mut self) -> &Gpr {
-            &self.gpr[$idx]
+        pub fn $name(&mut self) -> &mut Gpr {
+            &mut self.gpr[$idx]
         }
     };
 }
