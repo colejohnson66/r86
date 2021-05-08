@@ -82,7 +82,7 @@ impl Fpr {
     }
 
     pub fn sign(&self) -> bool {
-        (self.sign_exponent & 0x80) == 0x80
+        (self.sign_exponent & 0x8000) == 0x8000
     }
 
     pub fn sign_exponent(&self) -> u16 {
